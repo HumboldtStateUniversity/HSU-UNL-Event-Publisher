@@ -1,0 +1,13 @@
+K 13
+svn:externals
+V 267
+backend/UNL	https://unl-event-publisher.googlecode.com/svn/UNL_UCBCN/trunk/src/UNL
+frontend/UNL	https://unl-event-publisher.googlecode.com/svn/UNL_UCBCN_Frontend/trunk/src/UNL
+manager/UNL	https://unl-event-publisher.googlecode.com/svn/UNL_UCBCN_Manager/trunk/src/UNL
+
+K 10
+svn:ignore
+V 1
+
+
+END

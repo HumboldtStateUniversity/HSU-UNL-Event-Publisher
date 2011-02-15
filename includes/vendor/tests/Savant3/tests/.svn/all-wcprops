@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests
+END
+07_escape.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/07_escape.phpt
+END
+04_plugins_image.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/04_plugins_image.phpt
+END
+00_prepend.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/00_prepend.php
+END
+04_plugins_ahref.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/04_plugins_ahref.phpt
+END
+03_filters.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/03_filters.phpt
+END
+06_includes.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/06_includes.phpt
+END
+04_plugins_fester.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/04_plugins_fester.phpt
+END
+08_autoload.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/08_autoload.phpt
+END
+05_errors.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/05_errors.phpt
+END
+04_plugins_date.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/04_plugins_date.phpt
+END
+02_output.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/02_output.phpt
+END
+01_assign.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/01_assign.phpt
+END

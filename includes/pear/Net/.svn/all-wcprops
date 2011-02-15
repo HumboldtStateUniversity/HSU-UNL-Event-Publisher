@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net
+END
+Vpopmaild.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/Vpopmaild.php
+END
+DIME.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/DIME.php
+END
+POP3.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/POP3.php
+END
+URL.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/URL.php
+END
+SMTP.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/SMTP.php
+END
+Socket.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Net/Socket.php
+END

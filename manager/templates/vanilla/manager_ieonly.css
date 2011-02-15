@@ -1,0 +1,72 @@
+/*	-------------------------------------------------------------
+	IE 6 only hacks
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+* html #right_area {
+	height: 200px;
+}
+
+* html #contentSearch form fieldset legend {
+}
+* html #navigation div#nav_end{
+height:7px;
+margin:-1px 0 0 0;top:-6px;
+width:219px;
+position:relative;
+background:url(images/wapp_nav_bottom.gif) no-repeat left bottom;
+}
+* html #contentSearch form fieldset li {
+	height: 1px;
+	float:none;
+}
+
+* html #contentSearch form input,* html #contentSearch form textarea,#contentSearch form select
+	{
+	margin: 0;
+}
+
+* html #contentSearch form fieldset {
+	margin: 20px 0;
+	padding: 0 0 10px 0;
+}
+
+* html #contentSearch form fieldset.d__header___class {
+	margin-top: 4px;
+}
+* html body#subscribe #contentSearch form fieldset.d__header___class{margin:40px 0 0 0;}
+* html #contentSearch form fieldset li.reqnote {
+	margin: 0 0 20px 0;
+}
+
+* html body#normal div#contentSearch ul.eventsbystatus {
+	margin: -27px 0 10px 0;;
+	padding: 6px 6px 0 6px;
+}
+
+
+/*	-------------------------------------------------------------
+	IE 7
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+*+html #contentSearch form fieldset legend {
+	margin: -13px 0 0 -7px;
+}
+
+*+html #contentSearch form fieldset label {
+	margin: 15px 0 0 0;
+}
+
+*+html body#normal div#contentSearch ul.eventsbystatus {
+	margin: -27px 0 10px 0;;
+	padding: 6px 6px 0 6px;
+}
+
+*+html #contentSearch form fieldset.d__header___class {
+	margin-top: 4px;
+}
+*+html body#subscribe #contentSearch form fieldset.d__header___class{margin:40px 0 0 0;}
+*+html #contentSearch form fieldset {
+	margin: 20px 0;
+	padding: 0 0 10px 0;
+}
+*+html #contentSearch form fieldset li {
+	float:none;
+}

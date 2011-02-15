@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Calendar/Decorator
+END
+Weekday.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Calendar/Decorator/Weekday.php
+END
+Uri.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Calendar/Decorator/Uri.php
+END
+Wrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Calendar/Decorator/Wrapper.php
+END
+Textual.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Calendar/Decorator/Textual.php
+END

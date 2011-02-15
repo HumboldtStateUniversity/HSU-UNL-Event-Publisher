@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command
+END
+Channels.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Channels.php
+END
+Package.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Package.php
+END
+Remote.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Remote.php
+END
+Build.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Build.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Auth.php
+END
+Package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Package.xml
+END
+Channels.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Channels.xml
+END
+Remote.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Remote.xml
+END
+Config.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Config.php
+END
+Install.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Install.php
+END
+Pickle.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Pickle.php
+END
+Registry.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Registry.php
+END
+Build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Build.xml
+END
+Mirror.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Mirror.php
+END
+Auth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Auth.xml
+END
+Config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Config.xml
+END
+Install.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Install.xml
+END
+Test.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Test.php
+END
+Pickle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Pickle.xml
+END
+Registry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Registry.xml
+END
+Mirror.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Mirror.xml
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Common.php
+END
+Test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Command/Test.xml
+END

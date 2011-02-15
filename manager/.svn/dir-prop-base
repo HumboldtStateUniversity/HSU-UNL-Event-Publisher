@@ -1,0 +1,12 @@
+K 13
+svn:externals
+V 95
+templates	https://unl-event-publisher.googlecode.com/svn/UNL_UCBCN_Manager/trunk/www/templates
+
+K 10
+svn:ignore
+V 16
+
+config.inc.php
+
+END

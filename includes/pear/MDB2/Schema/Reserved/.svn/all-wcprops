@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved
+END
+mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved/mssql.php
+END
+oci8.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved/oci8.php
+END
+ibase.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved/ibase.php
+END
+mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved/mysql.php
+END
+pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema/Reserved/pgsql.php
+END

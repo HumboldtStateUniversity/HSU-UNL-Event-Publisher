@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.7.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>HTML_Common</name>
+ <channel>pear.php.net</channel>
+ <summary>PEAR::HTML_Common is a base class for other HTML classes.</summary>
+ <description>The PEAR::HTML_Common package provides methods for html code display and attributes handling.
+* Methods to set, remove, update html attributes.
+* Handles comments in HTML code.
+* Handles layout, tabs, line endings for nicer HTML code.</description>
+ <lead>
+  <name>Klaus Guenther</name>
+  <user>thesaur</user>
+  <email>thesaur@php.net</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Alexey Borzov</name>
+  <user>avb</user>
+  <email>avb@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Bertrand Mansion</name>
+  <user>mansion</user>
+  <email>bmansion@mamasam.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Adam Daniel</name>
+  <user>adaniel</user>
+  <email>adaniel1@eesus.jnj.com</email>
+  <active>no</active>
+ </lead>
+ <date>2010-11-08</date>
+ <time>15:09:21</time>
+ <version>
+  <release>1.2.5</release>
+  <api>1.2.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>Whitespace is no longer trimmed from quoted attribute values in 
+_parseAttribute() method (bug #15787)</notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="HTML" md5sum="42093f7fea4b1a9f455b2bb771e52e31" name="Common.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.0.4</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>1.2.4</release>
+     <api>1.2.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2007-05-16</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>Migrate to package.xml version 2.0, use proper header comment block.
+No code changes since previous release.</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.2.3</release>
+     <api>1.2.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2006-10-08</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>* Added setAttribute() method (backport from HTML_Common2)
+* Added possibility to set the charset parameter for htmlspecialchars()
+  via static HTML_Common::charset() method (see bug #2410)
+* Properly document getAttribute() method (bug #5704), fix PHPDoc comments
+  for several other methods</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.2.2</release>
+     <api>1.2.2</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2005-09-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>Bugfix release
+- fixed bug #3948 (semicolon after case in switch)
+- fixed bug #3953 (outdated inline docs for a private function)
+- updated some other inline docs for private functions</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.2.1</release>
+     <api>1.2.1</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2003-06-19</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>* Method getAttributes() can now return the attributes in a string (Alexey Borzov)</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.2</release>
+     <api>1.2</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2003-05-20</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>Applied patch by Klaus Guenther:
+* setTab(): Allows the indent string (default: \t) to be set
+* setLineEnd(): Allows the line end string (default: \n) to be set
+* Allows the indent and line ending settings to be propagated to content objects</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.1</release>
+     <api>1.1</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2003-04-15</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>This new release optimizes HTML_Common's way to deal with attributes.
+* Fix a bug in _parseAttributes when a string was passed to it (Alexey Borzov)
+* Only key-value associative arrays are now used, XHTML compliant (Alexey Borzov)
+* Fix a bug related to getAttribute case sensitivity detected by Ian Harder #22628 (Alexey Borzov)</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0</release>
+     <api>1.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2002-05-28</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>First release.</notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

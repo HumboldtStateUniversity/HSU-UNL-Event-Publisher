@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3
+END
+Error.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3/Error.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3/Exception.php
+END
+Plugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3/Plugin.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3/Filter.php
+END

@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>DB_DataObject_FormBuilder</name>
+ <channel>pear.php.net</channel>
+ <summary>Class to automatically build HTML_QuickForm objects from a DB_DataObject-derived class</summary>
+ <description>DB_DataObject_FormBuilder will aid you in rapid application development using the packages DB_DataObject and HTML_QuickForm. For having a quick but working prototype of your application, simply model the database, run DataObject&amp;apos;s createTable script over it and write a script that passes one of the resulting objects to the FormBuilder class. The FormBuilder will automatically generate a simple but working HTML_QuickForm object that you can use to test your application. It also provides a processing method that will automatically detect if an insert() or update() command has to be executed after the form has been submitted. If you have set up DataObject&amp;apos;s links.ini file correctly, it will also automatically detect if a table field is a foreign key and will populate a selectbox with the linked table&amp;apos;s entries. There are many optional parameters that you can place in your DataObjects.ini or in the properties of your derived classes, that you can use to fine-tune the form-generation, gradually turning the prototypes into fully-featured forms, and you can take control at any stage of the process.</description>
+ <lead>
+  <name>Justin Patrin</name>
+  <user>justinpatrin</user>
+  <email>justinpatrin@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Markus Wolff</name>
+  <user>mw21st</user>
+  <email>mw21st@php.net</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Norbert Mocsnik</name>
+  <user>norbert</user>
+  <email>norbert@php.net</email>
+  <active>yes</active>
+ </developer>
+ <date>2010-11-08</date>
+ <time>15:18:05</time>
+ <version>
+  <release>1.0.1</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.txt">LGPL</license>
+ <notes>
+Automatically built QA release
+Bug #17985 package.xml is invalid - saltybeagle
+ </notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="/" md5sum="1fadc88639677583f81ad2842018d6eb" name="tools/fixPre1.52CVSFiles.php" role="data"/>
+   <file baseinstalldir="/" md5sum="c94076ba9d873e29c1018d8d4e2a9925" name="tools/fix0.9.0Files.php" role="data"/>
+   <file baseinstalldir="/" md5sum="cbc40dfe772eb8ca2b41c45db7983eab" name="tests/typeArrays.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="368f8f4f7f532762e8aa7eb0715081d3" name="tests/textElement.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="a1040784c9401fbcd494cffcca30e553" name="tests/submitText.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="b78c56c780ee6276ed31758a96266324" name="tests/primaryKeyIsHidden.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="27ae6668db2e9ffa1a0c8bf96f33e5db" name="tests/notNullFieldRequired.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="f53fad2246e19df85d13d7a6c8ca8dc5" name="tests/newRecordInserted.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="e3708001904def6e41a73b3524d3a110" name="tests/movie.sql" role="test"/>
+   <file baseinstalldir="/" md5sum="08e82417c774c7a34a14f9fa9c9b4ede" name="tests/links.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="4bca6252ff9f2ed7d73085dbdd0eeb50" name="tests/getForm.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="597f74033e7656efedfa307b186f65cb" name="tests/formHeaderText.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="a35be54ec879ac1881cd966473c14ecd" name="tests/forceInsert.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="db9394a205fce3d43ae23945bf7a57c7" name="tests/existingRecordUpdated.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="60bb8157981a0ea949c2dea87db1e4df" name="tests/enum.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="07ac20763e557245151d910898a8f584" name="tests/elementNamePrefix_Postfix.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="5d705aff4eb4f3214fcded330a7b4a3b" name="tests/dateOptionsCallbacks.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="de52d1c7996a9aad3ea7e88f58851e72" name="tests/dateElement.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="f14abf7cc0917c8bc5df8b5250cf5fc6" name="tests/createWithOptions.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="74a411216d3423451b8896bb84f43a38" name="tests/createWithDriver.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="b69863c15b2b4e3c5e60d09539704cba" name="tests/createSubmit.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="fc966ce12f8848041da88de76c6e90ba" name="tests/create.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="58a5ebdb88f717ecd256f00a2869b873" name="tests/configAndOverride.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="7c74f6e81b89b167128375180bce477d" name="tests/config.php" role="test"/>
+   <file baseinstalldir="/" md5sum="f566957423ab18f122418f24fdbba251" name="tests/array2date.phpt" role="test"/>
+   <file baseinstalldir="/" md5sum="0fa42678a88e41a33e84f6ded6f07084" name="package.php" role="php"/>
+   <file baseinstalldir="/DB/DataObject" md5sum="943d5fe81894416a09f29c81410a4361" name="FormBuilder/QuickForm/SubFormFB.php" role="php"/>
+   <file baseinstalldir="/DB/DataObject" md5sum="bccc74cad36e23a5e8f386f481cac1f0" name="FormBuilder/QuickForm/SubForm.php" role="php"/>
+   <file baseinstalldir="/DB/DataObject" md5sum="c26e540e31933dd5974547e45ccfd098" name="FormBuilder/QuickForm.php" role="php"/>
+   <file baseinstalldir="/DB/DataObject" md5sum="8e0f56e1d1204f1073b3cf3a9d51e88c" name="FormBuilder.php" role="php"/>
+   <file baseinstalldir="/" md5sum="ae96182ee440ebcdcb0a31fc42861d55" name="examples/sql/schema.sql" role="doc"/>
+   <file baseinstalldir="/" md5sum="62ca78779ca6521640c2c36ce25b302d" name="examples/sql/schema.gif" role="doc"/>
+   <file baseinstalldir="/" md5sum="3416573d53ce0c8087c337143c174bf1" name="examples/index.php" role="doc"/>
+   <file baseinstalldir="/" md5sum="0039a7a0fbaaedc17e14ecbe1e16ccd5" name="examples/dataObject.ini" role="doc"/>
+   <file baseinstalldir="/" md5sum="cd9d9856a29ba92743c12e82b39ef223" name="examples/config_inc.php" role="doc"/>
+   <file baseinstalldir="/" md5sum="f1eadcfb6937b8cd0bdb9d8c84b57ac0" name="examples/classes/Product.php" role="doc"/>
+   <file baseinstalldir="/" md5sum="7b0b062e5386d984ab96fb369a5455d2" name="examples/classes/Manufacturer.php" role="doc"/>
+   <file baseinstalldir="/" md5sum="5a8d2aafb6db44a5b0774232b29f61a4" name="examples/classes/formbuilder.links.ini" role="doc"/>
+   <file baseinstalldir="/" md5sum="fd2aacbc20ed4779ca10cbe317ee6f5c" name="examples/classes/formbuilder.ini" role="doc"/>
+   <file baseinstalldir="/" md5sum="2ed71cb70b1774674ff3950542d930bb" name="examples/classes/Category.php" role="doc"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.4</min>
+   </pearinstaller>
+   <package>
+    <name>DB_DataObject</name>
+    <channel>pear.php.net</channel>
+    <min>1.8.5</min>
+   </package>
+   <package>
+    <name>HTML_QuickForm</name>
+    <channel>pear.php.net</channel>
+    <min>3.2.4</min>
+   </package>
+  </required>
+  <optional>
+   <package>
+    <name>Date</name>
+    <channel>pear.php.net</channel>
+    <min>1.4.7</min>
+   </package>
+   <package>
+    <name>HTML_Table</name>
+    <channel>pear.php.net</channel>
+    <min>1.7.5</min>
+   </package>
+   <package>
+    <name>HTML_QuickForm_ElementGrid</name>
+    <channel>pear.php.net</channel>
+    <min>0.1.0</min>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>0.8</release>
+     <api>0.8</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-08-21</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+- Initial release.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.8.1</release>
+     <api>0.8.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-08-23</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Bugfix release:
+- Fixed a bug in getSelectOptions() that occured if the linked field was NULL
+- Fixed a bug with tables containing integer fields but having no entry in the links.ini (thanks to Fabien Franzen for reporting it)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.8.2</release>
+     <api>0.8.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-08-28</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+New features:
+- Support for custom field order (Fabien Franzen)
+- Support for grouped elements (Fabien Franzen)
+- Optional call to DB_DataObject::validate() on processing form data (suggested by Ron McClain)
+- Possibility to optionally use existing form objects (suggested by Alexey Borzoff)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.9.0</release>
+     <api>0.9.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-05-16</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Lots of lots of fixes/changes:
+- New configuration option &quot;elementTypeMap&quot;: Allows you to define
+  a list of FormBuilder field types and HTML_QuickForm element types
+  that should be used for those field types. This way, you can for
+  example use a WYSYWIG HTML editing component instead of textareas.
+- New configuration options: &quot;dateToDatabaseCallback&quot; and
+  &quot;dateFromDatabaseCallback&quot; allow you to define callback functions
+  for date format conversion. This way, you can use any input and
+  storage format for dates that you desire.
+- Fixed bug #624: Incompatibility with schema files generated by
+  DB_DataObject 1.4.0 and up. Side-effect: FormBuilder now also
+  recognizes DATE, DATETIME and TEXT fields automatically, so there
+  is no more need to use class properties to define them manually.
+- Conversion of ISO dates to QuickForm date arrays no longer
+  relies on strtotime(), but uses PEAR::Date instead to get rid of the
+  date range limitations of Unix timestamps
+- You can now also use DATETIME fields, as more formatting
+  options for date fields are supported (m,M,d,Y,H,i,s)
+- New experimental option &quot;dateFieldLanguage&quot; allows setting the
+  language for date fields, this doesn't seem to work yet though
+- useForm() now knows a second parameter that allows to add elements
+  from an existing form to the generated one ... this, too, is to be considered
+  highly experimental as the current implementation relies on supposedly private
+  QuickForm properties to be public
+- Support for a new callback method in your DataObjects: &quot;dateOptions()&quot;
+  allows to return an option array for all or individual date elements. See docs
+  for QuickForm's date element for details on possible options
+- Added support for recursive link lookups (by Justin Patrin)
+- Implemented changes by Norbert Moscnik:
+  a) added &quot;fieldsToRender&quot; configuration option
+  b) added &quot;userEditableFields&quot; configuration option
+  c) added &quot;forced_values&quot; configuration option
+  d) additional empty option (value=&quot;&quot;) as the first element of the &lt;select&gt; lists
+- Fixed file upload handling: http://pear.php.net/bugs/bug.php?id=423
+- Added usage of setter methods: http://pear.php.net/bugs/bug.php?id=422
+- When processing the form, the new getUserEditableFields() method is used
+  to check against manipulated POST requests
+- Added support for definition of display_fields and custom field ordering in
+  a separate .ini file (contributed by Justin Patrin)
+- Fixed: Threw notices when no primary key was detected in processForm().
+  Will now exit and return false.
+- Added: New method forceQueryType() will let you override the autodetection
+  for the query command (insert/update) using new predefined constants.
+- Fixed inconsistency with documentation regarding hide_primary_key (spotted by Norbert Mocsnik)
+- Fixed bug with checks for postProcess() and preProcess() user-methods, spotted by Ron McClain
+- Fixed bug that occured when building selectboxes (if select_order_field was not defined,
+  and the linked class had its own select_display_field property, FormBuilder was trying
+  to order by a nonexisting field)
+- Fixed small issue in processForm method (detection if submitted values really belong 
+  to the current DataObject)
+- Minor change in configuration method (check inline docs!!)
+- New options &quot;createSubmit&quot; and &quot;submitText&quot; to set creation of
+  a submit button on/off and specify its text
+- fix bug preventing the options array from being used (Arnaud Limbourg)
+- use raiseError instead of new PEAR_Error, use a variable to make php5 happy (Arnaud Limbourg)
+- Automatically making the primary key a hidden field is now optional
+- Fixed notices when working with E_ALL
+- Fixed bug with element reordering (Arnaud Limbourg)
+- Additions and corrections in inline docs
+- Changed bullshit implementation: Existing form objects are no longer passed
+  through the options array, but by using a new method useForm().
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.10.0</release>
+     <api>0.10.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-08-27</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+This version introduces major BC breaks, mostly dealing with the names and locations of configuration variables most of which can be corrected by using a provided fix script(s). If you have already used FormBuilder in your current projects, please read all of this very carefully!
+
+MAJOR BC BREAKS -- Please read all comments below before trying to use this version!
+This checkin is the result of an attempt at unifying the various parts of the FormBuilder API, unifying the coding styles, and conforming to PEAR CS. This *will* break your application.
+
+All options are now configurable through the DataObject. Any option that could be in the FormBuilder can now be in the DataObject.
+
+All options in the DataObject now have a &quot;fb_&quot; prefix to distinguish them from field names.
+
+All options in both the FormBuilder and DataObject were changed to use studlyCaps instead_of_underscores.
+
+Some few options have changed names. For example, follow_links is now linkDisplayLevel.
+
+All options may be specified in the [DB_DataObject_FormBuilder] section of the ini file. For options that are DataObject specific, these are set as defaults. The DataObject may change them through its options. linkDisplayFields and linkOrderFields (see below) are arrays and set the same as elementTypeMap.
+
+All options in the [DB_DataObject_FormBuilder] section of the ini file are copied into the FormBuilder when it is instantiated. Hence, changing $GLOBALS['_DB_DATAOVJECT_FORMBUILDER']['CONFIG'] after you create your FormBuilder will no longer work.
+
+All options in the DataObject (except for those that start with &quot;select&quot;) are copied to the FormBuilder after preGenerateForm is called. This is to cut down on the internal complexity of FormBuilder. This means that you cannot change options in the DataObject after preGenerateForm (such as in postGenerateForm). We don't see this as a problem as you can set everything up before then and (nearly) all options are used once postGenerateForm is called. If you know of a problem with this, please send us an e-mail or a bug report. This also means that you cannot re-use a FormBuilder object as the settings of the previous FormBuilder will persist.
+
+The database.formBuilder.ini file is no longer used. Select display and order fields should be put in the DO file as linkDisplayFields and linkOrderFields. The fix0.9.0Files.php script will move these options into your DataObject classes automatically.
+
+If you were previously using the 0.9.0 release, the script in CVS called fix0.9.0Files.php should be able to fix all BC breaks in your code and ini files. If it doesn't please send an e-mail to justinpatrin@php.net so that I can fix it. You can download the script from this URL: http://cvs.php.net/pear/DB_DataObject_FormBuilder/fix0.9.0Files.php
+
+If you were previously using a CVS version of FormBuilder.php after 1.36 up to 1.52, the script in CVS called fixPre1.52CVSFiles.php should be able to fix any BC problems you have. All this script does is rename sleect*Fields to link*Fields. You can download the script from this URL: http://cvs.php.net/pear/DB_DataObject_FormBuilder/fixPre1.52CVSFiles.php
+
+For a list of all changes, please see the CVS changelogs for FormBuilder.php. Of particular interest should be the changelog for CVS version 1.37.
+
+FURTHER IMPROVEMENTS AND MODIFICATIONS:
+- Added crossLinkSeparator option
+- Added TIME element handling (Thanks to Frank Fahs)
+- Added support for ENUM select or radio generation
+3 new options: enumFields, enumOptions, and enumOptionsCallback
+- Added linkElementTypes option
+- selectAddEmpty is now an array which should be filled with link fields that should have an empty option in their select box i.e., the option has moved from the linked to the linker
+- Removed QuickForm-specific functions from main class and introduced new QuickForm-driver class. A third parameter was added to the factory method to determine which driver is to be used.
+- Fixed bug 1829 - date callbacks not called correctly
+- Fixed issues with unset member vars and $options array in constructor
+- Better array handling for ini-arrays
+- Added more ini options to array handling
+- Array based options may be single values without a comma
+- Array based options which have no need for keys (selectDisplayFields, etc.) don't need the key
+- Fixed bug where linked fields in selectDisplayFields didn't know their own selectDisplayFields
+- Fixed bug where cross/tripleLinks are frozen if not in userEditableFields array
+- Added missing createSubmit option
+- Fixed Bug #1715 (minutes and seconds are lost in _array2date)
+- Got rid of Required QF rule for NOT NULL fields which are frozen
+- Fixed bug 1699 (Notice: Undefined property _triple/_crossLinks)
+- Fixed bug 1700 (Notice: Array to string conversion)
+- Added freezing of triplelink elements accoring to elements_to_freeze
+- Added missing code to freeze fields not in userEditableFields (if it exists)
+- Added code to allow any field to be a link field
+- Fixed bug #1500, adding fallback to displaying the primary key in selectboxes if a select_display_field cannot be identified (patch by Justin Patrin)
+- Fixed bug #1459 (Thanks to Justin Patrin)
+- New feature: Add required rule for NOT NULL fields (Bug #1487, thanks to Justin Patrin)
+- New feature: Add field name to error messages.
+- Small change to getDataObjectSelectDisplayValue() making use of getLink() instead of links().
+
+The FormBuilder Wiki has up-to-date documentation:
+http://opensource.21st.de/tiki-index.php?page=DB_DataObject_FormBuilder
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.10.1</release>
+     <api>0.10.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-10-26</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Allow arrays in preDefElements (creates a group)
+
+If you are upgrading from a pre-0.10.0 version, read the 0.10.0 release notes!
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.10.2</release>
+     <api>0.10.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-10-28</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+dateElementFormat member variable was missing. This configuration option should now work from DataObjects.
+
+If you are upgrading from a pre-0.10.0 version, read the 0.10.0 release notes!
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.10.3</release>
+     <api>0.10.3</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-11-08</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+New functionality! Added elementNamePrefix and elementNamePostfix options which allow you to add a prefix and/or postfix to element names. Please see the wiki for more info:
+http://opensource.21st.de/tiki-index.php?page=Formbuilder+configuration+options#id178017
+Re-added support for requiredRuleMessage (bug 2719) Thanks to pavel dot kunc at beneta dot cz
+If you are upgrading from a pre-0.10.0 version, read the 0.10.0 release notes!
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.11.1</release>
+     <api>0.11.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-01-08</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+0.11.1 adds a file missing in the 0.11.0 release
+Lots of new options, bug fixes, and a few changes. Check the wiki for more detailed info on new options.
+fixes:
+- Re-added support for timeElementFormat option
+- Re-added &quot;copy&quot; support for dbDateFormat (although it is not currently used)
+- Auto-generated form name is now always lowercase to ensure identical behaviour in PHP4 and PHP5
+- Fixed hidePrimaryKey issues when set in the ini file
+- Moved the rest of the driver-specific to the QuickForm driver
+- Changed crossLink and tripleLink code to use setDefaults (bug #2913)
+- Fix tripleLinks not holding their value after a submit (related to bug #2913)
+- Added support for all date format types specified in bug# 2375
+   NOTE: 'l' and 'D' types are supported by _date2Array, but not _array2Date. This means they can be output, but upon submission they do nothing.
+- Fixed freezing problems with crossLinks and tripleLinks (bug #2915)
+   A new QuickForm element type has been created for this. It is in DB/DataObject/FormBuilder/QuickForm/ElementTable.php. This element creates an HTML_Table with rows of elements. The table may or may not have row and column headers. Any QF element may be in each cell.
+- Fixed bug where time elements were created with 'date' type options (this should change nothing unless you use elementTypeMap)
+- 0 as primary key no longer causes unwanted insert (bug #2979)
+- Fixed elementNamePrefix and elementNamePostfix when used with crosslink and triplelink and dates
+  [ and ] are no longer allowed in the prefix and postfix
+changes:
+- The Primary Key is now retrieved using a new internal method (_getPrimaryKey) which looks first in the _primary_key property of the DataObject, then tries sequenceKey(), then the first element in keys()
+- Added patch to &quot;sync&quot; crosslinks and triplelinks instead of deleting all and recreating (Bug #2841)
+- The numeric rule will only be set if FB creates the element (bug #3042)
+- Renamed getDataObjectSelectDisplayValue() to getDataObjectString()
+new:
+- Added multi-select support to QF driver
+- Re-added multi-select support for crossLinks
+- Added casting of '' to NULL for link fields (for selectAddEmpty)
+- Added automatic entry of an empty option for link fields which are not DB_DATAOBJECT_NOTNULL
+- Added selectAddEmpty support for enum fields
+- Enum fields will automatically have an empty option if they are allowed to be NULL (same as for links)
+- Added a new crossLinkExtraFields option for crossLinks which allows editing of extra fields in the crosslink table
+- Added prepareLinkedDataObject callback for DO to customize link options (bug #2958)
+- Added elementTypeAttributes and fieldAttributes configuration options to QF driver
+- Added a new option: useCallTimePassByReference which defaults to false (bug #2658)
+- Added support for reverseLinks (request #2889)
+- Added support for boolean fields. Boolean fields are rendered as checkboxes
+- Added new option booleanFields
+- getDataObjectString() is now statically callable
+If you are upgrading from a pre-0.10.0 version, read the 0.10.0 and 0.10.1 release notes!
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.11.2</release>
+     <api>0.11.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-01-10</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-If DB_DATAOBJECT_BOOL is set in the type by the DataObject generator, it will take effect before the INT rules. (bug #3154)
+-Return only values whose keys start with the prefix and end with the postfix (bug #3163)
+-Fix processing of boolean fields not in booleanFields (bug #3167)
+-Enum fields display when frozen (bug #3124)
+-Changed crossLink extraFields to save the created FB object and use it for processing
+-CrossLinks also no longer use array syntax (which is not allowed for prefix and postfix)
+-Only set defaults for fields we are processing (bug #3199)
+-fieldsToRender should always be shown, even if not in preDefOrder (bug #3182)
+-Added prepareLinkedDataObject support for crosslinks and triplelinks
+-&quot;Required&quot; rule should not be applied to boolean fields
+-Fixed notices of undefined $key with prepareLinkedDataObject when processing tripleLinks and crossLinks
+-Use eval for call-time-pass-by-ref to avoid the warning (bug #3230)
+-Added selectAddEmptyLabel which allow setting of the label for an empty option
+-Fixed DATETIME type checking (was catching TIME elements)
+-Added a new datetime element to QF driver
+-Added dateTimeElementFormat option
+-New datetime type supports datetimeoptions callback in DO
+-Added language for time element (uses dateFieldLanguage)
+-Fix copy-paste error (bug #3333)
+-Fix auto-required rules not working with elementNamePre/Postfix (bug #3343)
+-Added elementTypeMap support for selects
+-Time / Date processing changes for Bug #3330
+-- If only a time is passed to _date2Array it will prepend today's date so that PEAR::Date will process it correctly
+-- You no longer have to have all 3 date fields specified for a date to be output from _array2date
+--- For example, f only a day is specified, it will put 0000 for year and 00 for month
+--- The same applies to times *except* that seconds will only be output of they are specified
+---- If only an hour and minute are specified (or only one of the 2) you will get H:i with no s
+---- If only seconds are specified you would get 0 for hour and minute
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.11.3</release>
+     <api>0.11.3</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-02-26</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-Remove special chars from package.xml
+-Fixed enumOptions option (bug #3469)
+-Fixed bug where if field is not set in reverseLink initial setup, reverseLinks fail to work
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.11.4</release>
+     <api>0.11.4</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-03-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-The FormBuilder object is now passed into preProcessForm and postProcessForm as the second argument
+-The FormBuilder object is now passed into getForm as the fifth argument
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.11.5</release>
+     <api>0.11.5</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-03-03</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-Fixed call-time-pass-by-ref warning with new getForm parameter
+-Fixed date format 'A' type not working due to copy/paste error
+-Fixed possible problem in _date2Array when posting empty values
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.12.0</release>
+     <api>0.12.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-03-04</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Added a new feature, linkNewValue. This is on by default for now. When a link select box is created the bottom entry is &quot;--New Value--&quot;. When selected, this un-hides a form below the select box for creation of a new linked record. If you're not sure what this is, try it, it's a very neat feature. Note: this requires JavaScript.
+Added error return when enum options are not found
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.12.1</release>
+     <api>0.12.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-03-05</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-Added a new feature, linkNewValue. This is on by default for now. When a link select box is created the bottom entry is &quot;--New Value--&quot;. When selected, this un-hides a form below the select box for creation of a new linked record. If you're not sure what this is, try it, it's a very neat feature. Note: this requires JavaScript.
+-Added error return when enum options are not found
+-0.12.1 adds the missing file PopupSelect.php
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.13.0</release>
+     <api>0.13.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-03-25</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-BC Break! linkNewValue is now off by default
+-Added support for specifying the location of preDefGroups in preDefOrder (use the group name) (request #3796)
+--If no entry is in preDefOrder for a preDefGroup it will be placed where the first element it contains would be placed
+-excludeFromAutoRules option added. Allows excluding of some or all element from automatic rule generation
+-Fixed notice in PopupSelect.php due to old commented JavaScript
+-Possible fix for some Primary Key problems
+-Fixed issues with using global functions as callbacks
+-Fixed further problems with ElementTable (crossLinks with extraFields / tripleLinks)
+-Fixed warnings when no links are defined (bug #3941)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.13.1</release>
+     <api>0.13.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-04-08</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-Fix Bug #3877 extra fields in crosslink table lost on update to parent table when crossLink type is select
+-Fix fatal errors when crossLinkExtraFields is set and the crossLink is of type 'select'
+-Removed all direct use of Primary Key from crossLink and tripleLink code as it was technically incorrect. It now uses the value from the links.ini
+-Fixed issue with populateOptions being called in DataObject callbacks other than preGenerateForm
+-Fixed issue with crossLink tables with no primary key
+-Fixed possible issue with tripleLinks regarding primary key
+-Fixed possible problem with crossLinks and tripleLinks when no values are found
+-Fixed possible problem with copies of DataObjects using factory
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.13.2</release>
+     <api>0.13.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-04-08</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-It is now possible to use something other than the primary key for a link. This field must be unique, though, or you will have an inconsistent database. FormBuilder will *not* warn you if the field is not unique.
+-tripleLinks and crossLinks will now always use the field values from the links.ini instead of primary keys
+-Added a 'multiselect' option to the elementTypeMap. You may now set a different QF element type for multiselects.
+-Fixed a bug where tripleLinks and crossLinks were filled out in a new record (non-fetched DO)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.13.3</release>
+     <api>0.13.3</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-04-13</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+-Fixed a bug which made linkNewValue not work with elementNamePrefix/Postfix
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.14.0</release>
+     <api>0.14.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-04-28</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Changes
+-BC break: Made enum options more flexible
+--Options in enumOptions or returned from enumOptionsCallback may be in one of two formats
+--If the first key of the array is an integer (such as 0) then the array is reformulated to have each value as the key. In other words, the key information is lost
+--If you wish to have the keys kept as-is (inserted into the database as they are) make your keys are strings (such as '0')
+
+-Changed _getPrimaryKey, _date2Array, and _array2Date to allow them to be called statically
+Fixes
+-Fixed notice when checking crossLink['type']
+New Features
+-Added return of errors from processForm when DB operations fail
+--This is a slight BC break as further operations will no longer be attempted
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.15.0</release>
+     <api>0.15.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-05-17</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Changes
+-BC Break, removed enum option reindexing altogether
+--enum option arrays *must* be indexed with the value you want to go into the DB. For normal enums, make the key and the value equal
+--array('option1' =&gt; 'option1', 'option2' =&gt; 'option2')
+--This *only* affects those who don't use the built-in callback to get the options from the DB automatically
+Fixes
+-Fixed typo which caused update errors to throw a fatal PHP error (bug #4364)
+New Features
+-Added linkNewValueText option to allow customizing of the linkNewValue option text
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.16.0</release>
+     <api>0.16.0</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2005-05-20</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Sorry to bring us back down to alpha, but I just changed the driver architecture. We should be back up to beta within a few releases.
+
+Changes
+* BC Break! The QuickForm driver no longer extends the FormBuilder main class
+** This means that extended versions of FormBuilder are no longer tied to a specific driver, however
+** If you have created your own FormBuilder extended class in the past you now need to alter it to
+** extend DB_DataObject_FormBuilder instead of DB_DataObject_FormBuilder_QuickForm
+
+** If you are instantiation your FormBuilder object with &quot;new&quot; you should switch to using DB_DataObject_FormBuilder::create()
+
+Fixes
+* validateOnProcess no longer fails when linkNewValue is used
+
+New Features
+* There are now callback options to allow custom functions to be set for:
+** preGenerateForm
+** postGenerateForm
+** preProcessForm
+** postProcessForm
+** prepareLinekdDataObject
+
+** Note: useCallTimePassByRef is now needed only if you use the FormBuilder parameter in the getForm callback
+
+* If you set the 'collapse' key of a crossLink array to true, the unselected crossLink records will be hidden until you click the &quot;Show All&quot; link beneath them. This should help a lot for large amounts of records in crossLinks.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.17.0</release>
+     <api>0.17.0</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2005-05-27</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Fixed bug #4407, addFormHeader no longer works in 0.16.0
+Fixed notices in QuickForm.php related to member vars
+Fixed __ALL__ value in ini file for excludeFromAutoRules getting changed to __ALL__
+Fixed bug #4440, Appended forms does not contain rules and errors
+Added fieldsRequired option to set non NOT NULL fields as required automatically
+Added support for multiple crossLink and tripleLink elements to the same table in one form
+Changed linkNewValue to use a SubForm element and a group instead of PopupSelect
+Removed PopupSelect as it's no longer used
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.17.1</release>
+     <api>0.17.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-06-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Moving back to Beta
+
+* Fixed issue with frozen crosslinks / triplelinks being processed incorrectly
+* trackSubmit is now set true for all forms
+* elementTypeMap arrays need not have all options, only the ones you wish to override need to be specified
+* Added elementTypeMap entry for subForm
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.17.2</release>
+     <api>0.17.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-06-17</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Fixed issue with setStaticProperty
+** Basically you don't need this line any more:
+** $_DB_DATAOBJECT_FORMBUILDER['CONFIG'] = $config['DB_DataObject_FormBuilder'];
+* Fixed problems with not null / required fields and the type option arrays (enumFields, textFields, etc) (bug #4617)
+* Fixed call-time-pass-by-ref error with preGenerateForm
+* Fixed elementNamePrefix/Postfix when collapsing crossLinks
+* crossLink and tripleLink header cells now use &quot;elementTableColumnLabel&quot; and &quot;elementTableRowLabel&quot; classes instead of hard-coding &quot;lightgrey&quot; as a background color for easy styling
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.18.0</release>
+     <api>0.18.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-08-22</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Fixed notice about $className in FormBuilder.php
+* Fig bug #4867 - enumOptions renumbered for NULL fields
+* Fixed bug where _array2Date added AM/PM to dates
+* Fixed bug where some callbacks set in PEAR::setStaticProperty or passed into the constructor would get overwritten with defaults
+* Fixed bug #5127 - cross/triple/reverseLinks don't work with pgsql
+* Fixed bug #4562 - date elements need to use addGroupRule
+
+* Altered create() to allow for any main class to be used
+* Altered create() to allow for inclusion of driver classes outside FormBuilder
+* The prepareLinkedDataObject callback may now affect displayFields and other link options
+* Added date/time option callback properties
+* Altered the default field labels to be much more useful
+
+* Changed SubForm elements to always use the default QuickForm renderer (used by linkNewValue)
+* Changed dataFromDatabaseCallback and dateToDatabaseCallback to allow for disabling of them
+** This is a slight BC break as a non-callable value was previously replaced with the defaults
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.18.1</release>
+     <api>0.18.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-08-22</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Fix bug #5188 - date option callbacks default values do not work
+
+* Implemented request #4647 - Added collapse support for reverseLinks
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC1</release>
+     <api>1.0.0RC1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-10-07</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* First RC for 1.0.0.
+
+* Fix a bug which caused nested linkNewValue forms and linkNewValue forms used in conjunction with elementNamePrefix/postfix not to insert a record
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC2</release>
+     <api>1.0.0RC2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-10-17</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Fix problems with callbacks and overloading (PHP5) (fixes date element array_merge errors)
+* Removed forced break between a link element and its linkNewValue sub-form
+* Fixed a bug in SubFormFB which broke some linkNewValue forms
+* Fixed issue with the encoding type of a form when a sub-form has a file element
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC4</release>
+     <api>1.0.0RC4</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2006-03-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+(Fixed since 1.0.0RC3)
+* Fixed undefined index notice in SubForm.php and other possible breakage
+** This was caused by the packaging of a version of SubForm.php which is not checked into CVS and has unsupported changes. Please upgrade as soon as you can to avoid breaking your scripts.
+
+(Changelog for 1.0.0RC3)
+* Fixed &quot;only variables should be assigned by reference&quot; notices (bug #5733)
+* Fixed a bug where boolean fields in the booleanFields option were overridden when not set as editable
+* Fixed a bug where cross/reverse/tripleLinks were processed when not set editable or rendered
+* Fixed notice about undefined variable $ordered (bug #6894)
+
+* Added linkNewNalue support for reverseLinks (Thanks to Brett Beiber for this patch)
+** Adds _createSubForm in the QuickForm renderer
+** Multiple SubForms are allowed for each reverseLink
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC5</release>
+     <api>1.0.0RC5</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2006-09-17</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* BC Break!
+** useMutators must now be set for setters to be used (this gets around problems with overloading)
+** useAccessors will now cause getters to be used to get non-link data
+*** accessors and mutators may not be used for link fields
+
+* Form values changed in preProcessFormCallback are now honored
+* De-silenced include_once (fopen now used to check for file readability)
+* _getEnumOptions() now works with MDB2
+* Boolean fields which are set editable but are not set as DB_DATAOBJECT_BOOL will now be set correctly
+* Fixed displaying of postgresql booleans
+* _sanitizeFieldName is now used when listing special elements (fixes some cross/triple/reverse link bugs)
+* Added more info to error output
+* Extended FormBuilder classes will now be re-used for sub-FormBuilders
+* Added an option to set the empty label for radios which is distinct from the select empty label (Request #7919)
+* Header elements now have a name
+* Fixed some docs
+* Fixed an undefined reference
+* SubForm.php now outputs a type attribute in all &lt;script&gt; output
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC6</release>
+     <api>1.0.0RC6</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2006-12-19</date>
+    <license uri="http://www.gnu.org/licenses/lgpl.txt">LGPL</license>
+    <notes>
+Additions:
+- Request #8721 CrossLinks now have a tri-state link which can hide all (thanks to peter at niebling dot name)
+
+Bugs Fixed:
+- Form processing will now fail when a reverseLink subForm fails processing
+- Bug #8105 The &quot;g&quot; formatter is now available in the default date formatter callbacks (thanks to dsanders at baselinesolutions dot com dot au)
+- Bug #6962 Crosslinks with special chars in their names, such as postgres tables, are processed again
+
+Changes:
+- The internal ElementTable QuickForm element is no longer used in favor of HTML_QuickForm_ElementGrid
+- package.xml 2.0 is now used exclusively, you must have PEAR 1.4.4 or greater installed to install DB_DataObject_FormBuilder
+- This package is now licensed under the LGPL
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0RC7</release>
+     <api>1.0.0RC6</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2007-03-31</date>
+    <license uri="http://www.gnu.org/licenses/lgpl.txt">LGPL</license>
+    <notes>
+* Fix Bug #10574: Line 1750 [justinpatrin]
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.0</release>
+     <api>1.0.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2009-05-26</date>
+    <license uri="http://www.gnu.org/licenses/lgpl.txt">LGPL</license>
+    <notes>
+First stable release.
+
+Fixes:
+* Fixed driver name case issues (bug #13071)
+* Fixed _array2date() notices (bug #14079)
+* Made unit tests skip instead of fail when configuration isn't present
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.1</release>
+     <api>1.0.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2010-10-25</date>
+    <license uri="http://www.gnu.org/licenses/lgpl.txt">LGPL</license>
+    <notes>
+Automatically built QA release
+Bug #17985 package.xml is invalid - saltybeagle
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

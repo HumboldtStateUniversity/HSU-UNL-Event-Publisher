@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1160/standalone/trunk/includes/pear/MDB2/Driver/Native
+END
+mysqli.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Driver/Native/mysqli.php
+END
+mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Driver/Native/mysql.php
+END
+pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1160/standalone/trunk/includes/pear/MDB2/Driver/Native/pgsql.php
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Driver/Native/Common.php
+END

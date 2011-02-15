@@ -1,0 +1,25 @@
+
+[category]
+category_id = 1
+title = 2
+
+[category__keys]
+category_id = 1
+
+[manufacturer]
+manufacturer_id = 1
+name = 2
+
+[manufacturer__keys]
+manufacturer_id = 1
+
+[product]
+product_id = 1
+title = 2
+article_number = 2
+description = 2
+manufacturer_ID = 1
+category_ID = 1
+
+[product__keys]
+product_id = 1

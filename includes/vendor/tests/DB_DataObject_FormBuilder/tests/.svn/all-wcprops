@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests
+END
+submitText.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/submitText.phpt
+END
+createWithDriver.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/createWithDriver.phpt
+END
+createWithOptions.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/createWithOptions.phpt
+END
+links.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/links.phpt
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/config.php
+END
+formHeaderText.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/formHeaderText.phpt
+END
+forceInsert.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/forceInsert.phpt
+END
+elementNamePrefix_Postfix.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/elementNamePrefix_Postfix.phpt
+END
+newRecordInserted.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/newRecordInserted.phpt
+END
+dateElement.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/dateElement.phpt
+END
+createSubmit.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/createSubmit.phpt
+END
+configAndOverride.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/configAndOverride.phpt
+END
+dateOptionsCallbacks.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/dateOptionsCallbacks.phpt
+END
+textElement.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/textElement.phpt
+END
+array2date.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/array2date.phpt
+END
+existingRecordUpdated.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/existingRecordUpdated.phpt
+END
+notNullFieldRequired.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/notNullFieldRequired.phpt
+END
+getForm.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/getForm.phpt
+END
+typeArrays.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/typeArrays.phpt
+END
+create.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/create.phpt
+END
+movie.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/movie.sql
+END
+enum.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/enum.phpt
+END
+primaryKeyIsHidden.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/tests/DB_DataObject_FormBuilder/tests/primaryKeyIsHidden.phpt
+END

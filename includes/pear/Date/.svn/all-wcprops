@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1311/standalone/trunk/includes/pear/Date
+END
+TimeZone.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1311/standalone/trunk/includes/pear/Date/TimeZone.php
+END
+Span.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1311/standalone/trunk/includes/pear/Date/Span.php
+END
+Calc.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1311/standalone/trunk/includes/pear/Date/Calc.php
+END
+Human.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1311/standalone/trunk/includes/pear/Date/Human.php
+END

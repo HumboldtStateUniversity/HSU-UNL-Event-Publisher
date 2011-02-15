@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator
+END
+Weekday.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator/Weekday.php
+END
+Uri.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator/Uri.php
+END
+Wrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator/Wrapper.php
+END
+Textual.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator/Textual.php
+END

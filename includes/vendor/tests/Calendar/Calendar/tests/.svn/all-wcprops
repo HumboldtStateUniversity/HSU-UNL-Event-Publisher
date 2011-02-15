@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests
+END
+all_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/all_tests.php
+END
+calendar_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/calendar_tests.php
+END
+year_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/year_test.php
+END
+util_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/util_tests.php
+END
+decorator_uri_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/decorator_uri_test.php
+END
+decorator_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/decorator_tests.php
+END
+calendar_tabular_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/calendar_tabular_tests.php
+END
+validator_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/validator_tests.php
+END
+peardate_engine_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/peardate_engine_test.php
+END
+calendar_include.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/calendar_include.php
+END
+hour_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/hour_test.php
+END
+day_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/day_test.php
+END
+helper_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/helper_test.php
+END
+unixts_engine_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/unixts_engine_test.php
+END
+calendar_engine_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/calendar_engine_tests.php
+END
+month_weekdays_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/month_weekdays_test.php
+END
+decorator_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/decorator_test.php
+END
+month_weeks_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/month_weeks_test.php
+END
+decorator_textual_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/decorator_textual_test.php
+END
+week_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/week_test.php
+END
+util_uri_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/util_uri_test.php
+END
+simple_include.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/simple_include.php
+END
+validator_error_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/validator_error_test.php
+END
+minute_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/minute_test.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/README
+END
+calendar_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/calendar_test.php
+END
+table_helper_tests.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/table_helper_tests.php
+END
+second_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/second_test.php
+END
+week_firstday_0_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/week_firstday_0_test.php
+END
+util_textual_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/util_textual_test.php
+END
+validator_unit_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/validator_unit_test.php
+END
+month_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Calendar/Calendar/tests/month_test.php
+END

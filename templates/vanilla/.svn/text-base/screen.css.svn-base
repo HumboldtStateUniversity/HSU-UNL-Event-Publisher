@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+html{
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+#frontend_view_selector {border-bottom:1px solid;margin:10px;padding:5px;}
+#frontend_view_selector li {display:inline;border:1px solid;border-bottom:none;margin:0px;padding:5px;}
+.wp-calendar {float:right;}
+.footer {border-top:1px solid;font-size:smaller;}

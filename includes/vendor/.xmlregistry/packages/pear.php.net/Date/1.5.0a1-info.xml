@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.7.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Date</name>
+ <channel>pear.php.net</channel>
+ <summary>Generic date/time handling class for PEAR</summary>
+ <description>Generic classes for representation and manipulation of
+dates, times and time zones without the need of timestamps,
+which is a huge limitation for PHP programs.  Includes time zone data,
+time zone conversions and many date/time conversions.
+It does not rely on 32-bit system date stamps, so
+you can display calendars and compare dates that date
+pre 1970 and post 2038.</description>
+ <lead>
+  <name>Baba Buehler</name>
+  <user>baba</user>
+  <email>baba@babaz.com</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Pierre-Alain Joye</name>
+  <user>pajoye</user>
+  <email>pajoye@php.net</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Monte Ohrt</name>
+  <user>mohrt</user>
+  <email>mohrt@php.net</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Firman Wandayandi</name>
+  <user>firman</user>
+  <email>firman@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>C.A. Woodcock</name>
+  <user>c01234</user>
+  <email>c01234@netcomuk.co.uk</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Alan Knowles</name>
+  <user>alan_k</user>
+  <email>alan@akbkhome.com</email>
+  <active>yes</active>
+ </developer>
+ <helper>
+  <name>Leonardo Dutra</name>
+  <user>scar</user>
+  <email>scar@php.net</email>
+  <active>yes</active>
+ </helper>
+ <date>2010-11-08</date>
+ <time>15:08:04</time>
+ <version>
+  <release>1.5.0a1</release>
+  <api>1.5.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License</license>
+ <notes>* Fixed bug #2378: getDate(DATE_FORMAT_UNIXTIME) doesn't convert to GMT
+* Fixed bug #7439: US/Indiana Daylight Savings Change
+* Implemented request #9700: Incorrect timestamps allowd
+* Fixed bug #10349: Wrong offset in timezones
+* Fixed bug #10591: inDaylightTime fails
+* Implemented request #11090: microtime is not set by default constructor
+* Fixed bug #11313: DST time change not handled correctly
+* Fixed bug #11475: Date::copy don't copy milisecond part
+* Fixed bug #11682: Australia/Perth has DST
+* Fixed bug #11708: getWeekdayAbbrname returns wrong lenght if string is unicode
+* Fixed bug #12019: Date-&gt;after(...) changes the date
+* Fixed bug #12420: Date constructor handles iso 8601 timezone offests of zero incorrectly
+* Fixed bug #12529: setTZ globally sets your TZ instead of only within date object
+* Fixed bug #13376: setFromDateDiff change source dates
+
+* Improved time-zone functionality so that it is entirely handled by the class and not reliant on native functions
+* Added leap-second functionality
+* Added functions 'Date::round()' and 'Date::trunc()'
+* Added formatting function 'Date::format2()' that uses a 'YYYY-MM-DD'-style formatting code
+* Added formatting function 'Date::format3()' to allow date-formatting using the formatting code of 'date()'</notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="/" md5sum="ba7ca89afafb406c951625633f7739e8" name="tests/test_weeknumbers_ISO.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="7f04b85a59e10ac151384b4a0944b69d" name="tests/test_weeknumbers_6.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="27ed5b40bc53a9f664bab204507eb1e7" name="tests/test_weeknumbers_5.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="5699510c89472a2099e9ce70dfed7b39" name="tests/test_weeknumbers_4.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="a8dcf87d412776f11caded951396144a" name="tests/test_weeknumbers_3.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="1b7fe13718c9aafc35fc8e4678ff609e" name="tests/test_weeknumbers_2.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="09722cfeaf9f12d9fd4bb986d01cbfe7" name="tests/test_weeknumbers_1.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="596c0a0bcadf804f1ed100122efa13a8" name="tests/test_weeknumbers_0.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="b2a5698ebb2279fafe05797805272a08" name="tests/test_round_trunc.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="1c92dbe198df45d9637d2715ffba6a4e" name="tests/test_julianday.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="222233678b80ea943f31d89fe271bd96" name="tests/test_format.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="a135be6cd4aeb32476423fa9dc95161a" name="tests/test_date_methods_span.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="7a279759c7a958309d09b32fa8da79c8" name="tests/test_calc.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="0ce1afb0702002238cbca6d4eb655db0" name="tests/test_addseconds_Paris.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="efc97a2b7c500b5231599fa9077c94ce" name="tests/test_addseconds_Calcutta.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="c513b98f00149ca9aafa80aa57e986bb" name="tests/test_addseconds.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="38622d9cb41342d3a177c354cca38599" name="tests/testunit_date_span.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="87e45df07de284e5b8fa9bac2b877b05" name="tests/testunit_date.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="42ace22a7887e03ff8b123a312108236" name="tests/testunit.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="9a4810b7c21636fcf6fc8a24d3390a56" name="tests/calc.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="069f767fcb477e2da47ada5baf4a08bb" name="tests/bugs/bug-13376.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="e9f3c1f34a1af4c45a6613532d1f391f" name="tests/bugs/bug-9801.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="2c3605d6335233cd2c2668c3bcdfcd5b" name="tests/bugs/bug-9568.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="ed5f3c43de3e753d97b5464069def920" name="tests/bugs/bug-9414.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="c4b407e940ba4abe4f1641fb906a1c1d" name="tests/bugs/bug-9213.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="06d16e340fe32eec25d7d9d9ad6673e2" name="tests/bugs/bug-8912.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="fcdacba87a1e42db9d5019dc3532a76a" name="tests/bugs/bug-8518.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="6a70afd6bb3aef644bf1df415f6b2bde" name="tests/bugs/bug-6246.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="315afd75e21bb47dd1d0b43c3764c8c0" name="tests/bugs/bug-2378.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="f88aad79a0aad52bdac4b2051ad04707" name="tests/bugs/bug-967.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="c256af3528128cefe00b8fec0f896cc6" name="tests/bugs/bug-727-4.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="1e10dff169da6bfb564677e0d22a2b03" name="tests/bugs/bug-727-3.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="141c65eed0cb184e73e145d156b76d00" name="tests/bugs/bug-727-2.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="f90332eae79803713ebedc7a0e77ed78" name="tests/bugs/bug-727-1.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="b458f713130e5b62417d4ce4f78d6075" name="tests/bugs/bug-674.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="b66305b16b8b27cf5fad0788d18292bc" name="tests/bugs/bug-445.phpt" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="e6424a28cb7c83ddee0dea62c6b9a9aa" name="docs/TODO" role="doc">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="a87378b409ca80751ca5a57399db12a1" name="docs/LICENSE" role="doc">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="2d9ab3cdf0a1d8438af99b3b5d4ead91" name="docs/examples/example.php" role="doc">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="4453316b96873b26ead2822f4d589591" name="Date/TimeZone.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="1efd48fbfa04fa460bb1e2bea1496dc8" name="Date/Span.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="19de73ea9672d6ca8248480c45377913" name="Date/Human.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="f4b06ba56d19c8ff69be2ad145fa214d" name="Date/Calc.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="6b48ff95fd02266788c855a0b0e31bf6" name="Date.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>Numbers_Words</name>
+    <channel>pear.php.net</channel>
+    <min>0.15.0</min>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>1.4</release>
+     <api>1.4</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2003-12-21</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>- improvements in input date parsing
+- add Date methods addSpan() and subtractSpan()
+- added two more ISO8601 date/time output formats DATE_FORMAT_ISO_BASIC and DATE_FORMAT_ISO_EXTENDED
+- improve Date_Calc isLeapYear() and daysInMonth() for year 1582
+- add gregorianToISO() method to Date_Calc
+- add dateSeason() method to Date_Calc
+- add Date_Span class
+- bugfix in Date_Calc when century ends in 00, only define DATE_CALC_BEGIN_WEEKDAY if not already defined
+- bugfix in beginOfNextWeek(), beginOfPreviousWeek() (thx to andreas dot kossmeier at bergfex dot at)
+- bugfix in nextDayOfWeek and prevDayOfWeek (thx to koan at gmx dot at)
+- bugfix for bug 62: getDate(DATE_FORMAT_UNIXTIME) off because of DST
+- bugfix for bug 65: format(e) returns zero-padded day
+- bugfix for bug 195: Suppress a notice in setDate()
+- bugfix for bug 271: Date_Calc weeksInMonth() returns wrong number
+- fix abstraction bug, Date constructor accepts now object that extends Date
+- add tests to release package
+- Fix notices and mins calc in to toUTCbyOffset()</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.1</release>
+     <api>1.4.1</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2004-02-24</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>- Fix #674 endOfWeek() beginOfWeek()
+- Fix #727, weeksInMonth (wrong result with some dates)
+- Fix #674 (and old system #22549), check arguments in Date_Span</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.2</release>
+     <api>1.4.2</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2004-03-14</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>- Fix #976 TimeZone default bad global usage
+  only _DATE_TIMEZONE_DEFAULT is used now
+- Fix #683, add optional length argumet to getDayName()
+- Fix PHP5 problems with get_class functions</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.3</release>
+     <api>1.4.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2004-05-16</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>- Fix #1250, wrong name for Bangladesh TZ
+- Fix #1390, add XML Schema datetime support
+  (aashley at optimiser dot com)
+  See http://www.w3.org/TR/2004/PER-xmlschema-2-20040318/#dateTime</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.4</release>
+     <api>1.4.4</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>stable</api>
+    </stability>
+    <date>2004-05-16</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>- Establish the DATE_CALC_FORMAT constant
+  and use it as the default value for each
+  of the Date_Calc class' method's $format
+  parameter.
+- Add beginOfMonthBySpan() and
+  endOfMonthBySpan() methods to Date_Calc.
+- Use integers for the parameters in
+  Date_Calc instead of strings.
+- Tweak Date_Calc::NWeekdayOfMonth() so it
+  can calculate the 'last' given weekday of
+  a month.
+- Fix Bug 1640. Make sure all longname's are also
+  keys in $GLOBALS['_DATE_TIMEZONE_DATA'].  Makes
+  Date_TimeZone work under more operating systems.
+- #5420, missing CEST
+- #3846, getYear, getMonth returns integer
+- #2652, add %h and %i support (rob at wildlime dot com
+- #5494, force dot as decimal separator
+- #3022, allow to specify the weekday abbrevation length used in ::format()
+- #4878, %s padding fix when &lt; 10 ( aashley at optimiser dot com)
+- #3059, use GLOBALS in date_span</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.5</release>
+     <api>1.4.5</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2005-10-12</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>Same code base as 1.4.4-beta
+See 1.4.4 changelog for details</notes>
+   </release>
+   <release>
+    <date>2005-11-15</date>
+    <version>
+     <release>1.4.6</release>
+     <api>1.4.6</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <notes>- Change license from PHP License to new BSD License
+- Bug #5715 fypo, missing s in $GLOBALS</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.4.7</release>
+     <api>1.4</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2006-11-22</date>
+    <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License</license>
+    <notes>* Fix bug #8912: putenv() causes crashes in DateTimeZone::inDaylightTime() under windows
+* Fix bug #9409: Date_Calc, fatal error using a non-array variable as an array
+* Fix bug #9414: Date::addSeconds() fails to work properly with negative numbers
+* Many cosmetics update
+* Moved bug test files to tests/bugs/
+* Removed unused files</notes>
+   </release>
+   <release>
+    <version>
+     <release>1.5.0a1</release>
+     <api>1.5.0</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2008-03-23</date>
+    <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License</license>
+    <notes>* Fixed bug #2378: getDate(DATE_FORMAT_UNIXTIME) doesn't convert to GMT
+* Fixed bug #7439: US/Indiana Daylight Savings Change
+* Implemented request #9700: Incorrect timestamps allowd
+* Fixed bug #10349: Wrong offset in timezones
+* Fixed bug #10591: inDaylightTime fails
+* Implemented request #11090: microtime is not set by default constructor
+* Fixed bug #11313: DST time change not handled correctly
+* Fixed bug #11475: Date::copy don't copy milisecond part
+* Fixed bug #11682: Australia/Perth has DST
+* Fixed bug #11708: getWeekdayAbbrname returns wrong lenght if string is unicode
+* Fixed bug #12019: Date-&gt;after(...) changes the date
+* Fixed bug #12420: Date constructor handles iso 8601 timezone offests of zero incorrectly
+* Fixed bug #12529: setTZ globally sets your TZ instead of only within date object
+* Fixed bug #13376: setFromDateDiff change source dates
+
+* Improved time-zone functionality so that it is entirely handled by the class and not reliant on native functions
+* Added leap-second functionality
+* Added functions 'Date::round()' and 'Date::trunc()'
+* Added formatting function 'Date::format2()' that uses a 'YYYY-MM-DD'-style formatting code
+* Added formatting function 'Date::format3()' to allow date-formatting using the formatting code of 'date()'</notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

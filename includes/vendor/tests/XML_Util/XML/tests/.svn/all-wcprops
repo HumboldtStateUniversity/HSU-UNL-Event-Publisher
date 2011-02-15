@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests
+END
+testBasic_createEndElement.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createEndElement.phpt
+END
+AllTests.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/AllTests.php
+END
+testBasic_getXmlDeclaration.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_getXmlDeclaration.phpt
+END
+testBasic_raiseError.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_raiseError.phpt
+END
+testBasic_getDocTypeDeclaration.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_getDocTypeDeclaration.phpt
+END
+testBasic_apiVersion.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_apiVersion.phpt
+END
+testBasic_reverseEntities.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_reverseEntities.phpt
+END
+testBasic_splitQualifiedName.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_splitQualifiedName.phpt
+END
+testBasic_replaceEntities.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_replaceEntities.phpt
+END
+testBasic_attributesToString.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_attributesToString.phpt
+END
+testBasic_createTagFromArray.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createTagFromArray.phpt
+END
+testBasic_createCDataSection.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createCDataSection.phpt
+END
+testBasic_createComment.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createComment.phpt
+END
+testBasic_createStartElement.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createStartElement.phpt
+END
+testBasic_isValidName.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_isValidName.phpt
+END
+testBug_4950.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBug_4950.phpt
+END
+testBug_5392.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBug_5392.phpt
+END
+testBasic_createTag.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_createTag.phpt
+END
+testBasic_collapseEmptyTags.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/XML_Util/XML/tests/testBasic_collapseEmptyTags.phpt
+END

@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1356/UNL_UCBCN/trunk/src/UNL/UCBCN
+END
+Publiccontact.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Publiccontact.php
+END
+Attendancerestriction.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Attendancerestriction.php
+END
+Account.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1248/UNL_UCBCN/trunk/src/UNL/UCBCN/Account.php
+END
+Recurringdate.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1230/UNL_UCBCN/trunk/src/UNL/UCBCN/Recurringdate.php
+END
+FacebookInstance.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1314/UNL_UCBCN/trunk/src/UNL/UCBCN/FacebookInstance.php
+END
+Event_has_sponsor.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Event_has_sponsor.php
+END
+Admissioncharge.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Admissioncharge.php
+END
+Role.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Role.php
+END
+Admissioninfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Admissioninfo.php
+END
+Sponsor.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Sponsor.php
+END
+Calendar_has_event.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1264/UNL_UCBCN/trunk/src/UNL/UCBCN/Calendar_has_event.php
+END
+Webcastlink.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Webcastlink.php
+END
+Event_targets_audience.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Event_targets_audience.php
+END
+Facebook.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1298/UNL_UCBCN/trunk/src/UNL/UCBCN/Facebook.php
+END
+Calendar.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1330/UNL_UCBCN/trunk/src/UNL/UCBCN/Calendar.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1273/UNL_UCBCN/trunk/src/UNL/UCBCN/User.php
+END
+Event_has_keyword.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Event_has_keyword.php
+END
+UnexpectedValueException.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1249/UNL_UCBCN/trunk/src/UNL/UCBCN/UnexpectedValueException.php
+END
+Relatedevent.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Relatedevent.php
+END
+FacebookRSVP.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1336/UNL_UCBCN/trunk/src/UNL/UCBCN/FacebookRSVP.php
+END
+Keyword.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Keyword.php
+END
+Cacheable.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Cacheable.php
+END
+Webcast.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Webcast.php
+END
+Error.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Error.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1249/UNL_UCBCN/trunk/src/UNL/UCBCN/Exception.php
+END
+Eventdatetime.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1264/UNL_UCBCN/trunk/src/UNL/UCBCN/Eventdatetime.php
+END
+Event_isopento_audience.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Event_isopento_audience.php
+END
+Performer.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Performer.php
+END
+EventInstance.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1264/UNL_UCBCN/trunk/src/UNL/UCBCN/EventInstance.php
+END
+Facebook_accounts.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1298/UNL_UCBCN/trunk/src/UNL/UCBCN/Facebook_accounts.php
+END
+Location.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Location.php
+END
+Autoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Autoload.php
+END
+EventListing.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1356/UNL_UCBCN/trunk/src/UNL/UCBCN/EventListing.php
+END
+CachingService.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/CachingService.php
+END
+Audience.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Audience.php
+END
+PostRunFiltering.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/PostRunFiltering.php
+END
+Document.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Document.php
+END
+Event_has_eventtype.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Event_has_eventtype.php
+END
+Event.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1264/UNL_UCBCN/trunk/src/UNL/UCBCN/Event.php
+END
+User_has_permission.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/User_has_permission.php
+END
+Eventtype.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Eventtype.php
+END
+Session.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Session.php
+END
+Subscription.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Subscription.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Filter.php
+END
+Permission.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1175/UNL_UCBCN/trunk/src/UNL/UCBCN/Permission.php
+END

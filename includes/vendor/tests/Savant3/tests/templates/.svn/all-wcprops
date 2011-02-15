@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates
+END
+06_includes.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/06_includes.tpl.php
+END
+04_plugins_fester.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/04_plugins_fester.tpl.php
+END
+footer.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/footer.tpl.php
+END
+02_output.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/02_output.tpl.php
+END
+04_plugins_date.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/04_plugins_date.tpl.php
+END
+04_plugins_image.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/04_plugins_image.tpl.php
+END
+07_escape.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/07_escape.tpl.php
+END
+04_plugins_form.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/04_plugins_form.tpl.php
+END
+header.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/header.tpl.php
+END
+04_plugins_ahref.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/04_plugins_ahref.tpl.php
+END
+03_filters.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/Savant3/tests/templates/03_filters.tpl.php
+END

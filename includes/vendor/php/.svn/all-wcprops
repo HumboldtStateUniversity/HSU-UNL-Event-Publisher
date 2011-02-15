@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1254/standalone/trunk/includes/vendor/php
+END
+package.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/php/package.php
+END
+pearcmd.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/pearcmd.php
+END
+PEAR5.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR5.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date.php
+END
+Pager.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Pager.php
+END
+Savant3.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Savant3.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1251/standalone/trunk/includes/vendor/php/Auth.php
+END
+System.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/System.php
+END
+MDB2.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/MDB2.php
+END
+DB.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/DB.php
+END
+peclcmd.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/peclcmd.php
+END
+PEAR.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR.php
+END

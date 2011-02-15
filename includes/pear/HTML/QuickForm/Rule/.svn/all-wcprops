@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule
+END
+Regex.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Regex.php
+END
+Callback.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Callback.php
+END
+Range.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Range.php
+END
+Required.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Required.php
+END
+Compare.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Compare.php
+END
+Email.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Rule/Email.php
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Auth.php
+END
+Container.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container.php
+END
+SASL.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/SASL.php
+END
+Controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Controller.php
+END
+RADIUS.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/RADIUS.php
+END
+Anonymous.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Anonymous.php
+END

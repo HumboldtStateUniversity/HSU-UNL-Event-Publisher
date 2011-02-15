@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container
+END
+Multiple.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/Multiple.php
+END
+KADM5.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/KADM5.php
+END
+MDB.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/MDB.php
+END
+SOAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/SOAP.php
+END
+NetVPOPMaild.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/NetVPOPMaild.php
+END
+SMBPasswd.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/SMBPasswd.php
+END
+DBLite.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/DBLite.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/Array.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/File.php
+END
+LDAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/LDAP.php
+END
+POP3.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/POP3.php
+END
+SAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/SAP.php
+END
+MDB2.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/MDB2.php
+END
+DB.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/DB.php
+END
+IMAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/IMAP.php
+END
+PEAR.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/PEAR.php
+END
+SOAP5.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/SOAP5.php
+END
+vpopmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/vpopmail.php
+END
+RADIUS.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Auth/Container/RADIUS.php
+END

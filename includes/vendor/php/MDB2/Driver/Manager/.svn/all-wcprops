@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/MDB2/Driver/Manager
+END
+mysqli.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/MDB2/Driver/Manager/mysqli.php
+END
+mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/MDB2/Driver/Manager/mysql.php
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/MDB2/Driver/Manager/Common.php
+END

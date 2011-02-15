@@ -1,0 +1,86 @@
+10
+
+dir
+1359
+http://unl-event-publisher.googlecode.com/svn/standalone/trunk/includes/vendor
+http://unl-event-publisher.googlecode.com/svn
+
+
+
+2010-11-08T21:47:13.256840Z
+1254
+brett.bieber
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+5ebfb90f-9047-0410-bcc6-e12502920475
+
+.pear2registry
+file
+
+
+
+
+2011-02-08T21:45:04.000000Z
+a5bc07e3b20b8fa86949fcdb75651a47
+2010-11-08T21:18:38.054965Z
+1251
+brett.bieber
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+580608
+
+tests
+dir
+
+.configsnapshots
+dir
+
+php
+dir
+
+.xmlregistry
+dir
+
+bin
+dir
+
+docs
+dir
+
+data
+dir
+
+downloads
+dir
+

@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm
+END
+element.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/element.php
+END
+hidden.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/hidden.php
+END
+hiddenselect.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/hiddenselect.php
+END
+group.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/group.php
+END
+link.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/link.php
+END
+radio.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/radio.php
+END
+input.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/input.php
+END
+RuleRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/RuleRegistry.php
+END
+autocomplete.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/autocomplete.php
+END
+password.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/password.php
+END
+submit.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/submit.php
+END
+xbutton.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/xbutton.php
+END
+html.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/html.php
+END
+Renderer.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer.php
+END
+Rule.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Rule.php
+END
+button.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/button.php
+END
+date.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/date.php
+END
+textarea.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/textarea.php
+END
+file.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/file.php
+END
+select.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/select.php
+END
+advcheckbox.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/advcheckbox.php
+END
+image.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/image.php
+END
+reset.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/reset.php
+END
+text.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/text.php
+END
+checkbox.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/checkbox.php
+END
+hierselect.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/hierselect.php
+END
+static.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/static.php
+END
+header.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/header.php
+END

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests
+END
+db_ismanip.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/db_ismanip.phpt
+END
+prepexe.inc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/prepexe.inc
+END
+transactions.inc
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/transactions.inc
+END
+numrows.inc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/numrows.inc
+END
+errors.inc
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/errors.inc
+END
+limit.inc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/limit.inc
+END
+db_factory.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/db_factory.phpt
+END
+simplequery.inc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/simplequery.inc
+END
+numcols.inc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/numcols.inc
+END
+fetchmodes.inc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/fetchmodes.inc
+END
+db_error2.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/db_error2.phpt
+END
+include.inc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/include.inc
+END
+fetchmode_object.inc
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/fetchmode_object.inc
+END
+skipif.inc
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/skipif.inc
+END
+run.cvs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/run.cvs
+END
+db_parsedsn.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/db_parsedsn.phpt
+END
+sequences.inc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/sequences.inc
+END
+db_error.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/db_error.phpt
+END

@@ -1,0 +1,77 @@
+/*	-------------------------------------------------------------
+	IE 6 only hacks
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+* html #right_area {
+	height: 200px;
+}
+
+* html #maincontent form fieldset legend {
+	margin: -13px 0 0 -7px;
+}
+* html #navigation div#nav_end{
+height:7px;
+margin:-1px 0 0 0;top:-6px;
+width:219px;
+position:relative;
+background:url(images/wapp_nav_bottom.gif) no-repeat left bottom;
+}
+* html #maincontent form fieldset li {
+	height: 1px;
+	float:none;
+}
+
+* html #maincontent form input,* html #maincontent form textarea,#maincontent form select
+	{
+	margin: 0;
+}
+
+* html #maincontent form fieldset {
+	margin: 20px 0;
+	padding: 0 0 10px 0;
+}
+
+* html #maincontent form fieldset.d__header___class {
+	margin-top: 4px;
+}
+* html body#subscribe #maincontent form fieldset.d__header___class{margin:40px 0 0 0;}
+* html #maincontent form fieldset li.reqnote {
+	margin: 0 0 20px 0;
+}
+
+* html body#normal div#maincontent ul.eventsbystatus {
+	margin: -27px 0 10px 0;;
+	padding: 6px 6px 0 6px;
+}
+* html #maincontent form fieldset.eventFieldsetAction{
+	margin:2px 205px 0 0 ;
+}
+* html #maincontent form fieldset.eventFieldsetAction label, * html #maincontent form fieldset.eventFieldsetAction legend{
+	position:absolute;top:-9999px;display:inline;
+}
+/*	-------------------------------------------------------------
+	IE 7
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+*+html #maincontent form fieldset.eventFieldsetAction label, *+html #maincontent form fieldset.eventFieldsetAction legend{
+	position:absolute;top:-9999px;display:inline;
+}
+
+*+html #maincontent form fieldset legend {
+	margin: -13px 0 0 -7px;
+}
+
+*+html body#normal div#maincontent ul.eventsbystatus {
+	margin: -27px 0 10px 0;;
+	padding: 6px 6px 0 6px;
+}
+
+*+html #maincontent form fieldset.d__header___class {
+	margin-top: 4px;
+}
+*+html body#subscribe #maincontent form fieldset.d__header___class{margin:40px 0 0 0;}
+*+html #maincontent form fieldset {
+	margin: 20px 0;
+	padding: 0 0 10px 0;
+}
+*+html #maincontent form fieldset li {
+	float:none;
+}

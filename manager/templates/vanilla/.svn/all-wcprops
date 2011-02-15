@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1358/UNL_UCBCN_Manager/trunk/www/templates/vanilla
+END
+EventListing.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1217/UNL_UCBCN_Manager/trunk/www/templates/vanilla/EventListing.tpl.php
+END
+manager_ieonly.css
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1178/UNL_UCBCN_Manager/trunk/www/templates/vanilla/manager_ieonly.css
+END
+EventListing_search.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1255/UNL_UCBCN_Manager/trunk/www/templates/vanilla/EventListing_search.tpl.php
+END
+manager_main.css
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1178/UNL_UCBCN_Manager/trunk/www/templates/vanilla/manager_main.css
+END
+manager.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1226/UNL_UCBCN_Manager/trunk/www/templates/vanilla/manager.js
+END
+manager_default.css
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1357/UNL_UCBCN_Manager/trunk/www/templates/vanilla/manager_default.css
+END
+Manager_Login.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1347/UNL_UCBCN_Manager/trunk/www/templates/vanilla/Manager_Login.tpl.php
+END
+Manager_Recommend.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1178/UNL_UCBCN_Manager/trunk/www/templates/vanilla/Manager_Recommend.tpl.php
+END
+Error.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1178/UNL_UCBCN_Manager/trunk/www/templates/vanilla/Error.tpl.php
+END
+Manager.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1358/UNL_UCBCN_Manager/trunk/www/templates/vanilla/Manager.tpl.php
+END

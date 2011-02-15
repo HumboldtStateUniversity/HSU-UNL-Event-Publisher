@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar
+END
+Calendar.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Calendar.php
+END
+Week.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Week.php
+END
+Second.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Second.php
+END
+Day.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Day.php
+END
+Hour.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Hour.php
+END
+Year.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Year.php
+END
+Minute.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Minute.php
+END
+Decorator.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Decorator.php
+END
+Month.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Month.php
+END
+Validator.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Validator.php
+END
+Factory.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/Calendar/Factory.php
+END

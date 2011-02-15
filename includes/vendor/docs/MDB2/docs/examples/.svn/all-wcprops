@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/docs/MDB2/docs/examples
+END
+example.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/docs/MDB2/docs/examples/example.php
+END
+metapear_test_db.schema
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/docs/MDB2/docs/examples/metapear_test_db.schema
+END
+example_php5.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/docs/MDB2/docs/examples/example_php5.php
+END

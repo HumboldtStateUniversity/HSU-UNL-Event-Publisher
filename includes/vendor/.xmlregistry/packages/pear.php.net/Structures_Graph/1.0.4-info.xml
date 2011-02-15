@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Structures_Graph</name>
+ <channel>pear.php.net</channel>
+ <summary>Graph datastructure manipulation library</summary>
+ <description>Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed
+and undirected graphs, with data and metadata stored in nodes. The library provides functions for graph traversing
+as well as for characteristic extraction from the graph topology.</description>
+ <lead>
+  <name>Sérgio Carvalho</name>
+  <user>sergiosgc</user>
+  <email>sergio.carvalho@portugalmail.com</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>brett.bieber@gmail.com</email>
+  <active>yes</active>
+ </helper>
+ <date>2010-11-08</date>
+ <time>15:06:58</time>
+ <version>
+  <release>1.0.4</release>
+  <api>1.0.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>LGPL License</license>
+ <notes>
+Bugfix Release:
+* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
+ </notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="/" md5sum="5791baa61d5d36442be58ea5cd9d4bd0" name="tests/testCase/BasicGraph.php" role="test"/>
+   <file baseinstalldir="/" md5sum="4fed49ef60db01eed800105aae4f2c8b" name="tests/AllTests.php" role="test"/>
+   <file baseinstalldir="/" md5sum="254ebaba7537ad0f36e63eb8b975cc51" name="Structures/Graph/Node.php" role="php"/>
+   <file baseinstalldir="/" md5sum="0492e677436d29228df93dca23629e06" name="Structures/Graph/Manipulator/TopologicalSorter.php" role="php"/>
+   <file baseinstalldir="/" md5sum="f0aff5a1efd188d63b4b8b9e9e840b97" name="Structures/Graph/Manipulator/AcyclicTest.php" role="php"/>
+   <file baseinstalldir="/" md5sum="4f25a6275af156f6f8e7b4309cb9f40d" name="Structures/Graph.php" role="php"/>
+   <file baseinstalldir="/" md5sum="7fbc338309ac38fefcd64b04bb903e34" name="LICENSE" role="data"/>
+   <file baseinstalldir="/" md5sum="628eb6532a8047bf5962fe24c1c245df" name="docs/tutorials/Structures_Graph/Structures_Graph.pkg" role="doc"/>
+   <file baseinstalldir="/" md5sum="6fdd16675f2181b53a4d2dc2c419752b" name="docs/html/todolist.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="7c1f852d7aa1a2fcada473723c8a46c2" name="docs/html/Structures_Graph/_Structures_Graph_php.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="0337573b69355c8b7ad36cd8f40ce859" name="docs/html/Structures_Graph/_Structures_Graph_Node_php.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="4faffdcc81cbc92520104e90a651a971" name="docs/html/Structures_Graph/_Structures_Graph_Manipulator_TopologicalSorter_php.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="9cfeca2ff35a44b4bb921a9a818d8fa6" name="docs/html/Structures_Graph/_Structures_Graph_Manipulator_AcyclicTest_php.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="fd9b59eb75a39d3a25a175660dfb12be" name="docs/html/Structures_Graph/tutorial_Structures_Graph.pkg.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="3fa8a9fae581fc31fd1dfbb14f475f92" name="docs/html/Structures_Graph/Structures_Graph_Node.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="08b05a395eca4b0ca49a956fadf83da6" name="docs/html/Structures_Graph/Structures_Graph_Manipulator_TopologicalSorter.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="686b7bd7108cf5ce9b1ae5f17cea79f4" name="docs/html/Structures_Graph/Structures_Graph_Manipulator_AcyclicTest.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="678ccf89e31bc7337803afd6b7c58827" name="docs/html/Structures_Graph/Structures_Graph.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="a88b0fcc2f97dd2069f671ef1dc92b40" name="docs/html/packages.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="296dd865297508569a6e72fcfd20fa81" name="docs/html/media/stylesheet.css" role="doc"/>
+   <file baseinstalldir="/" md5sum="e43ca110d02f287cdaac6357ba539fff" name="docs/html/media/banner.css" role="doc"/>
+   <file baseinstalldir="/" md5sum="b206403136db1de58901f825ad9f9cb0" name="docs/html/li_Structures_Graph.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="cf5397f529a0d9a701fac13ac6aaaa69" name="docs/html/index.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="6f58a7616dd96fb8cc0cbf928f66dd33" name="docs/html/errors.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="c97ebad7c5635abbbbf35a23e868649e" name="docs/html/elementindex_Structures_Graph.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="e302b63d3b18fa1c6e13f76816564d39" name="docs/html/elementindex.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="238f8a9d335e49ef87a0a276bcfc7231" name="docs/html/classtrees_Structures_Graph.html" role="doc"/>
+   <file baseinstalldir="/" md5sum="ce2da39dbb75e21074eb5e96231a3379" name="docs/generate.sh" role="doc"/>
+  </dir>
+ </contents>
+ <compatible>
+  <name>PEAR</name>
+  <channel>pear.php.net</channel>
+  <min>1.5.0RC3</min>
+  <max>1.9.1</max>
+ </compatible>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>1.0.2</release>
+     <api>1.0.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2007-01-07</date>
+    <license uri="http://opensource.org/licenses/lgpl-license.php">LGPL</license>
+    <notes>
+- Bug #9682 only variables can be returned by reference
+- fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.3</release>
+     <api>1.0.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2009-10-11</date>
+    <license>LGPL License</license>
+    <notes>
+Bugfix Release:
+Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xml file.
+* Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
+* Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
+* Update package.xml
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>1.0.4</release>
+     <api>1.0.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <date>2010-10-25</date>
+    <license>LGPL License</license>
+    <notes>
+Bugfix Release:
+* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

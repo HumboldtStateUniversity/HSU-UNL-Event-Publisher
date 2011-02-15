@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Calendar</name>
+ <channel>pear.php.net</channel>
+ <summary>A package for building Calendar data structures (irrespective of output)</summary>
+ <description>Calendar provides an API for building Calendar data structures. Using
+the simple iterator and it's &quot;query&quot; API, a user interface can easily be
+built on top of the calendar data structure, at the same time easily connecting it
+to some kind of underlying data store, where &quot;event&quot; information is
+being held.
+
+It provides different calculation &quot;engines&quot; the default being based on
+Unix timestamps (offering fastest performance) with an alternative using PEAR::Date
+which extends the calendar past the limitations of Unix timestamps. Other engines
+should be implementable for other types of calendar (e.g. a Chinese Calendar based
+on lunar cycles).</description>
+ <lead>
+  <name>Harry Fuecks</name>
+  <user>hfuecks</user>
+  <email>hfuecks@phppatterns.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Lorenzo Alberton</name>
+  <user>quipo</user>
+  <email>l.alberton@quipo.it</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Greg Beaver</name>
+  <user>cellog</user>
+  <email>greg@chiaraquartet.net</email>
+  <active>yes</active>
+ </helper>
+ <date>2010-11-08</date>
+ <time>15:09:32</time>
+ <version>
+  <release>0.5.5</release>
+  <api>0.5.5</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP</license>
+ <notes>
+* fixed bug #17182: fixed Calendar_Month_Weeks' empty day handling
+ (bug introduced in v.0.5.4)
+* PHP5 fixes
+ </notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="Calendar" md5sum="53f0d0a1bfd31939f225e71e3e9b437a" name="Year.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="de8690a7fc7f02ec1448b71b3dc9711a" name="Week.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="af3dece7024caf76f8ac101ef1213784" name="Validator.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="cfb10d540a0691868735e4a976bdbffd" name="Util/Uri.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="fe0fc0810166fbc506f4fccc5145cfc5" name="Util/Textual.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="8a623ee3b3d480f680665dd2581c76a5" name="tests/year_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="32978f498531be846094b809d83c87b8" name="tests/week_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="c82d7df7f072a6cc7e542e513f31d40b" name="tests/week_firstday_0_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="f39526e23386294fa218dec42778ca80" name="tests/validator_unit_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="78d41f7d92b1b1cdd1689083c55f5609" name="tests/validator_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="4bcd444204425766c812a236bf37cc75" name="tests/validator_error_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="d5d437e3a957141f00063b7948ff6d36" name="tests/util_uri_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="ebff1899fef7ed22277979e5c8e6e4f6" name="tests/util_textual_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="0c374e259b4e472910bed6eb0b6ff242" name="tests/util_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="6852af20d980a49a80bd539fb3e8d905" name="tests/unixts_engine_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="69f9dcc5768419fe390c6ef368d1e83b" name="tests/table_helper_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="edc362035c03b854fb6b57f00c708e45" name="tests/simple_include.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="0c2ffb326ff097aa65ded9f4e0e124d4" name="tests/second_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="a34d9f7c43275ca7f0fc3d3ab4609aec" name="tests/README" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="8f8946c1812f3f6858efbc202d6b13d1" name="tests/peardate_engine_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="1f9514983dbf25265a2d9979de232c83" name="tests/month_weeks_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="c871cf7d12fbb561989d5c8199833504" name="tests/month_weekdays_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="fd3dfbd691f4c79570e3b042c8f6746a" name="tests/month_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="9546d4d316175b73dbb3e01a152d7a7e" name="tests/minute_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="43eac090e80657be2651adf644509b0d" name="tests/hour_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="9da3358b8319c6a0f8944400cb29b7c2" name="tests/helper_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="66b2c958890fdbdf48f4b9b5891ae956" name="tests/decorator_uri_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="18ca9f9599eee764d98a1df8f416bd1b" name="tests/decorator_textual_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="bbb2052a34aa062e7bab84f9acfc9a11" name="tests/decorator_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="46b9d655fd3592b44444079327e40452" name="tests/decorator_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="47ad4fcdf292605c4eff76ef442808d6" name="tests/day_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="607055c6bb06d65d552fdc21d7563a16" name="tests/calendar_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="70b605e352f950fb4288fc82c3a4d029" name="tests/calendar_test.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="00b1c6c93dd355d7b6a29e846eead420" name="tests/calendar_tabular_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="c2c481193c9e76cf23bebb21ebcf48be" name="tests/calendar_include.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="2f031d1f0fa409899f3e26448c7b7eb9" name="tests/calendar_engine_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="0193981186e2541f8fc320dcf0464154" name="tests/all_tests.php" role="test"/>
+   <file baseinstalldir="Calendar" md5sum="65cfa9a7b02f6eb616b028b03d875db6" name="Table/Helper.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="c2518dc45d33f1b34cd32ee7e70b08e0" name="Second.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="b3553be8aabddf2c85027806b2e7ffcd" name="Month/Weeks.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="612dd0a35910527019cb254cbe59d69e" name="Month/Weekdays.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="32f209e013f1d8712fa55f63de22c455" name="Month.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="564c1b6ce578825b968fef5041b54db9" name="Minute.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="c25e0f62ca250ba286d79775c9eca25b" name="Hour.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="0470da2904c74e5f0604283ef37bc288" name="Factory.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="a5eb072ac7038a3211e256c8b5b7aa13" name="Engine/UnixTS.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="deb185935786040bb917df71aa8bad97" name="Engine/PearDate.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="1555d2f39338eae3702c4a3d8cf134e7" name="Engine/Interface.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="8398be6e0526da81f6493abeb60685d9" name="docs/Readme" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="6f1a1d5753b0915fde98bd6f76595871" name="docs/examples/index.html" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="2f8d443a6a22c75e3d2fb526acf51ce1" name="docs/examples/23.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="2f8d443a6a22c75e3d2fb526acf51ce1" name="docs/examples/23.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="d8fcad451ceb22aa463715669650723f" name="docs/examples/22.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="d8fcad451ceb22aa463715669650723f" name="docs/examples/22.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="1899981d2aede0f31efa1a7ac7d14133" name="docs/examples/21.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="1899981d2aede0f31efa1a7ac7d14133" name="docs/examples/21.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="11c561bb8c78c8af3aa85c758e8e9a49" name="docs/examples/20.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="11c561bb8c78c8af3aa85c758e8e9a49" name="docs/examples/20.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="1c6c9fd06364d39ef5c0e4e5676ca6a3" name="docs/examples/19.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="1c6c9fd06364d39ef5c0e4e5676ca6a3" name="docs/examples/19.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="9e939a79ceddfa5cfb0464d1da52f3fa" name="docs/examples/18.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="9e939a79ceddfa5cfb0464d1da52f3fa" name="docs/examples/18.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="c85d8a562973e241214182caad47be60" name="docs/examples/17.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="c85d8a562973e241214182caad47be60" name="docs/examples/17.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="a336d0d2862c7b1d7845aedb47464796" name="docs/examples/16.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="a336d0d2862c7b1d7845aedb47464796" name="docs/examples/16.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b6b50810ebad7efb93b683de43a3ac71" name="docs/examples/15.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b6b50810ebad7efb93b683de43a3ac71" name="docs/examples/15.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="2af7d93168d3de77929a1524f037a7c4" name="docs/examples/14.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="2af7d93168d3de77929a1524f037a7c4" name="docs/examples/14.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="44803b51c0835ef93731d5e25d623b4c" name="docs/examples/13.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="44803b51c0835ef93731d5e25d623b4c" name="docs/examples/13.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="341a2311825e6cf566dc1592999977cd" name="docs/examples/12.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="341a2311825e6cf566dc1592999977cd" name="docs/examples/12.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="472ad9447d8c23ef63cd1e84f6e12b7a" name="docs/examples/11.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="472ad9447d8c23ef63cd1e84f6e12b7a" name="docs/examples/11.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="02f776031b365fba667fcfc4f2751497" name="docs/examples/10.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="02f776031b365fba667fcfc4f2751497" name="docs/examples/10.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="9303ba13d2a991a0a45bb6101a9b86a5" name="docs/examples/9.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="9303ba13d2a991a0a45bb6101a9b86a5" name="docs/examples/9.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="51ad8df93ef00685b190d6d70e35cc19" name="docs/examples/8.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="51ad8df93ef00685b190d6d70e35cc19" name="docs/examples/8.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="72c463ca4fa135752d0b143b095fef88" name="docs/examples/7.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="72c463ca4fa135752d0b143b095fef88" name="docs/examples/7.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="dfd3e2240f91f80b849ec2e06cedee45" name="docs/examples/6.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="dfd3e2240f91f80b849ec2e06cedee45" name="docs/examples/6.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b8943a332e4c193381882448d89103bb" name="docs/examples/5.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b8943a332e4c193381882448d89103bb" name="docs/examples/5.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="da50dc763ce45629eac484875f0251ba" name="docs/examples/4.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="da50dc763ce45629eac484875f0251ba" name="docs/examples/4.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="4121b3441aacc11b011a7fd7f45eba53" name="docs/examples/3.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="4121b3441aacc11b011a7fd7f45eba53" name="docs/examples/3.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b0cdcb6d811f42684113ca1982cea3ca" name="docs/examples/2.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="b0cdcb6d811f42684113ca1982cea3ca" name="docs/examples/2.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="ffe585106fd6d3decfd37c121aca6800" name="docs/examples/1.phps" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="ffe585106fd6d3decfd37c121aca6800" name="docs/examples/1.php" role="doc"/>
+   <file baseinstalldir="Calendar" md5sum="36745b8527d48918faa83637e4716489" name="Decorator/Wrapper.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="ed0b9e586ec1868a5cd80d182ca8062d" name="Decorator/Weekday.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="53c117261c08810a112705e206dfcf6d" name="Decorator/Uri.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="0ed56c75815cf6c0a731af6a946aefc3" name="Decorator/Textual.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="a38ec52208465a19d1e4ebd22711db60" name="Decorator.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="5a72218ee404c65085339cce8fa2c60e" name="Day.php" role="php"/>
+   <file baseinstalldir="Calendar" md5sum="6d7de4c6e2ae4ee5ec812360d94a6fbc" name="Calendar.php" role="php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.5.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>Date</name>
+    <channel>pear.php.net</channel>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>0.5.4</release>
+     <api>0.5.4</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-12-12</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* fixed return by reference NOTICE in Decorator
+* fixed bug #8758: fixed Calendar_Week::thisYear() according the ISO-8601 standard
+* fixed bug #12542: Calendar_Util_Textual::orderedWeekdays() doesn't consider $firstDay
+* added new tests and fixed test to consider the CALENDAR_FIRST_DAY_OF_WEEK constant
+* fixed getWeekNInYear() in the PearDate engine with new Date package
+* request #2642: added Calendar::isToday() method
+* switched to package.xml v.2
+* updated header comment blocks according to the Coding Standards
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.5.3</release>
+     <api>0.5.3</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2005-10-22</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* fixed bug #3073, Calendar_Month_Weekdays: invalid empty days at year change
+* fixed bug #3445, thisWeek('n_in_month') off by one in some cases
+* use CALENDAR_FIRST_DAY_OF_WEEK constant throughout the package
+* fixed return by reference NOTICEs
+* added new tests
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.5.2</release>
+     <api>0.5.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-08-03</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* Small refactoring in the date engines to significantly reduce the number
+  of date() calls
+* make url default separator xhtml compliant (&amp; =&gt; &amp;amp;)
+* fix bug #1798 with week selection
+* fix bug #1995: thisWeek, prevWeek, nextWeek were not affected when a new
+  timestamp was set (thanks to johnschaefer at gmx dot de)
+* fix bug in return value from Calendar_Week::thisWeek and n_in_month
+* getMinYears() returned 1970 on all platforms (thanks to Andy Crain)
+* added some new examples
+* Moved logic from Calendar_Decorator_Uri and Calendar_Decorator_Textual to
+   Calendar_Util_Uri and Calendar_Util_Textual (BC preserved) - offers better
+   performance, reducing number of decorators required
+* extended engine interface for week related methods to meet rare use cases with
+   (not yet implemented) calendar engines
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.5.1</release>
+     <api>0.5.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-05-25</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* Fixed bug in Calendar_Week::setSelection():
+  the &quot;selected&quot; property was set, but not the decorated object.
+* Fixed bug in Calendar_Month_[Weekdays|Weeks]:
+  the number of empty days at the beginning of the month could be
+  wrong when the adjust() method was called to fix an invalid date.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.5</release>
+     <api>0.5</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2004-01-29</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* Added new return-value-formats for each [prev|this|next]*() method
+  Allowed formats are: 'int', 'timestamp' , 'array' and 'object'. Returns
+  data of specified type e.g. $Day = $Hour-&gt;prevDay('object');
+* Added factory for creating calendar objects (in conjunction with above change)
+* Added decorator to determine the day of the week for any calendar object
+* Minor bug fix in Decorator
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.4</release>
+     <api>0.4</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-11-22</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* Fixed bug in setTimeStamp where year wasn't set
+* Fixed bugs and changed API for Calendar_Week
+* Added Calendar::adjust method to adjust invalid dates
+* Added Calendar_Decorator_Uri to help with building links
+* Added Calendar_Decorator_Textual to help fetching month and weekday names
+* Added Calendar_Decorator_Wrapper to help apply decorators to built calendar
+  objects
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3</release>
+     <api>0.3</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-10-30</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+* Fixed bugs in Calendar_Validator for day and month ranges
+* Fixed bug with first day of week as 0
+* Modified weeks to extend beyond current month with prevWeek() and nextWeek()
+* More unit tests
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2</release>
+     <api>0.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2003-10-28</date>
+    <license uri="http://www.php.net/license">PHP</license>
+    <notes>
+First release
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

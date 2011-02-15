@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer
+END
+Tableless.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/Tableless.php
+END
+ObjectFlexy.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/ObjectFlexy.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/Array.php
+END
+ArraySmarty.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/ArraySmarty.php
+END
+ITDynamic.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/ITDynamic.php
+END
+QuickHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/QuickHtml.php
+END
+Default.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/Default.php
+END
+ITStatic.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/ITStatic.php
+END
+Object.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/HTML/QuickForm/Renderer/Object.php
+END

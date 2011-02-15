@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer
+END
+ObjectFlexy.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/ObjectFlexy.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/Array.php
+END
+ArraySmarty.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/ArraySmarty.php
+END
+ITDynamic.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/ITDynamic.php
+END
+QuickHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/QuickHtml.php
+END
+Default.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/Default.php
+END
+ITStatic.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/ITStatic.php
+END
+Object.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/HTML/QuickForm/Renderer/Object.php
+END

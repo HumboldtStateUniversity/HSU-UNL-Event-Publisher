@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver
+END
+19getlistof.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/19getlistof.phpt
+END
+11transactions.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/11transactions.phpt
+END
+16tableinfo.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/16tableinfo.phpt
+END
+droptable.inc
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/droptable.inc
+END
+17query.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/17query.phpt
+END
+mktable.inc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/mktable.inc
+END
+multiconnect.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/multiconnect.php
+END
+06prepexec.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/06prepexec.phpt
+END
+03simplequery.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/03simplequery.phpt
+END
+13limit.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/13limit.phpt
+END
+21freeResult.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/21freeResult.phpt
+END
+09numrows.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/09numrows.phpt
+END
+skipif.inc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/skipif.inc
+END
+run.cvs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/run.cvs
+END
+08affectedrows.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/08affectedrows.phpt
+END
+04numcols.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/04numcols.phpt
+END
+connect.inc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/connect.inc
+END
+10errormap.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/10errormap.phpt
+END
+18get.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/18get.phpt
+END
+setup.inc.cvs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/setup.inc.cvs
+END
+14fetchmode_object.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/14fetchmode_object.phpt
+END
+01connect.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/01connect.phpt
+END
+02fetch.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/02fetch.phpt
+END
+05sequences.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/05sequences.phpt
+END
+20locale.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/20locale.phpt
+END
+15quote.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/tests/DB/tests/driver/15quote.phpt
+END

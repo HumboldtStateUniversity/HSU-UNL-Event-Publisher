@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date
+END
+TimeZone.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date/TimeZone.php
+END
+Span.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date/Span.php
+END
+Calc.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date/Calc.php
+END
+Human.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/Date/Human.php
+END

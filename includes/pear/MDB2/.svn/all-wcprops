@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1162/standalone/trunk/includes/pear/MDB2
+END
+Iterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Iterator.php
+END
+LOB.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/LOB.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Date.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/MDB2/Schema.php
+END
+Extended.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1162/standalone/trunk/includes/pear/MDB2/Extended.php
+END

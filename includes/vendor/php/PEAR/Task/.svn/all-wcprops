@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task
+END
+Windowseol.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task/Windowseol.php
+END
+Replace.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task/Replace.php
+END
+Postinstallscript.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task/Postinstallscript.php
+END
+Unixeol.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task/Unixeol.php
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1250/standalone/trunk/includes/vendor/php/PEAR/Task/Common.php
+END

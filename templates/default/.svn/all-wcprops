@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1354/UNL_UCBCN_Frontend/trunk/www/templates/default
+END
+Frontend_Day_xml.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Day_xml.tpl.php
+END
+Frontend_xml.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_xml.tpl.php
+END
+print.css
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/print.css
+END
+Frontend_Year.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Year.tpl.php
+END
+frontend_ieonly.css
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/frontend_ieonly.css
+END
+Frontend_NoEvents_icalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_NoEvents_icalendar.tpl.php
+END
+Frontend_Day_rss.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Day_rss.tpl.php
+END
+util.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/util.js
+END
+frontend.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1260/UNL_UCBCN_Frontend/trunk/www/templates/default/frontend.js
+END
+Frontend_passthrough.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1258/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_passthrough.tpl.php
+END
+Frontend_rss.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_rss.tpl.php
+END
+Frontend_json.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1352/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_json.tpl.php
+END
+EventInstance_icalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventInstance_icalendar.tpl.php
+END
+Frontend_Day.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1256/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Day.tpl.php
+END
+facebook.css
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1262/UNL_UCBCN_Frontend/trunk/www/templates/default/facebook.css
+END
+EventListing_icalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventListing_icalendar.tpl.php
+END
+Frontend.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1341/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend.tpl.php
+END
+Frontend_Upcoming.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1256/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Upcoming.tpl.php
+END
+FacebookRSVP.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1269/UNL_UCBCN_Frontend/trunk/www/templates/default/FacebookRSVP.tpl.php
+END
+frontend_main.css
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/frontend_main.css
+END
+EventInstance_xml.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventInstance_xml.tpl.php
+END
+Frontend_MonthWidget.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_MonthWidget.tpl.php
+END
+Error.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Error.tpl.php
+END
+ajaxCaller.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/ajaxCaller.js
+END
+EventInstance_rss.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventInstance_rss.tpl.php
+END
+Frontend_NoEvents.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_NoEvents.tpl.php
+END
+EventListing_rss.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventListing_rss.tpl.php
+END
+Frontend_Search.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Search.tpl.php
+END
+EventInstance.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1289/UNL_UCBCN_Frontend/trunk/www/templates/default/EventInstance.tpl.php
+END
+Location.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Location.tpl.php
+END
+EventListing.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1306/UNL_UCBCN_Frontend/trunk/www/templates/default/EventListing.tpl.php
+END
+Frontend_Day_icalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Day_icalendar.tpl.php
+END
+Frontend_Day_monthday.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Day_monthday.tpl.php
+END
+Frontend_hcalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_hcalendar.tpl.php
+END
+EventListing_month.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/EventListing_month.tpl.php
+END
+Frontend_icalendar.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_icalendar.tpl.php
+END
+Frontend_Month.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1345/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Month.tpl.php
+END
+frontend_default.css
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1262/UNL_UCBCN_Frontend/trunk/www/templates/default/frontend_default.css
+END
+Frontend_Week.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1177/UNL_UCBCN_Frontend/trunk/www/templates/default/Frontend_Week.tpl.php
+END

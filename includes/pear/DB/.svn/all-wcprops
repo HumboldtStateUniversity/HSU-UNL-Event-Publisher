@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1137/standalone/trunk/includes/pear/DB
+END
+mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/mssql.php
+END
+DataObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/DataObject.php
+END
+sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/sqlite.php
+END
+oci8.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/oci8.php
+END
+storage.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/storage.php
+END
+mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/mysql.php
+END
+odbc.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/odbc.php
+END
+fbsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/fbsql.php
+END
+msql.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/msql.php
+END
+dbase.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/dbase.php
+END
+mysqli.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/mysqli.php
+END
+ibase.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/ibase.php
+END
+sybase.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/sybase.php
+END
+ifx.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/ifx.php
+END
+pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/pgsql.php
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1112/standalone/trunk/includes/pear/DB/common.php
+END

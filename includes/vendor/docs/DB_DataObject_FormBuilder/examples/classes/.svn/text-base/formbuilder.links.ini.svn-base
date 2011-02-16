@@ -1,9 +1,0 @@
-; This file defines relations between your tables. This is needed for
-; automatic combobox building, auto-joins and more. Always keep it up-to-date.
-; Format is pretty straightforward:
-; [tablename]
-; fieldname = targetTableName:targetFieldName
-
-[product]
-manufacturer_ID = manufacturer:manufacturer_id
-category_ID = category:category_id

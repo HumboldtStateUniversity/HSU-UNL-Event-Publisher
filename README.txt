@@ -1,4 +1,4 @@
-Humboldt State University's implementation of the UNL Event Publusher
+Humboldt State University's implementation of the UNL Event Publisher
 
 ----
 

@@ -1,0 +1,43 @@
+RewriteEngine On
+
+RewriteBase   /unlcal
+
+# Upcoming
+RewriteRule ^upcoming/$ ?upcoming=upcoming&%{QUERY_STRING} [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/upcoming/$ $1/?upcoming=upcoming&%{QUERY_STRING} [L]
+
+# Search
+RewriteRule ^search/$ ?search=search&%{QUERY_STRING} [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/search/$ $1/?search=search&%{QUERY_STRING} [L]
+
+# Search, with parameter after
+RewriteRule ^search/(.+)/$ ?search=search&q=$1&%{QUERY_STRING} [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/search/(.+)/$ $1/?search=search&q=$4&%{QUERY_STRING} [L]
+
+# Search, no parameter after 
+RewriteRule ^search/(.+) ?search=search&q=$1 [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/search/(.+)/$ $1/?search=search [L]
+
+# Account rewrite
+RewriteRule ^(([a-zA-Z]([0-9]+)?)+)$ $1/ [R]
+RewriteCond %{REQUEST_URI} !^/unlcal/manager/
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/$ ?calendar_shortname=$1&%{QUERY_STRING}
+
+# year rewrite
+RewriteRule ^([0-9]{4})$ $1/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})$ $1/$4/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/$ ?calendar_shortname=$1&y=$4&%{QUERY_STRING} [L]
+
+# month rewrite
+RewriteRule ^([0-9]{4})/(([0-1])?[0-9])$ $1/$2/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1])?[0-9])$ $1/$4/$5/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1])?[0-9])/$ ?calendar_shortname=$1&y=$4&m=$5&%{QUERY_STRING} [L]
+
+# day rewrite
+RewriteRule ^([0-9]{4})/(([0-1])?[0-9])/(([0-3])?[0-9])$ $1/$2/$4/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1])?[0-9])/(([0-3])?[0-9])$ $1/$4/$5/$7/ [R]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1])?[0-9])/(([0-3])?[0-9])/$ ?calendar_shortname=$1&y=$4&m=$5&d=$7&%{QUERY_STRING} [L]
+
+# single eventinstance rewrite
+RewriteRule ^([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?$ ?y=$1&m=$3&d=$5&eventdatetime_id=$7&%{QUERY_STRING} [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?$ ?calendar_shortname=$1&y=$4&m=$5&d=$7&eventdatetime_id=$9&%{QUERY_STRING} [L]

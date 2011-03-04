@@ -22,7 +22,7 @@ if (!isset($GLOBALS['unl_template_dependents'])) {
 -->
 <link rel="stylesheet" type="text/css" media="screen" href="/wdn/templates_3.0/css/all.css" />
 <link rel="stylesheet" type="text/css" media="print" href="/wdn/templates_3.0/css/print.css" />
-<script type="text/javascript" src="/wdn/templates_3.0/scripts/all.js"></script>
+<script type="text/javascript" src="templates/default/all.js"></script>
 <?php include_once $GLOBALS['unl_template_dependents'].'/wdn/templates_3.0/includes/browserspecifics.html'; ?>
 <?php include_once $GLOBALS['unl_template_dependents'].'/wdn/templates_3.0/includes/metanfavico.html'; ?>
 <!-- InstanceBeginEditable name="doctitle" -->

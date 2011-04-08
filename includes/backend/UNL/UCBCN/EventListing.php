@@ -113,11 +113,14 @@ class UNL_UCBCN_EventListing
 
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
-            $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime '.$rstr[0].
+            $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime 
+'.$rstr[0].
                             'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
+                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status 
+=\'archived\') '.
                                     'AND calendar_has_event.event_id = eventdatetime.event_id ' .
-                                    'AND (eventdatetime.starttime LIKE \''.date('Y-m-d ', $day->getTimestamp()).'%\'' .
+                                    'AND (eventdatetime.starttime LIKE \''.date('Y-m-d ', 
+$day->getTimestamp()).'%\'' .
                                     $rstr[1] . ') ' .
                             'ORDER BY '.$orderby);
         } else {
@@ -179,9 +182,11 @@ class UNL_UCBCN_EventListing
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
             $mdb2     = $calendar->getDatabaseConnection();
-            $sql      = 'SELECT eventdatetime.id, eventdatetime.starttime FROM event,calendar_has_event,eventdatetime ' .
+            $sql      = 'SELECT eventdatetime.id, eventdatetime.starttime FROM 
+event,calendar_has_event,eventdatetime ' .
                                 'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                                'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
+                                                'AND (calendar_has_event.status =\'posted\' OR 
+calendar_has_event.status =\'archived\') '.
                                                 'AND calendar_has_event.event_id = eventdatetime.event_id ' .
                                                 'AND calendar_has_event.event_id = event.id ' .
                                                 'AND eventdatetime.starttime >= \'' . date('Y-m-d') . '\' '.
@@ -195,12 +200,14 @@ class UNL_UCBCN_EventListing
         }
         $res = $mdb2->query($sql)->fetchAll();
         $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
-               'recurringdate.recurrence_id FROM recurringdate, eventdatetime ' .
+               'recurringdate.recurrence_id FROM recurringdate, eventdatetime, calendar_has_event ' .
                'WHERE recurringdate > \'' . date('Y-m-d') . '\' ' .
                'AND eventdatetime.event_id = recurringdate.event_id ' .
                'AND recurringdate.ongoing = FALSE ' .
                'AND recurringdate.unlinked = FALSE ' .
-               'ORDER BY recurringdate LIMIT 10;';
+               'AND calendar_has_event.calendar_id = '. $calendar->id .
+               ' AND calendar_has_event.event_id = eventdatetime.event_id ' .
+               'ORDER BY recurringdate LIMIT ' . $limit;
         $rec_res = $mdb2->query($sql);
         $recurring_events = $rec_res->fetchAll();
         for ($i = 0; $i < count($recurring_events); $i++) {
@@ -261,10 +268,13 @@ class UNL_UCBCN_EventListing
             $calendar =& $options['calendar'];
             $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime ' .
                             'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
+                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status 
+=\'archived\') '.
                                     'AND calendar_has_event.event_id = eventdatetime.event_id ' .
-                                    'AND eventdatetime.starttime < \''.date('Y-m-d', $day->getTimestamp()).'\' ' .
-                                    'AND eventdatetime.endtime >= \''.date('Y-m-d', $day->getTimestamp()).'\' ' .
+                                    'AND eventdatetime.starttime < \''.date('Y-m-d', $day->getTimestamp()).'\' ' 
+.
+                                    'AND eventdatetime.endtime >= \''.date('Y-m-d', $day->getTimestamp()).'\' ' 
+.
                             'ORDER BY '.$orderby);
         } else {
             $eventdatetime->whereAdd('starttime LIKE \''.date('Y-m-d', $day->getTimestamp()).'%\'');
@@ -282,3 +292,4 @@ class UNL_UCBCN_EventListing
         }
     }
 }
+

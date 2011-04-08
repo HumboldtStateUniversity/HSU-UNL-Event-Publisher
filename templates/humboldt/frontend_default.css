@@ -63,7 +63,7 @@ a.permalink{font-size:0.6em;position:relative;}
 #maincontent a.returnPrevScreen{font-weight:bold;display:block;font-size:0.8em;padding:2px 3px;background:#cee2f7;color:#6da6db;border:1px solid #a8c2ed;}
 #maincontent .tel{margin-left:0}
 table td.empty{color:#ddd;}
-#maincontent .right {float: right;width: 650px;margin:40px 5px 0 0;}
+#maincontent .right {float: right;width: 620px;margin:40px 5px 0 0;}
 
 /* Calendar Widget */
 table.wp-calendar thead th{

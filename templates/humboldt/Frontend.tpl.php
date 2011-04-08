@@ -26,13 +26,13 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 @import "http://www.humboldt.edu/humboldt/styles/interior.css";
 </style>
 <link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/print.css" media="print" />
-<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie.css" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie7.css" media="screen" /><![endif]-->
 <script src="http://www.humboldt.edu/humboldt/scripts/main.js" type="text/javascript"></script>
 
 <!--styles & scripts for calendar content-->
 
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/frontend_main.css" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie7.css" media="screen" /><![endif]-->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/facebook.css" />
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/ajaxCaller.js"></script>
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/frontend.js"></script>
@@ -90,7 +90,27 @@ if (isset($this->output[0], $this->output[0]->event)
       </ul>
           <?php if (isset($this->right)) { ?>
               <div class="col left">
-                  <div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
+                <?php	
+                        if ($this->calendar->id == 1){ // Only show on main calendar
+                                include_once "upcoming.php";
+                                print upcoming();
+                        }
+                  ?>
+  
+		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
+<!--Event type select-->
+                  <?php
+                  $eventlist = UNL_UCBCN_Frontend::factory('eventtype');
+                  $eventlist->orderBy('name ASC');
+                  if($eventlist->find()){
+                      $output = "<form action='".$this->uri . "search/' method='GET'><select name='q'>\n";
+                      while ($eventlist->fetch()) {
+                          $output .= "<option value='$eventlist->name'>$eventlist->name</option>\n";
+                      }
+                  $output .= '</select><input type="submit"></form>';
+                  echo $output;
+                  }
+                  ?>
                   <div class="cal_widget">
                   <h3>Contribute/Learn More</h3>
                   <ul>

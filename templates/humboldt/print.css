@@ -1,0 +1,62 @@
+.sIFR-flash, object, embed {display: none !important;height: 0;width: 0;position: absolute;overflow: hidden;}
+span.sIFR-alternate {visibility: visible !important;display: block !important;position: static !important;left: auto !important;top: auto !important;width: auto !important;height: auto !important;overflow: visible !important;}
+* {margin: 0;padding: 0;}
+p {margin: 0 0 1.1em 0;}
+img {border: none;margin:10px 0;}
+a{text-decoration:none;background:none;font-weight:bold;color:#900;}
+body {text-align: left;font: 80%/150% "Lucida Grande",Verdana,Arial;color: #434343;}
+#maincontent h1 {font-size: 1.7em;font-weight: normal;padding: 0 0 7px 0;}
+#maincontent h2 {font-size: 1.2em;font-weight: normal;padding: 0 0 12px 0;}
+#maincontent h3{font-size: 1.1em;}
+p.sec_main{margin:10px 0;font-weight: normal;letter-spacing: -1px;font: 1.6em Verdana,Helvetica,sans-serif;}
+#maincontent ul, #footer ul{list-style: square;padding: 0 0 1.1em 30px;}
+#maincontent ol{padding: 0 0 1.1em 36px;}
+#maincontent dd {padding: 0 0 0 30px;}
+body, #header, #container, #footer, #footer #footer_floater, p.sec_main, #title, body#doc #red-header, #red-header, #red-header div.clear{width: auto !important;margin: 0 !important;padding: 0 !important}
+#red-header h1{color:#990000;margin-bottom:10px;}
+#titlegraphic{padding:7px 0 0 0;margin:0 0 6px 0;}
+#titlegraphic h1{font-size:2.0em;line-height:normal;}
+#titlegraphic h2{font-size:1.7em;color:#666;}
+#titlegraphic h1, #titlegraphic h2{font-family:Arial, Helvetica, sans-serif;font-weight:normal;}
+#maincontent{border-top:1px solid #999;}
+#tabsG, p#feeds, .footer_col, .permalink, #day_nav, ul#frontend_view_selector, form#event_search, .col, .skipnav, #header ul,  #header #quicklinks, #header #unlsearch,  #shelf,  #navigation, #breadcrumbs,  #title ul, #copyright span, #wordmark{display:none;}
+#footer{border-top:1px solid #666;}
+.bgcolcream, .bgcolscarlet{background-color: #F8F5EA;}
+.bgcolfixed {background-color: #EEE;}
+.bgcolmedgray, .bgcoldkgray{background: #e7e7d6;}
+body#doc .zenboxsolid, body#doc .zenboxfixed, body#doc .zenboxfeature{ border: none;}
+body#doc .zenboxsolid, body#doc .zenboxfixed{border: 1px solid #C9C28C}
+.zenboxsolid, .zenboxfixed{ border: none;position:relative; padding:0 10px; }
+.zenboxfeature  {border: none;position:relative;padding:0 10px;}
+.highlight-navy, sserifstoryheadnavy{color:#005387;}
+.highlight-green{color:#509B09;}
+.highlight-red, .sserifstoryheadred{color:#990000;}
+
+h1.summary, h4.sec_main, h4.ongoing{font-size:1.5em;padding:10px 0;font-family:Georgia, Arial}
+h4.sec_main{margin-bottom:4px;}
+h1.summary{margin-top:10px;}
+h4.ongoing{font-size:1.2em;margin-top:7px;}
+td{padding:3px 0;border-bottom:1px solid #ddd;}
+td.date{padding-right:10px;text-align:right;}
+span.location{font-size:0.75em;color:#3A8103;}
+#maincontent{margin:10px 0;}
+
+.month_cal table.wp-calendar{margin:0 0 20px 0;width:100%!important}
+.month_cal table.wp-calendar tr{border-bottom:1px solid #666;}
+.month_cal table.wp-calendar td{
+	width:92px;
+	text-align:left;
+	vertical-align:top;position:relative;
+	float:left;
+	display:block;
+	min-height:12.3em;
+	_height:12.3em;
+	border:none!important;
+	}
+.month_cal table.wp-calendar th{font-size:1.15em;text-align:center;width:92px;display:block;float:left;margin-bottom:1px;}
+.month_cal table.wp-calendar tr{float:right;font-size:0.8em;}
+
+#maincontent .month_cal table.wp-calendar td ul{list-style:circle!important}
+#maincontent .month_cal table.wp-calendar td ul li{overflow:hidden;height:1.8em;padding:0;border-bottom:1px solid #ddd;background:#fff;margin:2px 0 0 0;}
+.month_cal .more_event, #monthfullview, #maincontent .monthvalue_ID, #next_month, #prev_month{display:none!important;}
+

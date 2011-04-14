@@ -6,19 +6,51 @@ header('Content-Type:text/html; charset=UTF-8');
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title><?php echo $this->doctitle; ?></title>
-        <link rel="stylesheet" type="text/css" media="screen" href="templates/vanilla/manager_main.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="templates/vanilla/dialog/dialog_box.css" />
+
+		<!--HSU mainsite stylesheets & scripts--> 
+		<style type="text/css"  media="screen,projection"> 
+		@import "http://www.humboldt.edu/humboldt/styles/interior.css";
+		</style> 
+		<link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/print.css" media="print" /> 
+		<script src="http://www.humboldt.edu/humboldt/scripts/main.js" type="text/javascript"></script> 
+
+		<!--styles & scripts for calendar content-->
+
+
+        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/<?php echo $this->calendar->theme ?>/jquery-ui.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="templates/vanilla/manager.js"></script>
-        <script type="text/javascript" src="templates/vanilla/dialog/dialog_box.js"></script>
+        <script type="text/javascript" src="templates/humboldt/manager.js"></script>
+        <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
     </head>
-    <body <?php echo $this->uniquebody; ?>>
-        <div id="mainWrapper">
+    <body class="col4-0" <?php echo $this->uniquebody; ?>>
+		<div id="wrap"> 
+		<div id="container"> 
 
-            <div id="contentWrapper">
-                <div id="breadCrumb" style='width: 933px'>
+		<p id="branding"><a href="http://www.humboldt.edu"><img src="http://www.humboldt.edu/humboldt/images/interiorwordmark.jpg" alt="Humboldt State University" /></a></p> 
+
+		<div id="content"> 
+		<div id="contentwrap"> 
+		<div id="page-meta"> 
+
+		<span></span>	
+	
+	
+        <div id="titlegraphic" style="clear:both">
+            <h1><?php
+                if (isset($this->calendar)) {
+                    echo $this->calendar->name;
+                } else {
+                    echo 'Event Publishing System';
+                }
+                ?></h1>
+            <h2>Plan. Publish. Share.</h2>
+        </div>
+		<div id="maincontent">	
+
+                <div id="breadCrumb" style='width: 900px'>
                     <a href="">Calendar</a>
                     <?php
                     if (!empty($this->calendar->website)) {
@@ -32,16 +64,6 @@ header('Content-Type:text/html; charset=UTF-8');
                             UNL_UCBCN::displayRegion($this->calendarselect);
                         } //End if user
                         ?>
-                        <div id="titlegraphic" style="clear:both">
-                            <h1><?php
-                                if (isset($this->calendar)) {
-                                    echo $this->calendar->name;
-                                } else {
-                                    echo 'Event Publishing System';
-                                }
-                                ?></h1>
-                            <h2>Plan. Publish. Share.</h2>
-                        </div>
                     </div>
 
                     <div id="navigation">
@@ -103,12 +125,66 @@ header('Content-Type:text/html; charset=UTF-8');
                     </div>
                     <div style="clear: both"></div>
                 </div>
-                <div id="mainFooter">
-                    <div class="footerLinks">
-                        <strong>&#169; YOUR ORGANIZATION</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+			</div> 
+
+
+
+
+			</div><!-- /contentwrap --> 
+			</div><!-- /content --> 
+			</div><!-- /container --> 
+			 </div><!-- /wrap --> 
+
+			<div id="site-meta"> 
+			<div id="meta-wrap"> 
+
+
+			<!-- Google CSE Search Box Begins --> 
+
+			<form action="http://www.humboldt.edu/humboldt/search/" id="search"> 
+			    <input type="hidden" name="cx" value="016116879625100262331:h29hmmqiar8" /> 
+			    <input type="hidden" name="cof" value="FORID:11" /> 
+			    <input type="text" name="q" size="15" value="Search" /> 
+			    <input type="image" src="http://www.humboldt.edu/humboldt//images/submit.gif" value="Go" name="sa" class="submit" alt="go" /> 
+			</form> 
+			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script> 
+			<!-- Google CSE Search Box Ends --> 
+
+			<div class="vcard"> 
+			 <a class="url" href="http://www.humboldt.edu"></a> 
+
+			 <div class="org fn">Humboldt State University<br />a California State University</div> 
+			 <div class="adr"> 
+			  <div class="street-address">1 Harpst Street</div> 
+			  <span class="locality">Arcata</span>, 
+			  <span class="region">CA</span> 
+			  <span class="postal-code">95521</span> 
+
+			 </div> 
+			 <div class="tel">(707) 826-3011</div> 
+			</div> 
+
+			<ul id="contact"> 
+			<li><a href="http://www.humboldt.edu/humboldt/contact">Contact Us.</a></li> 
+			<li>|</li> 
+			<li><a href="mailto:dmca@humboldt.edu">DMCA.</a></li> 
+			</ul> 
+
+			</div><!-- /meta-wrap --> 
+
+			</div><!-- /site-meta --> 
+
+			<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+			</script><script type="text/javascript"> 
+			//<![CDATA[
+			_uacct = "UA-133335-1";
+			urchinTracker();
+			//]]>
+
+			</script> 
+
+			</body>
     </body>
 </html>

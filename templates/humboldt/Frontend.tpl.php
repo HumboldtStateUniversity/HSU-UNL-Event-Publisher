@@ -92,8 +92,8 @@ if (isset($this->output[0], $this->output[0]->event)
               <div class="col left">
                 <?php	
                         if ($this->calendar->id == 1){ // Only show on main calendar
-                                include_once "upcoming.php";
-                                print upcoming();
+                                include_once "featured.php";
+                                print featured();
                         }
                   ?>
   

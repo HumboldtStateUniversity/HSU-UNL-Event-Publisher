@@ -1,13 +1,6 @@
-html{
-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-}
-#contentWrapper{
-width: 981px;
-}
-
 #contentSearch {
-width: 933px;
-padding: 1em;
+width: 880px;
+padding: 10px;
 margin: auto;
 }
 
@@ -26,7 +19,7 @@ display: none;
 
 #maincontent li{
 margin-left: 1.5em;
-list-style: circle;
+list-style: none;
 }
 
 /*	-------------------------------------------------------------
@@ -53,7 +46,7 @@ font-style:normal;
 }
 
 #main_right{
-margin-left: 250px;
+margin-left: 300px;
 }
 
 /*	-------------------------------------------------------------
@@ -86,7 +79,7 @@ display:none;
 
 #navlinks ul li a {
 display:block;
-width:218px;
+width:270px;
 padding:0;
 margin:0;
 height:46px;
@@ -128,7 +121,7 @@ padding:0;
 
 #navigation{
 float: left;
-margin-right: 1em;
+margin-right:0;
 }
 
 /*	-------------------------------------------------------------
@@ -206,9 +199,8 @@ padding:0;
 position: static;
 left: 0;
 width: auto;
-border: 1px solid #878;
-background-color: #dcd;
-margin-bottom: 1em;
+margin: 0 0 35px 0;
+border:0;
 }
 
 #contentSearch form fieldset ol {
@@ -230,9 +222,9 @@ padding: 0.5em;
 width:700px;
 }
 
-#contentSearch form input:focus,
+/*#contentSearch form input:focus,
 #contentSearch form textarea:focus,
-#contentSearch form select:focus {
+#contentSearch form select:focus*/ {
 background:#ffc;
 }
 
@@ -254,6 +246,7 @@ form div.element {
 padding:0;
 }
 
+
 form div.qfelement div.qfgroup {
 margin:0;
 margin:0 !important;
@@ -268,14 +261,17 @@ form div.error {
 border:1px solid red;
 padding:5px;
 }
-
 #contentSearch form fieldset legend {
-border: 1px solid #000;
-margin-left: 1em;
+width:100%;
+border: 0;
+margin: 0 0 10px 0;
 font-size: 1.2em;
-padding: 1px 5px;
-color: #fff;
-background-color: #2f2149;
+padding: 7px 5px;
+color: #000;
+background-color: #ccc;
+border-bottom:1px solid #999;
+position:relative;
+vertical-align:baseline;
 }
 
 #contentSearch form fieldset span,.required {
@@ -426,15 +422,19 @@ padding: 1px;
 display: none;
 }
 
+
 /*	-------------------------------------------------------------
 	Search form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 form#event_search {
-float:right;
 margin:0;
 padding:0;
 position:relative;
 z-index:1000;
+}
+form#event_search div{
+float:right;
+margin:0 0 15px 0;
 }
 
 form#event_search input#searchinput {
@@ -720,4 +720,44 @@ cursor:pointer;
 
 button#moveto_posted:hover,button#delete_event:hover,button#moveto_pending:hover,button#search:hover {
 background-position:0 -22px;
+}
+
+
+label {
+	color: #444;
+	font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+}
+
+input, textarea {
+	border: 1px solid #999; 
+	color: #444;
+	font:14px/17px arial, helvetica, sans-serif;
+	padding:3px 5px;
+    margin: 0;
+}
+#maincontent form select {
+	font-size:14px;
+}
+#maincontent input[type="text"], #maincontent textarea{
+	width:400px;
+}
+#maincontent #__reverseLink_eventdatetime_event_idendtime_1, 
+#maincontent #__reverseLink_eventdatetime_event_idstarttime_1,
+#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1{width:auto;}
+#maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
+	width:auto;
+}
+
+
+
+
+form div.element {margin-bottom:10px;}
+
+
+
+div#maincontent form ol li{
+	margin:0;
+	padding:0;
 }

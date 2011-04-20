@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fff;
+	font: small/1.3 "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
+	color: #222;
+	text-align: center;
+}
+
+/* GENERAL LAYOUT DIVS
+********************************************************************/
+#wrap {
+	background: #fff url(images/interiorhead.jpg) repeat-x left top;
+}
+#container, #meta-wrap {
+	margin: 0 auto;
+	text-align: left;
+	width: 766px;
+	font-size: 95%;
+}
+
+#page-meta {
+	background: #fff;
+	padding: 10px 0;
+}
+#branding {
+	height: 39px;
+	padding: 6px 0 0 0;
+	line-height: 1;
+	margin: 0 0 -6px -11px;
+}
+#content {
+	position: relative;
+	background: #fff url(images/leftback.jpg) repeat-y left top;
+	margin: 0 0 0 -100px;
+	padding: 0 0 0 100px;
+}
+#contentwrap {
+	margin: 0 -100px 0 0;
+	padding: 0 92px 0 0;
+}
+#search {
+	float: right;
+	margin: -3px 6px 0 10px;
+}
+#site-meta {
+	background: url(images/footer.jpg) repeat-x left top;
+	height: 170px;
+	padding-top: 3px;
+}
+#meta-wrap {
+	color: #001616;
+	font-size: 90%;
+}
+.vcard, #contact {
+	float: right;
+	clear: both;
+	width: 160px;
+	font-size: 95%;
+	margin: 42px 0 1px;
+	color: #84a09a;
+}
+#contact a:link, #contact a:visited { 
+	color: #84a09a;
+	}
+#contact {
+	margin-top: 0;
+}
+#contact li {
+	float: left;
+	margin-right: 10px;
+	list-style: none;
+}
+.street-address {
+	display: none;
+}
+
+
+/* Hx
+********************************************************************/
+h1 {
+	background: #F6F6EC;
+	border-bottom: dotted 1px #542812;
+	border-top: dotted 1px #542812;
+	font-family:"Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
+	letter-spacing: 1px;
+	font-size: 150%;
+	color: #003333;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 5px;
+	margin: 0 10px 25px 0;
+	}
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 120%;
+	font-weight: normal;
+	color: #003333;
+}
+#maincontent p + h2 {
+	margin-top: 20px;
+}
+#maincontent h3 {
+	margin: 1em 0 .5em 0;
+}
+#maincontent h4 {
+	margin: 1em 0 .5em 0;
+}
+
+/* P
+********************************************************************/
+p {
+	margin: 0 0 1em 0;
+	line-height: 1.5em;
+}
+p.intro {
+	font-size: 120%;
+}
+
+
+/* LISTS
+********************************************************************/
+dt {
+	font-size: 120%;
+	margin-bottom: 2px;
+}
+dl+dl {
+	margin-top: 2em;
+}
+dd {
+	margin: 0 0 1em 1em;
+}
+
+/* TABLES	
+********************************************************************/
+table {
+	font-size: 95%;
+	margin-top: 10px;
+}
+th {
+	text-align: left;
+	color: #333;
+	font-weight: normal;
+	font-size: 110%;
+	border-bottom: solid 2px #bac7c7;
+	padding: 0 0 3px 3px;
+}
+td {
+	padding: 5px 3px;
+	border-bottom: solid 1px #bac7c7;
+}
+
+/* CLEARING FLOATS
+********************************************************************/
+#site-meta:after, #contentwrap:after, p.intro:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/*main site interior.css overides*/
+#maincontent textarea, #maincontent input {
+	width: auto;
+}
+.col4-0 #container { 	/* set width for Campus calendar template*/
+	width: 900px;
+
+}
+.col4-0 #contentwrap {
+	background: url(images/col4-0.jpg) repeat-y right top;
+}
+#maincontent{
+	width:570px;
+	padding:0;
+	margin:0;
+}

@@ -36,5 +36,10 @@ if (isset($_GET['calendar_shortname'])&&!empty($_GET['calendar_shortname'])) {
     }
 }
 
+
+// clean the cache for every view
+// REMOVE for production
+$front->cleanCache();
+
 UNL_UCBCN::displayRegion($front);
 

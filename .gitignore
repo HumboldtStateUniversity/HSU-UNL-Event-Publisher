@@ -3,4 +3,9 @@ HSU-UNL-Event-Publisher.esproj/Project.espressostorage
 HSU-UNL-Event-Publisher.esproj/user.mmh61.espressostorage
 templates/humboldt/.DS_Store
 manager/templates/.DS_Store
+<<<<<<< HEAD
 home.html
+=======
+manager/templates/humboldt/.DS_Store
+manager/templates/humboldt/images/.DS_Store
+>>>>>>> 19cf0615df78071397ebb9d7bdd343d741a51fe7

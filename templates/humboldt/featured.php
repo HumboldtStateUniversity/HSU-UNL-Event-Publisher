@@ -1,5 +1,5 @@
 <?php
-function upcoming() {
+function featured() {
     $output = '';
     $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/featured/upcoming/?format=xml&limit=5";
     $xmlStr = file_get_contents($xmlUrl);

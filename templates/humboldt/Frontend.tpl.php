@@ -104,7 +104,16 @@ if (isset($this->output[0], $this->output[0]->event)
       </ul>
           <?php if (isset($this->right)) { ?>
               <div class="col left">
+<<<<<<< HEAD
                 
+=======
+                <?php	
+                        if ($this->calendar->id == 1){ // Only show on main calendar
+                                include_once "featured.php";
+                                print featured();
+                        }
+                  ?>
+>>>>>>> 19cf0615df78071397ebb9d7bdd343d741a51fe7
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->

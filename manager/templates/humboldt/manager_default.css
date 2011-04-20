@@ -222,9 +222,9 @@ padding: 0.5em;
 width:700px;
 }
 
-#contentSearch form input:focus,
+/*#contentSearch form input:focus,
 #contentSearch form textarea:focus,
-#contentSearch form select:focus {
+#contentSearch form select:focus*/ {
 background:#ffc;
 }
 

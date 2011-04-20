@@ -5,10 +5,10 @@
 #maincontent {
 	float: left;
     margin-bottom: 20px;
-    padding: 25px 10px 0 0;
+    padding: 0px 10px 0 0;
 }
 #maincontent a{background:none;}
-#maincontent a:hover{text-decoration:underline;}
+#maincontent a:hover{text-decoration:none;}
 
 body.events #titlegraphic {
     margin-top:60px;
@@ -20,17 +20,17 @@ body.events #titlegraphic {
 
 table {clear:both;width:100%;border-collapse:collapse;}
 table tr:hover, table tr.alt:hover{
-	background:#ffffcc;
+	background:#ccc;
 }
 table tr.alt{
-	background:#ecf4f8/*#ECF7FD*/;
+	background:#eee;
 }
 table thead th{
-	background:#3e83c9;
-	color:#fff;		
-	border-bottom:3px solid #BFD6F5;
+/*	background:#3e83c9;*/
+	color:#888;		
+	border-bottom:none;
 	padding:7px;
-	
+	font-size: 130%;
 }
 .day_cal table thead th, .event_cal table thead th{text-align:left!important;}
 table thead th.date a, table thead th.title a{
@@ -41,11 +41,11 @@ table thead th.title{font-style:normal;}
 
 table td{
 	padding:7px;
-	border-top:1px solid #d7e6ee;
+/*	border-top:1px solid #d7e6ee;*/
 	
 	}
-table td.date{width:20%;}
-table td.title{width:80%;}
+table td.date{width:25%;}
+table td.title{width:75%;}
 #maincontent .three_col h4.sec_main, #maincontent .three_col h4.upcoming-header{float:left;font-size:1.5em;padding: 4px 0 7px 30px!important; 
                  background: url(images/date1.gif) no-repeat 0 0;font-style:normal;}
 #maincontent .three_col h4.upcoming-header{background:url(images/newrecurevent.png) no-repeat 0 0;padding:0 0 7px 30px!important;}
@@ -55,15 +55,15 @@ table td.title{width:80%;}
 #maincontent p#day_nav{z-index:10000;margin:25px 0 0px 0;padding:0;float:right;position:relative;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{font-size:0.6em;position:relative;}
-#maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:17px;width:16px;display:block;}
-#maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 -17px}
-#maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 -17px}
+#maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:22px;width:33px;display:block;}
+#maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 -22px}
+#maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 -22px}
 #maincontent a.prev:hover, #maincontent a.next:hover, #maincontent a#dc.prev, #maincontent a#ac.next{background-position:0 1px;}
 #maincontent p.noentry{clear:both;float:left;}
 #maincontent a.returnPrevScreen{font-weight:bold;display:block;font-size:0.8em;padding:2px 3px;background:#cee2f7;color:#6da6db;border:1px solid #a8c2ed;}
 #maincontent .tel{margin-left:0}
 table td.empty{color:#ddd;}
-#maincontent .right {float: right;width: 620px;margin:40px 5px 0 0;}
+#maincontent .right {float: right;width: 582px;margin:40px 5px 0 0;}
 
 /* Calendar Widget */
 table.wp-calendar thead th{
@@ -79,7 +79,7 @@ table.wp-calendar td{
 	border:1px solid #ddd;
 }
 table.wp-calendar td.selected{
-	background-color:#ecf4f8;
+	background-color:#eee;
 }
 table.wp-calendar td#onselect{
 	background-color:#3e83c9;
@@ -99,7 +99,7 @@ table.wp-calendar tr:hover{
 	background:none;
 }
 table.wp-calendar td:hover{
-	background:#ffffcc;
+	background:#ccc;
 }
 #maincontent table.wp-calendar td.next, table.wp-calendar td.prev {color:#a2a2a2;}
 table.wp-calendar td.pad:hover{background:none}
@@ -132,7 +132,14 @@ table.wp-calendar #today_image{
 	right:0;
 	margin:3px 2px 0 0;
 }
-#maincontent span.location, #maincontent span.location a{text-transform:uppercase;font-size:0.75em;color:#3A8103;}
+#maincontent span.location{text-transform:uppercase;font-size:0.75em;background-color:#ccc;padding:3px 6px;border-radius:10px;float:right;}
+#maincontent span.location a {
+	text-decoration: none;
+	border-bottom: none;
+}
+#maincontent span.location a:hover {
+	color: #999;
+}
 #maincontent span.location a{font-size:1em;}
 #maincontent a.returnToday{
 font-size:0.8em;
@@ -151,18 +158,20 @@ text-decoration:underline;
 table.ongoing{margin:5px 0 0 0;}
 /*caption nav*/
 table.wp-calendar caption{position:relative;top:0;left:0;margin:0 0 0 0;overflow:auto;}
-table.wp-calendar caption span{display:block;height:31px;background:url(images/monthviewnav_mid.gif) repeat-x 0 0;float:left;}
+table.wp-calendar caption span{display:block;height:31px;/*background:url(images/monthviewnav_mid.gif) repeat-x 0 0;*/float:left;}
 table.wp-calendar caption span.monthvalue, table.wp-calendar caption span.yearvalue{
 margin-top:0;padding:8px 3px 0;}
-#maincontent table.wp-calendar caption a{margin-bottom:5px;color:#fff;}
+#maincontent table.wp-calendar caption a{margin-bottom:5px;color:#333;font-weight:bold;}
 #maincontent table.wp-calendar caption a:hover{color:#fff !important;}
 table.wp-calendar caption a#prev_month, table.wp-calendar caption a#next_month{text-indent:-9999em;
-	display:block;background:#fff url(images/monthviewnav_prev.gif) no-repeat; width:22px; height:31px;}
+	display:block;background:#fff url(images/monthviewnav_prev.gif) no-repeat; width:6px; height:11px;margin-top:10px}
 table.wp-calendar caption a#next_month{background:url(images/monthviewnav_next.gif) no-repeat;}
 table.wp-calendar caption a#prev_month:hover, table.wp-calendar caption a#next_month:hover{
-background-position:0 -45px;
+background-position:0 -11px;
 }
-
+table blockquote {
+	clear: both;
+}
 /* event view*/
 
 .event_cal h1.summary{padding: 7px 0 10px 37px!important; margin-top:5px;
@@ -222,7 +231,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;}
 #load{position:absolute;margin:80px 0 0 440px;z-index:1000000;top:0;left:0;}
 
 /* day view*/
-.col{margin-top:48px;width:220px;float:left;}
+.col{margin:20px 0 0 10px;width:220px;float:left;}
 
 /* month view */
 .month_cal {margin-top:70px;position:relative;}
@@ -258,16 +267,32 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;}
 #maincontent .month_cal table.wp-calendar td a.more_event{background:none;text-decoration:underline;border:none;margin:3px 0 0 35px;}
 #maincontent .month_cal table.wp-calendar td a.more_event:hover{background:none}
 #maincontent .month_cal table.wp-calendar td ul.none li.close_eventbox{display:none;}
-.month_cal table.wp-calendar td:hover{background:#ffffcc;}
+.month_cal table.wp-calendar td:hover{background:#ccc;}
 .month_cal table.wp-calendar th{font-size:1.15em;text-align:center;width:101px;display:block;float:left;margin-bottom:1px;}
 .month_cal table.wp-calendar tr{float:right;font-size:0.8em;}
 #maincontent .month_cal ul{padding:0 15px;}
 .month_cal table.wp-calendar caption{margin:-38px 0 0 0}
 
 
-ul#frontend_view_selector{position:relative;width:888px;float:right;padding:0 10px 0 0;margin:0;border-bottom:1px solid #999;}
-ul#frontend_view_selector li{background:#efefef;display:block;float:left;margin:0 0 0 4px;border: 1px solid #ccc;border-bottom:1px solid #efefef; padding:4px;}
-ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#todayview, ul#frontend_view_selector.year li#yearview, ul#frontend_view_selector.upcoming li#upcomingview{position:relative;background:#fff url(images/ulnavbar.gif) no-repeat left top;border: 1px solid #999;margin-bottom:-1px;border-bottom:2px solid #fff;}
+ul#frontend_view_selector {
+background-color: #D6D6D6;
+    height: 40px;
+    margin: 0;
+/*    overflow: hidden;*/
+    padding: 0 10px 0 0;
+    position: relative;
+    width: 280px;
+}
+ul#frontend_view_selector li {
+	display:block;
+	list-style-type: none;
+	float:left;
+	margin: 10px;
+}
+
+ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#todayview, ul#frontend_view_selector.year li#yearview, ul#frontend_view_selector.upcoming li#upcomingview{position:relative;background:transparent url(images/triangle.gif)no-repeat center bottom;	padding-bottom: 24px;
+}
+
 
 /*year view*/
 .year_cal table.wp-calendar{margin:0 0 15px 0;}
@@ -291,7 +316,7 @@ h1.year_main{	padding: 0 0 10px 30px!important; margin:40px 0 10px;
 /*search view*/
 form#event_search {
 	float:right;
-	margin:0 0 -24px 0;
+	margin:24px 0;
 	position:relative;z-index:1000;
 	}
 form#event_search input#searchinput{background:#eee; border:1px solid #ccc;
@@ -326,13 +351,15 @@ p#feeds a#rssformat{background:url(images/rss.gif) no-repeat;margin-left:5px;wid
 
 /* recently updated calendars */
 div.cal_widget{
-	background:url(images/recent_bot.gif) no-repeat left bottom;
+/*	background:url(images/recent_bot.gif) no-repeat left bottom;*/
 	clear:both;
-	width:222px;
+/*	width:222px;*/
 	padding:0 0 10px 0;
+	margin-top: 40px;
 }
 #maincontent div.cal_widget h3{
-	font-size:0.8em;position:relative;
+	font-size:0.8em;
+	position:relative;
 	margin:10px 0 0 0;
 	padding:10px 0 5px 12px;
 	background:url(images/recent.gif) no-repeat left top;
@@ -341,36 +368,33 @@ div.cal_widget{
 }
 #maincontent div.cal_widget ul{
 	list-style:none;
-	padding:21px 0 10px 14px;
-	margin:-14px 0 0 0;
-	background:url(images/recent_mid.gif) repeat-y right top;
+	padding:0;
+/*	margin:-14px 0 0 0;*/
+/*	background:url(images/recent_mid.gif) repeat-y right top;*/
 }
 #maincontent div.cal_widget ul li.nobullet {
 background:none;
 padding:0;
 }
-a#frontend_login{margin:0 0 0 -5px;background:url(images/front-login.gif) no-repeat 0 -2px;padding:0 0 0 20px}
-a#frontend_login:hover{background-position:0 -21px;}
+#maincontent li, #tert-content li {
+    list-style-type: none;
+    margin: 0 0 9px 0;
+}
+/*a#frontend_login{margin:0 0 0 -5px;background:url(images/front-login.gif) no-repeat 0 -2px;padding:0 0 0 20px}
+a#frontend_login:hover{background-position:0 -21px;}*/
 
-#maincontent div.cal_widget ul li#login_list{background:none;padding:0;}
-#maincontent div.cal_widget ul li{background:url(images/widget_list.gif) no-repeat 0 5px;padding:0 0 0 15px;height:1%;margin-right:7px;position:relative;}
-#maincontent div.cal_widget ul li:hover{background:url(images/widget_list_hover.gif) no-repeat 0 5px;}
+/*#maincontent div.cal_widget ul li#login_list{background:none;padding:0;}*/
+/*#maincontent div.cal_widget ul li{background:url(images/widget_list.gif) no-repeat 0 5px;padding:0 0 0 15px;height:1%;margin-right:7px;position:relative;}*/
+/*#maincontent div.cal_widget ul li:hover{background:url(images/widget_list_hover.gif) no-repeat 0 5px;}*/
 
 a#monthfullview{background:url(images/checkbox.gif) no-repeat;background-position:0 -14px; padding: 0 0 0 17px;}
 a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 
 #subscribe {
-  float: right;
-  width: 185px;
-  left:200px;
-  top: 30px;font-size:11px;
-  color:#900;
-  margin: 1em 0 0 0;
-  padding:0 0 2px 0;
-  cursor: pointer;
-  background: #eee url(images/subscribe.gif) no-repeat;
+/*  float: right;*/
+  margin-top:40px ;
 }
-#subscribe:hover #droplist {
+/*#subscribe:hover #droplist {
   display: block;
 }
 #subscribe span {
@@ -409,8 +433,13 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 #subscribe li a:hover,
 #subscribe li a:active {
   background-color: #ddd;
-}
+}*/
  abbr.dtstart:after, abbr.dtend:after {content:'' }
+ td abbr {
+ 	margin-top: 10px;
+ 	display: inline-block;
+ 	border-bottom: none;
+ }
 /* IE */
 * html tr.vevent td.date{font-size:0.9em!important;}
 * html #maincontent .three_col{padding:0;}
@@ -442,3 +471,56 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 .col4-0 #contentwrap {
 	background: url(images/col4-0.jpg) repeat-y right top;
 }
+h1 {
+	background: none;
+	border: none;
+	width: 300px;
+	float: left;
+	margin: 24px 0;
+}
+a:link {
+    border-bottom: none;
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+	border-bottom: none;
+}
+td {
+	border-bottom: none;
+}
+#maincontent table a:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+/*Featured event block*/
+#featuredEvents {
+/*	border: solid 1px #ccc;	*/
+	margin:40px 10px 10px 10px;
+	width: 300px;
+	width: 875px;
+	clear: both;
+	overflow: auto;
+}
+#featuredEvents .event_detail {
+	width: 260px;
+	height: 200px;
+	margin: 10px 18px 10px 10px;
+	float: left;
+	border: solid 1px #ccc;
+}
+#featuredEvents .event_detail img {
+	width: 260px;
+	height: 200px;
+}
+.clear {
+	clear: both;
+}
+/* Category filter
+----------------------------------------------- */
+#maincontent .col form {
+	margin-top: 40px;
+}
+
+
+/* @end */

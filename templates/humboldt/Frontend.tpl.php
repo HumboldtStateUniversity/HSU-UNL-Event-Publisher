@@ -69,6 +69,7 @@ if (isset($this->output[0], $this->output[0]->event)
 </div>
 <div id="maincontent">
 <div id="load"></div>
+<!--search form-->
       <form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
           <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
           <input type='submit' name='submit' value="Search" />
@@ -78,6 +79,19 @@ if (isset($this->output[0], $this->output[0]->event)
       </p>-->
       
       </form>
+      <?php	
+              if ($this->calendar->id == 1){ // Only show on main calendar
+                      include_once "upcoming.php";
+                      print upcoming();
+              }
+        ?>
+      <!--<div id="featured_events">
+	      <div class="event_detail">Event One</div>
+	      <div class="event_detail">Event Two</div>
+	      <div class="event_detail">Event Three</div>
+      </div>-->
+      
+<!-- event navigation  -->
       <ul id="frontend_view_selector" class="<?php echo $this->view; ?>">
           <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today's Events</a></li>
           <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),
@@ -90,12 +104,7 @@ if (isset($this->output[0], $this->output[0]->event)
       </ul>
           <?php if (isset($this->right)) { ?>
               <div class="col left">
-                <?php	
-                        if ($this->calendar->id == 1){ // Only show on main calendar
-                                include_once "upcoming.php";
-                                print upcoming();
-                        }
-                  ?>
+                
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->

@@ -7,15 +7,6 @@ header('Content-Type:text/html; charset=UTF-8');
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title><?php echo $this->doctitle; ?></title>
 
-		<!--HSU mainsite stylesheets & scripts--> 
-		<style type="text/css"  media="screen,projection"> 
-		@import "http://www.humboldt.edu/humboldt/styles/interior.css";
-		</style> 
-		<link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/print.css" media="print" /> 
-		<script src="http://www.humboldt.edu/humboldt/scripts/main.js" type="text/javascript"></script> 
-
-		<!--styles & scripts for calendar content-->
-
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
@@ -39,35 +30,36 @@ header('Content-Type:text/html; charset=UTF-8');
 	
 	
         <div id="titlegraphic" style="clear:both">
-            <h1><?php
-                if (isset($this->calendar)) {
-                    echo $this->calendar->name;
-                } else {
-                    echo 'Event Publishing System';
-                }
-                ?></h1>
-            <h2>Plan. Publish. Share.</h2>
+            <h1>Humboldt State Calendar</h1>
+            <!--<h2>Plan. Publish. Share.</h2>-->
         </div>
 		<div id="maincontent">	
 
-                <div id="breadCrumb" style='width: 900px'>
+                <!--<div id="breadCrumb">
                     <a href="">Calendar</a>
                     <?php
                     if (!empty($this->calendar->website)) {
                         echo ' / <a href="'.$this->calendar->website.'">'.$this->calendar->name.'</a>';
                     }
                     ?>
-                </div>
+                </div>-->
                 <div id="contentSearch">
-                    <div id="title" class="rightnav">
-                        <?php if (isset($this->user)) {
-                            UNL_UCBCN::displayRegion($this->calendarselect);
-                        } //End if user
-                        ?>
-                    </div>
 
                     <div id="navigation">
-                        <h4 id="sec_nav">Navigation</h4>
+	                    <div id="title" class="rightnav">
+							<p class="currentCal">Current calendar: <strong><?php
+				                if (isset($this->calendar)) {
+				                    echo $this->calendar->name;
+				                } else {
+				                    echo 'Event Publishing System';
+				                }
+				                ?></strong></p>
+	                        <?php if (isset($this->user)) {
+	                            UNL_UCBCN::displayRegion($this->calendarselect);
+	                        } //End if user
+	                        ?>
+	                    </div>
+                        <!--<h4 id="sec_nav">Navigation</h4>-->
                         <div id="navlinks">
                             <?php
                             if (isset($this->user)) { ?>
@@ -108,15 +100,16 @@ header('Content-Type:text/html; charset=UTF-8');
 
                     <div id="main_right" class="mainwrapper">
                         <div id="maincontent">
-                            <div>
+                            <!--<div>
                                 <h2>Descriptive Text</h2>
                                 <p>Fill in whatever information is pertinent to your calendar here.</p>
-                            </div>
+                            </div>-->
                             <?php if (isset($this->user)) { ?>
-                            <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">
+                            <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
                                 <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
                                 <input type='submit' class="search_submit" name='submit' value="Search" />
                                 <input type='hidden' name='action' value='search' />
+								</div>
                             </form>
                                 <?php }
                             UNL_UCBCN::displayRegion($this->output);
@@ -143,13 +136,13 @@ header('Content-Type:text/html; charset=UTF-8');
 
 			<!-- Google CSE Search Box Begins --> 
 
-			<form action="http://www.humboldt.edu/humboldt/search/" id="search"> 
+			<!--<form action="http://www.humboldt.edu/humboldt/search/" id="search"> 
 			    <input type="hidden" name="cx" value="016116879625100262331:h29hmmqiar8" /> 
 			    <input type="hidden" name="cof" value="FORID:11" /> 
 			    <input type="text" name="q" size="15" value="Search" /> 
 			    <input type="image" src="http://www.humboldt.edu/humboldt//images/submit.gif" value="Go" name="sa" class="submit" alt="go" /> 
 			</form> 
-			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script> 
+			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script> -->
 			<!-- Google CSE Search Box Ends --> 
 
 			<div class="vcard"> 
@@ -186,5 +179,4 @@ header('Content-Type:text/html; charset=UTF-8');
 			</script> 
 
 			</body>
-    </body>
 </html>

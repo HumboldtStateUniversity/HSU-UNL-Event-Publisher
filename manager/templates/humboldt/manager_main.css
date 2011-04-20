@@ -51,6 +51,7 @@
  */
 
 /* import stylesheets and hide from ie/mac \*/
+@import url("hsu-interior.css");
 @import url("manager_default.css");
 @import url("manager_ieonly.css"); 
 /* end import/hide */

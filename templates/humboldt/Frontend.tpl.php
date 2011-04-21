@@ -77,34 +77,21 @@ if (isset($this->output[0], $this->output[0]->event)
       <!--<p id="search_term">Search smartly: In addition to normal keyword search, you can also search with chronological terms such as 'tomorrow', 'Monday' and etc.
       <a href="#" title="close search tip">(close message)</a>
       </p>-->
-      
+<!-- featured events start-->
+      <?php	
+              if ($this->calendar->id == 1){ // Only show on main calendar
+                      include_once "featured.php";
+                      print featured();
+              }
+        ?>
       </form>
-      <!--<div id="featured_events">
-	      <div class="event_detail">Event One</div>
-	      <div class="event_detail">Event Two</div>
-	      <div class="event_detail">Event Three</div>
-      </div>-->
+
       
-<!-- event navigation  -->
-      <ul id="frontend_view_selector" class="<?php echo $this->view; ?>">
-          <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today's Events</a></li>
-          <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),
-                                                                                      'm'=>date('m'),
-                                                                                      'calendar'=>$this->calendar->id)); ?>">This Month</a></li>
-          <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),
-                                                                                    'calendar'=>$this->calendar->id)); ?>">This Year</a></li>
-          <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,
-                                                                                        'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
-      </ul>
+
           <?php if (isset($this->right)) { ?>
               <div class="col left">
 
-                <?php	
-                        if ($this->calendar->id == 1){ // Only show on main calendar
-                                include_once "featured.php";
-                                print featured();
-                        }
-                  ?>
+                
 
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
@@ -121,25 +108,21 @@ if (isset($this->output[0], $this->output[0]->event)
                   echo $output;
                   }
                   ?>
-                  <div class="cal_widget">
-                  <h3>Contribute/Learn More</h3>
-                  <ul>
-                  <li id="login_list"><a id="frontend_login" href="<?php echo $this->manageruri; ?>">Submit an Event</a> </li>
-                  <li><a href="http://www1.unl.edu/wdn/wiki/UNL_Calendar_Documentation">Learn More</a></li>
-                  <li><a href="http://www1.unl.edu/comments/">Provide Feedback</a> </li>
-                  </ul></div>
-                  
-                      
-<div id="subscribe" onmouseover="if(!g_bH){document.getElementById('droplist').style.display='block';}" onmouseout="if(!g_bH){document.getElementById('droplist').style.display='none';}">
-  <span>Subscribe to this calendar</span> 
-  <ul id="droplist">
-    <li id="eventrss"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming','format'=>'rss')); ?>&amp;limit=100" title="RSS feed">RSS feed</a></li>
-    <li id="eventical"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming','format'=>'ics')); ?>&amp;limit=100" title=".ical format">.ical format</a></li>
-    </ul>
-</div>
+                  Z
               
               </div>
               <div id="updatecontent" class="three_col right">
+              <!-- event navigation  -->
+            <ul id="frontend_view_selector" class="<?php echo $this->view; ?>">
+                <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today's Events</a></li>
+                <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),
+                                                                                            'm'=>date('m'),
+                                                                                            'calendar'=>$this->calendar->id)); ?>">This Month</a></li>
+                <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),
+                                                                                          'calendar'=>$this->calendar->id)); ?>">This Year</a></li>
+                <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,
+                                                                                              'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
+            </ul>
               <?php UNL_UCBCN::displayRegion($this->output); ?>
               </div>
               

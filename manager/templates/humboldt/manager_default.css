@@ -3,16 +3,6 @@ width: 880px;
 padding: 10px;
 margin: auto;
 }
-
-#contentSearch a {
-background:none;
-color: #737;
-}
-
-#contentSearch a:hover {
-text-decoration:underline;
-}
-
 #search_term{
 display: none;
 }
@@ -21,7 +11,10 @@ display: none;
 margin-left: 1.5em;
 list-style: none;
 }
-
+p.currentCal{
+margin:0 0 5px 0;
+font-size:1.3em;
+}
 /*	-------------------------------------------------------------
 	University of Nebraska-Lincoln Calendar
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -32,10 +25,7 @@ list-style: none;
 /*	-------------------------------------------------------------
 	Base Body Styles
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-#contentSearch a {
-background:none;
-color:#737;
-}
+
 
 #contentSearch a:hover {
 text-decoration:underline !important;
@@ -54,7 +44,6 @@ margin-left: 300px;
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 #navlinks ul {
 width:auto;
-border-bottom:3px double #ddd;
 margin:3px 0;
 padding:5px 0 7px;
 background:none;
@@ -65,14 +54,6 @@ list-style:none;
 padding:0;
 margin:0;
 }
-
-h4#sec_nav {
-background:url(images/heading.gif) no-repeat 0 4px;
-border-bottom:1px solid #ddd;
-color:#333;
-padding:0 0 0 11px;
-}
-
 #nav_end {
 display:none;
 }
@@ -128,10 +109,10 @@ margin-right:0;
 	Right hand column widget
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 div.cal_widget {
-background:url(images/recent_bot.gif) no-repeat left bottom;
+background-color:#888;
 width:222px;
-padding:0 0 10px;
-margin:0 0 10px;
+padding:0 7px 10px 0;
+margin:0 0 20px;
 }
 
 div.cal_widget h3 {
@@ -139,26 +120,26 @@ position:relative;
 font-size:12px !important;
 clear:both;
 margin:0;
-padding:8px 0 5px 12px;
-background:url(images/recent.gif) no-repeat left top;
-width:222px;
+padding:8px 0 5px 18px;
+background-color:#ddd;
+width:211px;
 height:15px;
 }
 
 div.cal_widget h3 span {
-padding:0 0 0 19px;
-background:url(images/date.gif) no-repeat left top;
+
 }
 
 div.cal_widget h3 img {
 float:right;
 }
-
+#maincontent div.cal_widget a{
+color:#fff;
+}
 div.cal_widget ul {
 list-style:none;
-padding:21px 0 10px 14px;
+padding:21px 0 10px 0px;
 margin:-14px 0 0;
-background:url(images/recent_mid.gif) repeat-y right top;
 }
 
 div.cal_widget ul li#login_list {
@@ -167,14 +148,13 @@ padding:0;
 }
 
 div.cal_widget ul li {
-background:url(images/widget_list.gif) no-repeat 0 5px;
-padding:0 0 0 15px;
+padding:0 0 0 0px;
 margin-right:7px;
 position:relative;
 }
 
 div.cal_widget ul li:hover {
-background:url(images/widget_list_hover.gif) no-repeat 0 5px;
+
 }
 
 div.cal_widget ul li.nobullet {
@@ -189,6 +169,9 @@ display:none;
 /*	-------------------------------------------------------------
 	Form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#contentwrap #maincontent form{
+font-size:14px;
+}
 #contentSearch form {
 clear: right;
 margin:0;
@@ -222,20 +205,11 @@ padding: 0.5em;
 width:700px;
 }
 
-/*#contentSearch form input:focus,
+#contentSearch form input:focus,
 #contentSearch form textarea:focus,
-#contentSearch form select:focus*/ {
+/*#contentSearch form select:focus*/ {
 background:#ffc;
 }
-
-#contentSearch form select {
-font-size:0.8em;
-}
-
-#contentSearch form option {
-padding:0 0.3em;
-}
-
 #contentSearch form textarea {
 overflow:auto;
 /*height:100px;*/
@@ -274,11 +248,9 @@ position:relative;
 vertical-align:baseline;
 }
 
-#contentSearch form fieldset span,.required {
+.required {
 color:red;
 }
-
-
 #contentSearch form fieldset li.reqnote label {
 display:none;
 }
@@ -316,14 +288,15 @@ margin-top:10px;
 text-align:left;
 }
 
+
+/** check all/ uncheck all buttons **/
 #contentSearch .subsectionlink,
 #contentSearch a#formShow,
 #contentSearch a.checkall,
 #contentSearch a.uncheckall {
-padding:2px;
-border:1px solid #266cb3;
-border-color:#77a9dc #1a5898 #1a5898 #77a9dc;
-background:#3e83c9;
+padding:3px 5px;
+border:1px solid #999;
+background:#777;
 color:#fff;
 }
 
@@ -340,10 +313,6 @@ margin-left:10px;
 #contentSearch a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
 color:#fff !important;
 text-decoration:underline;
-}
-
-form#cal_choose select {
-font-size:1em;
 }
 
 form#cal_choose br {
@@ -424,34 +393,6 @@ display: none;
 
 
 /*	-------------------------------------------------------------
-	Search form elements
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-form#event_search {
-margin:0;
-padding:0;
-position:relative;
-z-index:1000;
-}
-form#event_search div{
-float:right;
-margin:0 0 15px 0;
-}
-
-form#event_search input#searchinput {
-background:#eee;
-border:1px solid #ccc;
-border-color:#ccc #fff #fff #ccc;
-padding:2px;
-}
-
-form#event_search input.search_submit {
-border:none;
-border-right:2px solid #999;
-border-bottom:2px solid #999;
-padding:1px;
-}
-
-/*	-------------------------------------------------------------
 	Login Form
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 body#login #navigation {
@@ -507,33 +448,33 @@ border:none;
 	Table elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 body#normal div#contentSearch ul.eventsbystatus {
+font-size:14px;
 list-style:none;
 line-height:1;
-margin:0 0 10px;
-width:600px;
-padding:6px 6px 2.2em;
-border-bottom:1px solid #bebcbc;
+margin:5px 0 39px 0;
+padding:0;
+width:325px;
+height:30px;
+background-color:#ccc;
 }
 
 body#normal div#contentSearch ul.eventsbystatus li {
 display:block;
 float:left;
 margin:2px 2px -1px;
-padding:6px;
-background:#eee;
-border:1px solid #bebcbc;
+padding:6px 12px;
 }
 
 body#normal div#contentSearch ul.eventsbystatus li a {
 text-decoration:none;
+color:#000;
 }
 
+/** current **/
 body#normal div#contentSearch ul.eventsbystatus.archived li#archived_manager,
 body#normal div#contentSearch ul.eventsbystatus.pending li#pending_manager,
 body#normal div#contentSearch ul.eventsbystatus.posted li#posted_manager {
 position:relative;
-background:#fff;
-border-bottom:1px solid #fff;
 }
 
 body#normal div#contentSearch form {
@@ -568,10 +509,10 @@ border:none;
 }
 
 #contentSearch table.eventlisting thead th {
-background:#3e83c9;
+background:#777;
 color:#fff;
 text-align:left;
-border-bottom:3px solid #BFD6F5;
+border-bottom:2px solid #555;
 padding:7px;
 }
 
@@ -598,7 +539,7 @@ text-decoration:underline;
 }
 
 table.eventlisting tr:hover,table.eventlisting tr.alt:hover {
-color:red;
+color:#090;
 }
 
 table.eventlisting tr {
@@ -606,15 +547,15 @@ cursor:pointer;
 }
 
 table.eventlisting tr.alt {
-background:#e8f5fa;
-border-top:1px solid #8ebcd6;
-border-bottom:1px solid #8ebcd6;
+background:#ddd;
+border-top:1px solid #999;
+border-bottom:1px solid #999;
 }
 
 #contentSearch table.eventlisting tr td {
 padding:7px;
-border-top:1px solid #8ebcd6;
-border-bottom:1px solid #8ebcd6;
+border-top:1px solid #bbb;
+border-bottom:1px solid #bbb;
 }
 
 table td.date {
@@ -638,12 +579,13 @@ padding: 7px;
 /*	-------------------------------------------------------------
 	Buttons
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+/** edit buttons **/
 #contentSearch table.eventlisting td.edit a,#contentSearch table.eventlisting td a.user_perm_edit {
 font-size:11px;
-padding:2px 4px;
-border:1px solid #266cb3;
-border-color:#77a9dc #1a5898 #1a5898 #77a9dc;
-background:#3e83c9;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
 color:#fff;
 }
 
@@ -678,9 +620,14 @@ margin:10px 5px 0 0;
 }
 
 .btnsubmit,#contentSearch form input.submitButton {
-border:1px solid #ccc !important;
-background:#ddd !important;
-border-color:#d6d6d6 #909090 #909090 #d6d6d6 !important;
+background: url(images/submitBtn.gif) no-repeat center;
+border: none;
+cursor: pointer;
+height: 30px;
+margin: 0;
+overflow: hidden;
+padding: 30px 0 0 70px;
+width: 70px;
 }
 
 .btnsubmit#delete_event {
@@ -723,10 +670,13 @@ background-position:0 -22px;
 }
 
 
+
+
+
+
+/** overrides **/
 label {
 	color: #444;
-	font-size: 14px;
-    line-height: 17px;
     margin: 0;
 }
 
@@ -737,9 +687,6 @@ input, textarea {
 	padding:3px 5px;
     margin: 0;
 }
-#maincontent form select {
-	font-size:14px;
-}
 #maincontent input[type="text"], #maincontent textarea{
 	width:400px;
 }
@@ -749,15 +696,81 @@ input, textarea {
 #maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
 	width:auto;
 }
-
-
-
-
 form div.element {margin-bottom:10px;}
-
-
-
 div#maincontent form ol li{
 	margin:0;
 	padding:0;
+}
+#maincontnet .rightnav #submit{
+	padding:0;
+	line-height:15px;
+}
+
+fieldset, form, label, legend{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+
+
+
+/* select */
+#navigation .element a {
+color:#212121;
+}
+
+/* -- !Submit -- */
+#cal_choose input#submit {
+	background: url(images/go.gif) no-repeat center;
+	border: none;
+	cursor: pointer;
+	height: 30px;
+	margin: 0;
+	overflow: hidden;
+	padding: 30px 0 0 42px;
+	width: 42px;
+}
+
+/*	-------------------------------------------------------------
+	Search form elements
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	form#event_search{
+		margin:0;
+		padding:0;
+		height:30px;
+		position:relative;
+		z-index:1000;
+	}
+form#event_search div{
+	margin:1px 0 19px 0;
+	padding:0;
+	float:right;
+}
+#event_search #searchinput{
+	height:28px;
+	padding:4px 3px;
+	margin:0 10px 0 0;
+	padding:0;
+	float:left;
+	background:#eee;
+	border:1px solid #999;
+}
+div#maincontent form#event_search input.search_submit{
+	background: url(images/search.gif) no-repeat center;
+	border: none;
+	cursor: pointer;
+	height: 30px;
+	margin: 0;
+	overflow: hidden;
+	padding: 30px 0 0 70px;
+	width: 70px;
+	float:left;
+}
+
+#navigation .element select, #navigation .element ui-selectmenu{
+	width:220px;
+	text-align:left;
+}
 }

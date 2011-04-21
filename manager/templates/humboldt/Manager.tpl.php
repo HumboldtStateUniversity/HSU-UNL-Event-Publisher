@@ -10,11 +10,13 @@ header('Content-Type:text/html; charset=UTF-8');
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/<?php echo $this->calendar->theme ?>/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/ui.selectmenu.css">
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
+		<script src="templates/humboldt/ui.selectmenu.js"></script>
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>
 		<div id="wrap"> 
@@ -30,7 +32,7 @@ header('Content-Type:text/html; charset=UTF-8');
 	
 	
         <div id="titlegraphic" style="clear:both">
-            <h1>Humboldt State Calendar</h1>
+            <h1>Calendar/Events</h1>
             <!--<h2>Plan. Publish. Share.</h2>-->
         </div>
 		<div id="maincontent">	
@@ -44,20 +46,20 @@ header('Content-Type:text/html; charset=UTF-8');
                     ?>
                 </div>-->
                 <div id="contentSearch">
-
+					<p class="currentCal">Current calendar: <strong><?php
+		                if (isset($this->calendar)) {
+		                    echo $this->calendar->name;
+		                } else {
+		                    echo 'Event Publishing System';
+		                }
+		                ?></strong></p>
+                    <?php if (isset($this->user)) {
+                        UNL_UCBCN::displayRegion($this->calendarselect);
+                    } //End if user
+                    ?>
                     <div id="navigation">
 	                    <div id="title" class="rightnav">
-							<p class="currentCal">Current calendar: <strong><?php
-				                if (isset($this->calendar)) {
-				                    echo $this->calendar->name;
-				                } else {
-				                    echo 'Event Publishing System';
-				                }
-				                ?></strong></p>
-	                        <?php if (isset($this->user)) {
-	                            UNL_UCBCN::displayRegion($this->calendarselect);
-	                        } //End if user
-	                        ?>
+
 	                    </div>
                         <!--<h4 id="sec_nav">Navigation</h4>-->
                         <div id="navlinks">

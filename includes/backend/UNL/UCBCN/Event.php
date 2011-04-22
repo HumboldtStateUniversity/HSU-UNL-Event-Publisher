@@ -72,7 +72,6 @@ class UNL_UCBCN_Event extends DB_DataObject
     public $fb_formHeaderText = 'Event Sharing Status';
     public $fb_preDefOrder = array(
                                     'approvedforcirculation',
-                                    'consider',
                                     'title',
                                     'subtitle',
                                     'description',
@@ -177,7 +176,11 @@ class UNL_UCBCN_Event extends DB_DataObject
             ($_SESSION['calendar_id'] != $_UNL_UCBCN['default_calendar_id'])) {
             include_once 'UNL/UCBCN/Calendar_has_event.php';
             $this->fb_preDefElements['consider'] = HTML_QuickForm::createElement('checkbox', 'consider', $this->fb_fieldLabels['consider'], 'Please consider event for the main calendar');
-            if (isset($this->id)) {
+
+            // HSU mod - remove checkbox for considering
+            // an event for the main calendar
+            $this->fb_preDefElements['consider']->setChecked(true);
+            /*if (isset($this->id)) {
                 $che = UNL_UCBCN::factory('calendar_has_event');
                 $che->calendar_id = $_UNL_UCBCN['default_calendar_id'];
                 $che->event_id = $this->id;
@@ -186,7 +189,7 @@ class UNL_UCBCN_Event extends DB_DataObject
                     $this->fb_preDefElements['consider']->setChecked(true);
                     $this->fb_preDefElements['consider']->freeze();
                 }
-            }
+            }*/
         }
         if (isset($this->uidcreated)) {
             $el = HTML_QuickForm::createElement('text', 'uidcreated', 'Originally Created By', $this->uidcreated);

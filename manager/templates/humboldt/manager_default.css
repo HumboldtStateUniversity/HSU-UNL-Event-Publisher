@@ -455,7 +455,7 @@ margin:5px 0 39px 0;
 padding:0;
 width:325px;
 height:30px;
-background-color:#ccc;
+background-color:#d6d6d6;
 }
 
 body#normal div#contentSearch ul.eventsbystatus li {
@@ -474,8 +474,10 @@ color:#000;
 body#normal div#contentSearch ul.eventsbystatus.archived li#archived_manager,
 body#normal div#contentSearch ul.eventsbystatus.pending li#pending_manager,
 body#normal div#contentSearch ul.eventsbystatus.posted li#posted_manager {
-position:relative;
+position:relative;background:transparent url(images/triangle.gif)no-repeat center bottom; padding-bottom: 19px;
 }
+
+
 
 body#normal div#contentSearch form {
 padding:0;
@@ -772,5 +774,4 @@ div#maincontent form#event_search input.search_submit{
 #navigation .element select, #navigation .element ui-selectmenu{
 	width:220px;
 	text-align:left;
-}
 }

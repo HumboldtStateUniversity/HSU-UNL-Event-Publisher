@@ -70,9 +70,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     ###END_AUTOCODE
     
     public $fb_formHeaderText = 'Event Sharing Status';
-    public $fb_preDefOrder = array(
-                                    'approvedforcirculation',
-                                    'title',
+    public $fb_preDefOrder = array( 'title',
                                     'subtitle',
                                     'description',
                                     '__reverseLink_event_has_eventtype_event_id',
@@ -89,7 +87,6 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'imageurl'               => 'Existing Image URL',
                                     'imagedata'              => 'Upload/Attach an Image',
                                     'imagetitle'             => 'Image Title',
-                                    'approvedforcirculation' => '',
                                     'otherkeywords'          => 'Other Keywords',
                                     'listingcontactname'     => 'Name',
                                     'listingcontactphone'    => 'Phone',
@@ -110,10 +107,6 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'imagemime',
                                     'icalendar');
     
-    public $fb_enumFields          = array('approvedforcirculation');
-    public $fb_enumOptions         = array('approvedforcirculation'=>array('Private (Your event will only be available to your calendar)<br />',
-                                                                           'Public (Your event will be available to any calendar)<br />'));
-    
     public $fb_linkNewValue        = array('__reverseLink_eventdatetime_event_idlocation_id_1',
                                             'location_id');
 
@@ -125,8 +118,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     
     public $fb_linkElementTypes    = array('__reverseLink_eventdatetime_event_id'=>'subForm',
                                            '__reverseLink_event_has_eventtype_event_id'=>'subForm',
-                                           '__reverseLink_event_has_sponsor_event_id'=>'subForm',
-                                           'approvedforcirculation'=>'radio');
+                                           '__reverseLink_event_has_sponsor_event_id'=>'subForm');
     
     public $fb_textAreaFields      = array('description');
     
@@ -251,11 +243,9 @@ class UNL_UCBCN_Event extends DB_DataObject
             $defaults['datecreated'] = $this->datecreated;
         }
         
-        if (isset($this->approvedforcirculation)) {
-            $defaults['approvedforcirculation'] = $this->approvedforcirculation;
-        } else {
-            $defaults['approvedforcirculation'] = 1;
-        }
+        
+        $defaults['approvedforcirculation'] = 1;
+        
         $el =& $form->getElement('approvedforcirculation');
         unset($el->_elements[0]);
         $form->setDefaults($defaults);

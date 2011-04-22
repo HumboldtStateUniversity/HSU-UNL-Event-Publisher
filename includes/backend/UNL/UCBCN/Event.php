@@ -68,10 +68,9 @@ class UNL_UCBCN_Event extends DB_DataObject
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
-    
-    public $fb_formHeaderText = 'Event Sharing Status';
+
+    public $fb_formHeaderText = 'Event Details';
     public $fb_preDefOrder = array(
-                                    'approvedforcirculation',
                                     'title',
                                     'subtitle',
                                     'description',
@@ -81,7 +80,7 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'listingcontactname',
                                     'listingcontactphone',
                                     'listingcontactemail');
-    
+
     public $fb_fieldLabels = array( 'othereventtype'         => 'Secondary Event Type',
                                     'shortdescription'       => 'Short Description',
                                     'webpageurl'             => 'Event Webpage',
@@ -109,27 +108,27 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'transparency',
                                     'imagemime',
                                     'icalendar');
-    
-    public $fb_enumFields          = array('approvedforcirculation');
-    public $fb_enumOptions         = array('approvedforcirculation'=>array('Private (Your event will only be available to your calendar)<br />',
-                                                                           'Public (Your event will be available to any calendar)<br />'));
-    
+
+   // public $fb_enumFields          = array('approvedforcirculation');
+   // public $fb_enumOptions         = array('approvedforcirculation'=>array('Private (Your event will only be available to your calendar)<br />',
+   //                                                                        'Public (Your event will be available to any calendar)<br />'));
+
     public $fb_linkNewValue        = array('__reverseLink_eventdatetime_event_idlocation_id_1',
                                             'location_id');
 
     public $fb_reverseLinks        = array(array('table'=>'eventdatetime'),
                                            array('table'=>'event_has_eventtype'),
                                            array('table'=>'event_has_sponsor'));
-    
+
     public $fb_reverseLinkNewValue = true;
-    
+
     public $fb_linkElementTypes    = array('__reverseLink_eventdatetime_event_id'=>'subForm',
                                            '__reverseLink_event_has_eventtype_event_id'=>'subForm',
-                                           '__reverseLink_event_has_sponsor_event_id'=>'subForm',
-                                           'approvedforcirculation'=>'radio');
-    
+                                           '__reverseLink_event_has_sponsor_event_id'=>'subForm');
+                                           //'approvedforcirculation'=>'radio');
+
     public $fb_textAreaFields      = array('description');
-    
+
     /**
      * Called before the form values are processed and populate the object.
      *
@@ -156,7 +155,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             $rec->unlinkEvents($this->__table, $values, $datetime);
         }
     }
-    
+
     /**
      * Called before the form is generated.
      *
@@ -199,7 +198,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             $fb->reverseLinks = array();
         }
     }
-    
+
     /**
      * Called after the form is generated for additional formatting.
      *
@@ -210,33 +209,33 @@ class UNL_UCBCN_Event extends DB_DataObject
      */
     public function postGenerateForm(&$form, &$formBuilder)
     {
-        $form->insertElementBefore(HTML_QuickForm::createElement('header', 'detailsheader', 'Event Details'), 'title');
+       // $form->insertElementBefore(HTML_QuickForm::createElement('header', 'detailsheader', 'Event Details'), 'title');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'contactheader', 'Contact Information'), 'listingcontactname');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'eventlocationheader', 'Event Location, Date and Time'), '__reverseLink_eventdatetime_event_id');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'optionaldetailsheader', 'Additional Details (Optional)'), 'shortdescription');
         $form->updateElementAttr('approvedforcirculation', 'id="approvedforcirculation"');
         $form->updateElementAttr('uidcreated', 'id="uidcreated"');
-        
+
         foreach ($this->fb_textAreaFields as $name) {
             $el =& $form->getElement($name);
             $el->setRows(4);
             $el->setCols(50);
         }
-        
+
         foreach (array('title','subtitle') as $name) {
             $el =& $form->getElement($name);
             $el->setSize(50);
         }
-        
+
         $el =& $form->getElement('webpageurl');
         $el->setCols(50);
         $el->setRows(2);
-        
+
         $form->addRule('imageurl', 'Image URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
         $form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
-        
+
         $date = date('Y-m-d H:i:s');
-        
+
         $defaults = array('datecreated'     => $date,
                           'datelastupdated' => $date);
 
@@ -246,11 +245,11 @@ class UNL_UCBCN_Event extends DB_DataObject
             }
             $defaults['uidlastupdated']=$_SESSION['_authsession']['username'];
         }
-        
+
         if (!empty($this->datecreated)) {
             $defaults['datecreated'] = $this->datecreated;
         }
-        
+
         if (isset($this->approvedforcirculation)) {
             $defaults['approvedforcirculation'] = $this->approvedforcirculation;
         } else {
@@ -260,7 +259,7 @@ class UNL_UCBCN_Event extends DB_DataObject
         unset($el->_elements[0]);
         $form->setDefaults($defaults);
     }
-    
+
     /**
      * Simple function to test for a valid URL
      *
@@ -274,7 +273,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     {
         return preg_match('/^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/i', $val);
     }
-    
+
     /**
      * Called before linked dataobjects are used to restrict the results to a subset
      *
@@ -296,7 +295,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             }
         }
     }
-    
+
     /**
      * Returns an associative array of the fields for this table.
      *
@@ -334,7 +333,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             'datelastupdated'=>14,
             'uidlastupdated'=>2
         );
-        
+
         if (isset($_UNL_UCBCN['default_calendar_id']) &&
             isset($_SESSION['calendar_id']) &&
             ($_SESSION['calendar_id'] != $_UNL_UCBCN['default_calendar_id'])) {
@@ -350,19 +349,19 @@ class UNL_UCBCN_Event extends DB_DataObject
             'id',
         );
     }
-    
+
     function sequenceKey()
     {
         return array('id',true);
     }
-    
+
     function links()
     {
         return array('listingcontactuid' => 'users:uid',
                      'uidcreated'        => 'users:uid',
                      'uidlastupdated'    => 'users:uid');
     }
-    
+
     /**
      * This function processes any posted files,
      * sepcifically the images for an event.
@@ -381,7 +380,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             $this->imagedata = file_get_contents($_FILES['imagedata']['tmp_name']);
         }
     }
-    
+
     /**
      * Inserts a new event in the database.
      *
@@ -415,7 +414,7 @@ class UNL_UCBCN_Event extends DB_DataObject
         }
         return $result;
     }
-    
+
     /**
      * Updates the record for this event in the database.
      *
@@ -460,12 +459,12 @@ class UNL_UCBCN_Event extends DB_DataObject
             while ($events->fetch()) {
                 $facebook = new UNL_UCBCN_FacebookInstance($events->id);
                 $facebook->updateEvent();
-                
+
             }
         }
         return $res;
     }
-    
+
     /**
      * This function will add the current event to the default calendar.
      * It assumes that the global default_calendar_id is set.
@@ -489,7 +488,7 @@ class UNL_UCBCN_Event extends DB_DataObject
                 'source'          => $sourcemsg);
         return UNL_UCBCN::dbInsert('calendar_has_event', $values);
     }
-    
+
     /**
      * Performs a delete of this event and all child records
      *
@@ -505,7 +504,7 @@ class UNL_UCBCN_Event extends DB_DataObject
                 $facebook = new UNL_UCBCN_FacebookInstance($events->id);
                 $facebook->deleteEvent();
             }
-          
+
         // Delete child elements that would be orphaned.
         if (ctype_digit($this->id)) {
             foreach (array('calendar_has_event',
@@ -522,7 +521,7 @@ class UNL_UCBCN_Event extends DB_DataObject
         }
         return parent::delete();
     }
-    
+
     /**
      * Check whether this event belongs to any calendars.
      *
@@ -538,18 +537,18 @@ class UNL_UCBCN_Event extends DB_DataObject
             return false;
         }
     }
-    
+
     /**
      * Adds other information to the array produced by $event->toArray().
      * If $event already contains these values, this function can be called with
      * just the first parameter. Otherwise the values must be supplied.
-     * 
+     *
      * @param UNL_UCBCN_Event $event  the event to call toArray() on
      * @param mixed           $ucee   optional whether the current user can edit $event
      * @param mixed           $ucde   optional whether the user can delete $event
      * @param mixed           $che    optional status if calendar has event, false otherwise
      * @param mixed           $rec_id optional recurrence_id
-     * 
+     *
      * @return array
      */
     public function eventToArray($event, $ucee=null, $ucde=null, $che=null, $rec_id=false)
@@ -574,16 +573,16 @@ class UNL_UCBCN_Event extends DB_DataObject
         $event = array_merge($event->toArray(), $other_event_info);
         return $event;
     }
-    
+
     /**
      * Converts an associative array generated by UNL_UCBCN_Event::toArray()
      * back into an object of type UNL_UCBCN_Event. It can also take an object
      * of type UNL_UCBCN_Event or stdClass as its parameter. This ensures that the
      * value returned is an object of UNL_UCBCN_Event and not stdClass.
-     * 
+     *
      * @param mixed $event associative array, UNL_UCBCN_Event, or stdClass
-     * to convert to UNL_UCBCN_Event. 
-     * 
+     * to convert to UNL_UCBCN_Event.
+     *
      * @return UNL_UCBCN_Event
      */
     public function arrayToEvent($event)

@@ -399,6 +399,24 @@ class UNL_UCBCN_Event extends DB_DataObject
         $this->processFileAttachments();
         $this->datecreated = date('Y-m-d H:i:s');
         $this->datelastupdated = date('Y-m-d H:i:s');
+
+        // HSU - process image URL
+        if(isset($this->imageurl)){
+            $allowed = array('.png', '.jpg', '.jpeg');
+            $extension = substr($this->imageurl, -5);
+            if (in_array(stristr($extension, '.'), $allowed)) {
+                 $imagedata = file_get_contents($this->imageurl);
+                 if (stripos($extension, 'jpeg'))
+                         $imagemime = 'image/jpeg';
+                 elseif (stripos($extension, 'jpg'))
+                         $imagemime = 'image/jpg';
+                 elseif (stripos($extension, 'png'))
+                         $imagemime = 'image/png';
+                 $this->imagemime = $imagemime;
+                 $this->imagedata = $imagedata;
+            }
+        }
+
         if (isset($_SESSION['_authsession'])) {
             $this->uidcreated=$_SESSION['_authsession']['username'];
             $this->uidlastupdated=$_SESSION['_authsession']['username'];

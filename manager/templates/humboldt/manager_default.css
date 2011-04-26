@@ -328,10 +328,6 @@ float:left;
 display:none;
 }
 
-#contentSearch form#unl_ucbcn_event fieldset.d__header___class input {
-border:none;
-}
-
 #contentSearch form fieldset.d__header___class {
 /*margin-top:-23px;*/
 }
@@ -475,6 +471,23 @@ body#normal div#contentSearch ul.eventsbystatus.archived li#archived_manager,
 body#normal div#contentSearch ul.eventsbystatus.pending li#pending_manager,
 body#normal div#contentSearch ul.eventsbystatus.posted li#posted_manager {
 position:relative;background:transparent url(images/triangle.gif)no-repeat center bottom; padding-bottom: 19px;
+}
+
+
+ul#frontend_view_selector {
+background-color: #D6D6D6;
+    height: 40px;
+    margin: 0;
+/*    overflow: hidden;*/
+    padding: 0 10px 0 0;
+    position: relative;
+    width: 280px;
+}
+ul#frontend_view_selector li {
+	display:block;
+	list-style-type: none;
+	float:left;
+	margin: 10px;
 }
 
 

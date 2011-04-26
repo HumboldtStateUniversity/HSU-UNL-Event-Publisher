@@ -402,7 +402,7 @@ class UNL_UCBCN_Event extends DB_DataObject
 
         // HSU - process image URL
         if(isset($this->imageurl)){
-            $allowed = array('.png', '.jpg', '.jpeg');
+            $allowed = array('.png', '.jpg', '.jpeg', '.gif');
             $extension = substr($this->imageurl, -5);
             if (in_array(stristr($extension, '.'), $allowed)) {
                  $imagedata = file_get_contents($this->imageurl);
@@ -412,6 +412,8 @@ class UNL_UCBCN_Event extends DB_DataObject
                          $imagemime = 'image/jpg';
                  elseif (stripos($extension, 'png'))
                          $imagemime = 'image/png';
+		 elseif (stripos($extension, 'gif'))
+			 $imagemime = 'image/gif';
                  $this->imagemime = $imagemime;
                  $this->imagedata = $imagedata;
             }

@@ -1,3 +1,6 @@
+/* @override 
+	https://its-caldev.humboldt.edu/unlcal/templates/humboldt/frontend_default.css */
+
 /**
  * default.css
  * Everything goes in here.
@@ -63,7 +66,7 @@ a.permalink{font-size:0.6em;position:relative;}
 #maincontent a.returnPrevScreen{font-weight:bold;display:block;font-size:0.8em;padding:2px 3px;background:#cee2f7;color:#6da6db;border:1px solid #a8c2ed;}
 #maincontent .tel{margin-left:0}
 table td.empty{color:#ddd;}
-#maincontent .right {float: right;width: 582px;margin:40px 5px 0 0;}
+#maincontent .right {float: right;width: 582px;margin:40px 5px 0 80px;}
 
 /* Calendar Widget */
 table.wp-calendar thead th{
@@ -174,14 +177,17 @@ table blockquote {
 }
 /* event view*/
 
-.event_cal h1.summary{padding: 7px 0 10px 37px!important; margin-top:5px;
-                 background: url(images/event_one.gif) no-repeat 0 0;}
+.event_cal h1.summary{
+	float: none;
+}
 
-.event_cal table{width:auto;border:1px solid #8ebcd6;border-top:none;border-right:1px solid #4081a6;border-bottom:1px solid #4081a6;}
+.event_cal table{
+	width:auto;
+}
 .event_cal table td.date, .event_cal table td.title{width:auto;}
 #maincontent .event_cal table td.date{color:#cc0000;}
 .event_cal table thead{display:none;}
-img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;}
+img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;width:100%;}
 /*- Menu Tabs G--------------------------- */
 
     #tabsG {
@@ -478,6 +484,16 @@ h1 {
 	float: left;
 	margin: 24px 0;
 }
+/**/
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+/**/
 a:link {
     border-bottom: none;
     color: #333;

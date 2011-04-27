@@ -79,6 +79,7 @@ if (isset($this->output[0], $this->output[0]->event)
       <a href="#" title="close search tip">(close message)</a>
       </p>-->
       </form>
+	  <div class="clear"></div>
 <!-- featured events start-->
       <?php	
               if ($this->calendar->id == 1){ // Only show on main calendar

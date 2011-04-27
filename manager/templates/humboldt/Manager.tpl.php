@@ -17,13 +17,7 @@ header('Content-Type:text/html; charset=UTF-8');
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
 		<script src="templates/humboldt/ui.selectmenu.js"></script>
-		<script type="text/javascript">
-		$(function(){
-			$('select#calendar_id').selectmenu({
-				style:'dropdown'
-			});
-		});
-		</script>
+
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>
 		<div id="wrap"> 
@@ -55,11 +49,11 @@ header('Content-Type:text/html; charset=UTF-8');
                 <div id="contentSearch">
 					<p class="currentCal">Current calendar: <strong><?php
 		                if (isset($this->calendar)) {
-		                    echo $this->calendar->name;
-		                } else {
-		                    echo 'Event Publishing System';
+		                    echo '<p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
+		                #} else {
+		                #    echo 'Event Publishing System';
 		                }
-		                ?></strong></p>
+		                ?>
                     <?php if (isset($this->user)) {
                         UNL_UCBCN::displayRegion($this->calendarselect);
                     } //End if user

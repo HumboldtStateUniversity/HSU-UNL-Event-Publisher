@@ -8,7 +8,10 @@ body {
 	color: #222;
 	text-align: center;
 }
-
+a img {
+	text-decoration: none;
+	border: 0;
+	}
 /* GENERAL LAYOUT DIVS
 ********************************************************************/
 #wrap {

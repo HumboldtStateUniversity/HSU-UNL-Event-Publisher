@@ -47,7 +47,7 @@ header('Content-Type:text/html; charset=UTF-8');
                     ?>
                 </div>-->
                 <div id="contentSearch">
-					<p class="currentCal">Current calendar: <strong><?php
+					<?php
 		                if (isset($this->calendar)) {
 		                    echo '<p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
 		                #} else {

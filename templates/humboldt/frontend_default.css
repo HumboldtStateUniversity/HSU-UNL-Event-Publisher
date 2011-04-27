@@ -9,6 +9,7 @@
 	float: left;
     margin-bottom: 20px;
     padding: 0px 10px 0 0;
+    width: 900px;
 }
 #maincontent a{background:none;}
 #maincontent a:hover{text-decoration:none;}
@@ -45,7 +46,6 @@ table thead th.title{font-style:normal;}
 table td{
 	padding:7px;
 /*	border-top:1px solid #d7e6ee;*/
-	
 	}
 table td.date{width:25%;}
 table td.title{width:75%;}
@@ -67,6 +67,11 @@ a.permalink{font-size:0.6em;position:relative;}
 #maincontent .tel{margin-left:0}
 table td.empty{color:#ddd;}
 #maincontent .right {float: right;width: 582px;margin:40px 5px 0 80px;}
+
+.day_cal h1 {
+	float: none;
+	width: auto;
+}
 
 /* Calendar Widget */
 table.wp-calendar thead th{
@@ -179,6 +184,7 @@ table blockquote {
 
 .event_cal h1.summary{
 	float: none;
+	width: auto;
 }
 
 .event_cal table{

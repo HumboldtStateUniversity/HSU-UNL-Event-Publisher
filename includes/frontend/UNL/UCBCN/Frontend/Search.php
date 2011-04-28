@@ -58,6 +58,13 @@ class UNL_UCBCN_Frontend_Search extends UNL_UCBCN_Frontend
      * @var int
      */
     public $eventtype;
+
+    /**
+     * name of event type, used on search page
+     *
+     * @var string
+     */
+    public $eventtype_name;
     
     /**
      * Start time to search

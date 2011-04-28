@@ -10,13 +10,10 @@ header('Content-Type:text/html; charset=UTF-8');
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/ui.selectmenu.css">
-		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
-		<script src="templates/humboldt/ui.selectmenu.js"></script>
 
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>

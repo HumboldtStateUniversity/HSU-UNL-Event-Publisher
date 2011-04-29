@@ -531,17 +531,22 @@ padding:7px;
 color:#FFF;
 display:block;
 background:url(images/sort.gif) no-repeat;
-background-position:35px 5px;
+background-position:40px 5px;
 text-decoration:none;
 }
 
 #contentSearch table.eventlisting thead th.title a {
-background-position:71px 5px;
+background-position:79px 5px;
 }
 
 #contentSearch table.eventlisting td ul {
-padding:0 0 0 13px;
+padding:0;
 margin:0;
+}
+
+#contentSearch table.eventlisting td ul li{
+margin:0;
+padding:0;
 }
 
 table.eventlisting thead th a:hover {
@@ -700,9 +705,9 @@ input, textarea {
 #maincontent input[type="text"], #maincontent textarea{
 	width:400px;
 }
-#maincontent #__reverseLink_eventdatetime_event_idendtime_1, 
-#maincontent #__reverseLink_eventdatetime_event_idstarttime_1,
-#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1{width:auto;}
+#maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
+#maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
+#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,{width:auto;}
 #maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
 	width:auto;
 }

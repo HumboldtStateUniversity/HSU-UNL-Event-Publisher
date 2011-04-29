@@ -84,17 +84,14 @@ a img {
 /* Hx
 ********************************************************************/
 h1 {
-	background: #F6F6EC;
-	border-bottom: dotted 1px #542812;
-	border-top: dotted 1px #542812;
 	font-family:"Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
 	letter-spacing: 1px;
 	font-size: 150%;
 	color: #003333;
 	font-weight: normal;
 	text-transform: uppercase;
-	padding: 5px;
 	margin: 0 10px 25px 0;
+	padding:5px;
 	}
 h2 {
 	margin: 0 0 5px 0;

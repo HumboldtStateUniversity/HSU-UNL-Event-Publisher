@@ -33,7 +33,7 @@ function featured() {
         $time = strtotime($event['DateTime']['StartDate']);
         $formattedTime = date('M j', $time);
 
-        if ($count > 2) {
+        if ($count > 3) {
             $output .= "</div><div>";
         }
         $output .= '<div class="event_detail">';
@@ -47,8 +47,7 @@ width"260" height="200" />';
         $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '" target="_blank">' .
 $event['EventTitle'] . '</a></div>';
 
-        if ($count > 2) {
-            $output .= "</div>";
+        if ($count > 3) {
             $count = 0;
         }
         $count++;

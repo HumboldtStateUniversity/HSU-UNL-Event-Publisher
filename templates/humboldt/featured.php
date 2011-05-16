@@ -29,11 +29,12 @@ function featured() {
     }
 
     $count = 1;
-    foreach ($events as $event) {                  
+    foreach ($events as $event) {
+        $output .= $count;                  
         $time = strtotime($event['DateTime']['StartDate']);
         $formattedTime = date('M j', $time);
 
-        if ($count > 3) {
+        if ($count > 2) {
             $output .= "</div><div>";
         }
         $output .= '<div class="event_detail">';
@@ -47,7 +48,7 @@ width"260" height="200" />';
         $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '" target="_blank">' .
 $event['EventTitle'] . '</a></div>';
 
-        if ($count > 3) {
+        if ($count > 2) {
             $output .= "</div>";
             $count = 0;
         }

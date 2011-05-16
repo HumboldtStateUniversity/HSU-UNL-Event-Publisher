@@ -30,7 +30,6 @@ function featured() {
 
     $count = 1;
     foreach ($events as $event) {
-        $output .= $count;                  
         $time = strtotime($event['DateTime']['StartDate']);
         $formattedTime = date('M j', $time);
 

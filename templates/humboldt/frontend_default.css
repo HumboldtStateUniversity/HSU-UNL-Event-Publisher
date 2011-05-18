@@ -59,7 +59,10 @@ table td.title{width:75%;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{font-size:0.6em;position:relative;}
 #maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:22px;width:33px;display:block;}
+#maincontent #featuredEvents a.prev, #maincontent #featuredEvents a.next{text-indent:-9999px;height:42px;width:25px;display:block;}
 #maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 -22px}
+#maincontent #featuredEvents a.prev{background:url(images/scroll_prev.gif) no-repeat 0 0;float:left;position:relative;top:85px}
+#maincontent #featuredEvents a.next{background:url(images/scroll_next.gif) no-repeat 0 0;float:right;position:relative;top:85px}
 #maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 -22px}
 #maincontent a.prev:hover, #maincontent a.next:hover, #maincontent a#dc.prev, #maincontent a#ac.next{background-position:0 1px;}
 #maincontent p.noentry{clear:both;float:left;}
@@ -188,12 +191,12 @@ table blockquote {
 }
 
 .event_cal table{
-	width:auto;
+/*	width:auto;*/
 }
 .event_cal table td.date, .event_cal table td.title{width:auto;}
 #maincontent .event_cal table td.date{color:#cc0000;}
 .event_cal table thead{display:none;}
-img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;width:100%;}
+img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-width:480px;} /* give image max width to stop large images from busting the table layout*/
 /*- Menu Tabs G--------------------------- */
 
     #tabsG {
@@ -518,22 +521,26 @@ td {
 /*Featured event block*/
 #featuredEvents {
 /*	border: solid 1px #ccc;	*/
-	margin:40px 10px 10px 10px;
-	width: 300px;
-	width: 875px;
+	margin:40px 0 0 -10px;
+	padding-left: 10px;
+	width: 900px;
 	clear: both;
 	overflow: auto;
 }
 #featuredEvents .event_detail {
 	width: 260px;
 	height: 200px;
-	margin: 10px 18px 10px 10px;
+	margin: 10px 35px 0 0;
 	float: left;
-	border: solid 1px #ccc;
+/*	border: solid 1px #ccc;*/
 }
 #featuredEvents .event_detail img {
 	width: 260px;
 	height: 200px;
+}
+#featuredEvents .event_detail span {
+	display: block;
+	font-weight: bold;
 }
 .clear {
 	clear: both;
@@ -544,5 +551,38 @@ td {
 	margin-top: 40px;
 }
 
+/*Jquery Scrollable */
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+.scrollable {
 
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+/*	width: 860px;*/
+	height:275px;
+}
+
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accommodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+}
+
+/*
+	a single item. must be floated in horizontal scrolling.
+	typically, this element is the one that *you* will style
+	the most.
+*/
+.items div {
+	float:left;
+}
 /* @end */

@@ -26,7 +26,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 @import "http://www.humboldt.edu/humboldt/styles/interior.css";
 </style>
 <link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/print.css" media="print" />
-<script src="http://www.humboldt.edu/humboldt/scripts/all.js" type="text/javascript"></script>
+<script src="templates/humboldt/all.js" type="text/javascript"></script>
 <script src="http://www.humboldt.edu/humboldt/scripts/main.js" type="text/javascript"></script>
 
 <!--styles & scripts for calendar content-->
@@ -123,7 +123,7 @@ if (isset($this->output[0], $this->output[0]->event)
                   <div class="cal_widget">
                   <!--	<h3>Contribute/Learn More</h3>-->
                   	<ul>
-                  		<li id="login_list"><a id="frontend_login" href="manager/">&raquo; Submit an Event</a></li>
+                  		<li id="login_list"><a id="frontend_login" href="/manager/">&raquo; Submit an Event</a></li>
                   		<li><a href="#">&raquo; Give us Feedback</a></li>
                   		<li><a href="#">&raquo; Suggest an event</a> </li>
                   		<li><a href="#">&raquo; Calendar Documentation</a> </li>

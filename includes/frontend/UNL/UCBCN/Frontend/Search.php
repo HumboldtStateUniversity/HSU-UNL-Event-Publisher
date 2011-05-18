@@ -51,6 +51,20 @@ class UNL_UCBCN_Frontend_Search extends UNL_UCBCN_Frontend
      * @var string
      */
     public $query;
+
+    /**
+     * search for event type by id
+     *
+     * @var int
+     */
+    public $eventtype;
+
+    /**
+     * name of event type, used on search page
+     *
+     * @var string
+     */
+    public $eventtype_name;
     
     /**
      * Start time to search
@@ -129,6 +143,40 @@ class UNL_UCBCN_Frontend_Search extends UNL_UCBCN_Frontend
             } else {
                 $this->output = new UNL_UCBCN_Error('Error, the search could not be completed: '.$res->getMessage().'<br />Query:'.htmlentities($sql));
             }
+       	} elseif (!empty($this->eventtype)) {
+           $this->eventtype = (is_numeric(trim($this->eventtype)) ? trim($this->eventtype) : 0);
+           if ($this->eventtype > 0)
+               $mdb2 = $this->calendar->getDatabaseConnection();
+               $sql  = 'SELECT DISTINCT eventdatetime.id
+                        FROM event, eventdatetime, calendar_has_event, location,
+                             eventtype, event_has_eventtype
+                        WHERE
+                        event_has_eventtype.event_id = event.id AND
+                        event_has_eventtype.eventtype_id = eventtype.id AND
+                        eventdatetime.event_id = event.id AND
+                        calendar_has_event.event_id = event.id AND
+                        calendar_has_event.status != \'pending\' AND
+                        calendar_has_event.calendar_id = '.$this->calendar->id.' AND
+                        eventdatetime.location_id = location.id AND
+                        event_has_eventtype.eventtype_id = '.$this->eventtype;
+             
+               $res = $mdb2->query($sql);
+               if (!PEAR::isError($res)) {
+                   $this->output       = new UNL_UCBCN_EventListing();
+                   $this->output->type = 'search';
+                   while ($row = $res->fetchRow()) {
+                       $this->output->events[] =  new UNL_UCBCN_EventInstance($row[0]);
+                   }
+               }
+               $sql = 'SELECT name 
+                      FROM eventtype                     
+                      WHERE eventtype.id = ' . $this->eventtype;
+               $res = $mdb2->query($sql);
+               if (!PEAR::isError($res)){
+       	       	   $row = $res->fetchRow();
+                   $this->eventtype_name = $row;    
+               }
+
         } else {
             $this->output = 'Enter a search string to search for events.';
         }

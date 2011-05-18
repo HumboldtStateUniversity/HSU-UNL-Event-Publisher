@@ -2,11 +2,11 @@
 width: 880px;
 padding: 10px;
 margin: auto;
+position:relative;
 }
 #search_term{
 display: none;
 }
-
 #maincontent li{
 margin-left: 1.5em;
 list-style: none;
@@ -14,7 +14,9 @@ list-style: none;
 p.currentCal{
 margin:0 0 5px 0;
 font-size:1.3em;
+width:620px;
 }
+abbr{border:0;}
 /*	-------------------------------------------------------------
 	University of Nebraska-Lincoln Calendar
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -112,7 +114,7 @@ div.cal_widget {
 background-color:#888;
 width:222px;
 padding:0 7px 10px 0;
-margin:0 0 20px;
+margin:18px 0 20px;
 }
 
 div.cal_widget h3 {
@@ -133,13 +135,13 @@ div.cal_widget h3 span {
 div.cal_widget h3 img {
 float:right;
 }
-#maincontent div.cal_widget a{
+div.cal_widget a{
 color:#fff;
 }
 div.cal_widget ul {
 list-style:none;
 padding:21px 0 10px 0px;
-margin:-14px 0 0;
+margin:-14px 0 0 17px;
 }
 
 div.cal_widget ul li#login_list {
@@ -305,33 +307,17 @@ clear:both;
 display:block;
 margin-left:10px;
 }
-
-#contentSearch form fieldset li.consider div.element {
-
-}
-
 #contentSearch a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
 color:#fff !important;
 text-decoration:underline;
 }
-
-form#cal_choose br {
-line-height:0.8;
-}
-
 #contentSearch form fieldset.deventtypeheader_class select {
 float:left;
 }
-
 #contentSearch form fieldset.deventtypeheader_class .reqnote,
 #contentSearch form fieldset.deventlocationheader_class .reqnote {
 display:none;
 }
-
-#contentSearch form fieldset.d__header___class {
-/*margin-top:-23px;*/
-}
-
 body#subscribe #contentSearch form fieldset.d__header___class {
 margin:10px 0 0;
 }
@@ -435,7 +421,11 @@ position: relative;
 body#login #contentSearch form fieldset {
 width:415px;
 }
-
+form#cal_choose{
+margin:0;
+height:50px;
+width:620px;
+}
 form#cal_choose fieldset {
 border:none;
 }
@@ -447,30 +437,35 @@ body#normal div#contentSearch ul.eventsbystatus {
 font-size:14px;
 list-style:none;
 line-height:1;
-margin:5px 0 39px 0;
+margin:8px 0 39px 0;
 padding:0;
-width:325px;
-height:30px;
+height:38px;
 background-color:#d6d6d6;
 }
 
 body#normal div#contentSearch ul.eventsbystatus li {
 display:block;
 float:left;
-margin:2px 2px -1px;
-padding:6px 12px;
+margin:0;
+padding:0;
 }
 
 body#normal div#contentSearch ul.eventsbystatus li a {
+display:block;
+float:left;
+margin:0 3px 0 0;
+padding:12px 25px 23px;
 text-decoration:none;
 color:#000;
 }
-
+body#normal div#contentSearch ul.eventsbystatus li a:hover {
+position:relative;background:url(images/triangle_h.gif)no-repeat center bottom #999;
+}
 /** current **/
-body#normal div#contentSearch ul.eventsbystatus.archived li#archived_manager,
-body#normal div#contentSearch ul.eventsbystatus.pending li#pending_manager,
-body#normal div#contentSearch ul.eventsbystatus.posted li#posted_manager {
-position:relative;background:transparent url(images/triangle.gif)no-repeat center bottom; padding-bottom: 19px;
+body#normal div#contentSearch ul.eventsbystatus.archived li#archived_manager a,
+body#normal div#contentSearch ul.eventsbystatus.pending li#pending_manager a,
+body#normal div#contentSearch ul.eventsbystatus.posted li#posted_manager a{
+position:relative;background:url(images/triangle_h.gif)no-repeat center bottom #999;
 }
 
 
@@ -536,17 +531,22 @@ padding:7px;
 color:#FFF;
 display:block;
 background:url(images/sort.gif) no-repeat;
-background-position:35px 5px;
+background-position:40px 5px;
 text-decoration:none;
 }
 
 #contentSearch table.eventlisting thead th.title a {
-background-position:71px 5px;
+background-position:79px 5px;
 }
 
 #contentSearch table.eventlisting td ul {
-padding:0 0 0 13px;
+padding:0;
 margin:0;
+}
+
+#contentSearch table.eventlisting td ul li{
+margin:0;
+padding:0;
 }
 
 table.eventlisting thead th a:hover {
@@ -705,9 +705,9 @@ input, textarea {
 #maincontent input[type="text"], #maincontent textarea{
 	width:400px;
 }
-#maincontent #__reverseLink_eventdatetime_event_idendtime_1, 
-#maincontent #__reverseLink_eventdatetime_event_idstarttime_1,
-#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1{width:auto;}
+#maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
+#maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
+#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,{width:auto;}
 #maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
 	width:auto;
 }
@@ -727,9 +727,13 @@ fieldset, form, label, legend{
   border: 0;
   vertical-align: baseline;
 }
-
-
-
+#contentSearch form#cal_choose .element, #contentSearch form#cal_choose fieldset li{
+  float:left;
+  clear:none;
+  padding:0;
+}
+#contentSearch form#cal_choose label.element{display:none;}
+#contentSearch form#cal_choose select{margin:2px 8px 0 0;}
 
 /* select */
 #navigation .element a {
@@ -741,10 +745,10 @@ color:#212121;
 	background: url(images/go.gif) no-repeat center;
 	border: none;
 	cursor: pointer;
-	height: 30px;
+	height: 22px;
 	margin: 0;
 	overflow: hidden;
-	padding: 30px 0 0 42px;
+	padding: 22px 0 0 42px;
 	width: 42px;
 }
 
@@ -755,8 +759,10 @@ color:#212121;
 		margin:0;
 		padding:0;
 		height:30px;
-		position:relative;
+		position:absolute;
 		z-index:1000;
+		top:7px;
+		right:20px;
 	}
 form#event_search div{
 	margin:1px 0 19px 0;
@@ -772,7 +778,7 @@ form#event_search div{
 	background:#eee;
 	border:1px solid #999;
 }
-div#maincontent form#event_search input.search_submit{
+div#contentSearch form#event_search input.search_submit{
 	background: url(images/search.gif) no-repeat center;
 	border: none;
 	cursor: pointer;

@@ -111,7 +111,7 @@ foreach ($this->events as $e) {
 	</fieldset>
 </div>
 <div style='visibility: hidden'>
-<input class="btnsubmit" id="delete_event" type="submit" name="delete" onclick="return confirm('Are you sure? \n\nYour event is not automatically deleted from the master calendar. To delete, contact College Communications, communications@cornellcollege.edu, with the name and date of the deleted event.');" value="Delete" />
+<input class="btnsubmit" id="delete_event" type="submit" name="delete" onclick="return confirm('Your event will not automatically be deleted from the main calendar. To request your event be removed from the main calendar, contact the calendar editor at webadmin@humboldt.edu.');" value="Delete" />
 <?php if ($this->status=='posted' || $this->status=='archived') { ?>
 <input class="btnsubmit" id="moveto_pending" type="submit" name="pending" value="Move to Pending" />
 <?php } elseif ($this->status=='pending') { ?>

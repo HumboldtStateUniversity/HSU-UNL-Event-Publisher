@@ -100,18 +100,18 @@ if (isset($this->output[0], $this->output[0]->event)
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->
-                  <?php
-                  $eventlist = UNL_UCBCN_Frontend::factory('eventtype');
-                  $eventlist->orderBy('name ASC');
-                  if($eventlist->find()){
-                      $output = "<form action='".$this->uri . "search/' method='GET'><select name='q'>\n";
-                      while ($eventlist->fetch()) {
-                          $output .= "<option value='$eventlist->name'>$eventlist->name</option>\n";
-                      }
-                  $output .= '</select><input type="submit"></form>';
-                  echo $output;
-                  }
-                  ?>
+
+                  <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
+                  <form action="<?php $this->uri ?>search/" method="get">
+                      <select name="e"> 
+                      <?php while ($eventlist->fetch()): ?>
+                          <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
+                      <?php endwhile; ?>
+
+                      </select><input type="submit">
+                  </form>
+                  <?php endif; ?>
+                 
                   <div id="subscribe">
                   	<h3>Subscribe</h3>
                   	<ul>

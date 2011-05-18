@@ -3,6 +3,9 @@
 if (is_a($this->output,'UNL_UCBCN_EventListing')) {
     if ($dt = strtotime($this->query)) {
         echo '<h1 class="results">Search results for events dated <span>'.date('F jS',$dt).'</span><a class="permalink" href="'.$this->url.'">(link)</a></h1>';
+    } elseif (isset($this->eventtype)) {
+        echo '<h1 class="results">Event results for <span>' . $this->eventtype_name[0] . '</span><a class="permalink" 
+href="'.$this->url.'">(link)</a></h1>';
     } else {
         echo '<h1 class="results">Search results for "<span>'.htmlentities($this->query).'</span>"<a class="permalink" href="'.$this->url.'">(link)</a></h1>';
     }

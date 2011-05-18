@@ -67,7 +67,7 @@ foreach ($this->events as $event) {
 				    if (isset($event['recurrence_id'])) {
 				        $delete_url .= '&amp;rec_id='.$event['recurrence_id'];
 				    }
-					echo '<a onclick="return confirm(\'Are you sure you wish to delete '.htmlentities($event['title']).'? \n\nYour event is not automatically deleted from the master calendar. To delete, contact College Communications, communications@cornellcollege.edu, with the name and date of the deleted event.\');" href="'.$delete_url.'">Delete</a></td>';
+					echo '<a onclick="return confirm(\'Are you sure you wish to delete '.htmlentities($event['title']).'? \n\nYour event will not automatically be deleted from the main calendar. To request your event be removed from the main calendar, contact the calendar editor at webadmin@humboldt.edu.\');" href="'.$delete_url.'">Delete</a></td>';
 				} ?>
 			</td>
 		</tr>

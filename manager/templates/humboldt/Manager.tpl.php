@@ -10,13 +10,10 @@ header('Content-Type:text/html; charset=UTF-8');
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/ui.selectmenu.css">
-		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
-		<script src="templates/humboldt/ui.selectmenu.js"></script>
 
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>
@@ -47,6 +44,15 @@ header('Content-Type:text/html; charset=UTF-8');
                     ?>
                 </div>-->
                 <div id="contentSearch">
+					<?php if (isset($this->user)) { ?>
+                    <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
+                        <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+                        <input type='submit' class="search_submit" name='submit' value="Search" />
+                        <input type='hidden' name='action' value='search' />
+						</div>
+                    </form>
+					<?php
+                } ?>
 					<?php
 		                if (isset($this->calendar)) {
 		                    echo '<p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
@@ -107,15 +113,8 @@ header('Content-Type:text/html; charset=UTF-8');
                                 <h2>Descriptive Text</h2>
                                 <p>Fill in whatever information is pertinent to your calendar here.</p>
                             </div>-->
-                            <?php if (isset($this->user)) { ?>
-                            <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
-                                <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-                                <input type='submit' class="search_submit" name='submit' value="Search" />
-                                <input type='hidden' name='action' value='search' />
-								</div>
-                            </form>
-                                <?php }
-                            UNL_UCBCN::displayRegion($this->output);
+                            <?php if (isset($this->user)){
+                            UNL_UCBCN::displayRegion($this->output);}
                             ?>
                         </div>
                     </div>

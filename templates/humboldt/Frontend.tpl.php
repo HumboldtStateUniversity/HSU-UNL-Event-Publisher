@@ -103,14 +103,14 @@ if (isset($this->output[0], $this->output[0]->event)
 
                   <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
                   <form action="<?php $this->uri ?>search/" method="get">
-		      <select name="e"> 
+                      <select name="e"> 
                       <?php while ($eventlist->fetch()): ?>
                           <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
                       <?php endwhile; ?>
 
                       </select><input type="submit">
                   </form>
-		  <?php endif; ?>
+                  <?php endif; ?>
                  
                   <div id="subscribe">
                   	<h3>Subscribe</h3>

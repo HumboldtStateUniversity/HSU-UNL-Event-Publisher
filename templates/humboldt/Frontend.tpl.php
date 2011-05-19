@@ -35,8 +35,10 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie.css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/ie7.css" media="screen" /><![endif]-->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/facebook.css" />
-<script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/ajaxCaller.js"></script>
-<script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/frontend.js"></script>
+<script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/ajaxCaller.js"></script>
+<script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/frontend.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/jquery.tools.min.js"></script>
 <link rel="alternate" type="application/rss+xml" title="<?php echo $this->calendar->name; ?> Events" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'format'=>'rss')); ?>" />
 <link rel="search" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>" />
 <?php 

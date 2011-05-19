@@ -29,15 +29,16 @@ function featured() {
     $output .= '<h2 id="featuredEventsTitle">Featured Events</h2>';
     $output .='<a class="prev browse">previous</a><a class="next browse">next</a>';
     $output .= '<div class="scrollable">';
+    $output .= '<div class="items">';
     $count = 1;
     foreach ($events as $event) {
         $time = strtotime($event['DateTime']['StartDate']);
         $formattedTime = date('M j', $time);
 
         if ($count == 1) {
-            $output .= '<div class="items">';
+            $output .= '<div>';
         }
-        $output .= '<div>';
+//        $output .= '<div>';
         $output .= '<div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {

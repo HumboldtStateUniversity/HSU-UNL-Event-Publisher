@@ -55,8 +55,7 @@ $event['EventTitle'] . '</a></div><!-- /event_detail -->';
         }
         $count++;
     }
-    $ouput .='</div><!-- /item-->';
-    $output .= '</div><!-- /scrollable --></div><!-- /featuredEvents--></div><!--test-->';
+    $output .= '</div><!-- /scrollable --></div><!--items--></div><!-- /featuredEvents-->';
     return $output;
 }
 

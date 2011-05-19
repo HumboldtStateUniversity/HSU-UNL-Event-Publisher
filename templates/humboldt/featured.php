@@ -26,7 +26,7 @@ function featured() {
 
     // generate the div
     $output .= '<div id="featuredEvents">';
-    $output .= '<h2 id="featuredEventsTitle">Featured Events</h2><a></a>';
+    $output .= '<h2 id="featuredEventsTitle">Featured Events</h2>';
     $output .='<a class="prev browse">previous</a><a class="next browse">next</a>';
     $output .= '<div class="scrollable">';
     $count = 1;
@@ -37,7 +37,8 @@ function featured() {
         if ($count == 1) {
             $output .= '<div class="items">';
         }
-        $output .= '<div><div class="event_detail">';
+        $output .= '<div>';
+        $output .= '<div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {
             $output .= '<img src="' . $event['Images']['Image']['URL'] . '" alt="' . $event['EventTitle'] . '" 
@@ -49,11 +50,12 @@ width"260" height="200" />';
 $event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
         if ($count == 3) {
-            $output .= '</div><!--/generic container--></div><!-- /item-->';
+            $output .= '</div><!--/generic container-->';
             $count = 0;
         }
         $count++;
     }
+    $ouput .='</div><!-- /item-->';
     $output .= '</div><!-- /scrollable --></div><!-- /featuredEvents-->';
     return $output;
 }

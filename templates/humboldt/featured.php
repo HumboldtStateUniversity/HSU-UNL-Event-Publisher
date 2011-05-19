@@ -27,16 +27,17 @@ function featured() {
     // generate the div
     $output .= '<div id="featuredEvents">';
     $output .= '<h2 id="featuredEventsTitle">Featured Events</h2><a></a>';
-    $output .= '<div class="eventsContainer">';
+    $output .='<a class="prev browse">previous</a><a class="next browse">next</a>';
+    $output .= '<div class="scrollable">';
     $count = 1;
     foreach ($events as $event) {
         $time = strtotime($event['DateTime']['StartDate']);
         $formattedTime = date('M j', $time);
 
         if ($count == 1) {
-            $output .= '<div class="setOf3">';
+            $output .= '<div class="items">';
         }
-        $output .= '<div class="event_detail">';
+        $output .= '<div><div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {
             $output .= '<img src="' . $event['Images']['Image']['URL'] . '" alt="' . $event['EventTitle'] . '" 
@@ -44,16 +45,16 @@ width"260" height="200" />';
         }
 
         $output .= '<span>' . $formattedTime . '</span>';
-        $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '" target="_blank">' . 
+        $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '">' . 
 $event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
         if ($count == 3) {
-            $output .= '</div><!-- /setOf3 -->';
+            $output .= '</div><!--/generic container--></div><!-- /item-->';
             $count = 0;
         }
         $count++;
     }
-    $output .= '</div><!-- /eventsContainer --></div><!-- /featuredEvents-->';
+    $output .= '</div><!-- /scrollable --></div><!-- /featuredEvents-->';
     return $output;
 }
 

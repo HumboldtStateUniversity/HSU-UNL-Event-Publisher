@@ -38,7 +38,6 @@ function featured() {
         if ($count == 1) {
             $output .= '<div>';
         }
-//        $output .= '<div>';
         $output .= '<div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {
@@ -57,7 +56,7 @@ $event['EventTitle'] . '</a></div><!-- /event_detail -->';
         $count++;
     }
     $ouput .='</div><!-- /item-->';
-    $output .= '</div><!-- /scrollable --></div><!-- /featuredEvents-->';
+    $output .= '</div><!-- /scrollable --></div><!-- /featuredEvents--></div><!--test>';
     return $output;
 }
 

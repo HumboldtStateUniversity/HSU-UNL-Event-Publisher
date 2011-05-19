@@ -125,7 +125,7 @@ if (isset($this->output[0], $this->output[0]->event)
                   <div class="cal_widget">
                   <!--	<h3>Contribute/Learn More</h3>-->
                   	<ul>
-                  		<li id="login_list"><a id="frontend_login" href="/manager/">&raquo; Submit an Event</a></li>
+                  		<li id="login_list"><a id="frontend_login" href="manager/">&raquo; Submit an Event</a></li>
                   		<li><a href="#">&raquo; Give us Feedback</a></li>
                   		<li><a href="#">&raquo; Suggest an event</a> </li>
                   		<li><a href="#">&raquo; Calendar Documentation</a> </li>

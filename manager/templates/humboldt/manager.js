@@ -365,12 +365,13 @@ function showIsAppleWebKit() {
 	  		}
 }
 
+
 function hideField(){
 	
 		var id = document.getElementById('optionaldetailsheader');
 		var formContainer = id.getElementsByTagName('ol');
-		createButton('Click to add additional details', id, formHide, 'formShow')
-		formContainer[0].style.display='none';
+		//createButton('Click to add additional details', id, formHide, 'formShow')
+		//formContainer[0].style.display='none';
 	  	
 	  
 	  	//fix some layout problem at the same time
@@ -389,6 +390,7 @@ function hideField(){
 	
 }
 
+
 function formHide(){
 	var id = document.getElementById('optionaldetailsheader');
 	var formContainer = id.getElementsByTagName('ol');
@@ -397,6 +399,7 @@ function formHide(){
 	linkId.childNodes[0].nodeValue = (linkId.childNodes[0].nodeValue=="Hide Form")?"Click to add additional details":"Hide Form";
 	return false;
 }
+
 
 function createButton(linktext, attachE, actionFunc, idN){
 	var morelink = document.createElement("a");

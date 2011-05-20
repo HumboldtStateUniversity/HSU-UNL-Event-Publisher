@@ -72,8 +72,8 @@ class UNL_UCBCN_Event extends DB_DataObject
     public $fb_formHeaderText = 'Event Details';
     public $fb_preDefOrder = array(
                                     'title',
-                                    'subtitle',
                                     'description',
+                                    'webpageurl',
                                     '__reverseLink_event_has_eventtype_event_id',
                                     'othereventtype',
                                     '__reverseLink_eventdatetime_event_id',
@@ -88,15 +88,12 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'imageurl'               => 'Existing Image URL',
                                     'imagedata'              => 'Upload/Attach an Image',
                                     'imagetitle'             => 'Image Title',
-                                    'approvedforcirculation' => '',
                                     'otherkeywords'          => 'Other Keywords',
                                     'listingcontactname'     => 'Name',
                                     'listingcontactphone'    => 'Phone',
                                     'listingcontactemail'    => 'Email',
                                     '__reverseLink_eventdatetime_event_id' => '',
-                                    '__reverseLink_event_has_eventtype_event_id'=>'',
-                                    '__reverseLink_event_has_sponsor_event_id'=>'',
-                                    'consider'=>'');
+                                    '__reverseLink_event_has_eventtype_event_id'=>'');
 
     public $fb_hiddenFields = array('datecreated',
                                     'uidcreated',
@@ -107,7 +104,15 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'classification',
                                     'transparency',
                                     'imagemime',
-                                    'icalendar');
+                                    'icalendar', 
+                                    'subtitle', 
+                                    'shortdescription', 
+                                    'refreshments', 
+                                    'consider', 
+                                    'privatecomment', 
+                                    'otherkeywords',
+                                    'approvedforcirculation', 
+                                    'listingcontactuid');
 
    // public $fb_enumFields          = array('approvedforcirculation');
    // public $fb_enumOptions         = array('approvedforcirculation'=>array('Private (Your event will only be available to your calendar)<br />',
@@ -117,14 +122,13 @@ class UNL_UCBCN_Event extends DB_DataObject
                                             'location_id');
 
     public $fb_reverseLinks        = array(array('table'=>'eventdatetime'),
-                                           array('table'=>'event_has_eventtype'),
-                                           array('table'=>'event_has_sponsor'));
+                                           array('table'=>'event_has_eventtype'));
 
     public $fb_reverseLinkNewValue = true;
 
     public $fb_linkElementTypes    = array('__reverseLink_eventdatetime_event_id'=>'subForm',
-                                           '__reverseLink_event_has_eventtype_event_id'=>'subForm',
-                                           '__reverseLink_event_has_sponsor_event_id'=>'subForm');
+                                           '__reverseLink_event_has_eventtype_event_id'=>'subForm');
+                                           //'__reverseLink_event_has_sponsor_event_id'=>'subForm');
                                            //'approvedforcirculation'=>'radio');
 
     public $fb_textAreaFields      = array('description');
@@ -174,12 +178,15 @@ class UNL_UCBCN_Event extends DB_DataObject
             isset($_SESSION['calendar_id']) &&
             ($_SESSION['calendar_id'] != $_UNL_UCBCN['default_calendar_id'])) {
             include_once 'UNL/UCBCN/Calendar_has_event.php';
-            $this->fb_preDefElements['consider'] = HTML_QuickForm::createElement('checkbox', 'consider', $this->fb_fieldLabels['consider'], 'Please consider event for the main calendar');
+            //$this->fb_preDefElements['consider'] = HTML_QuickForm::createElement('checkbox', 'consider', $this->fb_fieldLabels['consider'], 'Please consider event for 
+            //	the main calendar');
 
             // HSU mod - remove checkbox for considering
             // an event for the main calendar
+            $this->consider = true;
+            /*
             $this->fb_preDefElements['consider']->setChecked(true);
-            /*if (isset($this->id)) {
+            if (isset($this->id)) {
                 $che = UNL_UCBCN::factory('calendar_has_event');
                 $che->calendar_id = $_UNL_UCBCN['default_calendar_id'];
                 $che->event_id = $this->id;
@@ -188,7 +195,8 @@ class UNL_UCBCN_Event extends DB_DataObject
                     $this->fb_preDefElements['consider']->setChecked(true);
                     $this->fb_preDefElements['consider']->freeze();
                 }
-            }*/
+            }
+            */
         }
         if (isset($this->uidcreated)) {
             $el = HTML_QuickForm::createElement('text', 'uidcreated', 'Originally Created By', $this->uidcreated);
@@ -222,7 +230,7 @@ class UNL_UCBCN_Event extends DB_DataObject
             $el->setCols(50);
         }
 
-        foreach (array('title','subtitle') as $name) {
+        foreach (array('title') as $name) {
             $el =& $form->getElement($name);
             $el->setSize(50);
         }

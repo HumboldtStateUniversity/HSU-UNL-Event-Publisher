@@ -634,7 +634,7 @@ button {
 margin:10px 5px 0 0;
 }
 
-.btnsubmit,#contentSearch form input.submitButton {
+.btnsubmit, #contentSearch form input.submitButton {
 background: url(images/submitBtn.gif) no-repeat center;
 border: none;
 cursor: pointer;
@@ -643,6 +643,13 @@ margin: 0;
 overflow: hidden;
 padding: 30px 0 0 70px;
 width: 70px;
+}
+#moveto_pending, #moveto_posted{
+background-image:none;
+padding:5px;
+color:#000;
+border:1px solid #999;
+background-color:#ddd;
 }
 
 .btnsubmit#delete_event {
@@ -702,12 +709,14 @@ input, textarea {
 	padding:3px 5px;
     margin: 0;
 }
-#maincontent input[type="text"], #maincontent textarea{
+#maincontent textarea{
 	width:400px;
+	height:80px;
 }
+#maincontent input[type="text"]{width:400px;}
 #maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
 #maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
-#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,{width:auto;}
+#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,
 #maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
 	width:auto;
 }

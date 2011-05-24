@@ -26,7 +26,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 @import "http://www.humboldt.edu/humboldt/styles/interior.css";
 </style>
 <link rel="stylesheet" type="text/css" href="http://www.humboldt.edu/humboldt/styles/print.css" media="print" />
-<script src="templates/humboldt/all.js" type="text/javascript"></script>
+<script src="<?php echo $this->uri; ?>templates/humboldt/all.js" type="text/javascript"></script>
 <script src="http://www.humboldt.edu/humboldt/scripts/main.js" type="text/javascript"></script>
 
 <!--styles & scripts for calendar content-->

@@ -116,24 +116,24 @@ class UNL_UCBCN_Manager_FacebookIntegration extends UNL_UCBCN_Manager_Plugin
      **/
     public function run()
     {
-        $this->output[] = '<p class="sec_main">Facebook Integration Manager</p>' .
-                '<p>Use this tool to register a calander with a facebook account and to change options.</p>';
+        $this->output[] = '<h2>Facebook Integration Manager</h2>' .
+                '<p class="fb-intro">Use this tool to register a calendar with a facebook account and to change options.</p>';
         if (UNL_UCBCN_FacebookInstance::getConfig() ) {
             if ($this->me) {
                 $this->output[] = "<img src='http://graph.facebook.com/".$this->me['id']."/picture'>";
                 $this->output[] = "Welcome, " . $this->me['name'] . " (<a href='{$this->logoutUrl}'>logout of facebook</a>)<br>";
                 $url = urlencode(UNL_UCBCN_FacebookInstance::getURL()."&authorize=true");
-                $this->output[] = "<a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a> | <a href='https://graph.facebook.com/oauth/authorize?client_id={$this->config['appID']}&redirect_uri=$url&scope=rsvp_event,user_events,create_event,offline_access,manage_pages'>Authorize facebook account for this calendar</a><br><hr>";
+                $this->output[] = "<div class='fb-nav'><a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a> | <a href='https://graph.facebook.com/oauth/authorize?client_id={$this->config['appID']}&redirect_uri=$url&scope=rsvp_event,user_events,create_event,offline_access,manage_pages'>Authorize facebook account for this calendar</a></div>";
             } else {
                 $url = urlencode(UNL_UCBCN_FacebookInstance::getURL()."&authorize=true");
-                $this->output[] = "<a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a> | <a href='https://graph.facebook.com/oauth/authorize?client_id={$this->config['appID']}&redirect_uri=$url&scope=rsvp_event,user_events,create_event,offline_access,manage_pages'>Authorize a facebook account for this calendar</a><br>";
+                $this->output[] = "<div class='fb-nav'><a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a> | <a href='https://graph.facebook.com/oauth/authorize?client_id={$this->config['appID']}&redirect_uri=$url&scope=rsvp_event,user_events,create_event,offline_access,manage_pages'>Authorize a facebook account for this calendar</a></div>";
             }
         } else {
-            $this->output[] = "<a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a>";
+            $this->output[] = "<div class='fb-nav'><a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration'>Integration Home</a> | <a href='{$this->uri}&edit=true'>Edit Settings for this calendar</a> | <a href='index.php?action=plugin&p=UNL_UCBCN_Manager_FacebookIntegration&FAQ=true'>FAQ</a></div>";
             $this->output[] = "<h2>Setting up facebook: </h2>";
-            $this->output[] = "There are a few things that you need to do before you can use this delightful feature.
-                                Please follow these instructions to get started...<br>
-                              <ol>
+            $this->output[] = "<p>There are a few things that you need to do before you can use this delightful feature.
+                                Please follow these instructions to get started...</p>
+                              <ol class='fb-instruct'>
                                   <li>Create a PHP file in your root directory named 'config.inc.php'.  There should already be a file
                                       in that directory called 'config.sample.inc.php'.  For an example of how to use the file that you just made
                                       open that file and read it.  The next few instructions will guide you though editing the 'config.inc.php'
@@ -197,7 +197,7 @@ class UNL_UCBCN_Manager_FacebookIntegration extends UNL_UCBCN_Manager_Plugin
     public function showFAQ()
     {
         $this->output[] = "<h2>FAQ</h2>";
-        $this->output[] = "<ol>
+        $this->output[] = "<ol class='fb-instruct'>
                            <li><strong>Q: How does Facebook Integration work?</strong> A: After you properly set up the integration and enable creation of facebook events, a new facebook event will be created for 
                                for each instance of the event on the authorized facebook account.  Users can then view the event on facebook, RSVP and invite friends.  While viewing the event in this event system
                                a user will be able to RSVP to an event.  Facebook events will only be created after integration has been set up, there for events made prior to the integration will not be added
@@ -306,8 +306,8 @@ class UNL_UCBCN_Manager_FacebookIntegration extends UNL_UCBCN_Manager_Plugin
                     $form->addElement($s);
                 } catch (FacebookApiException $e) {
                     error_log($e);
-                    $this->output[] = "You have not authorized an account yet.  Please authorize an account
-                                        for this calendar to view more options.";
+                    $this->output[] = "<p>You have not authorized an account yet.  Please authorize an account
+                                        for this calendar to view more options.</p>";
                 }
             }
         }

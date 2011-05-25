@@ -1,4 +1,4 @@
-$ = WDN.jQuery;
+
 
 //attaching JS events
 var glob_handler = {
@@ -495,7 +495,7 @@ function onMonthResponse(data, textStatus) {
 }
 
 /* parse ajax response for event listing and event instance */
-var save;//global variable to store previous content;
+/*var save;//global variable to store previous content;
 function onSumResponse(data, textStatus) {
   save = $('#updatecontent').html();
   $('#load').html("");
@@ -514,7 +514,7 @@ function onSumResponse(data, textStatus) {
   	 }
   }
 }
-
+*/
 //this function carries over onselect value from prior month widget
 function carryOver(ss){
 var td0 = getElementsByClassName(document, "table", "wp-calendar");

@@ -94,20 +94,15 @@ if (isset($this->output[0], $this->output[0]->event)
 	  <div class="clear"></div>
 <!-- featured events start-->
       <?php	
-              if ($this->calendar->id == 1){ // Only show on main calendar
-                      include_once "featured.php";
-                      print featured();
+           if ($this->uri == 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] OR
+               $this->uri == 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']){ // Only show on main calendar page                      
+                    include_once("featured.php");
+                    print featured();
               }
         ?>
 
-
-      
-
           <?php if (isset($this->right)) { ?>
               <div class="col left">
-
-                
-
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->

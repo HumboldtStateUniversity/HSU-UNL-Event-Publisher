@@ -12,6 +12,7 @@
 	    <option value="posted"    disabled="disabled">Add to Posted</option>
 	    <option value="pending"   disabled="disabled">Move to Pending</option>
 	    <option value="recommend" disabled="disabled">Recommend</option>
+	    <option value="feature"   disabled="disabled">Feature</option>
 	    <option value="delete"    disabled="disabled">Delete</option>
 	</select>
 	</fieldset>
@@ -106,6 +107,7 @@ foreach ($this->events as $e) {
 	    <option value="posted"    disabled="disabled">Add to Posted</option>
 	    <option value="pending"   disabled="disabled">Move to Pending</option>
 	    <option value="recommend" disabled="disabled">Recommend</option>
+	    <option value="feature"   disabled="disabled">Feature</option>
 	    <option value="delete"    disabled="disabled">Delete</option>
 	</select>
 	</fieldset>

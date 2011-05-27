@@ -229,7 +229,7 @@
                 </EmailAddresses>
             </EventListingContact>
         </EventListingContacts>
-        <EventStatus>Happening As Scheduled</EventStatus>
+        <EventStatus><?php echo $this->event->status; ?></EventStatus>
         <Classification>Public</Classification>
         <?php if (!empty($this->event->privatecomment)): ?>
         <PrivateComments>

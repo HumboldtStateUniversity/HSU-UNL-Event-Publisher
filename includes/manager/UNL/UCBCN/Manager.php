@@ -343,6 +343,9 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
             case 'recommend':
                 $this->output[] = $this->showRecommendForm();
                 break;
+            case 'feature':
+		$this->output[] = $this->showFeatureForm();
+		break;
             case 'search':
                 UNL_UCBCN::outputTemplate('UNL_UCBCN_EventListing', 'EventListing_search');
                 $this->uniquebody = 'id="search"';
@@ -1000,6 +1003,23 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
             return $r;
         } else {
             return new UNL_UCBCN_Error('No event(s) selected to recommend!');
+        }
+    }
+
+    /**
+     * This form allows the user to feature an event.
+     *
+     * @return UNL_UCBCN_Manager_Feature
+     */
+    public function showFeatureForm()
+    {
+	include_once 'UNL/UCBCN/Manager/Feature.php';
+        $events = $this->getPostedEvents();
+        if (count($events) > 0) {
+            $r = new UNL_UCBCN_Manager_Feature($this, $events);
+            return $r;
+        } else {
+            return new UNL_UCBCN_Error('No event(s) selected to feature!');
         }
     }
     

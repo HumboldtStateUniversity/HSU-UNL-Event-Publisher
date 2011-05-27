@@ -252,7 +252,11 @@ var manager = function() {
                 document.formlist.action = '?action=recommend';
                 document.formlist.submit();
                 break;
-            case 'delete':
+            case 'feature':
+                document.formlist.action = '?action=feature';
+                document.formlist.submit();
+                break;
+	    case 'delete':
                 var button = document.getElementById('delete_event');
                 button.click();
                 break;

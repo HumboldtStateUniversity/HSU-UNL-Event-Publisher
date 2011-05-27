@@ -1,13 +1,19 @@
 <?php
 function featured() {
     $output = '';
-    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/featured/upcoming/?format=xml";
+    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/upcoming/?format=xml";
     $xmlStr = file_get_contents($xmlUrl);
     $xmlObj = simplexml_load_string($xmlStr);
     $xmlObj = json_decode(json_encode($xmlObj),1); //convert xml object to array
 
+    foreach ($xmlObj['Event'] as $event){
+        if ($event['EventStatus'] == 'featured') {
+            $featuredEvents[] = $event;
+	}
+    } 
+
     // make sure the last row has 3 events
-    $events = array_chunk($xmlObj['Event'], 3); // split into groups of 3
+    $events = array_chunk($featuredEvents, 3); // split into groups of 3
     if (count($events) > 1 && count(end($events)) < 3){   // if the last row has less than 3
         $secondlast = $events[count($events)-2];          // second-to-last row
         $offset = count(end($events));                 // offset index for where to grab from

@@ -1,7 +1,7 @@
 <?php
 function featured() {
     $output = '';
-    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/upcoming/?format=xml";
+    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/upcoming/?format=xml&limit=18";
     $xmlStr = file_get_contents($xmlUrl);
     $xmlObj = simplexml_load_string($xmlStr);
     $xmlObj = json_decode(json_encode($xmlObj),1); //convert xml object to array

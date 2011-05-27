@@ -1,3 +1,4 @@
+<?php
 class UNL_UCBCN_Manager_Feature
 {
     /**

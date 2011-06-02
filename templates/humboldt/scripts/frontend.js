@@ -608,6 +608,7 @@ function searchinfo(){
 								};
 					
 	var top_off = document.forms.event_search.getElementsByTagName('a');
+//error here
 	top_off[0].onclick = function(){
 									var formseaarch = document.forms.event_search.q;
 									nav_prev1.style.display = 'inline';

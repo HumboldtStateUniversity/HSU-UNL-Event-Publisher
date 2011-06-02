@@ -25,7 +25,7 @@ echo date('l, F jS',$day->getTimeStamp());
             <a id="rssformat" title="rss format for events on '.date('l, F jS',$day->getTimeStamp()).'" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')).'">rss format for events on '.date('l, F jS',$day->getTimeStamp()).'</a>
             </p>'; ?>
 </div>
-<script type='text/javascript'> 
+<!--<script type='text/javascript'> 
 	$(document).ready(function() {
 		$.extend({
 	        getUrlVars: function(){
@@ -56,4 +56,4 @@ echo date('l, F jS',$day->getTimeStamp());
 		date: $.getUrlVar('d')
 	});
 });
-</script> 
+</script> -->

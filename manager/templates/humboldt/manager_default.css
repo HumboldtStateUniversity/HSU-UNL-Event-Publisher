@@ -1,48 +1,67 @@
+/* contentSearch is wrapper below title just inside maincontent */
+
+
 #contentSearch {
 width: 880px;
 padding: 10px;
 margin: auto;
 position:relative;
 }
-#search_term{
-display: none;
-}
-#maincontent li{
-margin-left: 1.5em;
-list-style: none;
-}
-p.currentCal{
-margin:0 0 5px 0;
-font-size:1.3em;
-width:620px;
-}
-abbr{border:0;}
-/*	-------------------------------------------------------------
-	University of Nebraska-Lincoln Calendar
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	Description:	Main styles
-	Filename:	default.css
-	Date:		November 06, 2006
-	-------------------------------------------------------------	*/
-/*	-------------------------------------------------------------
-	Base Body Styles
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-
-
-#contentSearch a:hover {
-text-decoration:underline !important;
-}
-
-#contentSearch .title {
-font-style:normal;
-}
-
 #main_right{
 margin-left: 300px;
 }
 
+
+#search_term{
+display: none;
+}
+
+
+#maincontent li{
+margin:8px 0;
+list-style: none;
+}
+abbr{border:0;}
+#contentSearch a:hover {
+text-decoration:underline !important;
+}
+a{color:#2c7202;}
+
+.eventAction{
+margin:10px 0;
+}
+
+
+
+
+/* repeating elements in frame -- top & left */
+/* current calendar declaration */
+p.currentCal{
+margin:0 0 5px 0;
+font-size:1.3em;#contentSearch
+width:620px;
+}
+/* select a different calendar dropdown */
+#contentSearch form#cal_choose .element, #contentSearch form#cal_choose fieldset li{
+  float:left;
+  clear:none;
+  padding:0;
+}
+#contentSearch form#cal_choose label.element{display:none;}
+#contentSearch form#cal_choose select{margin:2px 8px 0 0;}
+/* -- !Submit -- */
+#cal_choose input#submit {
+	background: url(images/go.gif) no-repeat center;
+	border: none;
+	cursor: pointer;
+	height: 22px;
+	margin: 0;
+	overflow: hidden;
+	padding: 22px 0 0 42px;
+	width: 42px;
+}
 /*	-------------------------------------------------------------
-	Navigation Styles
+	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 #navlinks ul {
 width:auto;
@@ -106,9 +125,11 @@ padding:0;
 float: left;
 margin-right:0;
 }
-
+#navigation .element a {
+color:#212121;
+}
 /*	-------------------------------------------------------------
-	Right hand column widget
+	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 div.cal_widget {
 background-color:#888;
@@ -149,9 +170,9 @@ background:none;
 padding:0;
 }
 
-div.cal_widget ul li {
+#maincontent div.cal_widget ul li {
 padding:0 0 0 0px;
-margin-right:7px;
+margin:0 7px 0 0;
 position:relative;
 }
 
@@ -171,76 +192,79 @@ display:none;
 /*	-------------------------------------------------------------
 	Form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-#contentwrap #maincontent form{
-font-size:14px;
+label {
+padding: 3px;
+color: #444;
+margin: 0;
 }
-#contentSearch form {
+form{
+font-size:14px;
 clear: right;
 margin:0;
 padding:0;
 }
-
-#contentSearch form fieldset {
+fieldset {
 position: static;
 left: 0;
 width: auto;
-margin: 0 0 35px 0;
+margin: 0;
+padding:0;
 border:0;
 }
 
-#contentSearch form fieldset ol {
+fieldset ol {
 list-style: none;
-}
-
-#contentSearch form fieldset label {
-padding: 3px;
-}
-
-#contentSearch form fieldset li {
-clear: both;
-list-style: none;
-margin-left: 0;
-padding: 0.5em;
-}
-
-#contentSearch form .row {
-width:700px;
-}
-
-#contentSearch form input:focus,
-#contentSearch form textarea:focus,
-/*#contentSearch form select:focus*/ {
-background:#ffc;
-}
-#contentSearch form textarea {
-overflow:auto;
-/*height:100px;*/
-}
-
-form div.qfgroup,
-form div.element {
+margin:0;
 padding:0;
 }
-
-
-form div.qfelement div.qfgroup {
-margin:0;
-margin:0 !important;
-line-height:0.5 !important;
+#maincontent fieldset ol{
+margin:0 0 40px 0;
+padding:0;
+position:relative;
+top:10px;
 }
-
-form span.error {
-color:red;
+#maincontent fieldset ol li{
+margin:10px 0;
+padding:0;
 }
-
-form div.error {
-border:1px solid red;
-padding:5px;
+fieldset li {
+clear: both;
+list-style: none;
+margin:10px 0;
 }
-#contentSearch form fieldset legend {
+input:focus,
+textarea:focus,
+form select:focus{
+background:#ffc;
+}
+input[type="text"], textarea{
+	border: 1px solid #999; 
+	color: #444;
+	font:14px/17px arial, helvetica, sans-serif;
+	padding:3px 5px;
+  margin: 0;
+}
+#maincontent textarea{
+	width:400px;
+	height:80px;
+	overflow:auto;
+}
+#maincontent input[type="text"]{
+		width:400px;
+}
+/* override widths */
+#maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
+#maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
+#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,
+#maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
+	width:auto;
+}
+#searchcriteria{width:400px;font-size:12px;height:150px}
+
+fieldset legend {
 width:100%;
 border: 0;
-margin: 0 0 10px 0;
+margin: 0;
 font-size: 1.2em;
 padding: 7px 5px;
 color: #000;
@@ -250,37 +274,53 @@ position:relative;
 vertical-align:baseline;
 }
 
+fieldset, form, label, legend{
+  margin:0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+
+/*form div.qfgroup,*/
+form div.element {
+padding:0;
+margin:0;
+}
+
+/* required & errors */
+form span.error {
+color:red;
+}
+
+form div.error {
+border:1px solid red;
+padding:5px;
+}
 .required {
 color:red;
 }
-#contentSearch form fieldset li.reqnote label {
+fieldset li.reqnote label {
 display:none;
 }
-
-#contentSearch form fieldset.hidden {
+fieldset.hidden {
 margin:0;
 padding:0;
 left: 0;
 background:0;
 border:none;
 }
-
-#contentSearch h3 {
-/*clear:left;*/
-}
-
-#contentSearch form fieldset ol li fieldset ol li.reqnote{
+fieldset ol li fieldset ol li.reqnote{
 display: none;
 }
-
-#contentSearch form fieldset ol li fieldset ol li{
+fieldset ol li fieldset ol li{
 padding: 0;
 }
 
 /*	-------------------------------------------------------------
 	Special/individual form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-#contentSearch form fieldset.doptionaldetailsheader_class {
+fieldset.doptionaldetailsheader_class {
 padding:0 0 10px;
 }
 
@@ -301,7 +341,9 @@ border:1px solid #999;
 background:#777;
 color:#fff;
 }
-
+#contentSearch li{
+margin:0;
+}
 #contentSearch a#formShow,#contentSearch .subsectionlink {
 clear:both;
 display:block;
@@ -351,28 +393,6 @@ border-left: 1px solid #ccc;
 border-right: 1px solid #ccc;
 border-bottom: 1px solid #ccc;
 }
-
-/*	-------------------------------------------------------------
-	Top right/college nav form elements
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-#contentSearch .rightnav ol {
-list-style:none;
-text-align: left;
-margin-top: 0;
-}
-
-#contentSearch .rightnav ol li {
-clear: none;
-display: inline;
-float:left;
-margin:0;
-padding: 1px;
-}
-
-#contentSearch .rightnav label.element{
-display: none;
-}
-
 
 /*	-------------------------------------------------------------
 	Login Form
@@ -634,7 +654,7 @@ button {
 margin:10px 5px 0 0;
 }
 
-.btnsubmit, #contentSearch form input.submitButton {
+/*.btnsubmit, */#contentSearch form input.submitButton {
 background: url(images/submitBtn.gif) no-repeat center;
 border: none;
 cursor: pointer;
@@ -644,13 +664,6 @@ overflow: hidden;
 padding: 30px 0 0 70px;
 width: 70px;
 }
-#moveto_pending, #moveto_posted{
-background-image:none;
-padding:5px;
-color:#000;
-border:1px solid #999;
-background-color:#ddd;
-}
 
 .btnsubmit#delete_event {
 float:left;
@@ -659,8 +672,7 @@ margin:10px 5px 0 0;
 background:#990000 !important;
 border-color:#d52828 #620404 #620404 #d52828 !important;
 }
-
-button#moveto_pending {
+#contentSearch form button#moveto_pending{
 width:99px;
 float:left;
 height:22px;
@@ -673,7 +685,7 @@ height:22px;
 background:url(images/button/search.gif) no-repeat;
 }
 
-button#moveto_posted {
+#contentSearch form button#moveto_posted{
 width:89px;
 float:left;
 height:21px;
@@ -692,74 +704,6 @@ background-position:0 -22px;
 }
 
 
-
-
-
-
-/** overrides **/
-label {
-	color: #444;
-    margin: 0;
-}
-
-input, textarea {
-	border: 1px solid #999; 
-	color: #444;
-	font:14px/17px arial, helvetica, sans-serif;
-	padding:3px 5px;
-    margin: 0;
-}
-#maincontent textarea{
-	width:400px;
-	height:80px;
-}
-#maincontent input[type="text"]{width:400px;}
-#maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
-#maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
-#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,
-#maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
-	width:auto;
-}
-form div.element {margin-bottom:10px;}
-div#maincontent form ol li{
-	margin:0;
-	padding:0;
-}
-#maincontnet .rightnav #submit{
-	padding:0;
-	line-height:15px;
-}
-
-fieldset, form, label, legend{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-#contentSearch form#cal_choose .element, #contentSearch form#cal_choose fieldset li{
-  float:left;
-  clear:none;
-  padding:0;
-}
-#contentSearch form#cal_choose label.element{display:none;}
-#contentSearch form#cal_choose select{margin:2px 8px 0 0;}
-
-/* select */
-#navigation .element a {
-color:#212121;
-}
-
-/* -- !Submit -- */
-#cal_choose input#submit {
-	background: url(images/go.gif) no-repeat center;
-	border: none;
-	cursor: pointer;
-	height: 22px;
-	margin: 0;
-	overflow: hidden;
-	padding: 22px 0 0 42px;
-	width: 42px;
-}
 
 /*	-------------------------------------------------------------
 	Search form elements
@@ -802,4 +746,23 @@ div#contentSearch form#event_search input.search_submit{
 #navigation .element select, #navigation .element ui-selectmenu{
 	width:220px;
 	text-align:left;
+}
+
+
+
+/** facebook integration page **/
+.fb-nav{margin:15px 0}
+#maincontent ol.fb-instruct li{
+	list-style:decimal;
+	padding:5px 0;
+	margin-left:25px;
+}
+#maincontent ol.fb-instruct li ol li{
+	list-style:lower-alpha;
+}
+#maincontent ul.fb-last{margin:25px 0}
+#maincontent ul.fb-last li{
+	list-style:disc;
+	padding:5px 0;
+	margin-left:25px;
 }

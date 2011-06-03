@@ -1,3 +1,6 @@
+<?php
+header('Content-Type:text/html; charset=UTF-8');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -97,10 +100,6 @@
 
                     <div id="main_right" class="mainwrapper">
                         <div id="maincontent">
-                            <!--<div>
-                                <h2>Descriptive Text</h2>
-                                <p>Fill in whatever information is pertinent to your calendar here.</p>
-                            </div>-->
                             <?php if (isset($this->user)){
                             UNL_UCBCN::displayRegion($this->output);}
                             ?>

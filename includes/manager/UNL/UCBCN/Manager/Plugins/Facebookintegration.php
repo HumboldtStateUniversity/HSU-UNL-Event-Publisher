@@ -240,7 +240,7 @@ class UNL_UCBCN_Manager_FacebookIntegration extends UNL_UCBCN_Manager_Plugin
      **/
     function showStatus()
     {
-        $this->output[] = "<ul>";
+        $this->output[] = "<ul class='fb-last'>";
         $this->output[] = "<li>Create events is currently set to: ";
         if ($this->facebookAccount->create_events) {
             $this->output[] = "True</li>";

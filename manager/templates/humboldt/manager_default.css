@@ -38,7 +38,7 @@ margin:10px 0;
 /* current calendar declaration */
 p.currentCal{
 margin:0 0 5px 0;
-font-size:1.3em;#contentSearch
+font-size:1.3em;
 width:620px;
 }
 /* select a different calendar dropdown */
@@ -449,7 +449,10 @@ width:620px;
 form#cal_choose fieldset {
 border:none;
 }
-
+form#cal_choose fieldset ol{
+	margin:0;
+	top:0;
+}
 /*	-------------------------------------------------------------
 	Table elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
@@ -717,11 +720,6 @@ background-position:0 -22px;
 		top:7px;
 		right:20px;
 	}
-form#event_search div{
-	margin:1px 0 19px 0;
-	padding:0;
-	float:right;
-}
 #event_search #searchinput{
 	height:28px;
 	padding:4px 3px;

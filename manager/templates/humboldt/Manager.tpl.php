@@ -1,6 +1,3 @@
-<?php
-header('Content-Type:text/html; charset=UTF-8');
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -26,12 +23,9 @@ header('Content-Type:text/html; charset=UTF-8');
 		<div id="contentwrap"> 
 		<div id="page-meta"> 
 
-		<span></span>	
-	
 	
         <div id="titlegraphic" style="clear:both">
             <h1>Calendar/Events</h1>
-            <!--<h2>Plan. Publish. Share.</h2>-->
         </div>
 		<div id="maincontent">	
 
@@ -56,8 +50,6 @@ header('Content-Type:text/html; charset=UTF-8');
 					<?php
 		                if (isset($this->calendar)) {
 		                    echo '<p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
-		                #} else {
-		                #    echo 'Event Publishing System';
 		                }
 		                ?>
                     <?php if (isset($this->user)) {
@@ -65,10 +57,6 @@ header('Content-Type:text/html; charset=UTF-8');
                     } //End if user
                     ?>
                     <div id="navigation">
-	                    <div id="title" class="rightnav">
-
-	                    </div>
-                        <!--<h4 id="sec_nav">Navigation</h4>-->
                         <div id="navlinks">
                             <?php
                             if (isset($this->user)) { ?>
@@ -136,17 +124,6 @@ header('Content-Type:text/html; charset=UTF-8');
 			<div id="meta-wrap"> 
 
 
-			<!-- Google CSE Search Box Begins --> 
-
-			<!--<form action="http://www.humboldt.edu/humboldt/search/" id="search"> 
-			    <input type="hidden" name="cx" value="016116879625100262331:h29hmmqiar8" /> 
-			    <input type="hidden" name="cof" value="FORID:11" /> 
-			    <input type="text" name="q" size="15" value="Search" /> 
-			    <input type="image" src="http://www.humboldt.edu/humboldt//images/submit.gif" value="Go" name="sa" class="submit" alt="go" /> 
-			</form> 
-			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script> -->
-			<!-- Google CSE Search Box Ends --> 
-
 			<div class="vcard"> 
 			 <a class="url" href="http://www.humboldt.edu"></a> 
 
@@ -170,15 +147,5 @@ header('Content-Type:text/html; charset=UTF-8');
 			</div><!-- /meta-wrap --> 
 
 			</div><!-- /site-meta --> 
-
-			<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
-			</script><script type="text/javascript"> 
-			//<![CDATA[
-			_uacct = "UA-133335-1";
-			urchinTracker();
-			//]]>
-
-			</script> 
-
 			</body>
 </html>

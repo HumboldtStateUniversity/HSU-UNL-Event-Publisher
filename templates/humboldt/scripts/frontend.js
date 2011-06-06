@@ -1,3 +1,5 @@
+//$ = WDN.jQuery;
+
 //attaching JS events
 var glob_handler = {
 
@@ -221,7 +223,7 @@ function isInternalLink(link)
 function returnToday(){
 	var x = new Date();	
 
-	$("#load").html("<img src='/templates/humboldt/images/loading.gif' />");
+	$("#load").html("<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />");
 
 	//due to the way we detect today's date, the left side content has to be loaded before the month widget
 	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';
@@ -588,42 +590,41 @@ function ajaxsearch(){
  * Call from: none
  * Call to: none
  */
-//function searchinfo(){
-//	var nav_prev1 = document.getElementById('day_nav');
-//	var search = document.forms.event_search.q;
-//	var flagappeared = document.getElementById('search_term');
-//	
-//	search.onclick = function(){							
-//								if(nav_prev1 && nav_prev1.style.display != 'inline'){
-//									nav_prev1.style.display = 'none';
-//								}
-//									if(!flagappeared.className){
-//										createCookie('searchtips','searchterms',7);
-//										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
-//										flagappeared.className = 'appeared';
-//										flagappeared.style.display = 'block';																					
-//									} else {
-//										flagappeared.style.display = 'none';	
-//									}							
-//								};
-//					
-//	var top_off = document.forms.event_search.getElementsByTagName('a');
-//error here
-//	top_off[0].onclick = function(){
-//									var formseaarch = document.forms.event_search.q;
-//									nav_prev1.style.display = 'inline';
-//									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
-//									formseaarch.focus();
-//									flagappeared.style.display = 'none';	
-//									return false;
-//									};
-//									
-//}
-//
-///*auto fade out */
-//function finishSearch(){	
-//	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
-//}
+function searchinfo(){
+	var nav_prev1 = document.getElementById('day_nav');
+	var search = document.forms.event_search.q;
+	var flagappeared = document.getElementById('search_term');
+	
+	search.onclick = function(){							
+								if(nav_prev1 && nav_prev1.style.display != 'inline'){
+									nav_prev1.style.display = 'none';
+								}
+									if(!flagappeared.className){
+										createCookie('searchtips','searchterms',7);
+										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
+										flagappeared.className = 'appeared';
+										flagappeared.style.display = 'block';																					
+									} else {
+										flagappeared.style.display = 'none';	
+									}							
+								};
+					
+	var top_off = document.forms.event_search.getElementsByTagName('a');
+	top_off[0].onclick = function(){
+									var formseaarch = document.forms.event_search.q;
+									nav_prev1.style.display = 'inline';
+									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
+									formseaarch.focus();
+									flagappeared.style.display = 'none';	
+									return false;
+									};
+									
+}
+
+/*auto fade out */
+function finishSearch(){	
+	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
+}
 /*
  * Clean and simple month display
  * Call from: addLoadEvent

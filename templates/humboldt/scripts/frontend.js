@@ -29,7 +29,9 @@ var glob_handler = {
  	glob_handler.addEvent(document.getElementById('monthwidget'), 'DOMMouseScroll', changeMonthWidget);
   }
   
-  todayHilite();	
+  todayHilite();
+  
+ }	
   
 
 

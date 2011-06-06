@@ -24,8 +24,10 @@ var glob_handler = {
  	 	ajaxsearch();
  	 	shortenText();
  		dropdown();
-  	 }	
+ 	 }
+ 	glob_handler.addEvent(document.getElementById('monthwidget'), 'DOMMouseScroll', changeMonthWidget);
   }
+  
   todayHilite();	
   
   //attach search tips if cookie does not exist
@@ -45,8 +47,26 @@ var glob_handler = {
     }
   }
 }
-glob_handler.addEvent(window,"load",glob_handler.init);  
+glob_handler.addEvent(window,"load",glob_handler.init);
 
+try {
+	WDN.navigation.initialize = function(){};
+} catch(e){}
+
+function changeMonthWidget(e)
+{
+	e = e ? e : window.event;
+	var raw = e.detail ? e.detail : e.wheelDelta;
+	if (raw > 0) {
+		// Go to next month
+		var next = document.getElementById('next_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
+	} else {
+		// Go to prev month
+		var next = document.getElementById('prev_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
+	}
+	ajaxEngine(next, 'monthwidget');
+	return cancelEvent(e);
+}
 
 /*------------------------ GENERIC FUNCTIONS --------------------------*/ 
 /* getElementsByClassName by some guy with a yeallowish website. */
@@ -159,34 +179,24 @@ function getCalendarDate(t)
    months[9]  = "October";
    months[10] = "November";
    months[11] = "December";
-   if(t){
-   	  var monthname   = months[t];
+   if (t){
+   	  var monthname = months[t];
    	  return monthname;
    }
-   else{
-	   var now         = new Date();
-	   var monthnumber = now.getMonth();
-	   var monthname   = months[monthnumber];
-	   var dateString = monthname;
-	   return dateString;
-   }
+
+   var now         = new Date();
+   var monthnumber = now.getMonth();
+   var monthname   = months[monthnumber];
+   var dateString  = monthname;
+   return dateString;
 }
 
 function eventLink(){
-
-	var tbodyObj = document.getElementsByTagName('tbody');
-	for(tb=0; tb<tbodyObj.length; tb++){
-		var eventLink = getElementsByClassName(tbodyObj[tb], "a", "url");
-			for(a=0; a<eventLink.length; a++){
-				 if (isInternalLink(eventLink[a])) {
-					eventLink[a].onclick = function(){
-										   var linkURL = this.getAttribute("href", 2)+'?&format=hcalendar';
-										   new ajaxEngine(linkURL, 'eventlisting');
-										   return false;
-										   }
-				 }
-			}
-	}
+	$('tbody a.url').click(function(){
+		var linkURL = this.getAttribute("href", 2)+'?&format=hcalendar';
+		new ajaxEngine(linkURL, 'eventlisting');
+		return false;
+	});
 }
 
 /*
@@ -209,18 +219,16 @@ function isInternalLink(link)
  * Call to: none
  */
 function returnToday(){
-	var x = new Date ();	
-	//var widgetDiv = document.getElementById('monthwidget');
-	document.getElementById('load').innerHTML="<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />";
+	var x = new Date();	
+
+	$("#load").html("<img src='/templates/humboldt/images/loading.gif' />");
+
 	//due to the way we detect today's date, the left side content has to be loaded before the month widget
-	var backtoDay = '?&amp;y='+x.getYear () + 1900+'&amp;m='+x.getMonth () + 1+'&amp;d='+x.getDate+'&amp;?&format=hcalendar';
+	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';
 	ajaxEngine(backtoDay, 'eventlisting');
-	ajaxCaller.get('?&amp;y='+x.getYear () + 1900+'&amp;m='+x.getMonth () + 1+'&amp;?&monthwidget&format=hcalendar', null, function(text, headers, callingContext){
-		if(document.getElementById('onselect') && document.getElementById('onselect').getElementsByTagName('a')[0] != null){
-			var tdlink = document.getElementById('onselect').getElementsByTagName('a')[0].getAttribute("href", 2);
-		}
-		document.getElementById('load').innerHTML=""
-		document.getElementById("monthwidget").innerHTML = text;
+	$.get(window.location.href+'?&y='+(x.getYear()+1900)+'&m='+(x.getMonth()+1)+'&monthwidget&format=hcalendar', function(data, textStatus) {
+		$("#load").html('');
+		$("#monthwidget").html(data);
 		todayHilite();			
 	}, false, null);
 	return false;
@@ -256,7 +264,7 @@ function todayHilite(){
 		}
 
 		if(idSelector.className != 'year' && idSelector.className != 'upcoming'){	
-			var selectedDay = getElementsByClassName(document.getElementById('UNLmaincontent'), "h4", "sec_main");
+			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "sec_main");
 			var re = new RegExp(/\d+/);
 			var m = re.exec(selectedDay[0].childNodes[0].nodeValue);
 			var dayT, todayT;
@@ -456,39 +464,40 @@ function monthCaptionSwitch(eT){
 }
 
 /*this is the main ajax calling engine. make library calls to XHR lib (ajaxcaller.js)*/
-function ajaxEngine(urlPath, section, vars){
+function ajaxEngine(urlPath, section, vars) {
 	document.getElementById('load').innerHTML="<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />";
 	switch (section){
 		case "monthwidget":
-			ajaxCaller.get(urlPath, null, onMonthResponse, false, null);
+			$.get(urlPath, onMonthResponse);
 			break;
 		case "search":
-			ajaxCaller.get(urlPath, vars, onSumResponse, false, null);
+			$.get(urlPath, onSumResponse);
 			break;
 		case "eventlisting":
-			ajaxCaller.get(urlPath, null, onSumResponse, false, null);
+			$.get(urlPath, onSumResponse);
 		break;
 		default : alert("Error: please specify ajaxEngine calling section");
 	}	
 }
 
 /* parse ajax response for month widget */
-function onMonthResponse(text, headers, callingContext) {
-  if(document.getElementById('onselect') && document.getElementById('onselect').getElementsByTagName('a')[0] != null){
-   var tdlink = document.getElementById('onselect').getElementsByTagName('a')[0].getAttribute("href", 2);
-  } 
-  document.getElementById('load').innerHTML="";
-  document.getElementById("monthwidget").innerHTML = text;
-  carryOver(tdlink);
-  todayHilite();
+function onMonthResponse(data, textStatus) {
+	if (document.getElementById('onselect')
+		&& document.getElementById('onselect').getElementsByTagName('a')[0] != null){
+		var tdlink = document.getElementById('onselect').getElementsByTagName('a')[0].getAttribute("href", 2);
+	} 
+	$('#load').html("");
+	$('#monthwidget').html(data);
+	carryOver(tdlink);
+	todayHilite();
 }
 
 /* parse ajax response for event listing and event instance */
 var save;//global variable to store previous content;
-function onSumResponse(text, headers, callingContext) {
-  save = document.getElementById('updatecontent').innerHTML;
-  document.getElementById('load').innerHTML=""
-  document.getElementById("updatecontent").innerHTML = text;
+function onSumResponse(data, textStatus) {
+  save = $('#updatecontent').html();
+  $('#load').html("");
+  $("#updatecontent").html(data);
   new eventLink();
   shortenText();
   if(document.getElementById('day_nav') != null){
@@ -599,6 +608,7 @@ function searchinfo(){
 								};
 					
 	var top_off = document.forms.event_search.getElementsByTagName('a');
+//error here
 	top_off[0].onclick = function(){
 									var formseaarch = document.forms.event_search.q;
 									nav_prev1.style.display = 'inline';
@@ -888,5 +898,18 @@ for (k=0;k<listevent.length;k++){
 				}
 
 return false;
+}
+
+function cancelEvent(e)
+{
+  e = e ? e : window.event;
+  if(e.stopPropagation)
+    e.stopPropagation();
+  if(e.preventDefault)
+    e.preventDefault();
+  e.cancelBubble = true;
+  e.cancel = true;
+  e.returnValue = false;
+  return false;
 }
 

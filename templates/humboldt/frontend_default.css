@@ -528,8 +528,6 @@ td {
 	overflow: auto;
 }
 #featuredEvents .event_detail {
-/*	width: 260px;*/
-/*	height: 200px;*/
 	margin: 10px 35px 0 0;
 	float: left;
 }
@@ -537,6 +535,7 @@ td {
 	width: 260px;
 	overflow: hidden;
 	height: 200px;
+	margin-bottom: 10px;
 }
 #featuredEvents .event_detail .imagecrop img {
 	width: 100%;

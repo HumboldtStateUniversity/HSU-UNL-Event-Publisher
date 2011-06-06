@@ -88,9 +88,9 @@ if (isset($this->output[0], $this->output[0]->event)
           <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
           <input type='submit' name='submit' value="Search" />
           <input type='hidden' name='search' value='search' />
-      <!--<p id="search_term">Search smartly: In addition to normal keyword search, you can also search with chronological terms such as 'tomorrow', 'Monday' and etc.
+      <p id="search_term">Search smartly: In addition to normal keyword search, you can also search with chronological terms such as 'tomorrow', 'Monday' and etc.
       <a href="#" title="close search tip">(close message)</a>
-      </p>-->
+      </p>
       </form>
 	  <div class="clear"></div>
 <!-- featured events start-->

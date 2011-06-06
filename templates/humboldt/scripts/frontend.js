@@ -221,7 +221,7 @@ function isInternalLink(link)
 function returnToday(){
 	var x = new Date();	
 
-	$("#load").html("<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />");
+	$("#load").html("<img src='/templates/humboldt/images/loading.gif' />");
 
 	//due to the way we detect today's date, the left side content has to be loaded before the month widget
 	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';

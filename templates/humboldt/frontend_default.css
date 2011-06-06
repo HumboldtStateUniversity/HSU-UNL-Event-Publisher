@@ -47,7 +47,7 @@ table td{
 	padding:7px;
 /*	border-top:1px solid #d7e6ee;*/
 	}
-table td.date{width:25%;}
+table td.date{width:25%;vertical-align:top;}
 table td.title{width:75%;}
 #maincontent .three_col h4.sec_main, #maincontent .three_col h4.upcoming-header{float:left;font-size:1.5em;padding: 4px 0 7px 30px!important; 
                  background: url(images/date1.gif) no-repeat 0 0;font-style:normal;}

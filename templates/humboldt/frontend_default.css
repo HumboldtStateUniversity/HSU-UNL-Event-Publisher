@@ -484,7 +484,9 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 
 /*main site interior.css overides*/
 #maincontent textarea, #maincontent input {
-	width: auto;
+	border-radius: 5px 5px 5px 5px;
+    margin: 10px 0;
+    width: auto;
 }
 .col4-0 #container { 	/* set width for Campus calendar template*/
 	width: 900px;

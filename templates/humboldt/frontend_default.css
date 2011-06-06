@@ -24,10 +24,10 @@ body.events #titlegraphic {
 
 table {clear:both;width:100%;border-collapse:collapse;}
 table tr:hover, table tr.alt:hover{
-	background:#ccc;
+	background:#f7f7cb;
 }
 table tr.alt{
-	background:#eee;
+	background:#f1f1f1;
 }
 table thead th{
 /*	background:#3e83c9;*/
@@ -93,7 +93,7 @@ table.wp-calendar td.selected{
 	background-color:#eee;
 }
 table.wp-calendar td#onselect{
-	background-color:#3e83c9;
+	background-color:#0e584a;
 }
 #maincontent table.wp-calendar td#onselect a, #maincontent table.wp-calendar td#onselect.today{
 	color:#fff;
@@ -110,7 +110,7 @@ table.wp-calendar tr:hover{
 	background:none;
 }
 table.wp-calendar td:hover{
-	background:#ccc;
+	background:#f7f7cb;
 }
 #maincontent table.wp-calendar td.next, table.wp-calendar td.prev {color:#a2a2a2;}
 table.wp-calendar td.pad:hover{background:none}
@@ -143,13 +143,13 @@ table.wp-calendar #today_image{
 	right:0;
 	margin:3px 2px 0 0;
 }
-#maincontent span.location{text-transform:uppercase;font-size:0.75em;background-color:#ccc;padding:3px 6px;border-radius:10px;float:right;margin-top:2em;}
+#maincontent span.location{text-transform:uppercase;font-size:0.75em;background-color:#999	;border: solid 1px #ccc;color: #252525;padding:3px 6px;border-radius:5px;float:right;margin:15px 0;}
 #maincontent span.location a {
 	text-decoration: none;
 	border-bottom: none;
 }
 #maincontent span.location a:hover {
-	color: #999;
+	color: #fff;
 }
 #maincontent span.location a{font-size:1em;}
 #maincontent a.returnToday{
@@ -173,7 +173,7 @@ table.wp-calendar caption span{display:block;height:31px;/*background:url(images
 table.wp-calendar caption span.monthvalue, table.wp-calendar caption span.yearvalue{
 margin-top:0;padding:8px 3px 0;}
 #maincontent table.wp-calendar caption a{margin-bottom:5px;color:#333;font-weight:bold;}
-#maincontent table.wp-calendar caption a:hover{color:#fff !important;}
+#maincontent table.wp-calendar caption a:hover{color:#0e584a !important;}
 table.wp-calendar caption a#prev_month, table.wp-calendar caption a#next_month{text-indent:-9999em;
 	display:block;background:#fff url(images/monthviewnav_prev.gif) no-repeat; width:6px; height:11px;margin-top:10px}
 table.wp-calendar caption a#next_month{background:url(images/monthviewnav_next.gif) no-repeat;}
@@ -194,7 +194,7 @@ table blockquote {
 /*	width:auto;*/
 }
 .event_cal table td.date, .event_cal table td.title{width:auto;}
-#maincontent .event_cal table td.date{color:#cc0000;}
+#maincontent .event_cal table td.date{color:#252525;font-weight:bold;}
 .event_cal table thead{display:none;}
 img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-width:480px;} /* give image max width to stop large images from busting the table layout*/
 /*- Menu Tabs G--------------------------- */
@@ -261,7 +261,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 	min-height:12.3em;
 	_height:12.3em;
 	}
-#maincontent .month_cal table.wp-calendar td a{background:#ddd;padding:0 4px;float:left;color:#900!important;margin:-5px 0 0 -6px}	
+#maincontent .month_cal table.wp-calendar td a{background:#ddd;padding:0 4px;float:left;color:#0e584a!important;margin:-5px 0 0 -6px}	
 #maincontent .month_cal table.wp-calendar td a:active{color:#333;}
 #maincontent .month_cal table.wp-calendar td span.monthvalue_ID{display:none}
 #maincontent .month_cal table.wp-calendar td ul{position:relative;list-style:none;clear:both;padding:4px 0 0 0;margin:0;}
@@ -457,14 +457,14 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 }*/
  abbr.dtstart:after, abbr.dtend:after {content:'' }
  td abbr {
- 	margin-top: 10px;
+/* 	margin-top: 10px;*/
  	display: inline-block;
  	border-bottom: none;
  }
 /* IE */
 * html tr.vevent td.date{font-size:0.9em!important;}
 * html #maincontent .three_col{padding:0;}
-* html #maincontent .three_col table td{padding:7px!important;}
+* html #maincontent .three_col table td{padding:10px!important;}
 * html .col{margin-top:10px;}
 * html table.wp-calendar caption span.monthvalue, * html table.wp-calendar caption span.yearvalue{padding:6px 3px 0;}
 * html #maincontent p#search_term{filter:alpha(opacity: 0);background:url(images/searchinfo.gif) no-repeat;margin:13px 0 0 -275px;padding:18px 20px 0 10px;}
@@ -557,6 +557,9 @@ td {
 ----------------------------------------------- */
 #maincontent .col form {
 	margin-top: 40px;
+}
+select {
+	width: 100%;
 }
 
 /*Jquery Scrollable */

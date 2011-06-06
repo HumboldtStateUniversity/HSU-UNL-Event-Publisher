@@ -528,15 +528,18 @@ td {
 	overflow: auto;
 }
 #featuredEvents .event_detail {
-	width: 260px;
-	height: 200px;
+/*	width: 260px;*/
+/*	height: 200px;*/
 	margin: 10px 35px 0 0;
 	float: left;
-/*	border: solid 1px #ccc;*/
 }
-#featuredEvents .event_detail img {
+.imagecrop {
 	width: 260px;
+	overflow: hidden;
 	height: 200px;
+}
+#featuredEvents .event_detail .imagecrop img {
+	width: 100%;
 }
 #featuredEvents .event_detail span {
 	display: block;

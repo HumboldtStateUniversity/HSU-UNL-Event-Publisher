@@ -94,6 +94,7 @@ table.wp-calendar td.selected{
 }
 table.wp-calendar td#onselect{
 	background-color:#0e584a;
+	color: #ccc;
 }
 #maincontent table.wp-calendar td#onselect a, #maincontent table.wp-calendar td#onselect.today{
 	color:#fff;

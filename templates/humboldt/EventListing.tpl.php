@@ -58,7 +58,7 @@ foreach ($this->events as $e) {
         }
     }
     $row .= '</td>' .
-            '<td><h3><a class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a>';
+            '<td><h3><a class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3>';
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {
         $l = $e->eventdatetime->getLink('location_id');
         $row .= ' <span class="location">';
@@ -67,7 +67,7 @@ foreach ($this->events as $e) {
         } else {
             $row .= UNL_UCBCN_Frontend::dbStringToHtml($l->name);
         }
-        $row .= '</span></h3>';
+        $row .= '</span>';
     }
     if ($this->type != 'ongoing') {
         $row .=    '<blockquote class="description">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->description).'</blockquote>';

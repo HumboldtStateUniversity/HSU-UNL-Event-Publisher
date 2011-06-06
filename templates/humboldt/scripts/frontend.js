@@ -625,6 +625,7 @@ function CBInsertBefore(linktext, actionFunc, classN){
 //function finishSearch(){	
 //	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
 //}
+
 /*
  * Clean and simple month display
  * Call from: addLoadEvent

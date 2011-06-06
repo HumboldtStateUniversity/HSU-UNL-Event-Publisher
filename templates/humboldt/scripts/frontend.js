@@ -33,42 +33,42 @@ var glob_handler = {
   todayHilite();	
   
   //attach search tips if cookie does not exist
-  if(readCookie('searchtips') ==null){
-  	searchinfo(); 
-  }
-	  
-  },
-  
-  addEvent: function( obj, type, fn ) {
-    if ( obj.attachEvent ) {
-      obj['e'+type+fn] = fn;
-      obj[type+fn] = function(){obj['e'+type+fn]( window.event );}
-      obj.attachEvent( 'on'+type, obj[type+fn] );
-    } else {
-      obj.addEventListener( type, fn, false );
-    }
-  }
-}
-glob_handler.addEvent(window,"load",glob_handler.init);
-
-try {
-	WDN.navigation.initialize = function(){};
-} catch(e){}
-
-function changeMonthWidget(e)
-{
-	e = e ? e : window.event;
-	var raw = e.detail ? e.detail : e.wheelDelta;
-	if (raw > 0) {
+//  if(readCookie('searchtips') ==null){
+//  	searchinfo(); 
+//  }
+//	  
+//  },
+//  
+//  addEvent: function( obj, type, fn ) {
+//    if ( obj.attachEvent ) {
+//      obj['e'+type+fn] = fn;
+//      obj[type+fn] = function(){obj['e'+type+fn]( window.event );}
+//      obj.attachEvent( 'on'+type, obj[type+fn] );
+//    } else {
+//      obj.addEventListener( type, fn, false );
+//    }
+//  }
+//}
+//glob_handler.addEvent(window,"load",glob_handler.init);
+//
+//try {
+//	WDN.navigation.initialize = function(){};
+//} catch(e){}
+//
+//function changeMonthWidget(e)
+//{
+//	e = e ? e : window.event;
+//	var raw = e.detail ? e.detail : e.wheelDelta;
+//	if (raw > 0) {
 		// Go to next month
-		var next = document.getElementById('next_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-	} else {
+//		var next = document.getElementById('next_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
+//	} else {
 		// Go to prev month
-		var next = document.getElementById('prev_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-	}
-	ajaxEngine(next, 'monthwidget');
-	return cancelEvent(e);
-}
+//		var next = document.getElementById('prev_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
+//	}
+//	ajaxEngine(next, 'monthwidget');
+//	return cancelEvent(e);
+//}
 
 /*------------------------ GENERIC FUNCTIONS --------------------------*/ 
 /* getElementsByClassName by some guy with a yeallowish website. */
@@ -204,37 +204,37 @@ function eventLink(){
 /*
  * Determines whether a link is to the internal system or external.
  */
-function isInternalLink(link)
-{
-	var baseURL = document.getElementById('todayview');
+//function isInternalLink(link)
+//{
+//	var baseURL = document.getElementById('todayview');
 	//baseURL.childNodes[0].getAttribute("href", 2)
-	if (link.getAttribute('href').indexOf('http') == 0 && link.getAttribute('href').indexOf('events.unl.edu') < 0 ) {
-		return false;
-	} else {
-		return true;
-	}
-}
+//	if (link.getAttribute('href').indexOf('http') == 0 && link.getAttribute('href').indexOf('events.unl.edu') < 0 ) {
+//		return false;
+//	} else {
+//		return true;
+//	}
+//}
 
 /*
  * Go back to today's date in month widget
  * Call from: addLoadEvent
  * Call to: none
  */
-function returnToday(){
-	var x = new Date();	
-
-	$("#load").html("<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />");
-
+//function returnToday(){
+//	var x = new Date();	
+//loading image goes here
+//	$("#load").html("<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />");
+//
 	//due to the way we detect today's date, the left side content has to be loaded before the month widget
-	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';
-	ajaxEngine(backtoDay, 'eventlisting');
-	$.get(window.location.href+'?&y='+(x.getYear()+1900)+'&m='+(x.getMonth()+1)+'&monthwidget&format=hcalendar', function(data, textStatus) {
-		$("#load").html('');
-		$("#monthwidget").html(data);
-		todayHilite();			
-	}, false, null);
-	return false;
-}
+//	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';
+//	ajaxEngine(backtoDay, 'eventlisting');
+//	$.get(window.location.href+'?&y='+(x.getYear()+1900)+'&m='+(x.getMonth()+1)+'&monthwidget&format=hcalendar', function(data, textStatus) {
+//		$("#load").html('');
+//		$("#monthwidget").html(data);
+//		todayHilite();			
+//	}, false, null);
+//	return false;
+//}
 
 /*
  * today icon and ajax initialization for month widget
@@ -495,25 +495,25 @@ function onMonthResponse(data, textStatus) {
 }
 
 /* parse ajax response for event listing and event instance */
-var save;//global variable to store previous content;
-function onSumResponse(data, textStatus) {
-  save = $('#updatecontent').html();
-  $('#load').html("");
-  $("#updatecontent").html(data);
-  new eventLink();
-  shortenText();
-  if(document.getElementById('day_nav') != null){
- 	 new monthNav(); 
-  }
-  else if(getElementsByClassName(document, "div", "event_cal").length > 0){
-  	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertBefore('< Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
-  	 }
-  	 else{
-  	 	save = '';
-  	 }
-  }
-}
+//var save;//global variable to store previous content;
+//function onSumResponse(data, textStatus) {
+//  save = $('#updatecontent').html();
+//  $('#load').html("");
+//  $("#updatecontent").html(data);
+//  new eventLink();
+//  shortenText();
+//  if(document.getElementById('day_nav') != null){
+// 	 new monthNav(); 
+//  }
+//  else if(getElementsByClassName(document, "div", "event_cal").length > 0){
+//  	if(document.getElementById('returnPrevScreen') == null){
+//    	 CBInsertBefore('< Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
+//  	 }
+//  	 else{
+//  	 	save = '';
+//  	 }
+//  }
+//}
 
 //this function carries over onselect value from prior month widget
 function carryOver(ss){
@@ -561,27 +561,27 @@ function CBInsertBefore(linktext, actionFunc, classN){
  * Call from: addevent
  * Call to: onSearchResponse
  */
-function ajaxsearch(){
-	var searchForm = document.getElementById('event_search');
-	var searchSubmit = searchForm.getElementsByTagName('input')[1];
-	var fp = document.getElementById('event_search');
-	var formAction = fp.action;
-	formAction = formAction.substring(0,formAction.indexOf('search'));
-
-	document.event_search.onsubmit = function(){
-		var searchVal = document.getElementById('searchinput').value;
-		while (searchVal.indexOf('#')>-1) {
-			searchVal = searchVal.replace(/#+/,'');
-		}
-		var searchVars = new Array();
-		searchVars['q'] = searchVal;
-		searchVars['format'] = 'hcalendar';
-		searchVars['search'] = 'search';
-		document.getElementById('load').innerHTML = '<img src="/ucomm/templatedependents/templatecss/images/loading.gif" />';
-		ajaxEngine(formAction, 'search', searchVars)
-		return false;
-	}
-}
+//function ajaxsearch(){
+//	var searchForm = document.getElementById('event_search');
+//	var searchSubmit = searchForm.getElementsByTagName('input')[1];
+//	var fp = document.getElementById('event_search');
+//	var formAction = fp.action;
+//	formAction = formAction.substring(0,formAction.indexOf('search'));
+//
+//	document.event_search.onsubmit = function(){
+//		var searchVal = document.getElementById('searchinput').value;
+//		while (searchVal.indexOf('#')>-1) {
+//			searchVal = searchVal.replace(/#+/,'');
+//		}
+//		var searchVars = new Array();
+//		searchVars['q'] = searchVal;
+//		searchVars['format'] = 'hcalendar';
+//		searchVars['search'] = 'search';
+//		document.getElementById('load').innerHTML = '<img src="/ucomm/templatedependents/templatecss/images/loading.gif" />';
+//		ajaxEngine(formAction, 'search', searchVars)
+//		return false;
+//	}
+//}
 
 
 
@@ -590,41 +590,41 @@ function ajaxsearch(){
  * Call from: none
  * Call to: none
  */
-function searchinfo(){
-	var nav_prev1 = document.getElementById('day_nav');
-	var search = document.forms.event_search.q;
-	var flagappeared = document.getElementById('search_term');
-	
-	search.onclick = function(){							
-								if(nav_prev1 && nav_prev1.style.display != 'inline'){
-									nav_prev1.style.display = 'none';
-								}
-									if(!flagappeared.className){
-										createCookie('searchtips','searchterms',7);
-										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
-										flagappeared.className = 'appeared';
-										flagappeared.style.display = 'block';																					
-									} else {
-										flagappeared.style.display = 'none';	
-									}							
-								};
-					
-	var top_off = document.forms.event_search.getElementsByTagName('a');
-	top_off[0].onclick = function(){
-									var formseaarch = document.forms.event_search.q;
-									nav_prev1.style.display = 'inline';
-									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
-									formseaarch.focus();
-									flagappeared.style.display = 'none';	
-									return false;
-									};
-									
-}
-
-/*auto fade out */
-function finishSearch(){	
-	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
-}
+//function searchinfo(){
+//	var nav_prev1 = document.getElementById('day_nav');
+//	var search = document.forms.event_search.q;
+//	var flagappeared = document.getElementById('search_term');
+//	
+//	search.onclick = function(){							
+//								if(nav_prev1 && nav_prev1.style.display != 'inline'){
+//									nav_prev1.style.display = 'none';
+//								}
+//									if(!flagappeared.className){
+//										createCookie('searchtips','searchterms',7);
+//										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
+//										flagappeared.className = 'appeared';
+//										flagappeared.style.display = 'block';																					
+//									} else {
+//										flagappeared.style.display = 'none';	
+//									}							
+//								};
+//					
+//	var top_off = document.forms.event_search.getElementsByTagName('a');
+//	top_off[0].onclick = function(){
+//									var formseaarch = document.forms.event_search.q;
+//									nav_prev1.style.display = 'inline';
+//									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
+//									formseaarch.focus();
+//									flagappeared.style.display = 'none';	
+//									return false;
+//									};
+//									
+//}
+//
+///*auto fade out */
+//function finishSearch(){	
+//	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
+//}
 /*
  * Clean and simple month display
  * Call from: addLoadEvent

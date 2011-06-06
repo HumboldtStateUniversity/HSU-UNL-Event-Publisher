@@ -213,14 +213,17 @@ var manager = function() {
                     sel[1].disabled = 'disabled';
                     sel[2].disabled = null;
                     sel[4].disabled = null;
+		    sel[5].disabled = null;
                 } else if (manager.list == 'search') {
                     sel[1].disabled = null;
                     sel[2].disabled = null;
                     sel[4].disabled = 'disabled';
+                    sel[5].disabled = 'disabled';
                 } else {
                     sel[1].disabled = null;
                     sel[2].disabled = 'disabled';
                     sel[4].disabled = null;
+                    sel[5].disabled = 'disabled';
                 }
                 sel[3].disabled = null;
             } else {

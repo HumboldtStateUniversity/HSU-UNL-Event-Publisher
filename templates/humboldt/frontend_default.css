@@ -458,7 +458,7 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 }*/
  abbr.dtstart:after, abbr.dtend:after {content:'' }
  td abbr {
- 	margin-top: 7px; 
+ 	margin-top: 10px; 
  	display: inline-block;
  	border-bottom: none;
  }

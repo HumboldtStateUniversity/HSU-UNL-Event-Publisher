@@ -397,10 +397,9 @@ padding:0;
     margin: 0 0 9px 0;
 }
 #updatecontent h3 {
-float: left;
+	float: left;
 	width: 60%;
-	color: red;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 /*a#frontend_login{margin:0 0 0 -5px;background:url(images/front-login.gif) no-repeat 0 -2px;padding:0 0 0 20px}
 a#frontend_login:hover{background-position:0 -21px;}*/
@@ -458,7 +457,6 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 }*/
  abbr.dtstart:after, abbr.dtend:after {content:'' }
  td abbr {
- 	margin-top: 10px; 
  	display: inline-block;
  	border-bottom: none;
  }

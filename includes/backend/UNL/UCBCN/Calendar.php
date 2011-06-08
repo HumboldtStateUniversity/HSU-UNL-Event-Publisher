@@ -171,11 +171,11 @@ class UNL_UCBCN_Calendar extends DB_DataObject
     {
         if (isset($this->id)) {
             $p = UNL_UCBCN::factory('permission');
-            $p->find();
             // HSU - only give new user a few permissions to main calendar
             $p->whereAdd('name = "Event Create"');
             $p->whereAdd('name = "Event Recommend"', 'OR');
             $p->whereAdd('name = "Event Send Event to Pending Queue"', 'OR');
+            $p->find();
             while ($p->fetch()) {
                     if (!UNL_UCBCN::userHasPermission($user,$p->name,$this)) {
                             UNL_UCBCN::grantPermission($user->uid,$this->id,$p->id);

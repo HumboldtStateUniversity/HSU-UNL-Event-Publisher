@@ -112,7 +112,9 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'privatecomment', 
                                     'otherkeywords',
                                     'approvedforcirculation', 
-                                    'listingcontactuid');
+                                    'listingcontactuid', 
+                                    'imageurl', 
+                                    'imagetitle');
 
    // public $fb_enumFields          = array('approvedforcirculation');
    // public $fb_enumOptions         = array('approvedforcirculation'=>array('Private (Your event will only be available to your calendar)<br />',
@@ -239,7 +241,7 @@ class UNL_UCBCN_Event extends DB_DataObject
         $el->setCols(50);
         $el->setRows(2);
 
-        $form->addRule('imageurl', 'Image URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
+        //$form->addRule('imageurl', 'Image URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
         $form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
 
         $date = date('Y-m-d H:i:s');
@@ -407,25 +409,6 @@ class UNL_UCBCN_Event extends DB_DataObject
         $this->processFileAttachments();
         $this->datecreated = date('Y-m-d H:i:s');
         $this->datelastupdated = date('Y-m-d H:i:s');
-
-        // HSU - process image URL
-        if(isset($this->imageurl)){
-            $allowed = array('.png', '.jpg', '.jpeg', '.gif');
-            $extension = substr($this->imageurl, -5);
-            if (in_array(stristr($extension, '.'), $allowed)) {
-                 $imagedata = file_get_contents($this->imageurl);
-                 if (stripos($extension, 'jpeg'))
-                         $imagemime = 'image/jpeg';
-                 elseif (stripos($extension, 'jpg'))
-                         $imagemime = 'image/jpg';
-                 elseif (stripos($extension, 'png'))
-                         $imagemime = 'image/png';
-		 elseif (stripos($extension, 'gif'))
-			 $imagemime = 'image/gif';
-                 $this->imagemime = $imagemime;
-                 $this->imagedata = $imagedata;
-            }
-        }
 
         if (isset($_SESSION['_authsession'])) {
             $this->uidcreated=$_SESSION['_authsession']['username'];

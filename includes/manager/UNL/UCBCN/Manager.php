@@ -224,7 +224,10 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                 $this->calendar = $this->getCalendar($this->user, $this->account, false, '?action=calendar&new=true');
             }
         } else {
-            $this->calendar = $this->getCalendar($this->user, $this->account, false, '?action=calendar&new=true');
+            //$this->calendar = $this->getCalendar($this->user, $this->account, false, '?action=calendar&new=true');
+            // HSU - don't give a new user their own calendar
+            $this->calendar = $this->getCalendar($this->getUser('unl'), $this->getAccount($this->getUser('unl')));
+            $this->calendar->addUser($this->user);
         }
         if ($this->user->calendar_id != $this->calendar->id) {
             // Set the user's calendar_id to remember their default calendar.

@@ -106,7 +106,8 @@ if (isset($this->output[0], $this->output[0]->event)
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->
-<h3>Events by Type</h3>
+				<div class="eventtypes">
+				<h3>Events by Type</h3>
                   <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
                   <form action="<?php $this->uri ?>search/" method="get">
                       <select name="e"> 
@@ -117,7 +118,7 @@ if (isset($this->output[0], $this->output[0]->event)
                       </select><input type="submit" value="Go">
                   </form>
                   <?php endif; ?>
-                 
+                 </div>
                   <div id="subscribe">
                   	<h3>Subscribe</h3>
                   	<ul>
@@ -131,7 +132,6 @@ if (isset($this->output[0], $this->output[0]->event)
                   	<ul>
                   		<li id="login_list"><a id="frontend_login" href="manager/">&raquo; Submit an Event</a></li>
                   		<li><a href="#">&raquo; Give us Feedback</a></li>
-                  		<li><a href="#">&raquo; Suggest an event</a> </li>
                   		<li><a href="#">&raquo; Calendar Documentation</a> </li>
                   	</ul>
                   </div>

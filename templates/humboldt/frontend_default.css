@@ -412,7 +412,9 @@ a#monthfullview{background:url(images/checkbox.gif) no-repeat;background-positio
 a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 
 #subscribe {
-/*  float: right;*/
+  margin-top:40px ;
+}
+#eventtypes {
   margin-top:40px ;
 }
 /*#subscribe:hover #droplist {
@@ -554,11 +556,11 @@ td {
 .clear {
 	clear: both;
 }
-/* Category filter
+/* Events by type filter
 ----------------------------------------------- */
-#maincontent .col form {
+/*#maincontent .col form {
 	margin-top: 40px;
-}
+}*/
 select {
 	width: 100%;
 }

@@ -34,6 +34,6 @@ $endu = strtotime($this->eventdatetime->endtime);
 			echo '&lt;/small&gt;';
 		} ?>
 	</description>
-	<pubDate><?php echo date('r',strtotime($this->event->datecreated)); ?></pubDate>
+<!--	<pubDate><?php echo date('r',strtotime($this->event->datecreated)); ?></pubDate>-->
 	<guid><?php echo $this->url; ?></guid>
 </item>

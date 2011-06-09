@@ -108,7 +108,7 @@ $endu = strtotime($this->eventdatetime->endtime);
             echo '<p id="feeds">
 			<a id="icsformat" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')).'">ics format for '.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
 			<a id="rssformat" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')).'">rss format for '.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
-			<a id="googlecal" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'google')).'">Add to Google'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
+			<a id="googlecal" href="'.http://www.google.com/calendar/event?action=TEMPLATE&text=<?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?>&location=<?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->eventtime->room); ?>&details=<?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->description); ?>&sprop=website:http://humboldt.edu&y=2011&m=06&d=09&eventdatetime_id=7525&&dates=20110609T000000/20110610T000000.'">Add to Google'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
 			</p>'; ?>
 		</div>
 	</div>

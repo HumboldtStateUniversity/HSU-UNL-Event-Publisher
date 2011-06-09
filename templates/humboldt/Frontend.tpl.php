@@ -106,7 +106,7 @@ if (isset($this->output[0], $this->output[0]->event)
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->
-				<div class="eventtypes">
+				<div id="eventtypes">
 				<h3>Events by Type</h3>
                   <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
                   <form action="<?php $this->uri ?>search/" method="get">

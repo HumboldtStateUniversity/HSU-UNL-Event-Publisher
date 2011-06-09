@@ -106,7 +106,7 @@ if (isset($this->output[0], $this->output[0]->event)
   
 		<div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
 <!--Event type select-->
-
+<h3>Events by Type</h3>
                   <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
                   <form action="<?php $this->uri ?>search/" method="get">
                       <select name="e"> 
@@ -114,7 +114,7 @@ if (isset($this->output[0], $this->output[0]->event)
                           <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
                       <?php endwhile; ?>
 
-                      </select><input type="submit" value="View by Type">
+                      </select><input type="submit" value="Go">
                   </form>
                   <?php endif; ?>
                  

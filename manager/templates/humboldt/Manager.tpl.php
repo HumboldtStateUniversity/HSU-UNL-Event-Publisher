@@ -100,9 +100,7 @@ header('Content-Type:text/html; charset=UTF-8');
 
                     <div id="main_right" class="mainwrapper">
                         <div id="maincontent">
-                            <?php if (isset($this->user)){
-                            UNL_UCBCN::displayRegion($this->output);}
-                            ?>
+                            <?php UNL_UCBCN::displayRegion($this->output); ?>
                         </div>
                     </div>
                     <div style="clear: both"></div>

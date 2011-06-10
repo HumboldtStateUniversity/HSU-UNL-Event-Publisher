@@ -102,14 +102,31 @@ $endu = strtotime($this->eventdatetime->endtime);
 		</tr>
 		</tbody>
 		</table>
-        <?php
-            UNL_UCBCN::displayRegion($this->facebookRSVP);
-            echo $this->facebook->like($this->url,$this->calendar->id);
-            echo '<p id="feeds">
-			<a id="icsformat" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')).'">ics format for '.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
-			<a id="rssformat" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')).'">rss format for '.UNL_UCBCN_Frontend::dbStringToHtml($this->event->title).'</a>
-			
-			</p>'; ?>
+		<?php
+			UNL_UCBCN::displayRegion($this->facebookRSVP);
+			echo $this->facebook->like($this->url,$this->calendar->id);
+		?>
+		<p id="feeds">
+			<a id="icsformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')); ?>">
+				ics format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
+			<a id="rssformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')); ?>">
+				rss format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
+			<?php
+				if ($this->eventdatetime->location_id) {
+					$loc = $this->eventdatetime->getLink('location_id');
+					$loc = UNL_UCBCN_Frontend::dbStringToHtml($loc->name);
+				} else {
+					$loc = "Unknown";
+				}
+
+				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
+						   "&text=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->title) .
+						   "&location=" . $loc .
+						   "&details=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->description) .
+						   "&sprop=website:" . $this->url;
+			?>
+			<a id="googlecal" href="<?php echo $googleurl; ?>">Add to Google</a>
+		</p>
 		</div>
 	</div>
 </div>

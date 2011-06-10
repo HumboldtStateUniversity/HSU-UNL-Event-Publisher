@@ -119,9 +119,26 @@ $endu = strtotime($this->eventdatetime->endtime);
 					$loc = "Unknown";
 				}
 
+				$eventdate = '';
+				if (isset($this->eventdatetime->starttime)) {
+					$eventdate .= date('Ymd', strtotime($this->eventdatetime->starttime));
+				
+					if (strpos($this->eventdatetime->starttime,'00:00:00')) {
+						$eventdate .= "/" . date('Ymd', strtotime("+1 day", strtotime($this->eventdatetime->starttime)));
+					
+					} else {
+				        	$eventdate .= "T" . gmdate('Gi', strtotime($this->eventdatetime->starttime)) . '00Z';
+				
+						if (isset($this->eventdatetime->endtime)) {
+							$eventdate .= "/" . date('Ymd', strtotime($this->eventdatetime->endtime));
+							$eventdate .= "T" . gmdate('Gi', strtotime($this->eventdatetime->endtime)) . '00Z';
+						}
+					}
+				}
 				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
 						   "&text=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->title) .
 						   "&location=" . $loc .
+						   "&dates=" . $eventdate .
 						   "&details=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->description) .
 						   "&sprop=website:" . $this->url;
 			?>

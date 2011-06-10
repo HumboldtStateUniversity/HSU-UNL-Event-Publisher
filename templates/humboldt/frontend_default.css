@@ -144,7 +144,7 @@ table.wp-calendar #today_image{
 	right:0;
 	margin:3px 2px 0 0;
 }
-#maincontent span.location{text-transform:uppercase;font-size:0.75em;background-color:#999	;border: solid 1px #ccc;color: #252525;padding:3px 6px;border-radius:5px;float:right;margin:15px 0;}
+#maincontent span.location{text-transform:uppercase;font-size:0.75em;background-color:#999	;border: solid 1px #ccc;color: #252525;padding:3px 6px;border-radius:5px;float:right;margin:0 0 0px;}
 #maincontent span.location a {
 	text-decoration: none;
 	border-bottom: none;
@@ -183,6 +183,7 @@ background-position:0 -11px;
 }
 table blockquote {
 	clear: both;
+	margin: 0 0 10px 0;
 }
 /* event view*/
 
@@ -400,6 +401,7 @@ padding:0;
 	float: left;
 	width: 60%;
 	margin-top: 0px;
+	margin-bottom: 10px;
 }
 /*a#frontend_login{margin:0 0 0 -5px;background:url(images/front-login.gif) no-repeat 0 -2px;padding:0 0 0 20px}
 a#frontend_login:hover{background-position:0 -21px;}*/

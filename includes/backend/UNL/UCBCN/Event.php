@@ -207,6 +207,11 @@ class UNL_UCBCN_Event extends DB_DataObject
             unset($this->fb_reverseLinks);
             $fb->reverseLinks = array();
         }
+
+	if (isset($this->imagedata)) {
+	    $el = HTML_QuickForm::createElement('text', 'uploadedimage', '<img src="'.$_UNL_UCBCN['frontenduri'].'?image&id='.$this->id.'" alt="Uploaded Image" />');
+            $el->freeze();
+        }
     }
 
     /**

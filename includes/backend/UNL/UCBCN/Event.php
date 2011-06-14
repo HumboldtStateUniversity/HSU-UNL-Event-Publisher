@@ -247,7 +247,9 @@ class UNL_UCBCN_Event extends DB_DataObject
         $el->setRows(2);
 
         //$form->addRule('imageurl', 'Image URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
-        $form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
+	$form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
+	$form->addRule('imagedata', 'Image must be one of the following formats: .jpg, .jpeg, .png, .gif, .bmp', 
+			'mimetype', array('image/png', 'image/jpg', 'image/jpeg', 'image/bmp'));
 
         $date = date('Y-m-d H:i:s');
 

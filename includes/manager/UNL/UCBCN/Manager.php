@@ -1019,8 +1019,8 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
 	include_once 'UNL/UCBCN/Manager/Feature.php';
         $events = $this->getPostedEvents();
         if (count($events) > 0) {
-            $r = new UNL_UCBCN_Manager_Feature($this, $events);
-            return $r;
+            $f = new UNL_UCBCN_Manager_Feature($this, $events);
+            return $f;
         } else {
             return new UNL_UCBCN_Error('No event(s) selected to feature!');
         }

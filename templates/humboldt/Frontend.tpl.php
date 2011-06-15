@@ -123,7 +123,6 @@ if (isset($this->output[0], $this->output[0]->event)
                   	<h3>Subscribe</h3>
                   	<ul>
                   		<li id="eventical"><a href="https://its-caldev.humboldt.edu/unlcal/upcoming/?format=ics&amp;limit=100" title=".ical format">iCal &amp; Outlook</a></li>
-                  		<li><a href="#" title="">Google Calendar</a></li>
                   		<li id="eventrss"><a href="https://its-caldev.humboldt.edu/unlcal/upcoming/?format=rss&amp;limit=100" title="RSS feed">RSS feed</a></li>
                   	</ul>
                   </div>

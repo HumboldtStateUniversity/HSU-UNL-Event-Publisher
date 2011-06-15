@@ -21,7 +21,6 @@ var glob_handler = {
   //if it is event day and instance view
   else{
  	 if(getElementsByClassName(document, "div", "year_cal").length == 0 && getElementsByClassName(document, "ul", "search").length == 0){
- 	 	ajaxsearch();
  	 	shortenText();
  		dropdown();
  	 }
@@ -30,11 +29,6 @@ var glob_handler = {
   
   todayHilite();	
   
-  //attach search tips if cookie does not exist
-  if(readCookie('searchtips') ==null){
-  	searchinfo(); 
-  }
-	  
   },
   
   addEvent: function( obj, type, fn ) {
@@ -470,10 +464,7 @@ function ajaxEngine(urlPath, section, vars) {
 		case "monthwidget":
 			$.get(urlPath, onMonthResponse);
 			break;
-		case "search":
-			$.get(urlPath, onSumResponse);
-			break;
-		case "eventlisting":
+                case "eventlisting":
 			$.get(urlPath, onSumResponse);
 		break;
 		default : alert("Error: please specify ajaxEngine calling section");
@@ -554,76 +545,6 @@ function CBInsertBefore(linktext, actionFunc, classN){
 	c.insertBefore(morelink, getElementsByClassName(document, "div", "event_cal")[0]);
 }
 
-/*
- * Ajax search
- * Call from: addevent
- * Call to: onSearchResponse
- */
-function ajaxsearch(){
-	var searchForm = document.getElementById('event_search');
-	var searchSubmit = searchForm.getElementsByTagName('input')[1];
-	var fp = document.getElementById('event_search');
-	var formAction = fp.action;
-	formAction = formAction.substring(0,formAction.indexOf('search'));
-
-	document.event_search.onsubmit = function(){
-		var searchVal = document.getElementById('searchinput').value;
-		while (searchVal.indexOf('#')>-1) {
-			searchVal = searchVal.replace(/#+/,'');
-		}
-		var searchVars = new Array();
-		searchVars['q'] = searchVal;
-		searchVars['format'] = 'hcalendar';
-		searchVars['search'] = 'search';
-		document.getElementById('load').innerHTML = '<img src="/ucomm/templatedependents/templatecss/images/loading.gif" />';
-		ajaxEngine(formAction, 'search', searchVars)
-		return false;
-	}
-}
-
-
-
-/*
- * Search box tips
- * Call from: none
- * Call to: none
- */
-function searchinfo(){
-	var nav_prev1 = document.getElementById('day_nav');
-	var search = document.forms.event_search.q;
-	var flagappeared = document.getElementById('search_term');
-	
-	search.onclick = function(){							
-								if(nav_prev1 && nav_prev1.style.display != 'inline'){
-									nav_prev1.style.display = 'none';
-								}
-									if(!flagappeared.className){
-										createCookie('searchtips','searchterms',7);
-										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
-										flagappeared.className = 'appeared';
-										flagappeared.style.display = 'block';																					
-									} else {
-										flagappeared.style.display = 'none';	
-									}							
-								};
-					
-	var top_off = document.forms.event_search.getElementsByTagName('a');
-//error here
-	top_off[0].onclick = function(){
-									var formseaarch = document.forms.event_search.q;
-									nav_prev1.style.display = 'inline';
-									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
-									formseaarch.focus();
-									flagappeared.style.display = 'none';	
-									return false;
-									};
-									
-}
-
-/*auto fade out */
-function finishSearch(){	
-	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
-}
 /*
  * Clean and simple month display
  * Call from: addLoadEvent

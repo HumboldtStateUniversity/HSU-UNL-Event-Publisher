@@ -207,6 +207,11 @@ class UNL_UCBCN_Event extends DB_DataObject
             unset($this->fb_reverseLinks);
             $fb->reverseLinks = array();
         }
+
+	if (isset($this->imagedata)) {
+	    $el = HTML_QuickForm::createElement('text', 'uploadedimage', '<img src="'.$_UNL_UCBCN['frontenduri'].'?image&id='.$this->id.'" alt="Uploaded Image" />');
+            $el->freeze();
+        }
     }
 
     /**
@@ -242,7 +247,9 @@ class UNL_UCBCN_Event extends DB_DataObject
         $el->setRows(2);
 
         //$form->addRule('imageurl', 'Image URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
-        $form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
+	$form->addRule('webpageurl', 'Web Page URL must be valid, be sure to include http://', 'callback', array('UNL_UCBCN_Event','checkURL'));
+	$form->addRule('imagedata', 'Image must be one of the following formats: .jpg, .jpeg, .png, .gif, .bmp', 
+			'mimetype', array('image/png', 'image/gif', 'image/jpeg', 'image/bmp'));
 
         $date = date('Y-m-d H:i:s');
 

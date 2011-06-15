@@ -108,8 +108,6 @@ function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
 
-/* Go to a given URL */
-function gotoURL(location) {document.location=location;}
 /*------------------------------------------------------------------------*/
 
 /*
@@ -452,7 +450,7 @@ function ajaxEngine(urlPath, section, vars) {
 			break;
                 case "eventlisting":
 			$.get(urlPath, onSumResponse);
-		break;
+			break;
 		default : alert("Error: please specify ajaxEngine calling section");
 	}	
 }

@@ -108,8 +108,6 @@ function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
 
-/* Go to a given URL */
-function gotoURL(location) {document.location=location;}
 /*------------------------------------------------------------------------*/
 
 /*

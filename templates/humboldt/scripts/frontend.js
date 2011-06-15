@@ -443,7 +443,7 @@ function monthCaptionSwitch(eT){
 
 /*this is the main ajax calling engine. make library calls to XHR lib (ajaxcaller.js)*/
 function ajaxEngine(urlPath, section, vars) {
-	document.getElementById('load').innerHTML="<img src='/ucomm/templatedependents/templatecss/images/loading.gif' />";
+	document.getElementById('load').innerHTML="<img src='/templates/humboldt/images/loading.gif' />";
 	switch (section){
 		case "monthwidget":
 			$.get(urlPath, onMonthResponse);

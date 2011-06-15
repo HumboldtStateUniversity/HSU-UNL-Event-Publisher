@@ -47,8 +47,8 @@ function featured() {
         $output .= '<div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {
-            $output .= '<div class="imagecrop"><img src="' . $event['Images']['Image']['URL'] . '" alt="' . $event['EventTitle'] . '" 
-/></div>';
+            $output .= '<div class="imagecrop"><a href="' . $event['WebPages']['WebPage']['URL'] . '"><img src="' . $event['Images']['Image']['URL'] . '" alt="' . $event['EventTitle'] . '" 
+/></a></div>';
         }
 
         $output .= '<span>' . $formattedTime . '</span>';

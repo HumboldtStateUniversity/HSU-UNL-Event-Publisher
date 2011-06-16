@@ -477,6 +477,7 @@ class UNL_UCBCN_setup_postinstall
                             'Event Send Event to Pending Queue',
                             'Event Edit',
                             'Event Recommend',
+			    'Event Feature',
                             'Event Remove from Pending',
                             'Event Remove from Posted',
                             'Event Remove from System ',

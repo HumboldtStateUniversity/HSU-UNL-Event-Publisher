@@ -347,7 +347,10 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                 $this->output[] = $this->showRecommendForm();
                 break;
             case 'feature':
-		$this->output[] = $this->showFeatureForm();
+		if ($this->userHasPermission($this->user, 'Event Feature', $this->calendar))
+                    $this->output[] = $this->showFeatureForm();
+                else
+                    $this->output = new UNL_UCBCN_Error('Sorry, you do not have permission to feature events.');
 		break;
             case 'search':
                 UNL_UCBCN::outputTemplate('UNL_UCBCN_EventListing', 'EventListing_search');

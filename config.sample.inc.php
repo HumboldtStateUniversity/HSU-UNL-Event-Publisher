@@ -2,6 +2,7 @@
 /*Display errors*/
 ini_set('display_errors', false);
 
+
 /*Add a custom include path here if needed....*/
 set_include_path(implode(PATH_SEPARATOR, array(
     dirname(__FILE__).'/includes/backend',

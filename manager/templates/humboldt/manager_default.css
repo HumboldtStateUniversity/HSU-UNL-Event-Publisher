@@ -332,7 +332,7 @@ text-align:left;
 
 
 /** check all/ uncheck all buttons **/
-#contentSearch .subsectionlink,
+/*#contentSearch .subsectionlink,*/
 #contentSearch a#formShow,
 #contentSearch a.checkall,
 #contentSearch a.uncheckall {
@@ -345,9 +345,9 @@ color:#fff;
 margin:0;
 }
 #contentSearch a#formShow,#contentSearch .subsectionlink {
-clear:both;
+/*clear:both;
 display:block;
-margin-left:10px;
+margin-left:10px;*/
 }
 #contentSearch a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
 color:#fff !important;
@@ -522,7 +522,7 @@ margin:0 0 12px;
 
 #contentSearch form fieldset li table.eventlisting {
 background:#fff;
-width:575px;
+width:570px;
 }
 
 #contentSearch form fieldset li table.eventlisting th {

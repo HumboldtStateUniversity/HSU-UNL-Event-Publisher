@@ -28,7 +28,7 @@ header('Content-Type:text/html; charset=UTF-8');
 
 	
         <div id="titlegraphic" style="clear:both">
-            <h1>Calendar/Events</h1>
+            <h1>Events Calendar</h1>
         </div>
 		<div id="maincontent">	
 

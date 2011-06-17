@@ -145,7 +145,7 @@ class UNL_UCBCN_Frontend_MonthWidget extends UNL_UCBCN implements UNL_UCBCN_Cach
         $Month->build();
         $selected_days    = $this->dailyEventCount($Month);
         $ongoing_events   = $this->findOngoingEvents($Month);
-        $recurring_events = UNL_UCBCN::factory('recurringdate')->getRecurringDates($Month);
+        $recurring_events = UNL_UCBCN::factory('recurringdate')->getRecurringDates($Month, $this->calendar);
         
 
         while ( $Day = $Month->fetch() ) {

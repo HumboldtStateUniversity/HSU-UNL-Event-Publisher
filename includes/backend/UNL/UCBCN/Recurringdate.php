@@ -102,7 +102,8 @@ class UNL_UCBCN_Recurringdate extends DB_DataObject
                 $sql .= " AND event_id in (
                             SELECT event_id 
                             FROM calendar_has_event 
-                            WHERE calendar_id = {$calendar->id})";
+                            WHERE calendar_id = {$calendar->id}
+			    AND status = 'posted')";
         }
 
 	$db = $this->getDatabaseConnection();

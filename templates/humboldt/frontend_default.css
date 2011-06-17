@@ -58,13 +58,13 @@ table td.title{width:75%;}
 #maincontent p#day_nav{z-index:10000;margin:25px 0 0px 0;padding:0;float:right;position:relative;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{font-size:0.6em;position:relative;}
-#maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:22px;width:33px;display:block;}
+#maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:28px;width:34px;display:block;}
 #maincontent #featuredEvents a.prev, #maincontent #featuredEvents a.next{text-indent:-9999px;height:42px;width:25px;display:block;}
-#maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 -22px}
+#maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 0}
 #maincontent #featuredEvents a.prev{background:url(images/scroll_prev.gif) no-repeat 0 0;float:left;position:relative;top:85px}
-#maincontent #featuredEvents a.next{background:url(images/scroll_next.gif) no-repeat 0 0;float:right;position:relative;top:85px}
-#maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 -22px}
-#maincontent a.prev:hover, #maincontent a.next:hover, #maincontent a#dc.prev, #maincontent a#ac.next{background-position:0 1px;}
+#maincontent #featuredEvents a.next{background:url(images/scroll_next.gif) no-repeat 0 0;float:right;position:relative;top:85px;margin-right:8px;}
+#maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 0}
+#maincontent a.prev:hover, #maincontent a.next:hover, #maincontent a#dc.prev, #maincontent a#ac.next{background-position:0 -28px;}
 #maincontent p.noentry{clear:both;float:left;}
 #maincontent a.returnPrevScreen{font-weight:bold;display:block;font-size:0.8em;padding:2px 3px;background:#cee2f7;color:#6da6db;border:1px solid #a8c2ed;}
 #maincontent .tel{margin-left:0}
@@ -176,10 +176,10 @@ margin-top:0;padding:8px 3px 0;}
 #maincontent table.wp-calendar caption a{margin-bottom:5px;color:#333;font-weight:bold;}
 #maincontent table.wp-calendar caption a:hover{color:#0e584a !important;}
 table.wp-calendar caption a#prev_month, table.wp-calendar caption a#next_month{text-indent:-9999em;
-	display:block;background:#fff url(images/monthviewnav_prev.gif) no-repeat; width:6px; height:11px;margin-top:10px}
+	display:block;background:#fff url(images/monthviewnav_prev.gif) no-repeat; width:21px; height:21px;margin-top:6px}
 table.wp-calendar caption a#next_month{background:url(images/monthviewnav_next.gif) no-repeat;}
 table.wp-calendar caption a#prev_month:hover, table.wp-calendar caption a#next_month:hover{
-background-position:0 -11px;
+background-position:0 -21px;
 }
 table blockquote {
 	clear: both;
@@ -299,6 +299,7 @@ background-color: #D6D6D6;
     padding: 0 10px 0 0;
     position: relative;
     width: 280px;
+/*    float: right;*/
 }
 ul#frontend_view_selector li {
 	display:block;
@@ -334,7 +335,8 @@ h1.year_main{	padding: 0 0 10px 30px!important; margin:40px 0 10px;
 form#event_search {
 	float:right;
 	margin:24px 0;
-	position:relative;z-index:1000;
+	position: relative;
+	z-index: 1000;
 	}
 form#event_search input#searchinput{background:#eee; border:1px solid #ccc;
  	  border-color:#ccc #fff #fff #ccc;padding:2px}
@@ -534,10 +536,12 @@ td {
 #featuredEvents {
 /*	border: solid 1px #ccc;	*/
 	margin:40px 0 0 -10px;
-	padding-left: 10px;
-	width: 900px;
+	padding:10px 0 0 10px;
+	width: 908px;
+	background-color: #d7d7d7;
 	clear: both;
 	overflow: auto;
+	box-shadow: 0 0 5px #333333 inset;
 }
 #featuredEvents .event_detail {
 	margin: 10px 35px 0 0;

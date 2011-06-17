@@ -129,25 +129,6 @@ dd {
 	margin: 0 0 1em 1em;
 }
 
-/* TABLES	
-********************************************************************/
-table {
-	font-size: 95%;
-	margin-top: 10px;
-}
-th {
-	text-align: left;
-	color: #333;
-	font-weight: normal;
-	font-size: 110%;
-	border-bottom: solid 2px #bac7c7;
-	padding: 0 0 3px 3px;
-}
-td {
-	padding: 5px 3px;
-	border-bottom: solid 1px #bac7c7;
-}
-
 /* CLEARING FLOATS
 ********************************************************************/
 #site-meta:after, #contentwrap:after, p.intro:after {

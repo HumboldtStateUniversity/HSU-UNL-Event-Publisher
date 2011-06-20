@@ -70,13 +70,13 @@ if (isset($this->output[0], $this->output[0]->event)
 
 <div id="content">
 <div id="contentwrap">
-<div id="page-meta">
+<!--<div id="page-meta">
 
 <span></span>
 
         <?php include_once $GLOBALS['unl_template_dependents'].'/wdn/templates_3.0/includes/wdnTools.html'; ?>
 
-</div>
+</div>-->
 <div id="maincontent">
 <div id="load"></div>
 <div id="header">

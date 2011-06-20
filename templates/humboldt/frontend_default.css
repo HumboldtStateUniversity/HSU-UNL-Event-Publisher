@@ -84,7 +84,7 @@ table td.title{width:75%;}
 }*/
 
 
-#maincontent p#day_nav{z-index:10000;margin:25px 0 0px 0;padding:0;float:right;position:relative;}
+#maincontent p#day_nav{z-index:10000;margin:15px 0;padding:0;float:right;position:relative;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{font-size:0.6em;position:relative;}
 #maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:28px;width:34px;display:block;}

@@ -178,7 +178,7 @@ class UNL_UCBCN_Frontend_Search extends UNL_UCBCN_Frontend
                }
 
         } else {
-            $this->output = 'Enter a search string to search for events.';
+            $this->output = '<h1>Enter a search term, date or phrase to search for events.</h1>';
         }
     }
     

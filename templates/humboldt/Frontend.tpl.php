@@ -61,7 +61,6 @@ if (isset($this->output[0], $this->output[0]->event)
 ?>
 
 
-
 </head>
 <body class="col4-0">
 <div id="wrap">

@@ -5,6 +5,21 @@
  * default.css
  * Everything goes in here.
  */
+ /* custom fonts */
+ @font-face {
+     font-family: 'CartoGothicStdBook';
+     src: url('fonts/CartoGothicStd-Book-webfont.eot');
+     src: url('fonts/CartoGothicStd-Book-webfont.eot?#iefix') format('embedded-opentype'),
+          url('fonts/CartoGothicStd-Book-webfont.woff') format('woff'),
+          url('fonts/CartoGothicStd-Book-webfont.ttf') format('truetype'),
+          url('fonts/CartoGothicStd-Book-webfont.svg#CartoGothicStdBook') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+/* end custom fonts */
+body {
+	font:13px/18px Helmet, Freesans, sans-serif;
+}
 #maincontent {
 	float: left;
     margin-bottom: 20px;
@@ -49,22 +64,37 @@ table td{
 	}
 table td.date{width:25%;}
 table td.title{width:75%;}
-#maincontent .three_col h4.sec_main, #maincontent .three_col h4.upcoming-header{float:left;font-size:1.5em;padding: 4px 0 7px 30px!important; 
-                 background: url(images/date1.gif) no-repeat 0 0;font-style:normal;}
-#maincontent .three_col h4.upcoming-header{background:url(images/newrecurevent.png) no-repeat 0 0;padding:0 0 7px 30px!important;}
-#maincontent h4.ongoing{font-size:1.5em;background:url(images/ongoing.gif) no-repeat 0 0;margin-top:15px;padding:6px 0 7px 34px;clear:both;}
+
+#maincontent .three_col h4.sec_main, #maincontent .three_col h4.upcoming-header{
+	float:left;
+	font-size:1.5em;
+/*	padding: 4px 0 7px 30px!important;*/
+/*	background: url(images/date1.gif) no-repeat 0 0;font-style:normal;*/
+}
+/*#maincontent .three_col h4.upcoming-header{
+	background:url(images/newrecurevent.png) no-repeat 0 0;
+	padding:0 0 7px 30px!important;
+}*/
+/*#maincontent h4.ongoing{
+	font-size:1.5em;
+	background:url(images/ongoing.gif) no-repeat 0 0;
+	margin-top:15px;
+	padding:6px 0 7px 34px;
+	clear:both;
+}*/
 
 
 #maincontent p#day_nav{z-index:10000;margin:25px 0 0px 0;padding:0;float:right;position:relative;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{font-size:0.6em;position:relative;}
 #maincontent a.prev, #maincontent a.next{text-indent:-9999px;height:28px;width:34px;display:block;}
-#maincontent #featuredEvents a.prev, #maincontent #featuredEvents a.next{text-indent:-9999px;height:42px;width:25px;display:block;}
+#maincontent #featuredEvents a.prev, #maincontent #featuredEvents a.next{text-indent:-9999px;height:45px;width:29px;display:block;}
 #maincontent a.prev{background:url(images/nav_prev.gif) no-repeat 0 0}
 #maincontent #featuredEvents a.prev{background:url(images/scroll_prev.gif) no-repeat 0 0;float:left;position:relative;top:85px}
 #maincontent #featuredEvents a.next{background:url(images/scroll_next.gif) no-repeat 0 0;float:right;position:relative;top:85px;margin-right:8px;}
 #maincontent a.next{background:url(images/nav_next.gif) no-repeat 0 0}
 #maincontent a.prev:hover, #maincontent a.next:hover, #maincontent a#dc.prev, #maincontent a#ac.next{background-position:0 -28px;}
+#maincontent #featuredEvents a.prev:hover, #maincontent #featuredEvents a.next:hover{background-position:0 -45px;}
 #maincontent p.noentry{clear:both;float:left;}
 #maincontent a.returnPrevScreen{font-weight:bold;display:block;font-size:0.8em;padding:2px 3px;background:#cee2f7;color:#6da6db;border:1px solid #a8c2ed;}
 #maincontent .tel{margin-left:0}
@@ -290,27 +320,44 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 #maincontent .month_cal ul{padding:0 15px;}
 .month_cal table.wp-calendar caption{margin:-38px 0 0 0}
 
+#maincontent #header {
+	background-color: #255249;
+	margin: -1px 0 0 -10px;
+	overflow: auto;
+	padding: 25px 0 10px 10px;
+	width: 908px;	
+	position: relative;
+	z-index: 1000;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
 ul#frontend_view_selector {
-background-color: #D6D6D6;
-    height: 40px;
-    margin: 0;
+    margin:15px 0 0 0;
 /*    overflow: hidden;*/
     padding: 0 10px 0 0;
-    position: relative;
-    width: 280px;
-/*    float: right;*/
+/*    position: relative;*/
+/*    width: 280px;*/
+    float: left;
 }
 ul#frontend_view_selector li {
-	display:block;
+/*	display:block;*/
 	list-style-type: none;
 	float:left;
-	margin: 10px;
+/*	margin: 10px;*/
 }
-
-ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#todayview, ul#frontend_view_selector.year li#yearview, ul#frontend_view_selector.upcoming li#upcomingview{position:relative;background:transparent url(images/triangle.gif)no-repeat center bottom;	padding-bottom: 24px;
+ul#frontend_view_selector li a {
+	color: #fff;
+    display: block;
+    height: 34px;
+    width: 107px;
+    text-align: center;
+    padding-top: 4px;
 }
-
+ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#todayview, ul#frontend_view_selector.year li#yearview, ul#frontend_view_selector.upcoming li#upcomingview{
+	background:transparent url(images/nav_bg.png)no-repeat center top;
+}
 
 /*year view*/
 .year_cal table.wp-calendar{margin:0 0 15px 0;}
@@ -332,11 +379,14 @@ h1.year_main{	padding: 0 0 10px 30px!important; margin:40px 0 10px;
                  background: url(images/date1.gif) no-repeat 0 0;}
 
 /*search view*/
+#maincontent form {
+	margin: 0;
+}
 form#event_search {
 	float:right;
-	margin:24px 0;
-	position: relative;
-	z-index: 1000;
+	margin: 6px 9px 0 0;
+/*	position: relative;*/
+/*	z-index: 1000;*/
 	}
 form#event_search input#searchinput{background:#eee; border:1px solid #ccc;
  	  border-color:#ccc #fff #fff #ccc;padding:2px}
@@ -500,12 +550,20 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 .col4-0 #contentwrap {
 	background: url(images/col4-0.jpg) repeat-y right top;
 }
-h1 {
+#header h1 {
 	background: none;
 	border: none;
-	width: 300px;
+	color: #fff;
+	width: 225px;
 	float: left;
-	margin: 24px 0;
+	margin: 5px 0 10px 0;
+	text-transform: none;
+	font: 25px/27px 'CartoGothicStdBook', Arial, sans-serif;
+	border: none;
+	padding: 0;
+}
+#header h1 span {
+	display: block;
 }
 /**/
 /* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
@@ -535,13 +593,18 @@ td {
 /*Featured event block*/
 #featuredEvents {
 /*	border: solid 1px #ccc;	*/
-	margin:40px 0 0 -10px;
-	padding:10px 0 0 10px;
+	margin:0px 0 0 -10px;
+	padding:25px 0 0 10px;
 	width: 908px;
 	background-color: #d7d7d7;
 	clear: both;
 	overflow: auto;
-	box-shadow: 0 0 5px #333333 inset;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+h2#featuredEventsTitle {
+	font: 22px/27px 'CartoGothicStdBook', Arial, sans-serif;
 }
 #featuredEvents .event_detail {
 	margin: 10px 35px 0 0;
@@ -559,6 +622,8 @@ td {
 #featuredEvents .event_detail span {
 	display: block;
 	font-weight: bold;
+	font-size: 14px;
+	color: #474747;
 }
 .clear {
 	clear: both;
@@ -606,4 +671,6 @@ select {
 .items div {
 	float:left;
 }
+
+
 /* @end */

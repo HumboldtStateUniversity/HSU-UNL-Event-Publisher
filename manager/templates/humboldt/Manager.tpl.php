@@ -27,9 +27,8 @@ header('Content-Type:text/html; charset=UTF-8');
 		<div id="page-meta"> 
 
 	
-        <div id="titlegraphic" style="clear:both">
-            <h1>Events Calendar</h1>
-        </div>
+		<h1><a href="<?php echo $this->uri; ?>"><?php echo $this->calendar->name; ?></a></h1>
+
 		<div id="maincontent">	
 
                 <!--<div id="breadCrumb">

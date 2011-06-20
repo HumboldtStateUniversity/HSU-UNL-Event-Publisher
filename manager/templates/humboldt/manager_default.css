@@ -697,7 +697,9 @@ div#contentSearch form#event_search input.search_submit{
 	width:220px;
 	text-align:left;
 }
-
+img.image-upload{
+	max-width:525px;
+}
 
 
 /** facebook integration page **/

@@ -27,7 +27,7 @@ header('Content-Type:text/html; charset=UTF-8');
 		<div id="page-meta"> 
 
 	
-		<h1><a href="<?php echo $this->uri; ?>"><?php echo $this->calendar->name; ?></a></h1>
+		<h1><a href="<?php echo $this->frontenduri; ?>">Events Calendar</a></h1>
 
 		<div id="maincontent">	
 

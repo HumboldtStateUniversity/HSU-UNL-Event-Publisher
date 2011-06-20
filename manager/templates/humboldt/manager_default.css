@@ -38,7 +38,7 @@ margin:10px 0;
 /* current calendar declaration */
 p.currentCal{
 margin:0 0 5px 0;
-font-size:1.3em;
+font-size:16px;
 width:620px;
 }
 /* select a different calendar dropdown */
@@ -237,7 +237,7 @@ textarea:focus,
 form select:focus{
 background:#ffc;
 }
-input[type="text"], textarea{
+input[type="text"], input[type="password"], textarea{
 	border: 1px solid #999; 
 	color: #444;
 	font:14px/17px arial, helvetica, sans-serif;
@@ -265,7 +265,7 @@ fieldset legend {
 width:100%;
 border: 0;
 margin: 0;
-font-size: 1.2em;
+font-size: 15px;
 padding: 7px 5px;
 color: #000;
 background-color: #ccc;
@@ -516,102 +516,54 @@ margin:0;
 }
 
 table.eventlisting {
-border-collapse:collapse;
-margin:0 0 12px;
+	border-collapse:collapse;
+	background-color: #cdcdcd;
+	margin:10px 0pt 15px;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
 }
-
-#contentSearch form fieldset li table.eventlisting {
-background:#fff;
-width:570px;
+table.eventlisting thead tr th, table.eventlisting tfoot tr th {
+	background:#777;
+	color:#fff;
+	text-align:left;
+	border-bottom:2px solid #555;
+	padding:7px;
 }
-
-#contentSearch form fieldset li table.eventlisting th {
-text-align:left;
-padding:4px;
-background:#666;
+table.eventlisting tbody td {
+	color: #3D3D3D;
+	padding: 7px;
+	background-color: #fff;
+	vertical-align: top;
+	border:none;
+	text-align:left;
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+}
+table.eventlisting tr.alt td {
+background-color:#eee;
+}
+table.eventlisting thead th.date a,
+table.eventlisting thead th.title a {
 color:#fff;
-}
-
-#contentSearch form fieldset li table.eventlisting td {
-border:none;
-text-align:left;
-}
-
-#contentSearch table.eventlisting input {
-border:none;
-}
-
-#contentSearch table.eventlisting thead th {
-background:#777;
-color:#fff;
-text-align:left;
-border-bottom:2px solid #555;
-padding:7px;
-}
-
-#contentSearch table.eventlisting thead th.date a,
-#contentSearch table.eventlisting thead th.title a {
-color:#FFF;
 display:block;
 background:url(images/sort.gif) no-repeat;
 background-position:40px 5px;
 text-decoration:none;
 }
-
-#contentSearch table.eventlisting thead th.title a {
+table.eventlisting thead th.title a {
 background-position:79px 5px;
 }
-
-#contentSearch table.eventlisting td ul {
+table.eventlisting td ul {
 padding:0;
 margin:0;
 }
-
-#contentSearch table.eventlisting td ul li{
+table.eventlisting td ul li{
 margin:0;
 padding:0;
 }
-
 table.eventlisting thead th a:hover {
 text-decoration:underline;
-}
-
-table.eventlisting tr:hover,table.eventlisting tr.alt:hover {
-color:#090;
-}
-
-table.eventlisting tr {
-cursor:pointer;
-}
-
-table.eventlisting tr.alt {
-background:#ddd;
-border-top:1px solid #999;
-border-bottom:1px solid #999;
-}
-
-#contentSearch table.eventlisting tr td {
-padding:7px;
-border-top:1px solid #bbb;
-border-bottom:1px solid #bbb;
-}
-
-table td.date {
-color: #000;
-font-size: 0.9em;
-float: none;
-font-weight: normal;
-width: auto;
-padding: 7px;
-}
-
-table th.date{
-color: #fff;
-font-size: 1.1em;
-float: none;
-font-weight: bold;
-width: 20%;
-padding: 7px;
 }
 
 /*	-------------------------------------------------------------
@@ -745,7 +697,9 @@ div#contentSearch form#event_search input.search_submit{
 	width:220px;
 	text-align:left;
 }
-
+img.image-upload{
+	max-width:525px;
+}
 
 
 /** facebook integration page **/

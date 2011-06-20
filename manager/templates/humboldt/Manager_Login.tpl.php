@@ -1,3 +1,4 @@
+<div class="login">
 <p>Please log in using your HSU User Name and Password.</p>
 
 <?php
@@ -9,3 +10,4 @@
 	$form->accept($renderer);
 	echo $renderer->toHtml();
 ?>
+</div>

@@ -85,27 +85,36 @@ class UNL_UCBCN_Recurringdate extends DB_DataObject
      * 
      * @return an array with values representing the days with recurring events.
      */
-    public function getRecurringDates($month)
+    public function getRecurringDates($month, $calendar = NULL)
     {
-        $mdays = $month->fetchAll();
+     	$mdays = $month->fetchAll();
         $first = date('Y-m-d H:i:s', array_shift($mdays)->getTimestamp());
         $last  = date('Y-m-d H:i:s', array_pop($mdays)->getTimestamp());
-        
+
         // Get recurring events for $month
-        $rd = $this->factory('recurringdate');
-        $rd->selectAdd();
-        $rd->selectAdd('recurringdate');
-        $rd->whereAdd("recurringdate >= '$first'");
-        $rd->whereAdd("recurringdate <= '$last'");
-        $rd->whereAdd("unlinked = FALSE");
-        $rd->find();
-        
-        $res = array();
-        
-        while ($rd->fetch()) {
-            $res[] = date('m-d', strtotime($rd->recurringdate));
+
+        $sql = "SELECT recurringdate FROM recurringdate 
+                WHERE recurringdate >= '{$first}' 
+                AND recurringdate <= '{$last}' 
+                AND unlinked = FALSE";
+        // Restrict to one calendar if passed in
+        if (!is_null($calendar)) {
+                $sql .= " AND event_id in (
+                            SELECT event_id 
+                            FROM calendar_has_event 
+                            WHERE calendar_id = {$calendar->id}
+			    AND status = 'posted')";
         }
-        
+
+	$db = $this->getDatabaseConnection();
+	$rd = $db->query($sql)->fetchAll();
+
+        $res = array();
+
+	foreach ($rd as $rec) {
+		$res[] = date('m-d', strtotime($rec[0]));
+	}
+
         return $res;
     }
     

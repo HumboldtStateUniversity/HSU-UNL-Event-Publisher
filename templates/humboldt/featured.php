@@ -14,8 +14,9 @@ function featured() {
 
     // make sure the last row has 3 events
     $events = array_chunk($featuredEvents, 3); // split into groups of 3
-    if (count($events) > 1 && count(end($events)) < 3){   // if the last row has less than 3
-        $secondlast = $events[count($events)-2];          // second-to-last row
+
+    if (count($events) > 3 && count(end($events)) < 3){   // if the last row has less than 3
+	$secondlast = $events[count($events)-2];          // second-to-last row
         $offset = count(end($events));                 // offset index for where to grab from
         $toadd = array_slice($secondlast, $offset); // the array to prepend to last row
         $events[count($events)-1] = array_merge($toadd, $events[count($events)-1]);
@@ -25,7 +26,8 @@ function featured() {
     $combined = array();
     for($x = 0; $x < count($events); $x++) {
         for($y = 0; $y < 3; $y++) {
-            $combined[] = $events[$x][$y];
+                if (!is_null($events[$x][$y]))
+		    $combined[] = $events[$x][$y];
         }
     }
     $events = $combined;
@@ -47,20 +49,22 @@ function featured() {
         $output .= '<div class="event_detail">';
 
         if (!empty($event['Images']['Image']['URL'])) {
-            $output .= '<div class="imagecrop"><a href="' . $event['WebPages']['WebPage']['URL'] . '"><img src="' . $event['Images']['Image']['URL'] . '" alt="' . $event['EventTitle'] . '" 
-/></a></div>';
+            $output .= '<div class="imagecrop"><a href="' . $event['WebPages']['WebPage']['URL'] . '">
+			<img src="' . $event['Images']['Image']['URL'] . '" 
+			alt="' . $event['EventTitle'] . '" /></a></div>';
         }
 
         $output .= '<span>' . $formattedTime . '</span>';
         $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '">' . 
-$event['EventTitle'] . '</a></div><!-- /event_detail -->';
+			$event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
-        if ($count == 3) {
+        if ($count == 3 || count($events < 3)) {
             $output .= '</div><!--/generic container-->';
             $count = 0;
         }
         $count++;
     }
+
     $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';
     return $output;
 }

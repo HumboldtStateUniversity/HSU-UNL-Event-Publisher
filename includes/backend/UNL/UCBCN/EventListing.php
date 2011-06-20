@@ -182,16 +182,16 @@ $day->getTimestamp()).'%\'' .
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
             $mdb2     = $calendar->getDatabaseConnection();
-            $sql      = 'SELECT eventdatetime.id, eventdatetime.starttime FROM 
-event,calendar_has_event,eventdatetime ' .
-                                'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                                'AND (calendar_has_event.status =\'posted\' OR 
-calendar_has_event.status =\'archived\') '.
-                                                'AND calendar_has_event.event_id = eventdatetime.event_id ' .
-                                                'AND calendar_has_event.event_id = event.id ' .
-                                                'AND eventdatetime.starttime >= \'' . date('Y-m-d') . '\' '.
-                                'ORDER BY '.$orderby.' LIMIT '.$limit;
-        } else {
+            $sql      = "SELECT eventdatetime.id, eventdatetime.starttime 
+			FROM event,calendar_has_event,eventdatetime 
+                        WHERE calendar_has_event.calendar_id={$calendar->id}  
+                        AND (calendar_has_event.status ='posted' OR 
+				calendar_has_event.status ='archived') 
+                        AND calendar_has_event.event_id = eventdatetime.event_id 
+                        AND calendar_has_event.event_id = event.id 
+                        AND eventdatetime.starttime >= '" . date('Y-m-d') . "'
+                        ORDER BY " . $orderby . " LIMIT " . $limit;
+	} else {
             $mdb2     = UNL_UCBCN::getDatabaseConnection();
             $calendar = null;
             $sql      = 'SELECT eventdatetime.id FROM eventdatetime WHERE '.
@@ -207,7 +207,9 @@ calendar_has_event.status =\'archived\') '.
                'AND recurringdate.unlinked = FALSE ' .
                'AND calendar_has_event.calendar_id = '. $calendar->id .
                ' AND calendar_has_event.event_id = eventdatetime.event_id ' .
+               ' AND calendar_has_event.status = \'posted\' ' . 
                'ORDER BY recurringdate LIMIT ' . $limit;
+
         $rec_res = $mdb2->query($sql);
         $recurring_events = $rec_res->fetchAll();
         for ($i = 0; $i < count($recurring_events); $i++) {

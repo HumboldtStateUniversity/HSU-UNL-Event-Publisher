@@ -47,7 +47,7 @@ table tr.alt{
 table thead th{
 	background:#f1f1f1;
 	color:#888;		
-	border-bottom:none;
+	border-bottom:solid 1px #ccc;
 	padding:7px;
 	font-size: 130%;
 }
@@ -550,17 +550,20 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 .col4-0 #contentwrap {
 	background: url(images/col4-0.jpg) repeat-y right top;
 }
-#header h1 {
+h1 {
 	background: none;
+	border: none;	
+	text-transform: none;
 	border: none;
+	padding: 0;
+}
+#header h1 {
 	color: #fff;
 	width: 225px;
 	float: left;
 	margin: 5px 0 10px 0;
-	text-transform: none;
 	font: 25px/27px 'CartoGothicStdBook', Arial, sans-serif;
-	border: none;
-	padding: 0;
+
 }
 #header h1 span {
 	display: block;

@@ -237,7 +237,7 @@ textarea:focus,
 form select:focus{
 background:#ffc;
 }
-input[type="text"], textarea{
+input[type="text"], input[type="password"], textarea{
 	border: 1px solid #999; 
 	color: #444;
 	font:14px/17px arial, helvetica, sans-serif;

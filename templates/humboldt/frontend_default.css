@@ -393,6 +393,9 @@ form#event_search input#searchinput{background:#eee; border:1px solid #ccc;
 #maincontent h1.results span{
 	background:#ffffcc;
 	}
+	#maincontent h1.results {
+		margin: 25px 0;
+	}
 #maincontent p#search_term{position:absolute;display:none;opacity:0;width:244px;height:85px;background:url(images/searchinfo.png) no-repeat;margin:-10px 0 0 -45px;padding:18px 20px 0 10px;font-size:11px;line-height:normal;}
 
 /*overwrite UNL template to expand to full width */
@@ -450,7 +453,7 @@ padding:0;
     list-style-type: none;
     margin: 0 0 9px 0;
 }
-#updatecontent h3 {
+#updatecontent h3, .search h3 {
 	float: left;
 	width: 60%;
 	margin-top: 0px;

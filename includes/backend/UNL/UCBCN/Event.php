@@ -209,7 +209,7 @@ class UNL_UCBCN_Event extends DB_DataObject
         }
 
 	if (isset($this->imagedata)) {
-	    $el = HTML_QuickForm::createElement('text', 'uploadedimage', '<img src="'.$_UNL_UCBCN['frontenduri'].'?image&id='.$this->id.'" alt="Uploaded Image" />');
+	    $el = HTML_QuickForm::createElement('text', 'uploadedimage', '<img src="'.$_UNL_UCBCN['frontenduri'].'?image&id='.$this->id.'" alt="Uploaded Image" class="image-upload" />');
             $el->freeze();
         }
     }

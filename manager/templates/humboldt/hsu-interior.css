@@ -71,15 +71,6 @@ a img {
 
 /* Hx
 ********************************************************************/
-h1 {
-	font: bold 18px/24px Helmet, Freesans, sans-serif;
-	letter-spacing: 1px;
-	color: #003333;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin: 0 10px 25px 0;
-	padding:5px;
-	}
 h2 {
 	margin: 0 0 5px 0;
 	font: 16px/20px Helmet, Freesans, sans-serif;

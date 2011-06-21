@@ -26,17 +26,24 @@ class UNL_UCBCN_Manager_Feature
             $db = $this->manager->user->getDatabaseConnection();
             foreach ($this->events as $event) { 	    
 	        if (isset($_POST['changeevent'.$event->id])) {
-			$submitted = true;                             
-			if ($event->status == 'featured')
+			$submitted = true;
+			$query = false; 
+			if ($_POST['changeevent'.$event->id] == 'Not Featured'){
 			    $status = 'NULL';
-			else
+			    $query = true;
+			}
+			elseif ($_POST['changeevent'.$event->id] == 'Featured'){
 			    $status = "'featured'";
-			$sql = "UPDATE event SET status = $status WHERE id = " . $event->id;
-			$db->query($sql);
+			    $query = true;
+			}
+			if ($query) {
+			    $sql = "UPDATE event SET status = $status WHERE id = " . $event->id;
+			    $db->query($sql);
+			}
 		}            
 	    }
 	    if ($submitted) {
-                // We have processed the recommendations. Redirect.
+                // We have processed the events. Redirect.
                 $this->manager->localRedirect($this->manager->uri . '?list=posted');
                 exit();
             }

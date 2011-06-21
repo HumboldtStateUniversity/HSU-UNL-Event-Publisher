@@ -24,7 +24,6 @@ header('Content-Type:text/html; charset=UTF-8');
 
 		<div id="content"> 
 		<div id="contentwrap"> 
-		<div id="page-meta"> 
 
 	
 
@@ -108,7 +107,6 @@ header('Content-Type:text/html; charset=UTF-8');
                 </div>
 
 
-			</div> 
 
 
 

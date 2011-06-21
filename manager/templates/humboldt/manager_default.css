@@ -26,17 +26,17 @@
 }
 #header h1 {
 	color: #fff;
-	width: 225px;
-	float: left;
 	margin: 5px 0 10px 0;
 	font: 25px/27px 'CartoGothicStdBook', Arial, sans-serif;
 
 }
 #header h1 a:link {
 	color: #fff;
+	text-decoration:none;
 }
 #header h1 a:visited {
 	color: #fff;
+	text-decoration:none;
 }
 
 

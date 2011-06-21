@@ -58,11 +58,15 @@ function featured() {
         $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '">' . 
 			$event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
-        if ($count == 3 || count($events < 3)) {
+        if ($count == 3) {
             $output .= '</div><!--/generic container-->';
             $count = 0;
         }
         $count++;
+    }
+
+    if (count($events < 3)) {
+        $output .= '</div><!--/generic container-->';
     }
 
     $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';

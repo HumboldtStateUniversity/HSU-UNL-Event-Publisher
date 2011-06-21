@@ -15,7 +15,7 @@ function featured() {
     // make sure the last row has 3 events
     $events = array_chunk($featuredEvents, 3); // split into groups of 3
 
-    if (count($events) > 3 && count(end($events)) < 3){   // if the last row has less than 3
+    if (count($events) > 1 && count(end($events)) < 3){   // if there is more than 1 page and the last row has less than 3 events
 	$secondlast = $events[count($events)-2];          // second-to-last row
         $offset = count(end($events));                 // offset index for where to grab from
         $toadd = array_slice($secondlast, $offset); // the array to prepend to last row
@@ -58,10 +58,13 @@ function featured() {
         $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '">' . 
 			$event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
+	$output .= "<!-- count: $count -->";
+
         if ($count == 3) {
             $output .= '</div><!--/generic container-->';
             $count = 0;
         }
+
         $count++;
     }
 

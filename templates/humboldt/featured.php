@@ -68,9 +68,10 @@ function featured() {
         $count++;
     }
 
-    if (count($events < 3)) {
+    if (count($events) < 3) { // if there are less than 3 events, div wasn't closed in for loop
         $output .= '</div><!--/generic container-->';
     }
+	$output .= '</div>';
 
     $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';
     return $output;

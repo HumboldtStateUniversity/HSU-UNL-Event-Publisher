@@ -301,12 +301,12 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 #maincontent .month_cal table.wp-calendar td ul.ul_box li{overflow:visible;height:auto;line-height:1.5;display:list-item!important;background:none;padding:1px 0;}
 #maincontent .month_cal table.wp-calendar td ul.ul_box li.close_eventbox{border:none;width:30px;}
 #maincontent .month_cal table.wp-calendar td ul.ul_box li.close_eventbox:hover{background:none;}
-#maincontent .month_cal table.wp-calendar td ul.ul_box li.close_eventbox a{color:#064D94;position:relative;display:block;background:url(images/close_pop.gif) no-repeat 0 2px;padding-top:1px;text-indent:-9999px;}
+#maincontent .month_cal table.wp-calendar td ul.ul_box li.close_eventbox a{color:#064D94;position:relative;display:block;background:url(images/close_pop.gif) no-repeat 0 0;padding-top:1px;text-indent:-9999px;}
 #maincontent .month_cal table.wp-calendar td ul a{background:none;border:none;padding:0;margin:0;float:none;}
 #maincontent .month_cal table.wp-calendar td ul a:hover{background:none;border:none;}
 .month_cal table.wp-calendar td.empty{background:#fff;}
-#maincontent .month_cal table.wp-calendar td ul li.dateUL{padding:1px 3px;background:#E0E0E0;}
-#maincontent .month_cal table.wp-calendar td ul.ul_box li.dateUL:hover{background:#7DB0E2;}
+#maincontent .month_cal table.wp-calendar td ul li.dateUL{padding:1px 3px;background:#999;color:#252525;}
+#maincontent .month_cal table.wp-calendar td ul.ul_box li.dateUL:hover{background:#E0E0E0;}
 #maincontent .month_cal table.wp-calendar td ul li.dateUL a{color:#fff!important;}
 #maincontent .month_cal table.wp-calendar td ul li{overflow:hidden;height:1.8em;padding:0;border-bottom:1px solid #ddd;background:#fff;margin:2px 0 0 0;}
 #maincontent .month_cal table.wp-calendar td ul.unhide li{overflow:visible;height:auto;}

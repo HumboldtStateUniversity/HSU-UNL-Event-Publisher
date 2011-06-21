@@ -27,10 +27,12 @@ header('Content-Type:text/html; charset=UTF-8');
 		<div id="page-meta"> 
 
 	
-		<h1><a href="<?php echo $this->frontenduri; ?>">Events Calendar</a></h1>
 
-		<div id="maincontent">	
 
+		<div id="maincontent">
+			<div id="header">
+					<h1><a href="<?php echo $this->frontenduri; ?>">Events Calendar</a></h1>	
+			</div>
                 <!--<div id="breadCrumb">
                     <a href="">Calendar</a>
                     <?php

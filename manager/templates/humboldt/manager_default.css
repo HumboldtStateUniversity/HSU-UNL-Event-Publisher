@@ -14,12 +14,13 @@
 
 #maincontent #header {
 	background-color: #255249;
-	margin: -1px 0 0 -10px;
+	margin: 0 0 20px -10px;
 	overflow: auto;
 	padding: 25px 0 10px 10px;
 	width: 908px;	
 	position: relative;
 	z-index: 1000;
+	top:-1px;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
@@ -27,7 +28,7 @@
 #header h1 {
 	letter-spacing:1px;
 	color: #fff;
-	margin: 5px 0 10px 0;
+	margin: 5px 0 30px 0;
 	font: 25px/27px 'CartoGothicStdBook', Arial, sans-serif;
 
 }
@@ -90,16 +91,7 @@ width:620px;
 #contentSearch form#cal_choose label.element{display:none;}
 #contentSearch form#cal_choose select{margin:2px 8px 0 0;}
 /* -- !Submit -- */
-#cal_choose input#submit {
-	background: url(images/go.gif) no-repeat center;
-	border: none;
-	cursor: pointer;
-	height: 22px;
-	margin: 0;
-	overflow: hidden;
-	padding: 22px 0 0 42px;
-	width: 42px;
-}
+
 /*	-------------------------------------------------------------
 	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
@@ -272,25 +264,22 @@ clear: both;
 list-style: none;
 margin:10px 0;
 }
-input:focus,
-textarea:focus,
-form select:focus{
-background:#ffc;
-}
-input[type="text"], input[type="password"], textarea{
-	border: 1px solid #999; 
-	color: #444;
-	font:14px/17px arial, helvetica, sans-serif;
-	padding:3px 5px;
-  margin: 0;
+input, textarea{
+	border-radius: 5px 5px 5px 5px;
+	background-color: #f6f6f6;
+	padding: 2px 5px;
+	line-height: 1;
 }
 #maincontent textarea{
 	width:400px;
 	height:80px;
 	overflow:auto;
+	border: 1px solid #888;
 }
 #maincontent input[type="text"]{
-		width:400px;
+	width:400px;
+	border: 1px solid #888;
+	padding: 4px;
 }
 /* override widths */
 #maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
@@ -442,14 +431,7 @@ display:none;
 }
 
 form#event_login button#submit {
-background:url(images/button/c_submit.gif) no-repeat 0 0;
-width:48px;
-height:21px;
-display:block;
-text-indent:-9999px;
-border:none;
-margin-top:3px;
-cursor:pointer;
+
 }
 
 form#event_login button#submit:hover {
@@ -650,14 +632,7 @@ margin:10px 5px 0 0;
 }
 
 /*.btnsubmit, */#contentSearch form input.submitButton {
-background: url(images/submitBtn.gif) no-repeat center;
-border: none;
-cursor: pointer;
-height: 30px;
-margin: 0;
-overflow: hidden;
-padding: 30px 0 0 70px;
-width: 70px;
+
 }
 
 .btnsubmit#delete_event {
@@ -713,23 +688,9 @@ background-position:0 -22px;
 		right:20px;
 	}
 #event_search #searchinput{
-	height:28px;
-	padding:4px 3px;
-	margin:0 10px 0 0;
-	padding:0;
 	float:left;
-	background:#eee;
-	border:1px solid #999;
 }
 div#contentSearch form#event_search input.search_submit{
-	background: url(images/search.gif) no-repeat center;
-	border: none;
-	cursor: pointer;
-	height: 30px;
-	margin: 0;
-	overflow: hidden;
-	padding: 30px 0 0 70px;
-	width: 70px;
 	float:left;
 }
 
@@ -740,6 +701,10 @@ div#contentSearch form#event_search input.search_submit{
 img.image-upload{
 	max-width:525px;
 }
+
+
+
+#date1_calendar_trigger, #date2_calendar_trigger, #date3_calendar_trigger{position:relative;top:8px;}
 
 
 /** facebook integration page **/

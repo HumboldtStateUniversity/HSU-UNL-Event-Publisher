@@ -15,6 +15,11 @@ header('Content-Type:text/html; charset=UTF-8');
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
 
+				<script src="templates/humboldt/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+				<link rel="stylesheet" href="templates/humboldt/uniform/css/uniform.default.css" type="text/css" media="screen" charset="utf-8" />
+				<script type="text/javascript">
+				$(document).ready(function() { $("input:checkbox, input:radio, input:file").uniform(); });
+				</script>
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>
 		<div id="wrap"> 

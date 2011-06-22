@@ -276,7 +276,7 @@ input, textarea{
 	overflow:auto;
 	border: 1px solid #888;
 }
-#maincontent input[type="text"]{
+#maincontent input[type="text"], #maincontent input[type="password"]{
 	width:400px;
 	border: 1px solid #888;
 	padding: 4px;
@@ -431,7 +431,7 @@ display:none;
 }
 
 form#event_login button#submit {
-
+	padding:4px 5px;
 }
 
 form#event_login button#submit:hover {

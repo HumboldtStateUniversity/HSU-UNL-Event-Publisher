@@ -218,7 +218,100 @@ function returnToday(){
  * Call to: none
  */
 
+function todayHilite(){
+	try {
+	x = new Date ();
+	y = x.getDate ();
+	var td0 = getElementsByClassName(document, "table", "wp-calendar");
+	var spanID = document.getElementById(getCalendarDate());
+	
+	var td1 = td0[0].getElementsByTagName('td');
+		var verify = getElementsByClassName(td0[0], "span", "monthvalue");
+		//if in day view (only), execute....
+//		var idSelector = document.getElementById('frontend_view_selector');
+//		if (idSelector.className == 'day' || idSelector.className == 'event' || idSelector.className == 'upcoming'){
+//			createButton('Return to today', document.getElementById('monthwidget'), returnToday, 'returnToday');
+//			if(idSelector.className == 'day'){
+//				monthNav(); 
+//			}
+//			eventLink();
+//			monthCaptionSwitch(td0[0]);
+//			for(i=0;i<td1.length;i++){
+//				monthWidget(td1[i]);
+//			}
+//		}
 
+		if(idSelector.className != 'year' && idSelector.className != 'upcoming'){	
+			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "sec_main");
+			var re = new RegExp(/\d+/);
+			var m = re.exec(selectedDay[0].childNodes[0].nodeValue);
+			var dayT, todayT;
+			var todayFlag = false;
+			//indicate today
+			for(i=0;i<td1.length;i++){
+				
+				if(td1[i].className.indexOf('prev') < 0 && td1[i].className.indexOf('next') < 0){
+					
+					if(td1[i].firstChild.nodeName == 'A'){
+						dayT = td1[i].firstChild.childNodes[0].nodeValue.indexOf(m[0]);
+						todayT = td1[i].firstChild.childNodes[0].nodeValue.indexOf([y]);
+					}else{
+						dayT = td1[i].firstChild.nodeValue.indexOf(m[0]);
+						todayT = td1[i].firstChild.nodeValue.indexOf([y]);
+					}
+				
+					if(m != null && dayT >= 0 && document.getElementById('onselect') == null){
+						td1[i].id = 'onselect';
+					}
+				
+					//insert icon to indicate today	
+					if(verify[0].id == getCalendarDate() && !todayFlag){
+						try{
+								
+							if(todayT >= 0){
+								td1[i].className += ' today'
+								var imageToday = document.createElement("div");
+								imageToday.setAttribute("id","today_image");
+								td1[i].appendChild(imageToday);
+								todayFlag = true;
+							}
+						}
+						catch(e){}	
+					}
+				}
+			}
+			todayFlag = false;
+		}
+		
+		else{
+				
+			for(q=0;q<td0.length;q++){
+				var verify1 = getElementsByClassName(td0[q], "span", "monthvalue");
+				var td1 = td0[q].getElementsByTagName('td');
+				//indicate today
+				for(i=0;i<td1.length;i++){
+					//insert icon to indicate today	
+					if(verify1[0].id == getCalendarDate() && td1[i].className.indexOf('prev') < 0 && td1[i].className.indexOf('next') < 0){
+						try{
+							if(td1[i].innerHTML.match("<a href.*>"+y+"</a>|"+y)){
+								td1[i].className += ' today'
+								var imageToday = document.createElement("div");
+								imageToday.setAttribute("id","today_image");
+								td1[i].appendChild(imageToday);
+								break;
+							}
+						}
+						catch(e){}	
+					}
+					
+				}
+			}
+		}
+	} catch(e) {}
+	if(!window.XMLHttpRequest){
+  		fnLoadPngs();
+  	}
+}
 
 /*
  * go through each table widget to set marker and launch ajax month engine if applicable

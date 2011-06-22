@@ -9,12 +9,12 @@ $endu = strtotime($this->eventdatetime->endtime);
 	<div class='vevent'>
 		<h1 class='summary'><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?> <a class="permalink" href="<?php echo $this->url; ?>">(link)</a></h1>
 		<?php if (isset($this->event->subtitle)) echo '<h2>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->subtitle).'</h2>'; ?>
-		<div id="tabsG">
+		<!--<div id="tabsG">
 		  <ul>
 		    <li><a href="#" id="event_selected" title="Event Detail"><span>Event Detail</span></a></li>
 		
 		  </ul>
-		</div>
+		</div>-->
 		<table>
 		<thead>
 			<tr>
@@ -107,9 +107,9 @@ $endu = strtotime($this->eventdatetime->endtime);
 			echo $this->facebook->like($this->url,$this->calendar->id);
 		?>
 		<p id="feeds">
-			<a id="icsformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')); ?>">
+			<a id="icsformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')); ?>" title="Get event in ical format">
 				ics format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
-			<a id="rssformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')); ?>">
+			<a id="rssformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')); ?>" title="Get this event via rss">
 				rss format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
 			<?php
 				if ($this->eventdatetime->location_id) {
@@ -142,7 +142,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 						   "&details=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->description) .
 						   "&sprop=website:" . $this->url;
 			?>
-			<a id="googlecal" href="<?php echo $googleurl; ?>">Add to Google</a>
+			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>
 <!--			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
 		</p>
 		</div>

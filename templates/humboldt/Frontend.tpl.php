@@ -42,7 +42,12 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 
 <script>
 // execute your scripts when the DOM is ready. this is mostly a good habit
+$(function() {
 
+	// initialize scrollable
+	$(".scrollable").scrollable({keyboard:false,circular:true});
+
+});
 </script>
 <link rel="alternate" type="application/rss+xml" title="<?php echo $this->calendar->name; ?> Events" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'format'=>'rss')); ?>" />
 <link rel="search" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>" />

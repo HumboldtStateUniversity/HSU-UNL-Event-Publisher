@@ -66,7 +66,7 @@ header('Content-Type:text/html; charset=UTF-8');
                             <ul>
                                 <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="My Calendar">Pending Events</a></li>
                                 <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create Event">Create Event</a></li>
-                                <li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>
+                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
                             </ul>
                                 <?php
                             } ?>
@@ -81,6 +81,7 @@ header('Content-Type:text/html; charset=UTF-8');
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
                                     <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>
                                     <li><a href="<?php echo $this->uri; ?>?action=users">Users &amp; Permissions</a></li>
+																		<li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
                                     <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
                                 </ul>
                             </div>

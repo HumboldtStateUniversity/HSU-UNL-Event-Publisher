@@ -208,7 +208,7 @@ function isInternalLink(link)
 {
 	var baseURL = document.getElementById('todayview');
 	//baseURL.childNodes[0].getAttribute("href", 2)
-	if (link.getAttribute('href').indexOf('http') == 0 && link.getAttribute('href').indexOf('events.unl.edu') < 0 ) {
+	if (link.getAttribute('href').indexOf('http') == 0 && link.getAttribute('href').indexOf('its-caldev.humboldt.edu/unlcal') < 0 ) {
 		return false;
 	} else {
 		return true;

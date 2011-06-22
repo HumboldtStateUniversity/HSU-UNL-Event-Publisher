@@ -124,6 +124,17 @@ if (isset($this->output[0], $this->output[0]->event)
                       </select><input type="submit" value="Go">
                   </form>
                   <?php endif; ?>
+                  <?php if( $et = UNL_UCBCN_Frontend::getEventTypes()): ?>
+                  <li>Event Types
+                          <ul>
+                          <?php while($et->fetch()): ?>
+                                  <li>
+                                          <a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search', 'q'=>$et->name)); ?>"><?php echo $et->name; ?></a>
+                                  </li>
+                          <?php endwhile; ?>
+                          </ul>
+                  </li>
+                  <?php endif; ?>
                  </div>
                   <div id="subscribe">
                   	<h3>Subscribe</h3>

@@ -196,21 +196,7 @@ function eventLink(){
  * Call from: addLoadEvent
  * Call to: none
  */
-function returnToday(){
-	var x = new Date();	
 
-	$("#load").html("<img src='/templates/humboldt/images/loading.gif' />");
-
-	//due to the way we detect today's date, the left side content has to be loaded before the month widget
-	var backtoDay = window.location.href+'?&y='+(x.getYear ()+1900)+'&m='+(x.getMonth()+1)+'&d='+x.getDate()+'&format=hcalendar';
-	ajaxEngine(backtoDay, 'eventlisting');
-	$.get(window.location.href+'?&y='+(x.getYear()+1900)+'&m='+(x.getMonth()+1)+'&monthwidget&format=hcalendar', function(data, textStatus) {
-		$("#load").html('');
-		$("#monthwidget").html(data);
-		todayHilite();			
-	}, false, null);
-	return false;
-}
 
 /*
  * today icon and ajax initialization for month widget

@@ -228,18 +228,18 @@ function todayHilite(){
 	var td1 = td0[0].getElementsByTagName('td');
 		var verify = getElementsByClassName(td0[0], "span", "monthvalue");
 		//if in day view (only), execute....
-//		var idSelector = document.getElementById('frontend_view_selector');
-//		if (idSelector.className == 'day' || idSelector.className == 'event' || idSelector.className == 'upcoming'){
-//			createButton('Return to today', document.getElementById('monthwidget'), returnToday, 'returnToday');
-//			if(idSelector.className == 'day'){
-//				monthNav(); 
-//			}
-//			eventLink();
-//			monthCaptionSwitch(td0[0]);
-//			for(i=0;i<td1.length;i++){
-//				monthWidget(td1[i]);
-//			}
-//		}
+		var idSelector = document.getElementById('frontend_view_selector');
+		if (idSelector.className == 'day' || idSelector.className == 'event' || idSelector.className == 'upcoming'){
+			createButton('Return to today', document.getElementById('monthwidget'), returnToday, 'returnToday');
+			if(idSelector.className == 'day'){
+				monthNav(); 
+			}
+			eventLink();
+			monthCaptionSwitch(td0[0]);
+			for(i=0;i<td1.length;i++){
+				monthWidget(td1[i]);
+			}
+		}
 
 		if(idSelector.className != 'year' && idSelector.className != 'upcoming'){	
 			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "sec_main");

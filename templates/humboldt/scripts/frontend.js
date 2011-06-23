@@ -231,7 +231,7 @@ function isInternalLink(link)
 function returnToday(){
 	var x = new Date ();	
 	//var widgetDiv = document.getElementById('monthwidget');
-	document.getElementById('load').innerHTML="<img src='/templates/humboldt/images/loading.gif' />";
+	document.getElementById('load').innerHTML="<img src='http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif' />";
 	//due to the way we detect today's date, the left side content has to be loaded before the month widget
 	var backtoDay = '?&amp;y='+x.getYear () + 1900+'&amp;m='+x.getMonth () + 1+'&amp;d='+x.getDate+'&amp;?&format=hcalendar';
 	ajaxEngine(backtoDay, 'eventlisting');
@@ -477,7 +477,7 @@ function monthCaptionSwitch(eT){
 
 /*this is the main ajax calling engine. make library calls to XHR lib (ajaxcaller.js)*/
 function ajaxEngine(urlPath, section, vars){
-	document.getElementById('load').innerHTML="<img src='/templates/humboldt/images/loading.gif' />";
+	document.getElementById('load').innerHTML="<img src='http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif' />";
 	switch (section){
 		case "monthwidget":
 			ajaxCaller.get(urlPath, null, onMonthResponse, false, null);
@@ -586,7 +586,7 @@ function ajaxsearch(){
 		searchVars['q'] = searchVal;
 		searchVars['format'] = 'hcalendar';
 		searchVars['search'] = 'search';
-		document.getElementById('load').innerHTML = '<img src="/templates/humboldt/images/loading.gif" />';
+		document.getElementById('load').innerHTML = '<img src="http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif" />';
 		ajaxEngine(formAction, 'search', searchVars)
 		return false;
 	}

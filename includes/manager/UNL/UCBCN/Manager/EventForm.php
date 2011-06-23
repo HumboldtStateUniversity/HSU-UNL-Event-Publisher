@@ -208,7 +208,7 @@ class UNL_UCBCN_Manager_EventForm
                                     $delete));
             }
             if (!isset($_REQUEST['rec']) && !isset($_REQUEST['recid'])) {
-                $table->addRow(array('<a class="subsectionlink" href="'.$this->manager->uri.'?action=eventdatetime&event_id='.$event->id.'">Add additional location, date and time.</a>'), 'colspan=5');
+                $table->addRow(array('<a class="subsectionlink" href="'.$this->manager->uri.'?action=eventdatetime&event_id='.$event->id.'">Add additional location, date and time.</a>'), 'colspan=4');
             }
             $table->setColAttributes(4, 'class="edit"');
             $table->setColAttributes(5, 'class="delete"');

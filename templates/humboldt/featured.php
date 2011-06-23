@@ -11,7 +11,7 @@ function featured() {
             $featuredEvents[] = $event;
 	}
     } 
-
+/*
     // make sure the last row has 3 events
     $events = array_chunk($featuredEvents, 3); // split into groups of 3
 
@@ -31,6 +31,9 @@ function featured() {
         }
     }
     $events = $combined;
+*/
+
+    $events = $featuredEvents; // temporary for testing circular
 
     // generate the div
     $output .= '<div id="featuredEvents">';
@@ -48,14 +51,20 @@ function featured() {
         }
         $output .= '<div class="event_detail">';
 
+        if (!is_array($event['WebPages']['WebPage'][0]))
+            $eventURL = $event['WebPages']['WebPage']['URL'];
+        else
+            // event has external webpage, so make sure to use the internal link
+            $eventURL = $event['WebPages']['WebPage'][0]['URL'];
+
         if (!empty($event['Images']['Image']['URL'])) {
-            $output .= '<div class="imagecrop"><a href="' . $event['WebPages']['WebPage']['URL'] . '">
+            $output .= '<div class="imagecrop"><a href="' . $eventURL . '">
 			<img src="' . $event['Images']['Image']['URL'] . '" 
 			alt="' . $event['EventTitle'] . '" /></a></div>';
         }
 
         $output .= '<span>' . $formattedTime . '</span>';
-        $output .= '<a href="' . $event['WebPages']['WebPage']['URL'] . '">' . 
+        $output .= '<a href="' . $eventURL . '">' . 
 			$event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
 	$output .= "<!-- count: $count -->";
@@ -68,9 +77,9 @@ function featured() {
         $count++;
     }
 
-    if (count($events) < 3) { // if there are less than 3 events, div wasn't closed in for loop
+    //if (count($events) < 3) { // if there are less than 3 events, div wasn't closed in for loop
         $output .= '</div><!--/generic container-->';
-    }
+    //}
 
     $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';
     return $output;

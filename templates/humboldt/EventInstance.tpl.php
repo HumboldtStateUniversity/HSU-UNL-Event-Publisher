@@ -119,28 +119,33 @@ $endu = strtotime($this->eventdatetime->endtime);
 					$loc = "Unknown";
 				}
 
+				// Add to Google button URL
 				$eventdate = '';
 				if (isset($this->eventdatetime->starttime)) {
-					$eventdate .= date('Ymd', strtotime($this->eventdatetime->starttime));
-				
+					$starttime = strtotime($this->eventdatetime->starttime);
+					$eventdate .= date('Ymd', $starttime);
+
 					if (strpos($this->eventdatetime->starttime,'00:00:00')) {
-						$eventdate .= "/" . date('Ymd', strtotime("+1 day", strtotime($this->eventdatetime->starttime)));
-					
+						// all day event
+						$eventdate .= "/" . date('Ymd', strtotime("+1 day", $starttime));
 					} else {
-				        	$eventdate .= "T" . gmdate('Gi', strtotime($this->eventdatetime->starttime)) . '00Z';
-				
+						// has start time
+						$eventdate .= "T" . gmdate('Hi', $starttime) . '00Z';
 						if (isset($this->eventdatetime->endtime)) {
-							$eventdate .= "/" . date('Ymd', strtotime($this->eventdatetime->endtime));
-							$eventdate .= "T" . gmdate('Gi', strtotime($this->eventdatetime->endtime)) . '00Z';
+							// has end time
+							$endtime = strtotime($this->eventdatetime->endtime);
+							$eventdate .= "/" . date('Ymd', $endtime);
+							$eventdate .= "T" . gmdate('Hi', $endtime) . '00Z';
 						}
 					}
 				}
 				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
-						   "&text=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->title) .
-						   "&location=" . $loc .
-						   "&dates=" . $eventdate .
-						   "&details=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->description) .
-						   "&sprop=website:" . $this->url;
+							"&text=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->title) .
+							"&location=" . $loc .
+							"&dates=" . $eventdate .
+							"&details=" . UNL_UCBCN_Frontend::dbStringToHtml($this->event->description) .
+							"&sprop=website:" . $this->url;
+
 			?>
 			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>
 <!--			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->

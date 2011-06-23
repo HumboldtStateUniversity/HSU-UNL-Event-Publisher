@@ -75,7 +75,7 @@ function showHide(e)
 
 /**
  * Shows/Hides the Monthly Recurring Type select and populates it accordingly
- */
+ *//*
 function toggleMonth(pre, togg, post)
 {
    var elemId = pre + "rectypemonth" + post;
@@ -180,12 +180,12 @@ function toggleMonth(pre, togg, post)
            elem.add(op, null);
 	   }
    }
-}
+}*/
 
 /**
  *  Gets the label for element elem.name
  */
-function getLabelFor(name) {
+/*function getLabelFor(name) {
     var labels = document.getElementsByTagName('label');
     for (var i in labels) {
         if (labels[i].htmlFor == name) {
@@ -196,7 +196,7 @@ function getLabelFor(name) {
         }
     }
     return false;
-}
+}*/
 
 /**
  * Namespace for manager javascript.

@@ -186,10 +186,10 @@ function getLabelFor(name) {
         if (labels[i].htmlFor == name) {
             return labels[i];
         }
-        if (labels[i].
-        for == name) {
-            return labels[i];
-        }
+        //if (labels[i].
+        //for == name) {
+        //    return labels[i];
+        //}
     }
     return false;
 }
@@ -253,7 +253,7 @@ var manager = function() {
                 form.submit();
                 break;
             case 'feature':
-								var form = document.getElementById('formlist');
+                var form = document.getElementById('formlist');
                 form.action = '?action=feature';
                 form.submit();
                 break;
@@ -276,6 +276,7 @@ function highlightLine(l, id) {
     checkevent(id);
     checkInput();
 }
+
 
 function animation(l, id) {
     var TRrow = "row" + id;
@@ -325,6 +326,8 @@ function animation(l, id) {
         }
     } catch(e) {}
 }
+
+
 
 function checkevent(id) {
     try {
@@ -434,14 +437,14 @@ function setCheckboxes(formid, val)
         } else {
             checks[i].checked = false;
             if (formid != 'unl_ucbcn_user') {
-                if (TDcell.className.indexOf('alt') >= 0) {
+                if (TDcell.className.indexOf('alt') >= 0) {/*
                     Spry.Effect.Highlight(TDcell, {
                         duration: 400,
                         from: '#FAFAB7',
                         to: '#e8f5fa',
                         restoreColor: '#e8f5fa',
                         toggle: false
-                    });
+                    });*/
                 }
                 else {
                     //  Spry.Effect.Highlight(TDcell,{duration:400,from:'#FAFAB7',to:'#ffffff',restoreColor:'#ffffff',toggle: false});

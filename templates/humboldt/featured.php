@@ -67,8 +67,6 @@ function featured() {
         $output .= '<a href="' . $eventURL . '">' . 
 			$event['EventTitle'] . '</a></div><!-- /event_detail -->';
 
-	$output .= "<!-- count: $count -->";
-
         if ($count == 3) {
             $output .= '</div><!--/generic container-->';
             $count = 0;
@@ -77,8 +75,8 @@ function featured() {
         $count++;
     }
 
-    if (count($events) < 3) { // if there are less than 3 events, div wasn't closed in for loop
-        $output .= '</div><!--/generic container-->';
+    if (count($events) < 3 OR $count < 3) { // if there are less than 3 events on last page, div wasn't closed in for loop
+	$output .= '</div><!--/generic container-->';
     }
 
     $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';

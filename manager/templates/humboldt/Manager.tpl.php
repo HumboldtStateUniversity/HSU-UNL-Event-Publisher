@@ -58,7 +58,7 @@ header('Content-Type:text/html; charset=UTF-8');
 						                    ?>
 																<?php
 													                if (isset($this->calendar)) {
-													                    echo '</div';
+													                    echo '</div>';
 													                }
 													                ?>
 						

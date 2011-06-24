@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteBase   /unlcal
+RewriteBase   /jaredunl
 
 # Upcoming
 RewriteRule ^upcoming/$ ?upcoming=upcoming&%{QUERY_STRING} [L]
@@ -20,7 +20,7 @@ RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/search/(.+)/$ $1/?search=search [L]
 
 # Account rewrite
 RewriteRule ^(([a-zA-Z]([0-9]+)?)+)$ $1/ [R]
-RewriteCond %{REQUEST_URI} !^/unlcal/manager/
+RewriteCond %{REQUEST_URI} !^/jaredunl/manager/
 RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/$ ?calendar_shortname=$1&%{QUERY_STRING}
 
 # year rewrite
@@ -41,3 +41,7 @@ RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1])?[0-9])/(([0-3])?[0-9])
 # single eventinstance rewrite
 RewriteRule ^([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?$ ?y=$1&m=$3&d=$5&eventdatetime_id=$7&%{QUERY_STRING} [L]
 RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?$ ?calendar_shortname=$1&y=$4&m=$5&d=$7&eventdatetime_id=$9&%{QUERY_STRING} [L]
+
+# single recurring eventinstance rewrite
+RewriteRule ^([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?(([0-9]+)/)?$ ?y=$1&m=$3&d=$5&eventdatetime_id=$7&event_id=$8&%{QUERY_STRING} [L]
+RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/([0-9]{4})/(([0-1]?[0-9])/)?(([0-3]?[0-9])/)?(([0-9]+)/)?(([0-9]+)/)?$ ?calendar_shortname=$1&y=$4&m=$5&d=$7&eventdatetime_id=$9&event_id=$10&%{QUERY_STRING} [L]

@@ -45,11 +45,11 @@ table tr.alt{
 	background:#f1f1f1;
 }
 table thead th{
-	background:#f1f1f1;
-	color:#888;		
-	border-bottom:solid 1px #ccc;
-	padding:7px;
-	font-size: 130%;
+	background:#0E584A;
+	color:#fff;		
+	border-bottom:solid 2px #333;
+	padding:10px 7px 0;
+	font-size: 14px;
 }
 .day_cal table thead th, .event_cal table thead th{text-align:left!important;}
 table thead th.date a, table thead th.title a{
@@ -111,16 +111,19 @@ table.wp-calendar thead th{
 	background:#fff;border-top:1px solid #999;border-bottom:3px double #999;color:#333;
 	text-align:left;font-size:8.5pt!important;
 }
-
 table.wp-calendar td, table.wp-calendar th{
 	text-align:center;
 	padding:4px;
 }
 table.wp-calendar td{
-	border:1px solid #ddd;
+	border:1px solid #eee;
+	color: #dbdbdb;
+}
+table.wp-calendar td.selected a {
+	color: #0E584A;
 }
 table.wp-calendar td.selected{
-	background-color:#eee;
+	background-color:#ddd;
 }
 table.wp-calendar td#onselect{
 	background-color:#0e584a;
@@ -143,7 +146,7 @@ table.wp-calendar tr:hover{
 table.wp-calendar td:hover{
 	background:#f7f7cb;
 }
-#maincontent table.wp-calendar td.next, table.wp-calendar td.prev {color:#a2a2a2;}
+/*#maincontent table.wp-calendar td.next, table.wp-calendar td.prev {color:#f2f2f2;}*/
 table.wp-calendar td.pad:hover{background:none}
 
 table.wp-calendar #today_image{
@@ -184,17 +187,18 @@ table.wp-calendar #today_image{
 }
 #maincontent span.location a{font-size:1em;}
 #maincontent a.returnToday{
-font-size:0.8em;
-padding:0 3px;
-border:1px solid #042579;
-border-color:#6D86C5 #213F8B #213F8B #6D86C5;
-background:#3e83c9;
-color:#fff;
-float:right;
-margin:5px 0 10px 0;}
+	font-size:12px;
+	padding:3px 0 0 9px;
+	background:transparent url(images/return-bg.gif) no-repeat 0 0;
+	color:#fff;
+	float:right;
+	margin:10px -3px 10px 0;
+	width: 91px;
+	height: 23px;
+}
 
 #maincontent a.returnToday:hover{
-text-decoration:underline;
+	text-decoration:none;
 }
 
 table.ongoing{margin:5px 0 0 0;}

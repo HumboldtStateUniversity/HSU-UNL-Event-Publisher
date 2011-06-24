@@ -6,8 +6,8 @@
 	</div>
 	<br />
 	<fieldset class="eventFieldsetAction">
-	<label for="action">Action</label>
-	<select name="action" onfocus="manager.list = '<?php echo $this->status; ?>'; return manager.updateActionMenus(this)" onchange="return manager.actionMenuChange(this)">
+	<label for="eventaction">Action</label>
+	<select name="eventaction" onfocus="manager.list = '<?php echo $this->status; ?>'; return manager.updateActionMenus(this)" onchange="return manager.actionMenuChange(this)">
 	    <option>Select action...</option>
 	    <option value="posted"    disabled="disabled">Add to Posted</option>
 	    <option value="pending"   disabled="disabled">Move to Pending</option>
@@ -107,8 +107,8 @@ foreach ($this->events as $e) {
 	</div>
 	<br />
 	<fieldset class="eventFieldsetAction">
-	<label for="action">Action</label>
-	<select name="action" onfocus="manager.list = '<?php echo $this->status; ?>'; return manager.updateActionMenus(this)" onchange="return manager.actionMenuChange(this)">
+	<label for="eventaction">Action</label>
+	<select name="eventaction" onfocus="manager.list = '<?php echo $this->status; ?>'; return manager.updateActionMenus(this)" onchange="return manager.actionMenuChange(this)">
 	    <option>Select action...</option>
 	    <option value="posted"    disabled="disabled">Add to Posted</option>
 	    <option value="pending"   disabled="disabled">Move to Pending</option>
@@ -119,7 +119,7 @@ foreach ($this->events as $e) {
 	</fieldset>
 </div>
 <div style='visibility: hidden'>
-<input class="btnsubmit" id="delete_event" type="submit" name="delete" onclick="return confirm('Your event will not automatically be deleted from the main calendar. To request your event be removed from the main calendar, contact the calendar editor at webadmin@humboldt.edu.');" value="Delete" />
+<input class="btnsubmit" id="delete_event" type="submit" name="delete" onclick="return confirm('Fo Sho?');" value="Delete" />
 <?php if ($this->status=='posted' || $this->status=='archived') { ?>
 <input class="btnsubmit" id="moveto_pending" type="submit" name="pending" value="Move to Pending" />
 <?php } elseif ($this->status=='pending') { ?>

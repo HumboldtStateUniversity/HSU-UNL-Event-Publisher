@@ -114,8 +114,8 @@ header('Content-Type:text/html; charset=UTF-8');
 	                            <?php
 	                            if (isset($this->user)) { ?>
 	                            <ul>
-	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="My Calendar">Pending Events</a></li>
-	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create Event">Create Event</a></li>
+	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="View or Edit Existing Events">View or Edit Existing Events</a></li>
+	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create an Event">Create an Event</a></li>
 	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
 	                            </ul>
 	                                <?php

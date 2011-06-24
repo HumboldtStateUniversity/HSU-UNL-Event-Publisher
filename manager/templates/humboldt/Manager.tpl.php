@@ -41,43 +41,52 @@ header('Content-Type:text/html; charset=UTF-8');
                     ?>
                 </div>-->
                 <div id="contentSearch">
-					<?php if (isset($this->user)) { ?>
-                    <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
-                        <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-                        <input type='submit' class="search_submit" name='submit' value="Search" />
-                        <input type='hidden' name='action' value='search' />
-						</div>
-                    </form>
-					<?php
-                } ?>
-					<?php
-		                if (isset($this->calendar)) {
-		                    echo '<p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
-		                }
-		                ?>
-                    <?php if (isset($this->user)) {
-                        UNL_UCBCN::displayRegion($this->calendarselect);
-                    } //End if user
-                    ?>
+	
+
+
+
                     <div id="navigation">
-                        <div id="navlinks">
-                            <?php
-                            if (isset($this->user)) { ?>
-                            <ul>
-                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="My Calendar">Pending Events</a></li>
-                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create Event">Create Event</a></li>
-                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
-                            </ul>
-                                <?php
-                            } ?>
-                        </div>
+	
+											<?php
+								                if (isset($this->calendar)) {
+								                    echo '<div id="calChoose-wrap"><p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
+								                }
+								                ?>
+						                    <?php if (isset($this->user)) {
+						                        UNL_UCBCN::displayRegion($this->calendarselect);
+						                    } //End if user
+						                    ?>
+																<?php
+													                if (isset($this->calendar)) {
+													                    echo '</div';
+													                }
+													                ?>
+						
+	
+	
+											<?php if (isset($this->user)) { ?>
+													<div id="search-wrap">
+						                    <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
+						                        <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+						                        <input type='submit' class="search_submit" name='submit' value="Search" />
+						                        <input type='hidden' name='action' value='search' />
+												</div>
+						                    </form>
+											</div>
+											<?php
+						                } ?>
+						
+						
+						
+	
+                        
                         <div id="nav_end"></div>
                         <div id="leftcollinks">
                             <?php if (isset($this->user)) { ?>
                             <div class="cal_widget">
                                 <h3><span><?php echo date("F jS, Y"); ?></span></h3>
                                 <ul>
-                                    <li class="nobullet">Welcome, <?php echo $this->user->uid; ?></li>
+                                    <li class="nobullet welcome">Welcome, <?php echo $this->user->uid; ?></li>
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
                                     <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>
                                     <li><a href="<?php echo $this->uri; ?>?action=users">Users &amp; Permissions</a></li>
@@ -101,6 +110,19 @@ header('Content-Type:text/html; charset=UTF-8');
 
                     <div id="main_right" class="mainwrapper">
                         <div id="maincontent">
+													<div id="navlinks">
+	                            <?php
+	                            if (isset($this->user)) { ?>
+	                            <ul>
+	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="My Calendar">Pending Events</a></li>
+	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create Event">Create Event</a></li>
+	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
+	                            </ul>
+	                                <?php
+	                            } ?>
+	                        </div>
+	
+	
                             <?php UNL_UCBCN::displayRegion($this->output); ?>
                         </div>
                     </div>

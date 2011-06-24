@@ -77,28 +77,63 @@ margin:10px 0;
 
 /* repeating elements in frame -- top & left */
 /* current calendar declaration */
+
+#calChoose-wrap, #search-wrap{
+	border:1px solid #84a09a;
+	padding:8px 6px;
+	margin:0 0 25px 0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
+}
 p.currentCal{
 margin:0 0 5px 0;
 font-size:16px;
-width:620px;
+line-height:20px;
+width:260px;
+}
+p.currentCal strong{
+white-space:nowrap;
 }
 /* select a different calendar dropdown */
 #contentSearch form#cal_choose .element, #contentSearch form#cal_choose fieldset li{
-  float:left;
   clear:none;
   padding:0;
 }
 #contentSearch form#cal_choose label.element{display:none;}
-#contentSearch form#cal_choose select{margin:2px 8px 0 0;}
+
+form#cal_choose{
+margin:0;
+width:260px;
+}
+form#cal_choose select, form#cal_choose #submit{
+float:left;
+margin:0;
+}
+form#cal_choose #submit{
+margin-left:2px;
+}
+form#cal_choose fieldset {
+border:none;
+}
+form#cal_choose fieldset ol{
+	margin:0;
+	top:0;
+}
+
 /* -- !Submit -- */
 
 /*	-------------------------------------------------------------
 	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 #navlinks ul {
-width:auto;
-margin:3px 0;
-padding:5px 0 7px;
+width:570px;
+height:50px;
+margin:0 0 45px 0;
+padding:0;
 background:none;
 list-style:none;
 }
@@ -113,19 +148,27 @@ display:none;
 
 #navlinks ul li a {
 display:block;
-width:270px;
-padding:0;
+width:233px;
+padding:10px 25px;
 margin:0;
-height:46px;
-text-indent:-9999px;
+height:30px;
+background-color:#aaa;
+float:left;
+color:#333;
+font: 17px/30px Helmet, Freesans, sans-serif;
+text-decoration:none;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border-radius: 7px;
 }
 
 #navlinks ul li#mycalendar a {
-background:url(images/nav_calendar.gif) no-repeat;
+margin-right:4px;
+/*background:url(images/nav_calendar.gif) no-repeat;*/
 }
 
 #navlinks ul li#create a {
-background:url(images/nav_create.gif) no-repeat;
+/*background:url(images/nav_create.gif) no-repeat;*/
 }
 
 #navlinks ul li#subscribe a {
@@ -137,15 +180,17 @@ background:url(images/nav_import.gif) no-repeat;
 }
 
 #navlinks ul li#mycalendar a:hover,
-#navigation ul li#create a:hover,
-#navigation ul li#subscribe a:hover,
+#navlinks ul li#create a:hover,
+#navlinks ul li#subscribe a:hover,
 #navlinks ul li#import a:hover,
-body#normal #navigation ul li#mycalendar a,
-body#create #navigation ul li#create a,
+body#normal #navlinks ul li#mycalendar a,
+body#create #navlinks ul li#create a,
 body#subscribe #navigation ul li#subscribe a,
 body#import #navigation ul li#import a,
 body#normal #navigation ul li#calendar a {
-background-position:0 -47px;
+background-color:#255249;
+color:#fff;
+text-decoration:none;
 }
 
 #contentSearch div.clear #navigation #leftcollinks {
@@ -164,21 +209,24 @@ color:#212121;
 	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 div.cal_widget {
-background-color:#888;
-width:222px;
-padding:0 7px 10px 0;
-margin:18px 0 20px;
+	border:1px solid #84a09a;
+	padding:0 6px;
+	margin:0 0 25px 0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
 }
 
 div.cal_widget h3 {
 position:relative;
-font-size:12px !important;
+font-size:14px !important;
 clear:both;
 margin:0;
-padding:8px 0 5px 18px;
+padding:7px 12px;
 background-color:#ddd;
-width:211px;
-height:15px;
 }
 
 div.cal_widget h3 span {
@@ -186,17 +234,17 @@ div.cal_widget h3 span {
 }
 
 div.cal_widget h3 img {
-float:right;
+	
 }
 div.cal_widget a{
-color:#fff;
+
 }
 div.cal_widget ul {
 list-style:none;
 padding:21px 0 10px 0px;
 margin:-14px 0 0 17px;
 }
-
+div.cal_widget ul li.welcome{font-weight:bold;}
 div.cal_widget ul li#login_list {
 background:none;
 padding:0;
@@ -463,18 +511,6 @@ position: relative;
 body#login #contentSearch form fieldset {
 width:415px;
 }
-form#cal_choose{
-margin:0;
-height:50px;
-width:620px;
-}
-form#cal_choose fieldset {
-border:none;
-}
-form#cal_choose fieldset ol{
-	margin:0;
-	top:0;
-}
 /*	-------------------------------------------------------------
 	Table elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
@@ -681,14 +717,12 @@ background-position:0 -22px;
 	form#event_search{
 		margin:0;
 		padding:0;
-		height:30px;
-		position:absolute;
-		z-index:1000;
-		top:7px;
-		right:20px;
+		height:25px;
 	}
-#event_search #searchinput{
+#event_search input#searchinput{
 	float:left;
+	width:180px;
+	margin-right:2px;
 }
 div#contentSearch form#event_search input.search_submit{
 	float:left;

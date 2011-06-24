@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteBase   /jaredunl
+RewriteBase   /unlcal
 
 # Upcoming
 RewriteRule ^upcoming/$ ?upcoming=upcoming&%{QUERY_STRING} [L]
@@ -20,7 +20,7 @@ RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/search/(.+)/$ $1/?search=search [L]
 
 # Account rewrite
 RewriteRule ^(([a-zA-Z]([0-9]+)?)+)$ $1/ [R]
-RewriteCond %{REQUEST_URI} !^/jaredunl/manager/
+RewriteCond %{REQUEST_URI} !^/unlcal/manager/
 RewriteRule ^(([a-zA-Z-_]([0-9]+)?)+)/$ ?calendar_shortname=$1&%{QUERY_STRING}
 
 # year rewrite

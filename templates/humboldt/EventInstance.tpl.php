@@ -54,7 +54,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->description); ?></p>
 			<?php
 			if (isset($this->eventdatetime->additionalpublicinfo)) {
-                echo '<p>Additional Public Info: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->additionalpublicinfo).'</p>';
+                echo '<p><strong>Additional Public Info:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->additionalpublicinfo).'</p>';
             }
 			if (isset($this->event->webpageurl)) {
 			    echo 'Website: <a class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'">'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'</a>';
@@ -76,7 +76,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 					UNL_UCBCN::displayRegion($loc);
 				}
                 if (isset($this->eventdatetime->directions)) {
-                    echo '<p class="directions">Directions: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
+                    echo '<p class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }
 				?>
 		</div>	

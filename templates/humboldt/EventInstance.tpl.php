@@ -16,8 +16,9 @@ $endu = strtotime($this->eventdatetime->endtime);
 		  </ul>
 		</div>-->
 		
-<!--				<h2 scope="col" class="date">Event Detail</h2>-->
-
+			
+		<div id="event_detail">
+			<h2 scope="col" class="date">Event Detail</h2>
 			<h3 class="date">Date: <?php echo date('l, F jS',$startu); ?></h3>
 		
 			<div class="alt"><p class="date">Time: 
@@ -79,7 +80,7 @@ $endu = strtotime($this->eventdatetime->endtime);
                 }
 				?>
 		</div>	
-
+	</div>
 
 			<h3 class="date">Contact:</h3>
 			

@@ -66,7 +66,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			}
 			?>
 			<?php if (isset($this->event->imagedata)) { ?>
-				<div class="detail_img_crop"><img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" /></div>
+				<img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" />
 			<?php } ?>	
 			</td>
 		</tr>

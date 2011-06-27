@@ -232,10 +232,7 @@ table blockquote {
 .event_cal table td.date, .event_cal table td.title{width:auto;}
 #maincontent .event_cal table td.date{color:#252525;font-weight:bold;}
 .event_cal table thead{display:none;}
-img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;}
-div.detail_img_crop {/* give image max width to stop large images from busting the table layout*/
-	max-width:480px;
-} 
+img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-width:480px;} /* give image max width to stop large images from busting the table layout*/
 /*- Menu Tabs G--------------------------- */
 
     #tabsG {

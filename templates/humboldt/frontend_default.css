@@ -368,7 +368,7 @@ ul#frontend_view_selector li a {
     padding-top: 4px;
 }
 ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#todayview, ul#frontend_view_selector.year li#yearview, ul#frontend_view_selector.upcoming li#upcomingview{
-	background:transparent url(images/nav_bg.png)no-repeat center top;
+	background:transparent url(images/nav_bg.png) no-repeat center top;
 }
 
 /*year view*/

@@ -15,19 +15,14 @@ $endu = strtotime($this->eventdatetime->endtime);
 		
 		  </ul>
 		</div>-->
-		<table style="table-layout: fixed;">
-		<thead>
-			<tr>
-				<th scope="col" class="date">Event Detail</th>
-			</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td class="date">Date:</td>
-			<td><?php echo date('l, F jS',$startu); ?></td>
-		</tr>
-		<tr class="alt"><td class="date">Time:</td>	
-			<td><?php
+		
+				<h2 scope="col" class="date">Event Detail</th>
+
+			<h3 class="date">Date:</h3>
+			<p><?php echo date('l, F jS',$startu); ?></p>
+		
+		<div class="alt"><p class="date">Time:</p>	
+			<p><?php
 			if (isset($this->eventdatetime->starttime)) {
 				if (strpos($this->eventdatetime->starttime,'00:00:00')) {
 					echo '<abbr class="dtstart" title="'.date(DATE_ISO8601, $startu).'">All day</abbr>';
@@ -51,11 +46,11 @@ $endu = strtotime($this->eventdatetime->endtime);
  				    	    echo '-<abbr class="dtend" title="'.date(DATE_ISO8601, $endu).'">'.date('g:i a', $endu).'</abbr>';
 		    	}
 		    }
-			?></td>
-		</tr>
-		<tr>
-			<td class="date">Description:</td>	
-			<td><p class='description'>
+			?></p>
+		</div>
+
+			<h3 class="date">Description:</h3>	
+		<p class='description'>
 			<?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->description); ?></p>
 			<?php
 			if (isset($this->eventdatetime->additionalpublicinfo)) {
@@ -68,11 +63,11 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php if (isset($this->event->imagedata)) { ?>
 				<img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" />
 			<?php } ?>	
-			</td>
-		</tr>
-		<tr class="alt">
-			<td class="date">Location:</td>
-			<td>
+			
+
+		<div class="alt">
+			<p class="date">Location:</p>
+			<div>
 				<?php
 				if (isset($this->eventdatetime->room)) {
 				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
@@ -84,11 +79,11 @@ $endu = strtotime($this->eventdatetime->endtime);
                     echo '<p class="directions">Directions: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }
 				?>
-			</td>
-		</tr>
-		<tr>
-			<td class="date">Contact:</td>
-			<td>
+			</div>
+
+
+			<h3 class="date">Contact:</h3>
+			<p>
 			<?php 
 			    if (isset($this->event->listingcontactname) ||
 					isset($this->event->listingcontactphone) ||
@@ -98,10 +93,9 @@ $endu = strtotime($this->eventdatetime->endtime);
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 					if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
 				} ?>
-			</td>
-		</tr>
-		</tbody>
-		</table>
+			</p>
+
+
 		<?php
 			UNL_UCBCN::displayRegion($this->facebookRSVP);
 			echo $this->facebook->like($this->url,$this->calendar->id);

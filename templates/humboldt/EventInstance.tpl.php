@@ -80,7 +80,6 @@ $endu = strtotime($this->eventdatetime->endtime);
                 }
 				?>
 		</div>	
-	</div>
 
 			<h3 class="date">Contact:</h3>
 			
@@ -93,8 +92,8 @@ $endu = strtotime($this->eventdatetime->endtime);
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 					if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
 				} ?>
-			
-
+	</div>
+		
 
 		<?php
 			UNL_UCBCN::displayRegion($this->facebookRSVP);

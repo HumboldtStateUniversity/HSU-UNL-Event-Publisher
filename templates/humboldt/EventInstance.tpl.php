@@ -57,7 +57,7 @@ $endu = strtotime($this->eventdatetime->endtime);
                 echo '<p><strong>Additional Public Info:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->additionalpublicinfo).'</p>';
             }
 			if (isset($this->event->webpageurl)) {
-			    echo 'For more information visit: <a class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'">'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'</a>';
+			    echo '<p><strong>For more information visit:</strong> <a class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'">'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'</a></p>';
 			}
 			?>
 			<?php if (isset($this->event->imagedata)) { ?>
@@ -66,15 +66,15 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 
 		<div class="alt">
-			<p class="date"><strong>Where:</strong> <?php
-			if (isset($this->eventdatetime->room)) {
-			    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
-			}
-			if ($loc = $this->eventdatetime->getLocation()) {
-				UNL_UCBCN::displayRegion($loc);
-			}</p>
+			<p class="date"><strong>Where:</strong></p>
 			
-				
+				<?php
+				if (isset($this->eventdatetime->room)) {
+				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
+				}
+				if ($loc = $this->eventdatetime->getLocation()) {
+					UNL_UCBCN::displayRegion($loc);
+				}
                 if (isset($this->eventdatetime->directions)) {
                     echo '<p class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }

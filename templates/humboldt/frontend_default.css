@@ -236,7 +236,7 @@ table blockquote {
 	
 }
 img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-width:480px;} /* give image max width to stop large images from busting the table layout*/
-#updatecontent #event_detail h3, #updatecontent #event_detail h3  {
+#updatecontent #event_detail h3, #updatecontent #event_detail h2  {
 	float: none;
 	margin: 18px 0;
 }

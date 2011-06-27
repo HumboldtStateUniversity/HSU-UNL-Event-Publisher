@@ -15,7 +15,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 		
 		  </ul>
 		</div>-->
-		<table>
+		<table style="table-layout: fixed;">
 		<thead>
 			<tr>
 				<th scope="col" class="date">Event Detail</th>

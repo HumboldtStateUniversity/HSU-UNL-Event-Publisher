@@ -16,13 +16,12 @@ $endu = strtotime($this->eventdatetime->endtime);
 		  </ul>
 		</div>-->
 		
-				<h2 scope="col" class="date">Event Detail</th>
+<!--				<h2 scope="col" class="date">Event Detail</h2>-->
 
-			<h3 class="date">Date:</h3>
-			<p><?php echo date('l, F jS',$startu); ?></p>
+			<h3 class="date">Date: <?php echo date('l, F jS',$startu); ?></h3>
 		
-		<div class="alt"><p class="date">Time:</p>	
-			<p><?php
+			<div class="alt"><p class="date">Time: 
+			<?php
 			if (isset($this->eventdatetime->starttime)) {
 				if (strpos($this->eventdatetime->starttime,'00:00:00')) {
 					echo '<abbr class="dtstart" title="'.date(DATE_ISO8601, $startu).'">All day</abbr>';
@@ -66,8 +65,8 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 
 		<div class="alt">
-			<p class="date">Location:</p>
-			<div>
+			<h3 class="date">Location:</h3>
+			
 				<?php
 				if (isset($this->eventdatetime->room)) {
 				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
@@ -79,11 +78,11 @@ $endu = strtotime($this->eventdatetime->endtime);
                     echo '<p class="directions">Directions: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }
 				?>
-			</div>
+		</div>	
 
 
 			<h3 class="date">Contact:</h3>
-			<p>
+			
 			<?php 
 			    if (isset($this->event->listingcontactname) ||
 					isset($this->event->listingcontactphone) ||
@@ -93,7 +92,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 					if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
 				} ?>
-			</p>
+			
 
 
 		<?php

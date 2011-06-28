@@ -45,7 +45,10 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 $(function() {
 
 	// initialize scrollable
-	$(".scrollable").scrollable({keyboard:false});
+	$(".scrollable").scrollable({
+		keyboard:false,
+		circular:true
+	});
 
 });
 </script>

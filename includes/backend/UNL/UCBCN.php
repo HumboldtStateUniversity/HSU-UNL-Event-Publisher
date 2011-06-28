@@ -927,6 +927,18 @@ class UNL_UCBCN
             }
         }
 
+        // If the user doesn't have permission to edit events,
+        // they can only edit their own event if it is pending
+        $che = UNL_UCBCN::factory('calendar_has_event');
+        $che->event_id = $event->id;
+        $che->whereAdd("status='pending'");
+        $che->whereAdd("uidcreated ='" . $user->uid . "'");
+        $che->whereAdd("source='create event form' OR source='checked consider event'");
+        if ($che->find()) {
+            return true;
+        }
+
+
         return false;
     }
 }

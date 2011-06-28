@@ -318,7 +318,6 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
             case 'createEvent':
                 $this->uniquebody = 'id="create"';
                 $this->sectitle   = 'Create/Edit Event';
-                if ($this->userHasPermission($this->user, 'Event Create', $this->calendar)) {
                     if (isset($_GET['id'])) {
                         $id = (int)$_GET['id'];
                     } elseif (isset($_POST['id'])) {
@@ -326,10 +325,31 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                     } else {
                         $id = null;
                     }
-                    $this->output[] = $this->showEventSubmitForm($id);
+
+		// If creating a new event
+                if ($this->userHasPermission($this->user, 'Event Create', $this->calendar) && (is_null($id) || $id == 0)){
+			$this->output[] = $this->showEventSubmitForm($id);
+		} elseif ($this->userHasPermission($this->user, 'Event Edit', $this->calendar) && $id > 0) {
+			// user is editing an event and has permission	
+			$this->output[] = $this->showEventSubmitForm($id);
+		}
+		
+                // if user is trying to edit an event, but doesn't have Event Edit
+                // permissions, they should be able to edit the event if they created
+                // it and it is still in pending
+		elseif (!$this->userHasPermission($this->user, 'Event Edit', $this->calendar)){
+                    $che = UNL_UCBCN::factory('calendar_has_event');
+                    $che->event_id = $id;
+                    $che->whereAdd("uidcreated = '" . $this->user->uid . "'");
+                    $che->whereAdd("status='pending'");
+                    if ($che->find()){
+			$this->output[] = $this->showEventSubmitForm($id);
+		    } else {
+                        $this->output = new UNL_UCBCN_Error('Sorry, you do not have permission to edit this event.');
+                    } 
                 } else {
                     $this->output = new UNL_UCBCN_Error('Sorry, you do not have permission to create events.');
-                }
+		}
                 break;
             case 'eventdatetime':
                 if ($this->userHasPermission($this->user, 'Event Create', $this->calendar)) {

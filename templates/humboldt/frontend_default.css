@@ -633,6 +633,8 @@ h2#featuredEventsTitle {
 #featuredEvents .event_detail {
 	margin: 10px 35px 0 0;
 	float: left;
+	width: 260px;
+	
 }
 .imagecrop {
 	width: 260px;

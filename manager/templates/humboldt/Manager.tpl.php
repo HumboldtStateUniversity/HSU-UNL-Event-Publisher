@@ -95,8 +95,9 @@ header('Content-Type:text/html; charset=UTF-8');
                                     <li><a href="<?php echo $this->uri; ?>?action=users">Users &amp; Permissions</a></li>
                                     <?php endif; ?>
                                     <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit Subscription', $this->calendar)) : ?>				    
-                  		    <li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
-                                    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
+                  		    	<li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
+                                    <?php endif; ?>
+				    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
                                 </ul>
                             </div>
                                 <?php

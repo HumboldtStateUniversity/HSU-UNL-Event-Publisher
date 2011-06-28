@@ -88,10 +88,16 @@ header('Content-Type:text/html; charset=UTF-8');
                                 <ul>
                                     <li class="nobullet welcome">Welcome, <?php echo $this->user->uid; ?></li>
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
-                                    <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>
+                                    <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) : ?>
+                                        <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>
+                                    <?php endif; ?>
+                                    <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Change User Permissions', $this->calendar)) : ?>
                                     <li><a href="<?php echo $this->uri; ?>?action=users">Users &amp; Permissions</a></li>
-																		<li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
-                                    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
+                                    <?php endif; ?>
+                                    <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit Subscription', $this->calendar)) : ?>				    
+                  		    	<li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
+                                    <?php endif; ?>
+				    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
                                 </ul>
                             </div>
                                 <?php

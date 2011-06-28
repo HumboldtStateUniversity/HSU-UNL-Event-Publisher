@@ -677,7 +677,8 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                 $a_event->fetch();
                 // This event date time combination was selected... find out what they chose.
                 if (isset($_POST['delete'])
-                    && $this->userHasPermission($this->user, 'Event Delete', $this->calendar)) {
+		    && ($this->userHasPermission($this->user, 'Event Delete', $this->calendar))
+                    || ($this->user->uid == $a_event->uidcreated && $a_event->status = 'pending')) {
                     if (isset($event->recurrence_id)) {
                         // it is a recurring event
                         $rd = UNL_UCBCN_Manager::factory('recurringdate');

@@ -1,7 +1,7 @@
 <?php
 function featured() {
     $output = '';
-    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/upcoming/?format=xml&limit=18";
+    $xmlUrl = "https://its-caldev.humboldt.edu/unlcal/upcoming/?format=xml&limit=100";
     $xmlStr = file_get_contents($xmlUrl);
     $xmlObj = simplexml_load_string($xmlStr);
     $xmlObj = json_decode(json_encode($xmlObj),1); //convert xml object to array
@@ -75,7 +75,7 @@ function featured() {
         $count++;
     }
 
-    if (count($events) < 3 OR $count < 3) { // if there are less than 3 events on last page, div wasn't closed in for loop
+    if (count($events) < 3 OR $count > 0) { // if there are less than 3 events on last page, div wasn't closed in for loop
 	$output .= '</div><!--/generic container-->';
     }
 

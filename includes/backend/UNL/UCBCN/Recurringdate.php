@@ -192,7 +192,7 @@ class UNL_UCBCN_Recurringdate extends DB_DataObject
                     $nextmonweekday = date('l', strtotime($nextmon));
                     $cur = date('D Y-m-d H:i:s', strtotime("{$rtm[$i]} $weekday, $nextmon")); 
                     if ($weekday == $nextmonweekday && $rtm[$i] != 'last') {
-                        $cur = date('D Y-m-d H:i:s', strtotime('last week', strtotime($cur)));
+                        $cur = date('D Y-m-d H:i:s', strtotime('-7 days', strtotime($cur)));
                     }
                     // Update end
                     $weekday = date('l', strtotime($end[$i]));
@@ -200,7 +200,7 @@ class UNL_UCBCN_Recurringdate extends DB_DataObject
                     $nextmonweekday = date('l', strtotime($nextmon));
                     $end[$i] = date('D Y-m-d H:i:s', strtotime("{$rtm[$i]} $weekday, $nextmon"));
                     if ($weekday == $nextmonweekday && $rtm[$i] != 'last') {
-                        $end[$i] = date('D Y-m-d H:i:s', strtotime('last week', strtotime($end[$i])));
+                        $end[$i] = date('D Y-m-d H:i:s', strtotime('-7 days', strtotime($end[$i])));
                     }
                 }
             }

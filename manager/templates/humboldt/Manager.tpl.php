@@ -117,17 +117,19 @@ header('Content-Type:text/html; charset=UTF-8');
 
                     <div id="main_right" class="mainwrapper">
                         <div id="maincontent">
-													<div id="navlinks">
+													
 	                            <?php
 	                            if (isset($this->user)) { ?>
+															<div id="navlinks">
 	                            <ul>
 	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="View or Edit Existing Events">View or Edit Existing Events</a></li>
 	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create an Event">Create an Event</a></li>
 	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
 	                            </ul>
+															</div>
 	                                <?php
 	                            } ?>
-	                        </div>
+	                        
 	
 	
                             <?php UNL_UCBCN::displayRegion($this->output); ?>

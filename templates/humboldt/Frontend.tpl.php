@@ -39,7 +39,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/frontend.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/jquery.tools.min.js"></script>
-<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
 
 <script>
 // execute your scripts when the DOM is ready. this is mostly a good habit

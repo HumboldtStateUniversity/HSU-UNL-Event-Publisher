@@ -531,6 +531,7 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
  td abbr {
  	display: inline-block;
  	border-bottom: none;
+ 	font-weight: bold;
  }
 /* IE */
 * html tr.vevent td.date{font-size:0.9em!important;}
@@ -639,7 +640,7 @@ h2#featuredEventsTitle {
 .imagecrop {
 	width: 260px;
 	overflow: hidden;
-	height: 200px;
+	height: 170px;
 	margin-bottom: 10px;
 }
 #featuredEvents .event_detail .imagecrop img {

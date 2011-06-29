@@ -49,7 +49,7 @@ margin: auto;
 position:relative;
 }
 #main_right{
-margin-left: 300px;
+float:right;
 }
 
 
@@ -129,18 +129,28 @@ form#cal_choose fieldset ol{
 /*	-------------------------------------------------------------
 	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-#navlinks ul {
-width:570px;
-height:50px;
+#navlinks{
 margin:0 0 45px 0;
+border-bottom:6px solid #255249;	
+width:566px;
+}
+#navlinks ul {
+width:566px;
+height:44px;
+margin:0;
 padding:0;
 background:none;
 list-style:none;
+border-bottom:6px solid #255249;
 }
 
 #navlinks ul li {
 padding:0;
-margin:0;
+margin:0 0 0 0;
+display:block;
+width:283px;
+height:50px;
+float:left;
 }
 #nav_end {
 display:none;
@@ -150,7 +160,7 @@ display:none;
 display:block;
 width:233px;
 padding:10px 25px;
-margin:0;
+margin:0 0 -5px 0;
 height:30px;
 background-color:#aaa;
 float:left;
@@ -163,11 +173,12 @@ border-radius: 7px;
 }
 
 #navlinks ul li#mycalendar a {
-margin-right:4px;
+
 /*background:url(images/nav_calendar.gif) no-repeat;*/
 }
 
 #navlinks ul li#create a {
+
 /*background:url(images/nav_create.gif) no-repeat;*/
 }
 
@@ -201,6 +212,7 @@ padding:0;
 #navigation{
 float: left;
 margin-right:0;
+width:275px;
 }
 #navigation .element a {
 color:#212121;
@@ -339,7 +351,7 @@ input, textarea{
 #searchcriteria{width:400px;font-size:12px;height:150px}
 
 fieldset legend {
-width:100%;
+width:550px;
 border: 0;
 margin: 0;
 font-size: 15px;
@@ -735,6 +747,7 @@ div#contentSearch form#event_search input.search_submit{
 img.image-upload{
 	max-width:525px;
 }
+
 
 
 /* add new location */

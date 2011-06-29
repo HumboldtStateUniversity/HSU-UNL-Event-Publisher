@@ -7,7 +7,8 @@ if (!isset($GLOBALS['unl_template_dependents'])) {
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<xml:lang="en" xmlns:fb="http://developers.facebook.com/schema/" >
+<xmlns:og="http://opengraphprotocol.org/schema/">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="copyright" content="Humboldt State University" />

@@ -736,6 +736,17 @@ img.image-upload{
 	max-width:525px;
 }
 
+
+/* add new location */
+#__reverseLink_eventdatetime_event_idlocation_id_1__subForm__div{
+	width:475px;
+	margin:0 0 35px 20px;
+}
+#__reverseLink_eventdatetime_event_idlocation_id_1__subForm__div legend{
+	width:450px;
+}
+
+
 /* datepicker button */
 #date1_calendar_trigger, #date2_calendar_trigger, #date3_calendar_trigger{position:relative;top:8px;}
 

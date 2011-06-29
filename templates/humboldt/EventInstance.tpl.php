@@ -144,25 +144,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 			<a id="twittershare" href="http://twitter.com/home?status=Check out this event <?php echo $this->url; ?>" title="Click to share this post on Twitter">Share on Twitter</a>
 		</p>
-		<div id="facebooklike">
 		
-		<fb:like href="<?php echo $this->url; ?>" layout="standard"
-		show_faces="true" width="400" action="like" font="verdana" colorscheme="light" />
-		
-		<div id="fb-root"></div>
-		<script>
-		window.fbAsyncInit = function() {
-		FB.init({appId: 'insert your app id here', status: true, cookie: true, xfbml: true});
-		};
-		(function() {
-		var e = document.createElement('script');
-		e.type = 'text/javascript';
-		e.src = document.location.protocol +
-		'//connect.facebook.net/en_US/all.js';
-		e.async = true;
-		document.getElementById('fb-root').appendChild(e);
-		}());
-		</script>
 		</div>
 	</div>
 </div>

@@ -142,6 +142,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			?>
 			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>
 			<!--<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
+			<a href="http://twitter.com/home?status=Check out this event <?php echo $this->url; ?>" title=”Click to share this post on Twitter”>Share on Twitter</a>
 		</p>
 		</div>
 	</div>

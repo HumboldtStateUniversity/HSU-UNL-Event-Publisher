@@ -162,7 +162,7 @@ width:233px;
 padding:10px 25px;
 margin:0 0 -5px 0;
 height:30px;
-background-color:#aaa;
+background-color:#ddd;
 float:left;
 color:#333;
 font: 17px/30px Helmet, Freesans, sans-serif;
@@ -749,6 +749,35 @@ img.image-upload{
 }
 
 
+/** feature & recommend tables **/
+table#feature_cals, table#recommend_cals{
+	width:100%;
+	margin:15px 0;
+}
+table#feature_cals th, table#recommend_cals th{
+background:#777;
+color:#fff;
+text-align:left;
+border-bottom:2px solid #555;
+padding: 4px 7px;
+font-weight:normal;
+}
+table#feature_cals td, table#recommend_cals td{
+color: #3D3D3D;
+padding: 4px 7px;
+background-color: #fff;
+vertical-align: top;
+border:none;
+text-align:left;
+border-top:1px solid #bbb;
+border-bottom:1px solid #bbb;
+}
+h3{
+	font: 16px/20px Helmet, Freesans, sans-serif;
+}
+h3 span.title{
+	font-weight:bold;
+}
 
 /* add new location */
 #__reverseLink_eventdatetime_event_idlocation_id_1__subForm__div{

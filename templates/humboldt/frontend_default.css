@@ -75,13 +75,12 @@ table td.title{width:75%;}
 	background:url(images/newrecurevent.png) no-repeat 0 0;
 	padding:0 0 7px 30px!important;
 }*/
-/*#maincontent h4.ongoing{
+#maincontent h4.ongoing{
 	font-size:1.5em;
-	background:url(images/ongoing.gif) no-repeat 0 0;
 	margin-top:15px;
 	padding:6px 0 7px 34px;
 	clear:both;
-}*/
+}
 
 
 #maincontent p#day_nav{z-index:10000;margin:15px 0;padding:0;float:right;position:relative;}

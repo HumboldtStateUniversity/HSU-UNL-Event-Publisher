@@ -10,6 +10,7 @@ header('Content-Type:text/html; charset=UTF-8');
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
+				<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="templates/humboldt/hsu-ie.css" media="screen" /><![endif]--> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>

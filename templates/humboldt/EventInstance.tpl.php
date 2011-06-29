@@ -144,7 +144,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 			<a id="twittershare" href="http://twitter.com/home?status=Check out this event <?php echo $this->url; ?>" title="Click to share this post on Twitter">Share on Twitter</a>
 		</p>
-		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="20" show_faces="false" font="arial"></fb:like>
+		<div id="fb-root"></div><fb:like href="" send="false" layout="button_count" width="20" show_faces="false" font="arial"></fb:like>
 		</div>
 	</div>
 </div>

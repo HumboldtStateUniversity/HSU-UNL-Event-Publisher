@@ -685,23 +685,27 @@ background:#990000 !important;
 border-color:#d52828 #620404 #620404 #d52828 !important;
 }
 #contentSearch form button#moveto_pending{
-width:99px;
-float:left;
-height:22px;
-background:url(images/button/movetodraft.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 button#search {
-width:48px;
-height:22px;
-background:url(images/button/search.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch form button#moveto_posted{
-width:89px;
-float:left;
-height:21px;
-background:url(images/button/addtoposted.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 button#moveto_posted,button#delete_event,button#moveto_pending,button#search {
@@ -710,11 +714,6 @@ display:block;
 border:none;
 cursor:pointer;
 }
-
-button#moveto_posted:hover,button#delete_event:hover,button#moveto_pending:hover,button#search:hover {
-background-position:0 -22px;
-}
-
 
 
 /*	-------------------------------------------------------------

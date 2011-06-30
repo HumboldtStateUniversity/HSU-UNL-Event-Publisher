@@ -490,9 +490,12 @@ body#login #navigation {
 display:none;
 }
 
-/*form#event_login button#submit {
-	padding:4px 5px;
-}*/
+form#event_login button#submit {
+	border-radius: 5px 5px 5px 5px;
+	background-color: #f6f6f6;
+	padding: 2px 5px;
+	line-height: 1;
+}
 
 body#login #contentSearch {
 padding-top:50px;

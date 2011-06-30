@@ -490,20 +490,16 @@ body#login #navigation {
 display:none;
 }
 
-form#event_login button#submit {
+/*form#event_login button#submit {
 	padding:4px 5px;
-}
-
-form#event_login button#submit:hover {
-background-position:0 -22px;
-}
+}*/
 
 body#login #contentSearch {
 padding-top:50px;
 }
 
 body#login #contentSearch p{
-margin-bottom: 1em;
+margin-bottom: 25px;
 }
 
 body#login #contentSearch input {
@@ -512,9 +508,6 @@ margin:2px 0;
 width:200px;
 }
 
-body#login #contentSearch input:focus {
-background:#ffc;
-}
 
 body#login #contentSearch form label.element {
 position: relative;

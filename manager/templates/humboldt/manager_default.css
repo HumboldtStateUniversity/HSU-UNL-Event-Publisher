@@ -646,21 +646,19 @@ color:#fff;
 }
 
 #contentSearch table.eventlisting td.delete a,button#delete_event {
-display:block;
-padding:0;
-text-indent:-9999px;
-width:48px;
-height:22px;
-background:url(images/button/delete.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch table.eventlisting td a.user_perm_remove {
-display:block;
-padding:0;
-text-indent:-9999px;
-background:url(images/button/remove_user.gif) no-repeat;
-width:89px;
-height:21px;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {

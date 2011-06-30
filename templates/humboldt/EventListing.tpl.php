@@ -72,7 +72,7 @@ foreach ($this->events as $e) {
     if ($this->type != 'ongoing') {
         $row .=    '<blockquote class="description">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->description).'</blockquote>';
     }
-    $row .= $e->facebook->like($e->url,$e->calendar->id);
+//    $row .= $e-><!--facebook-->->like($e->url,$e->calendar->id);
     $row .= '</td></tr>';
     
     echo $row;

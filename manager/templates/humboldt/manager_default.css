@@ -491,11 +491,10 @@ display:none;
 }
 
 form#event_login button#submit {
-	padding:4px 5px;
-}
-
-form#event_login button#submit:hover {
-background-position:0 -22px;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #f6f6f6;
+	padding: 2px 5px;
+	line-height: 1;
 }
 
 body#login #contentSearch {
@@ -503,7 +502,7 @@ padding-top:50px;
 }
 
 body#login #contentSearch p{
-margin-bottom: 1em;
+margin-bottom: 25px;
 }
 
 body#login #contentSearch input {
@@ -512,9 +511,6 @@ margin:2px 0;
 width:200px;
 }
 
-body#login #contentSearch input:focus {
-background:#ffc;
-}
 
 body#login #contentSearch form label.element {
 position: relative;
@@ -650,21 +646,19 @@ color:#fff;
 }
 
 #contentSearch table.eventlisting td.delete a,button#delete_event {
-display:block;
-padding:0;
-text-indent:-9999px;
-width:48px;
-height:22px;
-background:url(images/button/delete.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch table.eventlisting td a.user_perm_remove {
-display:block;
-padding:0;
-text-indent:-9999px;
-background:url(images/button/remove_user.gif) no-repeat;
-width:89px;
-height:21px;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {
@@ -691,23 +685,27 @@ background:#990000 !important;
 border-color:#d52828 #620404 #620404 #d52828 !important;
 }
 #contentSearch form button#moveto_pending{
-width:99px;
-float:left;
-height:22px;
-background:url(images/button/movetodraft.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 button#search {
-width:48px;
-height:22px;
-background:url(images/button/search.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 #contentSearch form button#moveto_posted{
-width:89px;
-float:left;
-height:21px;
-background:url(images/button/addtoposted.gif) no-repeat;
+font-size:11px;
+padding:3px 5px;
+border:1px solid #aaa;
+background:#777;
+color:#fff;
 }
 
 button#moveto_posted,button#delete_event,button#moveto_pending,button#search {
@@ -716,11 +714,6 @@ display:block;
 border:none;
 cursor:pointer;
 }
-
-button#moveto_posted:hover,button#delete_event:hover,button#moveto_pending:hover,button#search:hover {
-background-position:0 -22px;
-}
-
 
 
 /*	-------------------------------------------------------------
@@ -785,6 +778,9 @@ h3 span.title{
 	margin:0 0 35px 20px;
 }
 #__reverseLink_eventdatetime_event_idlocation_id_1__subForm__div legend{
+	width:450px;
+}
+#location_id_location____header__ legend{
 	width:450px;
 }
 

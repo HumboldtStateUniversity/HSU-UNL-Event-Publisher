@@ -183,13 +183,14 @@ $day->getTimestamp()).'%\'' .
             $calendar =& $options['calendar'];
             $mdb2     = $calendar->getDatabaseConnection();
             $sql      = "SELECT eventdatetime.id, eventdatetime.starttime 
-			FROM event,calendar_has_event,eventdatetime 
+			FROM event,calendar_has_event,eventdatetime
                         WHERE calendar_has_event.calendar_id={$calendar->id}  
                         AND (calendar_has_event.status ='posted' OR 
 				calendar_has_event.status ='archived') 
                         AND calendar_has_event.event_id = eventdatetime.event_id 
                         AND calendar_has_event.event_id = event.id 
                         AND eventdatetime.starttime >= '" . date('Y-m-d') . "'
+			AND event.id NOT IN (select distinct event_id from recurringdate)
                         ORDER BY " . $orderby . " LIMIT " . $limit;
 	} else {
             $mdb2     = UNL_UCBCN::getDatabaseConnection();
@@ -199,7 +200,7 @@ $day->getTimestamp()).'%\'' .
                         'ORDER BY '.$orderby.' LIMIT '.$limit;
         }
         $res = $mdb2->query($sql)->fetchAll();
-        $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
+               $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
                'recurringdate.recurrence_id FROM recurringdate, eventdatetime, calendar_has_event ' .
                'WHERE recurringdate > \'' . date('Y-m-d') . '\' ' .
                'AND eventdatetime.event_id = recurringdate.event_id ' .

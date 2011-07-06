@@ -44,12 +44,20 @@ class UNL_UCBCN_Manager_Login
      * @var string
      */
     public $password_field;
+
+    /**
+    * Login status
+    *
+    * @var string
+    */
+    public $status;
     
     /**
      * Constructs the login screen.
      */
-    function __construct()
+    function __construct(UNL_UCBCN_Manager &$manager)
     {
+	$this->status         = $manager->a->status;
         $this->post_url       = $_SERVER['SCRIPT_FILENAME'];
         $this->user_field     = 'username';
         $this->password_field = 'password';

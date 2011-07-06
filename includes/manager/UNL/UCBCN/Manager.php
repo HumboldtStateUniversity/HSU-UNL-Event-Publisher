@@ -254,7 +254,8 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
      */
     function showLoginForm()
     {
-        return new UNL_UCBCN_Manager_Login();
+	
+        return new UNL_UCBCN_Manager_Login($this);
         
     }
     

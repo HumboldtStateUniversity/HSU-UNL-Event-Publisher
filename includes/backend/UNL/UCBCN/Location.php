@@ -84,6 +84,9 @@ class UNL_UCBCN_Location extends DB_DataObject
 		foreach ($this->fb_hiddenFields as $el) {
             $this->fb_preDefElements[$el] = HTML_QuickForm::createElement('hidden', $fb->elementNamePrefix.$el.$fb->elementNamePostfix);
         }
+
+		$fb_fieldLabels['streetaddress1'] = "asdf";
+
 	}
 
     function table()

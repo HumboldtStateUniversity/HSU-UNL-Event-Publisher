@@ -57,7 +57,7 @@ class UNL_UCBCN_Manager_Login
      */
     function __construct(UNL_UCBCN_Manager &$manager)
     {
-	$this->status         = $manager->a->status;
+	$this->status         = $manager->a->getStatus();
         $this->post_url       = $_SERVER['SCRIPT_FILENAME'];
         $this->user_field     = 'username';
         $this->password_field = 'password';

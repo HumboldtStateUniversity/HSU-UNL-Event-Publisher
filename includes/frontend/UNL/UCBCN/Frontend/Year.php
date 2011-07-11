@@ -62,6 +62,29 @@ class UNL_UCBCN_Frontend_Year extends UNL_UCBCN
     {
         $this->year     = $y;
         $this->calendar = $calendar;
+        $prev           = UNL_UCBCN_Frontend::formatURL(array(
+                                                'y'       => $y-1,
+                                                'calendar'=> $this->calendar->id));
+        $next           = UNL_UCBCN_Frontend::formatURL(array(
+                                                'y'       => $y+1,
+                                                'calendar'=> $this->calendar->id));
+
+        $this->caption='
+            <span><a href="'.$prev.'" id="prev_year" title="View events for '.
+                $prev . 
+                '">&lt;&lt; </a>
+            </span>
+            <span class="yearvalue"><a href="'.
+                UNL_UCBCN_Frontend::formatURL(array('y'       => $y,
+                                                      'calendar'=> $this->calendar->id)).
+                                                      '">'.$y.
+                                                      '</a>
+            </span>
+            <span><a href="'.$next.'" id="next_year" title="View events for '.
+                $next.
+                '"> &gt;&gt;</a>
+            </span>
+        ';
         $m              = 1;
         for ($m=1;$m<=12;$m++) {
             $this->monthwidgets[] = new UNL_UCBCN_Frontend_MonthWidget($this->year, $m, $this->calendar);

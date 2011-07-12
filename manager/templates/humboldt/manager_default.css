@@ -812,4 +812,4 @@ h3 span.title{
 /** validation **/
 
 label.error {color: #c00; vertical-align: top; font-weight:bold; display:block; padding-top:3px;}
-body#login #contentSearch p.error {color: #c00; margin:0; font-weight:bold;}
+body#login #contentSearch p.error {color: #c00; margin:-5px 0 -10px 0; font-weight:bold;}

@@ -811,5 +811,5 @@ h3 span.title{
 
 /** validation **/
 
-label.error {color: red; padding-left: .5em; vertical-align: top; }
-p.error {color: red;}
+label.error {color: #c00; vertical-align: top; font-weight:bold; display:block; border-bottom:1px dotted #c00;}
+p.error {color: #c00; margin:0; font-weight:bold; border-bottom:1px dotted #c00;}

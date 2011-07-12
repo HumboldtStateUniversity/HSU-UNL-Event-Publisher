@@ -53,6 +53,9 @@ background:url(images/wapp_nav_bottom.gif) no-repeat left bottom;
 *+html #contentSearch form fieldset label {
 	margin: 15px 0 0 0;
 }
+*+html #contentSearch form fieldset label.error {
+	margin: 0;
+}
 
 *+html body#normal div#contentSearch ul.eventsbystatus {
 	margin: -27px 0 10px 0;;

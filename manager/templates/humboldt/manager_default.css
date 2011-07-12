@@ -805,3 +805,11 @@ h3 span.title{
 	padding:5px 0;
 	margin-left:25px;
 }
+
+
+
+
+/** validation **/
+
+label.error {color: red; padding-left: .5em; vertical-align: top; }
+p.error {color: red;}

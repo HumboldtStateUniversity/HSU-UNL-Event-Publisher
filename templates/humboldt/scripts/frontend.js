@@ -21,7 +21,6 @@ var glob_handler = {
   //if it is event day and instance view
   else{
  	 if(getElementsByClassName(document, "div", "year_cal").length == 0 && getElementsByClassName(document, "ul", "search").length == 0){
- 	 	ajaxsearch();
  	 	shortenText();
  		dropdown();
  	 }

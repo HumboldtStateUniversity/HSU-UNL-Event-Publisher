@@ -254,7 +254,8 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
      */
     function showLoginForm()
     {
-        return new UNL_UCBCN_Manager_Login();
+	
+        return new UNL_UCBCN_Manager_Login($this);
         
     }
     
@@ -299,7 +300,7 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
      */
     function run($action='')
     {
-        $this->doctitle = 'UNL Event Publishing System';
+        $this->doctitle = 'HSU Event Publisher';
         if (isset($this->user)) {
             // User is authenticated, and an account has been chosen.
             $this->calendarselect[] = $this->showChooseCalendar();

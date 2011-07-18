@@ -64,6 +64,29 @@ class UNL_UCBCN_Location extends DB_DataObject
                                          'mapurl'               => 'Map URL',
                                          'webpageurl'           => 'Web Page',
                                          'standard'             => 'Make this location always available');
+	public $fb_hiddenFields 	 = array('room',
+                                    	 'directions',
+										 'additionalpublicinfo',
+										 'type',
+										 'hours',
+										 'webpageurl',
+										 'phone');
+
+	/**
+     * Called before the form is generated.
+     *
+     * @param DB_DataObject_FormBuilder &$fb The FormBuilder
+     *
+     * @return void
+     */
+    public function preGenerateForm(&$fb)
+    {
+	foreach ($this->fb_hiddenFields as $el) {
+            $this->fb_preDefElements[$el] = HTML_QuickForm::createElement('hidden', $fb->elementNamePrefix.$el.$fb->elementNamePostfix);
+        }
+
+    }
+
     function table()
     {
         return array(

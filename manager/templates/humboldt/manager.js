@@ -366,30 +366,6 @@ function updateRow() {
 
 }
 
-function requiredField() {
-    var fieldset = document.getElementsByTagName('fieldset');
-    var lastrequired = getElementsByClassName(document, "span", "required");
-    try {
-        //alert(lastrequired.length);
-        lastrequired[lastrequired.length - 1].id = 'lastfieldset';
-
-        for (var i = 0; i < fieldset.length; i++) {
-            //var divrequired = getElementsByClassName(fieldset[i], "div", "reqnote");
-            var spanrequired = getElementsByClassName(fieldset[i], "span", "required");
-            if (spanrequired.length < 2) {
-                //if (spanrequired.length > 0 && spanrequired[0].parentNode.nextSibling.childNodes.length > 0) {
-                //    spanrequired[0].parentNode.nextSibling.childNodes[0].style.background = '#f8e6e9';
-                //}
-            } else {
-                for (var c = 0, p = spanrequired.length; c < p; c++) {
-                    //if (spanrequired.length > 0 && spanrequired[c].parentNode.nextSibling.childNodes.length > 0) {
-                    //    spanrequired[c].parentNode.nextSibling.childNodes[0].style.background = '#f8e6e9';
-                    //}
-                }
-            }
-        }
-    } catch(e) {}
-}
 
 /*safari fixes*/
 function showIsAppleWebKit() {

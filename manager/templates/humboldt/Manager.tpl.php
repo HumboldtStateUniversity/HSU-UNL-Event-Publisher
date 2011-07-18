@@ -16,6 +16,8 @@ header('Content-Type:text/html; charset=UTF-8');
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
         <script type="text/javascript" src="templates/humboldt/dialog/dialog_box.js"></script>
+				<script type="text/javascript" src="templates/humboldt/jquery.validate.min.js"></script>
+				<script type="text/javascript" src="templates/humboldt/validate.js"></script>
 
     </head>
     <body class="col4-0" <?php echo $this->uniquebody; ?>>

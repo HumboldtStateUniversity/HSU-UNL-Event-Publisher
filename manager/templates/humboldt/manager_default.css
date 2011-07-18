@@ -379,15 +379,15 @@ margin:0;
 
 /* required & errors */
 form span.error {
-color:red;
+color:#c00;
 }
 
 form div.error {
-border:1px solid red;
+border:1px solid #c00;
 padding:5px;
 }
 .required {
-color:red;
+color:#c00;
 }
 fieldset li.reqnote label {
 display:none;
@@ -805,3 +805,11 @@ h3 span.title{
 	padding:5px 0;
 	margin-left:25px;
 }
+
+
+
+
+/** validation **/
+
+label.error {color: #c00; vertical-align: top; font-weight:bold; display:block; padding-top:3px;}
+body#login #contentSearch p.error {color: #c00; margin:-5px 0 -10px 0; font-weight:bold;}

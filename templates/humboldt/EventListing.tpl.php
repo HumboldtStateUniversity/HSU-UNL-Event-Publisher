@@ -1,11 +1,11 @@
 <?php if ($this->type == 'ongoing') {
     echo '<h4 class="'.$this->type.'">Ongoing Events:</h4>';
 } ?>
-<table class='<?php echo $this->type; ?>'>
+<table class='<?php echo $this->type; ?>' id="eventlist">
 <thead>
 <tr>
-<th scope="col" class="date">Time</th>
-<th scope="col" class="title">Event Title</th>
+<th scope="col" class="date visuallyhidden">Time</th>
+<th scope="col" class="title visuallyhidden">Event Title</th>
 </tr>
 </thead>
 <tbody class="vcalendar">

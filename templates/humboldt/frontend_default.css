@@ -152,7 +152,7 @@ body {
 	display: block;
 }
 #banner {
-	background: #f5f5f5 url(images/handmadepaper.png) repeat left; top;
+	background: #f5f5f5 url(images/handmadepaper.png) repeat left top;
 	margin-top: -5px;
 	padding: 25px 0;
 }
@@ -249,7 +249,6 @@ table thead th{
 }
 .day_cal table thead th, .event_cal table thead th{
 	text-align:left;
-	text-indent
 }
 table thead th.date a, table thead th.title a{
 	color:#FFFFFF;
@@ -970,7 +969,7 @@ select {
 
 /*non-semantic helper classes
 --------------------------------------------*/
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }

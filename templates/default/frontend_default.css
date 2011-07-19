@@ -229,7 +229,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;}
 	float:left;
 	display:block;
 	min-height:12.3em;
-	_height:12.3em;
+/*	_height:12.3em; ie hack for height*/
 	}
 #maincontent .month_cal table.wp-calendar td a{background:#ddd;padding:0 4px;float:left;color:#900!important;margin:-5px 0 0 -6px}	
 #maincontent .month_cal table.wp-calendar td a:active{color:#333;}

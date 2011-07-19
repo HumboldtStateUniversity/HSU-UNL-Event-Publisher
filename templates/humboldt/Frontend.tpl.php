@@ -27,7 +27,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/frontend.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/jquery.tools.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="templates/humboldt/scripts/easyselectbox.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo $this->uri; ?>templates/humboldt/scripts/easyselectbox.min.js"></script>
 
 <script>
 // execute your scripts when the DOM is ready. this is mostly a good habit
@@ -65,7 +65,7 @@ if (isset($this->output[0], $this->output[0]->event)
 
 	<div id="maincontent">
 		<div id="load"></div>
-		<div id="banner">
+		<div id="banner" class="clearfix">
 			<div id="banner-wrap">
 				<h1 id="calname"><a href="<?php echo $this->uri; ?>"><?php echo $this->calendar->name; ?></a></h1>
 <!--search form-->

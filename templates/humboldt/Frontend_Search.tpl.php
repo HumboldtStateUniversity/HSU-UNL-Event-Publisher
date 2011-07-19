@@ -1,3 +1,6 @@
+<div id="content-wrap">
+<div id="content-top"></div>
+<div class="column-wrap">
 <div class="day_cal">
 <?php
 if (is_a($this->output,'UNL_UCBCN_EventListing')) {

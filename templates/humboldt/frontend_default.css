@@ -329,10 +329,12 @@ table.wp-calendar td, table.wp-calendar th{
 	text-align:center;
 	padding:4px;
 }
-#monthwidget table.wp-calendar td{
+table.wp-calendar td{
 	border:1px solid #eee;
 	color: #212121;
 	background-color: #fff;
+}
+#monthwidget table.wp-calendar td {
 	opacity: .5;
 }
 table.wp-calendar td.selected a {

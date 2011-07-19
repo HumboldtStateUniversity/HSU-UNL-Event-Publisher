@@ -686,7 +686,8 @@ p#feeds a#rssformat{background:url(images/icon-rss.png) no-repeat;margin-left:5p
 p#feeds a#googlecal{background:url(images/google.png) no-repeat;margin-left:5px;width:25px;height:25px;}
 p#feeds a#twittershare{background:url(images/twitter.png) no-repeat;margin-left:5px;width:25px;height:25px;}
 #facebook_wrap {
-	margin: 12px !important; /*facebook connect*/
+	margin-top: 12px; /*facebook connect*/
+	float: left;
 }
 
 /* recently updated calendars */

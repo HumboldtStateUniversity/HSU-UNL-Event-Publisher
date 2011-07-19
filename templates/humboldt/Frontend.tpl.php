@@ -116,8 +116,9 @@ if (isset($this->output[0], $this->output[0]->event)
                         </form>
                         <?php endif; ?>
                        </div><!--/eventtypes-->
+                   </div><!--/view_nav-->
      <?php if (isset($this->right)) { ?>
-                 </div><!--/view_nav-->
+                 
       <div class="col left">
   
 		<div id="monthwidget" class="minical">

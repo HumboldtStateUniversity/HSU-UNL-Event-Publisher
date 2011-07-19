@@ -67,7 +67,7 @@ if (isset($this->output[0], $this->output[0]->event)
 		<div id="load"></div>
 		<div id="banner">
 			<div id="banner-wrap">
-				<h1><a href="<?php echo $this->uri; ?>"><?php echo $this->calendar->name; ?></a></h1>
+				<h1 id="calname"><a href="<?php echo $this->uri; ?>"><?php echo $this->calendar->name; ?></a></h1>
 <!--search form-->
 		<div id="main_search">
 	      <form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
@@ -91,7 +91,6 @@ if (isset($this->output[0], $this->output[0]->event)
 	        ?>
 		</div><!-- /banner-wrap -->
 		</div><!-- /banner -->
-		</div>
           <?php if (isset($this->right)) { ?>
           <div id="content-wrap">
           <div id="content-top"></div>

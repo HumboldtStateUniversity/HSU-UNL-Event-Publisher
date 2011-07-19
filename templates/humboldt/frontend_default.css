@@ -629,7 +629,7 @@ ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#t
 }
 div#main_search {
 	float:right;
-	margin: 18px 9px 0 0;
+	margin: 18px 0 0;
 }
 form#event_search input#searchinput{
 	background:#fff; 
@@ -830,7 +830,7 @@ a.event_submit:hover {
 	background-position: 0 -32px;
 }
 a.top {
-	margin: 18px 0 0 127px;
+	margin: 18px 0 0 131px;
 	
 }
 /* typography

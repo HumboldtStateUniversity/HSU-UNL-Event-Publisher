@@ -532,12 +532,14 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 }
 #view_nav {
 	margin:18px 0 0 320px;
+	position: relative;
+	z-index: 20;
 }
 /* month view */
 .month_cal {margin-top:70px;position:relative;}
 .month_cal table.wp-calendar{margin:0 0 20px 0;}
 .month_cal table.wp-calendar td{
-	width:99px;
+	width:119px;
 	text-align:left;
 	background:#f3f3f3;
 	vertical-align:top;
@@ -568,22 +570,15 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 #maincontent .month_cal table.wp-calendar td a.more_event:hover{background:none}
 #maincontent .month_cal table.wp-calendar td ul.none li.close_eventbox{display:none;}
 .month_cal table.wp-calendar td:hover{background:#f7f7cb;}
-.month_cal table.wp-calendar th{font-size:1.15em;text-align:center;width:101px;display:block;float:left;margin-bottom:1px;}
+.month_cal table.wp-calendar th{font-size:1.15em;text-align:center;width:121px;display:block;float:left;margin-bottom:1px;}
 .month_cal table.wp-calendar tr{float:right;font-size:0.8em;}
 #maincontent .month_cal ul{padding:0 15px;}
-.month_cal table.wp-calendar caption{margin:-38px 0 0 0}
-
-#maincontent #header {
-	background-color: #255249;
-	margin: -1px 0 0 -10px;
-	overflow: auto;
-	padding: 25px 0 10px 10px;
-	width: 908px;	
+.month_cal table.wp-calendar caption, .year_cal caption{
+	margin:-132px 0 0 0;
+	font-size: 18px;
+	padding: 0 0 20px;
 	position: relative;
-	z-index: 1000;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	z-index: 0;
 }
 
 ul#frontend_view_selector {
@@ -625,8 +620,11 @@ ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#t
 .year_cal table tr:hover{
 	background:none;
 }
-h1.year_main{	padding: 0 0 10px 30px!important; margin:40px 0 10px;
-                 background: url(images/date1.gif) no-repeat 0 0;}
+h1.year_main, h1.month_main{	
+	float: left;
+	font-size: 20px;
+	margin: -60px 0 10px;
+	padding: 0 0 10px 30px !important;
 
 /*search view*/
 #maincontent form {

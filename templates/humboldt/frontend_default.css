@@ -432,10 +432,10 @@ table.ongoing{margin:5px 0 0 0;}
 /*caption nav*/
 table.wp-calendar caption, table caption{position:relative;top:0;left:0;margin:0 0 0 0;overflow:auto;}
 table.wp-calendar caption span, table caption span{display:block;height:31px;/*background:url(images/monthviewnav_mid.gif) repeat-x 0 0;*/float:left;}
-table.wp-calendar caption span.monthvalue, table.wp-calendar caption span.yearvalue{
+table.wp-calendar caption span.monthvalue, table caption span.yearvalue{
 margin-top:0;padding:8px 3px 0;}
-#maincontent table.wp-calendar caption a{margin-bottom:5px;color:#333;font-weight:bold;}
-#maincontent table.wp-calendar caption a:hover{color:#6a9231 !important;}/*here*/
+#maincontent table.wp-calendar caption a,#maincontent table caption a{margin-bottom:5px;color:#333;font-weight:bold;}
+#maincontent table.wp-calendar caption a:hover,#maincontent table caption a:hover{color:#6a9231 !important;}/*here*/
 table.wp-calendar caption a#prev_month, table caption a#prev_year, table.wp-calendar caption a#next_month, table caption a#next_year{text-indent:-9999em;
 	display:block;background:url(images/monthviewnav_prev.png) no-repeat; width:21px; height:21px;margin-top:6px}
 table.wp-calendar caption a#next_month, table caption a#next_year{background:url(images/monthviewnav_next.png) no-repeat;}
@@ -613,7 +613,7 @@ ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#t
 .year_cal table.wp-calendar{margin:0 0 15px 0;}
 
 .year_cal table.wp-calendar caption span{padding:0;margin:0;height:auto;background:none;float:none;display:inline;}
-.year_cal table.wp-calendar caption span.monthvalue{margin:0;padding:0 5px 0 15px;background:url(images/year_box.gif) no-repeat 0 1px;}
+.year_cal table.wp-calendar caption span.monthvalue{margin:0;padding:0 5px 0 15px;background:none;}
 .year_cal table.wp-calendar caption {text-align:left;padding:0 0 2px 0;position:relative;margin:0;}
 .year_cal table.wp-calendar caption a#prev_month, .year_cal table.wp-calendar caption a#next_month{display:none}
 #maincontent .year_cal table.wp-calendar caption a{color:#333;}

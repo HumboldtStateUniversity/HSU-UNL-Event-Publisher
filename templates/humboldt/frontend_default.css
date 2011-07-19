@@ -683,9 +683,11 @@ input[type="submit"] {
 p#feeds a{float:left;display:block;text-indent:-9999px;height:20px;}
 p#feeds a#icsformat{background:url(images/icon-cal.png) no-repeat;width:25px;height:25px;}
 p#feeds a#rssformat{background:url(images/icon-rss.png) no-repeat;margin-left:5px;width:25px;height:25px;}
-p#feeds a#googlecal{background:url(images/google.gif) no-repeat;margin-left:5px;width:20px;}
-p#feeds a#twittershare{background:url(images/twitter.gif) no-repeat;margin-left:5px;width:20px;}
-
+p#feeds a#googlecal{background:url(images/google.png) no-repeat;margin-left:5px;width:25px;}
+p#feeds a#twittershare{background:url(images/twitter.png) no-repeat;margin-left:5px;width:25px;}
+.connect_widget {
+	margin: 12px; /*facebook connect*/
+}
 
 /* recently updated calendars */
 div.cal_widget{

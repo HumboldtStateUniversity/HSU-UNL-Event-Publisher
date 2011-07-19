@@ -575,10 +575,13 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 #maincontent .month_cal ul{padding:0 15px;}
 .month_cal table.wp-calendar caption, .year_cal caption#year_cal_name{
 	margin:-132px 0 0 0;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 0 0 20px;
 	position: relative;
 	z-index: 0;
+}
+.year_cal caption#year_cal_name{
+	margin: -65px 0 0 0;
 }
 
 ul#frontend_view_selector {

@@ -329,7 +329,7 @@ table.wp-calendar td, table.wp-calendar th{
 	text-align:center;
 	padding:4px;
 }
-table.wp-calendar td{
+#monthwidget table.wp-calendar td{
 	border:1px solid #eee;
 	color: #212121;
 	background-color: #fff;

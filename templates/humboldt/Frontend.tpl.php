@@ -94,7 +94,9 @@ if (isset($this->output[0], $this->output[0]->event)
           <div id="content-wrap">
           <div id="content-top"></div>
           <div class="column-wrap">
-          <!-- event navigation  -->			
+	          <div id="view_nav">
+          
+		          <!-- event navigation  -->			
           			<ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    
           			    <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today</a></li>
           			    <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
@@ -115,8 +117,8 @@ if (isset($this->output[0], $this->output[0]->event)
                         <?php endif; ?>
                        </div><!--/eventtypes-->
      <?php if (isset($this->right)) { ?>
-                       
-              <div class="col left">
+                 </div><!--/view_nav-->
+      <div class="col left">
   
 		<div id="monthwidget" class="minical">
 			<?php UNL_UCBCN::displayRegion($this->right); ?>

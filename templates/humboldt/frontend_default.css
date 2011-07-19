@@ -310,7 +310,6 @@ table td.empty{color:#ddd;}
 #maincontent .right {
 	float: right;
 	width: 590px;
-	margin:40px 0 0 0;
 }
 
 .day_cal h1 {
@@ -524,13 +523,16 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 
 /* day view*/
 .col{
-	margin:20px 0 30px 0px;
+	margin:-65px 0 30px;
 /*	padding-right: 20px;*/
 	width:290px;
 	float:left;
+	clear: both;
 	background: transparent url(images/side-shadow.png) no-repeat right top;
 }
-
+#view_nav {
+	margin:18px 0 0 320px;
+}
 /* month view */
 .month_cal {margin-top:70px;position:relative;}
 .month_cal table.wp-calendar{margin:0 0 20px 0;}

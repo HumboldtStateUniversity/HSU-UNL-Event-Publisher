@@ -92,7 +92,7 @@ class UNL_UCBCN_Frontend_Month extends UNL_UCBCN
         <span class="monthvalue" id="'.
               Calendar_Util_Textual::thisMonthName($Month).'"><a href="'.
               UNL_UCBCN_Frontend::formatURL(array('y'       => $Month->thisYear(),
-                                                  'm'       => $Month->thisMonth(),
+                                                  'M'       => $Month->thisMonth(),
                                                   'calendar'=> $this->calendar->id)).
                                                   '">'.
               Calendar_Util_Textual::thisMonthName($Month).'</a></span>

@@ -515,7 +515,7 @@ function onSumResponse(text, headers, callingContext) {
   }
   else if(getElementsByClassName(document, "div", "event_cal").length > 0){
   	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertAfter('< Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
+    	 CBInsertBefore('Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
   	 }
   	 else{
   	 	save = '';

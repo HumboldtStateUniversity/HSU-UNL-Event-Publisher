@@ -1,3 +1,6 @@
+<div id="content-wrap">
+<div id="content-top"></div>
+<div class="column-wrap">
 <h1 class="year_main"><?php echo $this->year; ?></h1>
 <div class="year_cal">
 <table>

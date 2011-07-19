@@ -1,6 +1,6 @@
 <div class="year_cal">
 <table>
-    <caption><?php echo $this->caption; ?></caption>
+    <caption>Events for <?php echo $this->caption; ?></caption>
 <tr>
 <td>
 <?php UNL_UCBCN::displayRegion($this->monthwidgets[0]); ?>

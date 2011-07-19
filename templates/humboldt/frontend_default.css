@@ -620,11 +620,6 @@ ul#frontend_view_selector.month li#monthview, ul#frontend_view_selector.day li#t
 .year_cal table tr:hover{
 	background:none;
 }
-h1.year_main, h1.month_main{	
-	float: left;
-	font-size: 20px;
-	margin: -60px 0 10px;
-	padding: 0 0 10px 30px !important;
 
 /*search view*/
 #maincontent form {

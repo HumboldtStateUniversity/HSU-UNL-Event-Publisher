@@ -1,6 +1,6 @@
 <div class="month_cal" id="month_viewcal">
 <table class="wp-calendar">
-	<caption><?php echo $this->caption; ?></caption>
+	<caption>Events for <?php echo $this->caption; ?></caption>
    <thead>
 	<tr>
 		<th abbr="Sunday" scope="col" title="Sunday">Sun</th>

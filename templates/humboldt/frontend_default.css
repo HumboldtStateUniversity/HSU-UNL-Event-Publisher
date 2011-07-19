@@ -267,7 +267,7 @@ table td.title{width:75%;}
 	float:left;
 	font-size:18px;
 	font-weight: 500;
-	padding: 12px 0 12px 25px;
+	padding: 9px 0 9px 25px;
 	width: 250px;
 	background: url(images/flag.png) no-repeat 0 0;
 }
@@ -544,13 +544,14 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 	text-align:left;
 	background:#f3f3f3;
 	vertical-align:top;
+	background: #f3f3f3 url(images/handmadepaper.png) repeat left top;
 	float:left;
 	display:block;
 	min-height:12.3em;
 	_height:12.3em;
 	}
-#maincontent .month_cal table.wp-calendar td a{background:#ddd;padding:0 4px;float:left;color:#0e584a!important;margin:-5px 0 0 -6px}	
-#maincontent .month_cal table.wp-calendar td a:active{color:#333;}
+#maincontent .month_cal table.wp-calendar td a{background:#fff;padding:0 4px;float:left;color:#567f1c!important;margin:-5px 0 0 -5px; border-right:solid 1px #999;border-bottom:solid 1px #999;}	
+#maincontent .month_cal table.wp-calendar td a:active{color:#567f1c;}
 #maincontent .month_cal table.wp-calendar td span.monthvalue_ID{display:none}
 #maincontent .month_cal table.wp-calendar td ul{position:relative;list-style:none;clear:both;padding:4px 0 0 0;margin:0;}
 #maincontent .month_cal table.wp-calendar td ul.ul_box{width:200px;z-index:1000;position:absolute;margin:0;background:#fff;border:1px solid #7DB0E2;border-color:#E0E0E0 #999 #999 #E0E0E0;padding:4px;}
@@ -561,7 +562,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 #maincontent .month_cal table.wp-calendar td ul a{background:none;border:none;padding:0;margin:0;float:none;}
 #maincontent .month_cal table.wp-calendar td ul a:hover{background:none;border:none;}
 .month_cal table.wp-calendar td.empty{background:#fff;}
-#maincontent .month_cal table.wp-calendar td ul li.dateUL{padding:1px 3px;background:#999;color:#252525;}
+#maincontent .month_cal table.wp-calendar td ul li.dateUL{padding:1px 3px;background:#7FAF38;color:#252525;}
 #maincontent .month_cal table.wp-calendar td ul.ul_box li.dateUL:hover{background:#E0E0E0;}
 #maincontent .month_cal table.wp-calendar td ul li.dateUL a{color:#fff!important;}
 #maincontent .month_cal table.wp-calendar td ul li{overflow:hidden;height:1.8em;padding:0;border-bottom:1px solid #ddd;background:#fff;margin:2px 0 0 0;}

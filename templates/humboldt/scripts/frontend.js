@@ -837,7 +837,7 @@ function showDate(ulList, liList, m, y){
 function adjustPos(ulL, tD){
 	var pos = findPos(ulL.parentNode.parentNode.parentNode.parentNode);
 	var ulpos = findPos(ulL);
-	var footpos = findPos(document.getElementById('footer'));
+	var footpos = findPos(document.getElementById('site-meta'));
 	var tdHeight = tD.clientHeight;
 	var version=0;
 	var widthOffset;

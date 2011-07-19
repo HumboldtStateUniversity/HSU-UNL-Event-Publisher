@@ -91,10 +91,31 @@ if (isset($this->output[0], $this->output[0]->event)
 	        ?>
 		</div><!-- /banner-wrap -->
 		</div><!-- /banner -->
-          <?php if (isset($this->right)) { ?>
           <div id="content-wrap">
           <div id="content-top"></div>
           <div class="column-wrap">
+          <!-- event navigation  -->			
+          			<ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    
+          			    <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today</a></li>
+          			    <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
+          			    <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),'m'=>date('m'),'calendar'=>$this->calendar->id)); ?>">Month</a></li>
+          			    <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),                                                                                   'calendar'=>$this->calendar->id)); ?>">Year</a></li>
+          			</ul>			
+          			<!--Event type select-->
+          			<div id="eventtypes">
+                        <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
+          	  <form action="<?php echo UNL_UCBCN_Frontend::formatURL(array('search'=>'search')) ?>" method="get">
+                            <select name="e" id="e"> 
+                            <?php while ($eventlist->fetch()): ?>
+                                <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
+                            <?php endwhile; ?>
+          
+                            </select><input type="submit" value="Go" id="event_type_go">
+                        </form>
+                        <?php endif; ?>
+                       </div><!--/eventtypes-->
+     <?php if (isset($this->right)) { ?>
+                       
               <div class="col left">
   
 		<div id="monthwidget" class="minical">
@@ -124,26 +145,7 @@ if (isset($this->output[0], $this->output[0]->event)
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->
       <div id="updatecontent" class="three_col right">
-			<!-- event navigation  -->			
-			<ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    
-			    <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today</a></li>
-			    <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
-			    <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),'m'=>date('m'),'calendar'=>$this->calendar->id)); ?>">Month</a></li>
-			    <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),                                                                                   'calendar'=>$this->calendar->id)); ?>">Year</a></li>
-			</ul>			
-			<!--Event type select-->
-			<div id="eventtypes">
-              <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
-	  <form action="<?php echo UNL_UCBCN_Frontend::formatURL(array('search'=>'search')) ?>" method="get">
-                  <select name="e" id="e"> 
-                  <?php while ($eventlist->fetch()): ?>
-                      <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
-                  <?php endwhile; ?>
-
-                  </select><input type="submit" value="Go" id="event_type_go">
-              </form>
-              <?php endif; ?>
-             </div><!--/eventtypes-->
+			
                 <?php UNL_UCBCN::displayRegion($this->output); ?>
               </div>
               

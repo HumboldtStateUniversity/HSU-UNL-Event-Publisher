@@ -94,7 +94,7 @@ if (isset($this->output[0], $this->output[0]->event)
           <div id="content-wrap">
           <div id="content-top"></div>
           <div class="column-wrap">
-	          <div id="view_nav">
+	          <div id="view_nav" class="clearfix">
           
 		          <!-- event navigation  -->			
           			<ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    

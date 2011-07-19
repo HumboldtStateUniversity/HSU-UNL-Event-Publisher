@@ -342,11 +342,11 @@ table.wp-calendar td.selected a {
 	color: #212121;
 /*	opacity: 1;*/
 }
-table.wp-calendar td.selected{
+#monthwidget table.wp-calendar td.selected{
 	opacity: 1;
 	background-color:#fff;
 }
-table.wp-calendar td#onselect{
+#monthwidget table.wp-calendar td#onselect{
 	background-color:#99ce4a;
 	color: #ccc;
 }

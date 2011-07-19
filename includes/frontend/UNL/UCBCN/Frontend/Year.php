@@ -70,16 +70,17 @@ class UNL_UCBCN_Frontend_Year extends UNL_UCBCN
                                                 'calendar'=> $this->calendar->id));
 
         $this->caption='
-            <span><a href="'.$prev.'" id="prev_year" title="View events for '.
-                $prev . 
-                '">&lt;&lt; </a>
-            </span>
             <span class="yearvalue"><a href="'.
                 UNL_UCBCN_Frontend::formatURL(array('y'       => $y,
                                                       'calendar'=> $this->calendar->id)).
                                                       '">'.$y.
                                                       '</a>
             </span>
+            <span><a href="'.$prev.'" id="prev_year" title="View events for '.
+                $prev . 
+                '">&lt;&lt; </a>
+            </span>
+            
             <span><a href="'.$next.'" id="next_year" title="View events for '.
                 $next.
                 '"> &gt;&gt;</a>

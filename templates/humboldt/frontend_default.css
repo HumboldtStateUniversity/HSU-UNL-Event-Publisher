@@ -435,11 +435,11 @@ table.wp-calendar caption span{display:block;height:31px;/*background:url(images
 table.wp-calendar caption span.monthvalue, table.wp-calendar caption span.yearvalue{
 margin-top:0;padding:8px 3px 0;}
 #maincontent table.wp-calendar caption a{margin-bottom:5px;color:#333;font-weight:bold;}
-#maincontent table.wp-calendar caption a:hover{color:#0e584a !important;}
-table.wp-calendar caption a#prev_month, table.wp-calendar caption a#next_month{text-indent:-9999em;
+#maincontent table.wp-calendar caption a:hover{color:#6a9231 !important;}/*here*/
+table.wp-calendar caption a#prev_month, table.wp-calendar caption a#prev_year, table.wp-calendar caption a#next_month, table.wp-calendar caption a#next_year{text-indent:-9999em;
 	display:block;background:url(images/monthviewnav_prev.png) no-repeat; width:21px; height:21px;margin-top:6px}
-table.wp-calendar caption a#next_month{background:url(images/monthviewnav_next.png) no-repeat;}
-table.wp-calendar caption a#prev_month:hover, table.wp-calendar caption a#next_month:hover{
+table.wp-calendar caption a#next_month, table.wp-calendar caption a#next_year{background:url(images/monthviewnav_next.png) no-repeat;}
+table.wp-calendar caption a#prev_month:hover, table.wp-calendar caption a#prev_year:hover, table.wp-calendar caption a#next_month:hover, table.wp-calendar caption a#next_year:hover{
 background-position:0 -21px;
 }
 table blockquote {

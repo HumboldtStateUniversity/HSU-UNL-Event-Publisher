@@ -123,15 +123,14 @@ if (isset($this->output[0], $this->output[0]->event)
      	</div><!--/othercals-->
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->
-       <!-- event navigation  -->			
-       <ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    
-           <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today</a></li>
-           <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
-           <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),'m'=>date('m'),'calendar'=>$this->calendar->id)); ?>">Month</a></li>
-           <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),                                                                                   'calendar'=>$this->calendar->id)); ?>">Year</a></li>
-       </ul>
       <div id="updatecontent" class="three_col right">
-						
+			<!-- event navigation  -->			
+			<ul id="frontend_view_selector" class="<?php echo $this->view; ?>">    
+			    <li id="todayview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id)); ?>">Today</a></li>
+			    <li id="upcomingview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'upcoming'=>'upcoming')); ?>">Upcoming</a></li>
+			    <li id="monthview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),'m'=>date('m'),'calendar'=>$this->calendar->id)); ?>">Month</a></li>
+			    <li id="yearview"><a href="<?php echo UNL_UCBCN_Frontend::formatURL(array('y'=>date('Y'),                                                                                   'calendar'=>$this->calendar->id)); ?>">Year</a></li>
+			</ul>			
 			<!--Event type select-->
 			<div id="eventtypes">
               <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>

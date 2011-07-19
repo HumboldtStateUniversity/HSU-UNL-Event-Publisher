@@ -573,7 +573,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 .month_cal table.wp-calendar th{font-size:1.15em;text-align:center;width:121px;display:block;float:left;margin-bottom:1px;}
 .month_cal table.wp-calendar tr{float:right;font-size:0.8em;}
 #maincontent .month_cal ul{padding:0 15px;}
-.month_cal table.wp-calendar caption, .year_cal caption.year_cal_name{
+.month_cal table.wp-calendar caption, .year_cal caption#year_cal_name{
 	margin:-132px 0 0 0;
 	font-size: 18px;
 	padding: 0 0 20px;

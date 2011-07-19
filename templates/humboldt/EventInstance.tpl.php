@@ -94,11 +94,12 @@ $endu = strtotime($this->eventdatetime->endtime);
 				} ?>
 	</div>
 		
-
+	<div id="facebook_wrap">
 		<?php
 			UNL_UCBCN::displayRegion($this->facebookRSVP);
 			echo $this->facebook->like($this->url,$this->calendar->id);
 		?>
+		</div>
 		<p id="feeds">
 			<a id="icsformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')); ?>" title="Get event in ical format">
 				ics format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>

@@ -685,7 +685,7 @@ p#feeds a#icsformat{background:url(images/icon-cal.png) no-repeat;width:25px;hei
 p#feeds a#rssformat{background:url(images/icon-rss.png) no-repeat;margin-left:5px;width:25px;height:25px;}
 p#feeds a#googlecal{background:url(images/google.png) no-repeat;margin-left:5px;width:25px;height:25px;}
 p#feeds a#twittershare{background:url(images/twitter.png) no-repeat;margin-left:5px;width:25px;height:25px;}
-.connect_widget {
+#facebook_wrap {
 	margin: 12px !important; /*facebook connect*/
 }
 

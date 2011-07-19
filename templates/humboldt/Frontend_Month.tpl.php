@@ -1,6 +1,6 @@
-<div id="content-wrap">
+<!--<div id="content-wrap">
 <div id="content-top"></div>
-<div class="column-wrap">
+<div class="column-wrap">-->
 <div class="month_cal" id="month_viewcal">
 <table class="wp-calendar">
 	<caption><?php echo $this->caption; ?></caption>

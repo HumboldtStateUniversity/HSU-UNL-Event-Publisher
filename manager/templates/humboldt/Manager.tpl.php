@@ -1,17 +1,17 @@
-<?php
-header('Content-Type:text/html; charset=UTF-8');
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Copyright" content="Copyright Humboldt State University 2011. All Rights Reserved.">
+	<meta name="description" content="Humboldt State University: Learning to make a difference. A State University located in coastal Northern California." />
+	<meta name="keywords" content="HSU, Humboldt, Humboldt State, Humboldt State University, Humboldt State College, California State University, Arcata, California, academics, redwoods, coast, Humboldt County, Humbolt, lumberjack" />
+	<link rel="shortcut icon" href="http://www.humboldt.edu/humboldt/favicon.ico" />
+	<link rel="apple-touch-icon" href="http://www.humboldt.edu/humboldt/apple-touch-icon.png" />
+	
         <title><?php echo $this->doctitle; ?></title>
 
 
         <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/manager_main.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" />
-				<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="templates/humboldt/hsu-ie.css" media="screen" /><![endif]-->
-				<!--[if IE 7]><link rel="stylesheet" type="text/css" href="templates/humboldt/hsu-ie7.css" media="screen" /><![endif]-->  
+        <link rel="stylesheet" type="text/css" media="screen" href="templates/humboldt/dialog/dialog_box.css" /> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
         <script type="text/javascript" src="templates/humboldt/manager.js"></script>
@@ -20,36 +20,33 @@ header('Content-Type:text/html; charset=UTF-8');
 				<script type="text/javascript" src="templates/humboldt/validate.js"></script>
 
     </head>
-    <body class="col4-0" <?php echo $this->uniquebody; ?>>
-		<div id="wrap"> 
-		<div id="container"> 
+    <body <?php echo $this->uniquebody; ?>>
+			<div id="wrap">
+					<div id="masthead"> 
+							<div id="logowrapper"><a id="logo" href="http://www.humboldt.edu/"> 
+								<span class="ir">Humboldt State University</span></a> 
+							</div> 
+						</div>
+							<div id="maincontent">
+								<div id="load"></div>
+								<div id="banner">
+									<div id="banner-wrap">
+					<h1 id="calname"><a href="<?php echo $this->frontenduri; ?>">HSU Events</a></h1>	
 
-		<p id="branding"><a href="http://www.humboldt.edu"><img src="http://www.humboldt.edu/humboldt/images/interiorwordmark.jpg" alt="Humboldt State University" /></a></p> 
-
-		<div id="content"> 
-		<div id="contentwrap"> 
-
-	
-
-
-		<div id="maincontent">
-			<div id="header">
-					<h1><a href="<?php echo $this->frontenduri; ?>">Events Calendar</a></h1>	
-			</div>
-                <!--<div id="breadCrumb">
-                    <a href="">Calendar</a>
-                    <?php
-                    if (!empty($this->calendar->website)) {
-                        echo ' / <a href="'.$this->calendar->website.'">'.$this->calendar->name.'</a>';
-                    }
-                    ?>
-                </div>-->
-                <div id="contentSearch">
-	
+					<div class="clear"></div>
 
 
+					</div><!-- /banner-wrap -->
+					</div><!-- /banner -->
 
-                    <div id="navigation">
+
+</div>
+
+<div id="content-wrap">
+<div id="content-top"></div>
+<div class="column-wrap">
+
+<div class="col left">
 	
 											<?php
 								                if (isset($this->calendar)) {
@@ -82,9 +79,6 @@ header('Content-Type:text/html; charset=UTF-8');
 						
 						
 						
-	
-                        
-                        <div id="nav_end"></div>
                         <div id="leftcollinks">
                             <?php if (isset($this->user)) { ?>
                             <div class="cal_widget">
@@ -118,8 +112,7 @@ header('Content-Type:text/html; charset=UTF-8');
                         </div>
                     </div>
 
-                    <div id="main_right" class="mainwrapper">
-                        <div id="maincontent">
+		<div class="three_col right">
 													
 	                            <?php
 	                            if (isset($this->user)) { ?>
@@ -136,47 +129,48 @@ header('Content-Type:text/html; charset=UTF-8');
 	
 	
                             <?php UNL_UCBCN::displayRegion($this->output); ?>
-                        </div>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
+													</div>
+
+														<div class="clear"></div>
+													<!--THIS IS THE END OF THE MAIN CONTENT AREA.-->
+													</div><!-- /column-wrap -->
+													</div><!-- /column-top -->
+
+													</div><!-- /content-wrap -->
 
 
+													</div><!-- /wrap -->
+													</div>
+													<div id="site-meta">
+														<div id="meta-wrap" class="clearfix">
+															<div class="article first">
+																<h1>Have Questions or comments?</h1>
+																<p><a href="http://humboldt.edu/web/feedback" title="">Drop us a line</a> and we will get back to you as soon as we can.</p>		
+															</div><!--/article-->
+															<div class="article">
+																<h1>About this Calendar</h1>
+																<p>If you ware wondering how to <a href="#" title="">submit events, get event content on to your own site or subscribe</a> to certain event feeds our guide should get you going.</p>
+															</div><!--/article-->
+															<div class="article last">
+															<div class="socialnetworks"><a href="http://www.facebook.com/humboldtstatealumni" title="facebook"><img src="http://www.humboldt.edu/humboldt/images2010/facebook.png" alt="Facebook" width="18px" height="18px"></a> <a href="http://www.flickr.com/photos/humboldtstate" title="flickr"><img src="http://www.humboldt.edu/humboldt/images2010/flickr.png" alt="Flickr" width="18px" height="18px"></a> <a href="http://www.linkedin.com/groups?home=&amp;gid=2772964&amp;trk=anet_ug_hm" title="linkedin"><img src="http://www.humboldt.edu/humboldt/images2010/linkedin.png" alt="LinkedIn"></a> <a href="http://www.twitter.com/humboldtstate/" title="twitter"><img src="http://www.humboldt.edu/humboldt/images2010/twitter.png" alt="Twitter" width="18px" height="18px"></a> <a href="http://www.youtube.com/humboldtonline" title="youtube"><img src="http://www.humboldt.edu/humboldt/images2010/youtube.png" alt="Youtube" width="18px" height="18px"></a></div>
+																<div class="vcard">
+																	<a class="url" href="http://www.humboldt.edu"></a>
 
+																	<div class="org fn">Humboldt State University<br />a California State University</div>
+																	<div class="adr">
+																		<div class="street-address">1 Harpst Street</div>
+																		<span class="locality">Arcata</span>, 
+																		<span class="region">CA</span>
+																		<span class="postal-code">95521</span>
 
+																	</div>
+																	<div class="tel">(707) 826-3011</div>
+																	<div class="contact"><a href="http://humboldt.edu/web/feedback">Contact us</a></div>
+																</div>						
+															</div><!--/article-->
+													</div><!-- /meta-wrap -->
 
+													</div><!-- /site-meta -->
 
-			</div><!-- /contentwrap --> 
-			</div><!-- /content --> 
-			</div><!-- /container --> 
-			 </div><!-- /wrap --> 
-
-			<div id="site-meta"> 
-			<div id="meta-wrap"> 
-
-
-			<div class="vcard"> 
-			 <a class="url" href="http://www.humboldt.edu"></a> 
-
-			 <div class="org fn">Humboldt State University<br />a California State University</div> 
-			 <div class="adr"> 
-			  <div class="street-address">1 Harpst Street</div> 
-			  <span class="locality">Arcata</span>, 
-			  <span class="region">CA</span> 
-			  <span class="postal-code">95521</span> 
-
-			 </div> 
-			 <div class="tel">(707) 826-3011</div> 
-			</div> 
-
-			<ul id="contact"> 
-			<li><a href="http://www.humboldt.edu/humboldt/contact">Contact Us.</a></li> 
-			<li>|</li> 
-			<li><a href="mailto:dmca@humboldt.edu">DMCA.</a></li> 
-			</ul> 
-
-			</div><!-- /meta-wrap --> 
-
-			</div><!-- /site-meta --> 
-			</body>
-</html>
+													</body>
+														</html>

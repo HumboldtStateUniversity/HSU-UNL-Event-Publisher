@@ -329,21 +329,18 @@ table.wp-calendar td, table.wp-calendar th{
 	text-align:center;
 	padding:4px;
 }
-table.wp-calendar td{
+table.wp-calendar td, .year_cal table.wp-calendar td{
 	border:1px solid #eee;
 	color: #212121;
-	background-color: #fff;
+	background-color: #f2f0ee;
 }
-#monthwidget table.wp-calendar td {
-	opacity: .5;
+#monthwidget table.wp-calendar td,  {
+/*	opacity: .5;*/
 }
 table.wp-calendar td.selected a {
-	color: #fff;
 	color: #212121;
-/*	opacity: 1;*/
 }
-#monthwidget table.wp-calendar td.selected{
-	opacity: 1;
+#monthwidget table.wp-calendar td.selected, .year_cal table.wp-calendar td.selected{
 	background-color:#fff;
 }
 #monthwidget table.wp-calendar td#onselect{
@@ -364,7 +361,7 @@ table.wp-calendar td#prev{
 table.wp-calendar tr:hover{
 	background:none;
 }
-table.wp-calendar td:hover{
+table.wp-calendar td:hover, .year_cal table.wp-calendar td:hover{
 	background:#e6dba4;
 }
 /*#maincontent table.wp-calendar td.next, table.wp-calendar td.prev {color:#f2f2f2;}*/
@@ -532,25 +529,29 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 	background: transparent url(images/side-shadow.png) no-repeat right top;
 }
 #view_nav {
-	margin:18px 0 0 320px;
+	margin:18px 40px 0 0px;
 	position: relative;
 	z-index: 20;
+	float: right;
 }
 /* month view */
-.month_cal {margin-top:70px;position:relative;}
+.month_cal {float: left;margin-top: -65px;position: relative;}
+.year_cal {
+float: left;margin-top: -65px;position: relative;width: 100%;
+}
 .month_cal table.wp-calendar{margin:0 0 20px 0;}
 .month_cal table.wp-calendar td{
 	width:119px;
 	text-align:left;
+	border: solid 1px #ddd;
 	background:#f3f3f3;
 	vertical-align:top;
-	background: #f3f3f3 url(images/handmadepaper.png) repeat left top;
 	float:left;
 	display:block;
 	min-height:12.3em;
-	_height:12.3em;
+/*	_height:12.3em;	*/
 	}
-#maincontent .month_cal table.wp-calendar td a{background:#fff;padding:0 4px;float:left;color:#567f1c!important;margin:-5px 0 0 -5px; border-right:solid 1px #999;border-bottom:solid 1px #999;}	
+#maincontent .month_cal table.wp-calendar td a{background:#fff;padding:0 4px;float:left;color:#567f1c!important;margin:-4px 0 0 -4px; border-right:solid 1px #999;border-bottom:solid 1px #999;}	
 #maincontent .month_cal table.wp-calendar td a:active{color:#567f1c;}
 #maincontent .month_cal table.wp-calendar td span.monthvalue_ID{display:none}
 #maincontent .month_cal table.wp-calendar td ul{position:relative;list-style:none;clear:both;padding:4px 0 0 0;margin:0;}
@@ -576,14 +577,14 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 .month_cal table.wp-calendar tr{float:right;font-size:0.8em;}
 #maincontent .month_cal ul{padding:0 15px;}
 .month_cal table.wp-calendar caption, .year_cal caption#year_cal_name{
-	margin:-132px 0 0 0;
+	margin:0px 0 0 0;
 	font-size: 16px;
 	padding: 0 0 20px;
 	position: relative;
 	z-index: 0;
 }
 .year_cal caption#year_cal_name{
-	margin: -65px 0 0 0;
+/*	margin: -65px 0 0 0;*/
 }
 
 ul#frontend_view_selector {
@@ -773,7 +774,7 @@ a.icon-rss {
 *+html #maincontent p#search_term{filter:alpha(opacity: 0);background:url(images/searchinfo.gif) no-repeat;margin:13px 0 0 -275px;padding:18px 20px 0 10px;}
 *+html .col{margin-top:10px;}
 *+html table.wp-calendar caption span.monthvalue, *+html table.wp-calendar caption span.yearvalue{padding:6px 3px 0;}
-*+html .month_cal {margin-top:7px;}
+/**+html .month_cal {margin-top:7px;}*/
 
 /**/
 

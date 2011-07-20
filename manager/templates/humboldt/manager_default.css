@@ -1,5 +1,111 @@
-/* contentSearch is wrapper below title just inside maincontent */
- /* custom fonts */
+/* @override 
+	https://its-caldev.humboldt.edu/unlcal/templates/humboldt/frontend_default.css */
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;color:#212121;text-decoration:none;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; } 
+/**
+
+ * default.css
+ * Everything goes in here.
+ */
  @font-face {
      font-family: 'CartoGothicStdBook';
      src: url('fonts/CartoGothicStd-Book-webfont.eot');
@@ -12,66 +118,107 @@
  }
 /* end custom fonts */
 
-#maincontent #header {
-	background-color: #255249;
-	margin: 0 0 20px -10px;
-	overflow: auto;
-	padding: 25px 0 10px 10px;
-	width: 908px;	
-	position: relative;
+body {
+	font:13px/18px Helmet, Freesans, sans-serif;
+}
+#masthead {
+	background: #6a9231 url(images/mark-bg.gif);
+	height: 41px;
+	position: relative;	
 	z-index: 1000;
-	top:-1px;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
-#header h1 {
-	letter-spacing:1px;
-	color: #fff;
-	margin: 5px 0 30px 0;
-	font: 25px/27px 'CartoGothicStdBook', Arial, sans-serif;
-
+/* humboldt state university wordmark*/
+#logowrapper {
+	width: 910px;
+	margin: 0 auto;
 }
-#header h1 a:link {
-	color: #fff;
-	text-decoration:none;
+#logo {
+	background:#6a9231 url(images/hsu-mark.gif) no-repeat left top;
+	width: 350px;
+	height: 41px;
+/*	padding: 5px 0;*/
+	display: block;
 }
-#header h1 a:visited {
-	color: #fff;
-	text-decoration:none;
+#banner {
+	background: #f5f5f5 url(images/handmadepaper.png) repeat left top;
+	margin-top: -5px;
+	padding: 25px 0;
 }
-
-
-#contentSearch {
-width: 880px;
-padding: 10px;
-margin: auto;
-position:relative;
+#banner-wrap {
+	width: 910px;
+	margin: 0 auto;
+	padding: 0 0px;
 }
-#main_right{
-float:right;
+#content-wrap {
+	background: #d9d5ce url(images/exclusive_paper.jpg) repeat left top;
+	padding-bottom: 50px;
 }
-
-
-#search_term{
-display: none;
+#content-top {
+	background: transparent url(images/banner-shadow.gif) repeat-x left top;
+	height: 8px;
 }
-
-
-#maincontent li{
-margin:8px 0;
-list-style: none;
-}
-abbr{border:0;}
-#contentSearch a:hover {
-text-decoration:underline !important;
-}
-a{color:#2c7202;}
-
-.eventAction{
-margin:10px 0;
+.column-wrap {
+	width: 910px;
+	margin: 0 auto;
 }
 
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+#site-meta {
+	background: url(images/footer-shadow.png) repeat-x left -21px;
+}
+#meta-wrap {
+	width: 910px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+#meta-wrap .article {
+	float: left;
+	width: 275px;
+	margin-left: 50px;
+}
+#meta-wrap .first {
+	margin-left: 0;
+}
+#meta-wrap .last {
+	margin-left: 35px;
+}
+.vcard {
+	text-align: right;
+	clear: right;
+}
+.socialnetworks {
+	float: right;
+	margin-top: 18px;
+	width: 115px;
+}
+.socialnetworks img {
+	float: left;
+	margin-left: 5px;
+}
+#meta-wrap a {
+	color: #567f1c;
+	text-decoration: underline;
+}
+.col{
+	margin:0 0 30px;
+/*	padding-right: 20px;*/
+	width:290px;
+	float:left;
+	clear: both;
+	background: transparent url(images/side-shadow.png) no-repeat right top;
+}
+#maincontent .right {
+
+}
+.right{float:right;}
+/* end container blocks*/
 
 
 
@@ -79,18 +226,10 @@ margin:10px 0;
 /* current calendar declaration */
 
 #calChoose-wrap, #search-wrap{
-	border:1px solid #84a09a;
-	padding:8px 6px;
-	margin:0 0 25px 0;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-	-moz-box-shadow: 1px 1px 5px #888;
-	-webkit-box-shadow: 1px 1px 5px #888;
-	box-shadow: 1px 1px 5px #888;
+
 }
 p.currentCal{
-margin:0 0 5px 0;
+margin:0 0 0 17px;
 font-size:16px;
 line-height:20px;
 width:260px;
@@ -106,8 +245,10 @@ white-space:nowrap;
 #contentSearch form#cal_choose label.element{display:none;}
 
 form#cal_choose{
-margin:0;
+margin:0 0 0 17px;
+padding:10px 0 5px 0;
 width:260px;
+height:30px;
 }
 form#cal_choose select, form#cal_choose #submit{
 float:left;
@@ -123,6 +264,9 @@ form#cal_choose fieldset ol{
 	margin:0;
 	top:0;
 }
+form#cal_choose div, form#cal_choose li{
+	display:inline;
+}
 
 /* -- !Submit -- */
 
@@ -130,26 +274,16 @@ form#cal_choose fieldset ol{
 	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 #navlinks{
-margin:0 0 45px 0;
-border-bottom:6px solid #255249;	
-width:566px;
+
 }
 #navlinks ul {
-width:566px;
-height:44px;
-margin:0;
-padding:0;
-background:none;
-list-style:none;
-border-bottom:6px solid #255249;
+height:52px;
+margin:25px 0 40px 0;
+width:560px;
 }
 
 #navlinks ul li {
-padding:0;
-margin:0 0 0 0;
 display:block;
-width:283px;
-height:50px;
 float:left;
 }
 #nav_end {
@@ -158,18 +292,14 @@ display:none;
 
 #navlinks ul li a {
 display:block;
-width:233px;
-padding:10px 25px;
-margin:0 0 -5px 0;
+width:230px;
+padding:10px 15px;
+margin:0;
 height:30px;
-background-color:#ddd;
-float:left;
-color:#333;
+color:#000;
 font: 17px/30px Helmet, Freesans, sans-serif;
 text-decoration:none;
--moz-border-radius: 7px;
--webkit-border-radius: 7px;
-border-radius: 7px;
+background-color:#fff;
 }
 
 #navlinks ul li#mycalendar a {
@@ -178,7 +308,7 @@ border-radius: 7px;
 }
 
 #navlinks ul li#create a {
-
+margin-left:20px;
 /*background:url(images/nav_create.gif) no-repeat;*/
 }
 
@@ -199,9 +329,7 @@ body#create #navlinks ul li#create a,
 body#subscribe #navigation ul li#subscribe a,
 body#import #navigation ul li#import a,
 body#normal #navigation ul li#calendar a {
-background-color:#255249;
-color:#fff;
-text-decoration:none;
+border-bottom:1px solid #f08730;
 }
 
 #contentSearch div.clear #navigation #leftcollinks {
@@ -220,25 +348,10 @@ color:#212121;
 /*	-------------------------------------------------------------
 	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-div.cal_widget {
-	border:1px solid #84a09a;
-	padding:0 6px;
-	margin:0 0 25px 0;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-	-moz-box-shadow: 1px 1px 5px #888;
-	-webkit-box-shadow: 1px 1px 5px #888;
-	box-shadow: 1px 1px 5px #888;
-}
 
-div.cal_widget h3 {
-position:relative;
-font-size:14px !important;
-clear:both;
-margin:0;
-padding:7px 12px;
-background-color:#ddd;
+div.cal_widget h3, #calChoose-wrap h3, #search-wrap h3 {
+	background: transparent url(images/heading-bg.png) no-repeat left top;
+	padding: 13px;
 }
 
 div.cal_widget h3 span {
@@ -249,7 +362,7 @@ div.cal_widget h3 img {
 	
 }
 div.cal_widget a{
-
+color:#537F15;
 }
 div.cal_widget ul {
 list-style:none;
@@ -357,8 +470,8 @@ margin: 0;
 font-size: 15px;
 padding: 7px 5px;
 color: #000;
-background-color: #ccc;
-border-bottom:1px solid #999;
+background-color: #fff;
+border-bottom:1px solid #ccc;
 position:relative;
 vertical-align:baseline;
 }
@@ -379,15 +492,15 @@ margin:0;
 
 /* required & errors */
 form span.error {
-color:#c00;
+color:red;
 }
 
 form div.error {
-border:1px solid #c00;
+border:1px solid red;
 padding:5px;
 }
 .required {
-color:#c00;
+color:red;
 }
 fieldset li.reqnote label {
 display:none;
@@ -491,10 +604,11 @@ display:none;
 }
 
 form#event_login button#submit {
-	border-radius: 5px 5px 5px 5px;
-	background-color: #f6f6f6;
-	padding: 2px 5px;
-	line-height: 1;
+	padding:4px 5px;
+}
+
+form#event_login button#submit:hover {
+background-position:0 -22px;
 }
 
 body#login #contentSearch {
@@ -502,7 +616,7 @@ padding-top:50px;
 }
 
 body#login #contentSearch p{
-margin-bottom: 25px;
+margin-bottom: 1em;
 }
 
 body#login #contentSearch input {
@@ -511,6 +625,9 @@ margin:2px 0;
 width:200px;
 }
 
+body#login #contentSearch input:focus {
+background:#ffc;
+}
 
 body#login #contentSearch form label.element {
 position: relative;
@@ -646,19 +763,21 @@ color:#fff;
 }
 
 #contentSearch table.eventlisting td.delete a,button#delete_event {
-font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+display:block;
+padding:0;
+text-indent:-9999px;
+width:48px;
+height:22px;
+background:url(images/button/delete.gif) no-repeat;
 }
 
 #contentSearch table.eventlisting td a.user_perm_remove {
-font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+display:block;
+padding:0;
+text-indent:-9999px;
+background:url(images/button/remove_user.gif) no-repeat;
+width:89px;
+height:21px;
 }
 
 #contentSearch table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {
@@ -685,27 +804,23 @@ background:#990000 !important;
 border-color:#d52828 #620404 #620404 #d52828 !important;
 }
 #contentSearch form button#moveto_pending{
-font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+width:99px;
+float:left;
+height:22px;
+background:url(images/button/movetodraft.gif) no-repeat;
 }
 
 button#search {
-font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+width:48px;
+height:22px;
+background:url(images/button/search.gif) no-repeat;
 }
 
 #contentSearch form button#moveto_posted{
-font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+width:89px;
+float:left;
+height:21px;
+background:url(images/button/addtoposted.gif) no-repeat;
 }
 
 button#moveto_posted,button#delete_event,button#moveto_pending,button#search {
@@ -715,13 +830,18 @@ border:none;
 cursor:pointer;
 }
 
+button#moveto_posted:hover,button#delete_event:hover,button#moveto_pending:hover,button#search:hover {
+background-position:0 -22px;
+}
+
+
 
 /*	-------------------------------------------------------------
 	Search form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 	form#event_search{
-		margin:0;
-		padding:0;
+		margin:0 0 0 17px;
+		padding:10px 0 15px 0;
 		height:25px;
 	}
 #event_search input#searchinput{
@@ -765,12 +885,6 @@ text-align:left;
 border-top:1px solid #bbb;
 border-bottom:1px solid #bbb;
 }
-h3{
-	font: 16px/20px Helmet, Freesans, sans-serif;
-}
-h3 span.title{
-	font-weight:bold;
-}
 
 /* add new location */
 #__reverseLink_eventdatetime_event_idlocation_id_1__subForm__div{
@@ -783,7 +897,6 @@ h3 span.title{
 #location_id_location____header__ legend{
 	width:450px;
 }
-
 
 /* datepicker button */
 #date1_calendar_trigger, #date2_calendar_trigger, #date3_calendar_trigger{position:relative;top:8px;}
@@ -809,7 +922,144 @@ h3 span.title{
 
 
 
-/** validation **/
+/* typography
+------------------------------------------------*/
+h1,h2,h3,h4,h5,h6, ul {
+	line-height: 18px;
+	margin: 18px 0 9px 0;
+}
+h1#calname {
+	font: 40px/27px 'CartoGothicStdBook', Arial, sans-serif;
+} 
+h1#calname a {
+	color: #212121;
+	text-decoration: none;
+}
+h3 {
+	font-size: 16px;
+	color: #212121;
+	font-weight: normal;
+}
+p {
+	line-height: 18px;
+	margin: 9px 0;
+}
+#subscribe h3, #othercals h3, #communitycals h3 {
+	background: transparent url(images/heading-bg.png) no-repeat left top;
+	padding: 13px;
+}
+#subscribe p, #subscribe ul, #othercals ul, #communitycals ul {
+	padding-left: 13px;
+}
+#subscribe li {
+	margin: 10px 0;
+}
+/* Events by type filter
+----------------------------------------------- */
+/*#maincontent .col form {
+	margin-top: 40px;
+}*/
+select {
+/*	width: 100%;*/
+}
 
-label.error {color: #c00; vertical-align: top; font-weight:bold; display:block; padding-top:3px;}
-body#login #contentSearch p.error {color: #c00; margin:-5px 0 -10px 0; font-weight:bold;}
+/*Jquery Scrollable */
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+.scrollable {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+/*	width: 860px;*/
+	height:275px;
+}
+
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accommodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+}
+
+/*
+	a single item. must be floated in horizontal scrolling.
+	typically, this element is the one that *you* will style
+	the most.
+*/
+.items div {
+	float:left;
+}
+/*easy select
+---------------------------------------------*/
+#event_type_go {
+	float: left;
+	position: relative;
+	top: -33px;
+	left: 231px;
+	z-index: 200;
+}
+.easy-select-box{
+	position:relative;
+	width:230px;
+	font-size:11px;
+	color:#212121;
+	clear: both;
+/*	float: right;*/
+}
+.easy-select-box .easy-select-box-disp,
+.easy-select-box .easy-select-box-disp:visited{
+	background: url("images/select-bg.png") no-repeat scroll 0 0 transparent;
+	    color: #212121;
+	    display: block;
+	    height: 21px;
+	    line-height: 18px;
+	    padding: 6px 0 5px 10px;
+	    text-decoration: none;
+}
+.easy-select-box .easy-select-box-disp:hover{
+	position:relative;
+	background-position: 0 -32px;
+	text-decoration:none;
+}
+.easy-select-box ul{
+	background: none repeat scroll 0 0 #FFFFFF;
+	    border: 1px solid #CCCCCC;
+	    display: none;
+	    left: 0;
+	    max-height: 200px;
+	    overflow: auto;
+	    position: absolute;
+	    top: 10px;
+	    width: 226px;
+	    z-index: 99;
+}
+.easy-select-box ul li a,
+.easy-select-box ul li a:visited{
+	padding:3px;
+	background:#FFFFFF;
+	display:block;
+	color:#0c2245;
+	cursor:default;
+}
+.easy-select-box ul li a:hover{
+	background:#90b060;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+/*non-semantic helper classes
+--------------------------------------------*/
+.visuallyhidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* @end */

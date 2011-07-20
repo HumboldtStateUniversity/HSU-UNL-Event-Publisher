@@ -206,6 +206,18 @@ body {
 	color: #567f1c;
 	text-decoration: underline;
 }
+.col{
+	margin:0 0 30px;
+/*	padding-right: 20px;*/
+	width:290px;
+	float:left;
+	clear: both;
+	background: transparent url(images/side-shadow.png) no-repeat right top;
+}
+#maincontent .right {
+
+}
+.right{float:right;}
 /* end container blocks*/
 
 
@@ -265,27 +277,14 @@ form#cal_choose fieldset ol{
 	Navigation Styles -- left hand pointers
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 #navlinks{
-margin:0 0 45px 0;
-border-bottom:6px solid #255249;	
-width:566px;
+
 }
 #navlinks ul {
-width:566px;
-height:44px;
-margin:0;
-padding:0;
-background:none;
-list-style:none;
-border-bottom:6px solid #255249;
+
 }
 
 #navlinks ul li {
-padding:0;
-margin:0 0 0 0;
-display:block;
-width:283px;
-height:50px;
-float:left;
+
 }
 #nav_end {
 display:none;
@@ -298,7 +297,6 @@ padding:10px 25px;
 margin:0 0 -5px 0;
 height:30px;
 background-color:#ddd;
-float:left;
 color:#333;
 font: 17px/30px Helmet, Freesans, sans-serif;
 text-decoration:none;
@@ -355,25 +353,10 @@ color:#212121;
 /*	-------------------------------------------------------------
 	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-div.cal_widget {
-	border:1px solid #84a09a;
-	padding:0 6px;
-	margin:0 0 25px 0;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-	-moz-box-shadow: 1px 1px 5px #888;
-	-webkit-box-shadow: 1px 1px 5px #888;
-	box-shadow: 1px 1px 5px #888;
-}
 
 div.cal_widget h3 {
-position:relative;
-font-size:14px !important;
-clear:both;
-margin:0;
-padding:7px 12px;
-background-color:#ddd;
+	background: transparent url(images/heading-bg.png) no-repeat left top;
+	padding: 13px;
 }
 
 div.cal_widget h3 span {
@@ -384,7 +367,7 @@ div.cal_widget h3 img {
 	
 }
 div.cal_widget a{
-
+color:#537F15;
 }
 div.cal_widget ul {
 list-style:none;

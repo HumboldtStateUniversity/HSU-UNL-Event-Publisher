@@ -82,9 +82,10 @@
                         <div id="leftcollinks">
                             <?php if (isset($this->user)) { ?>
                             <div class="cal_widget">
-                                <h3><span><?php echo date("F jS, Y"); ?></span></h3>
+                                <h3><span>Welcome, <?php echo $this->user->uid; ?></span></h3>
                                 <ul>
-                                    <li class="nobullet welcome">Welcome, <?php echo $this->user->uid; ?></li>
+	
+                                    <li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
                                     <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) : ?>
                                         <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>
@@ -131,7 +132,7 @@
                             <?php UNL_UCBCN::displayRegion($this->output); ?>
 													</div>
 
-														<div class="clear"></div>
+														<div class="clearfix"></div>
 													<!--THIS IS THE END OF THE MAIN CONTENT AREA.-->
 													</div><!-- /column-wrap -->
 													</div><!-- /column-top -->

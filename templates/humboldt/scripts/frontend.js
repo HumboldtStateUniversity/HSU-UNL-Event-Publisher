@@ -468,10 +468,11 @@ function monthWidget(tD){
 /*month widget caption month navigator*/
 function monthCaptionSwitch(eT){
 	var spanarrow = eT.getElementsByTagName('span');
+	spanarrow[3].childNodes[0].onclick=function(){new ajaxEngine(spanlinknext, 'monthwidget');return false;};
+	spanarrow[0].childNodes[0].onclick=function(){new ajaxEngine(spanlinkprev, 'monthwidget');return false;};
 	var spanlinkprev = spanarrow[0].childNodes[0].getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
 	var spanlinknext = spanarrow[3].childNodes[0].getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-	spanarrow[3].childNodes[0].onclick=function(){new ajaxEngine(spanlinknext, 'monthwidget');return false;};
- 	spanarrow[0].childNodes[0].onclick=function(){new ajaxEngine(spanlinkprev, 'monthwidget');return false;};
+
 }
 
 /*this is the main ajax calling engine. make library calls to XHR lib (ajaxcaller.js)*/

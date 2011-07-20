@@ -130,6 +130,7 @@ class UNL_UCBCN_Frontend_MonthWidget extends UNL_UCBCN implements UNL_UCBCN_Cach
                                                       'calendar'=>$this->calendar->id));
 
         $this->caption = '
+        <span><a href="'.$prev.'" id="prev_month" title="View events for '.Calendar_Util_Textual::thisMonthName($PMonth).' '.$PMonth->thisYear().'">&lt;&lt; </a></span>
         <span class="monthvalue" id="'.Calendar_Util_Textual::thisMonthName($Month).'"><a href="'.
                         UNL_UCBCN_Frontend::formatURL(array('y'=>$Month->thisYear(),
                                                             'm'=>$Month->thisMonth(),
@@ -137,7 +138,6 @@ class UNL_UCBCN_Frontend_MonthWidget extends UNL_UCBCN implements UNL_UCBCN_Cach
         <span class="yearvalue"><a href="'.
                         UNL_UCBCN_Frontend::formatURL(array('y'=>$Month->thisYear(),
                                                             'calendar'=>$this->calendar->id)).'">'.$Month->thisYear().'</a></span>
-	    <span><a href="'.$prev.'" id="prev_month" title="View events for '.Calendar_Util_Textual::thisMonthName($PMonth).' '.$PMonth->thisYear().'">&lt;&lt; </a></span>
         <span><a href="'.$next.'" id="next_month" title="View events for '.Calendar_Util_Textual::thisMonthName($NMonth).' '.$NMonth->thisYear().'"> &gt;&gt;</a></span>
         ';
 

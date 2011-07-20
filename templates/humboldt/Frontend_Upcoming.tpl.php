@@ -1,5 +1,5 @@
 <div class="calendar"></div>
-<h4 class="upcoming-header">Upcoming Events:</h4>
+<h4 class="sec_main">Upcoming Events:</h4>
 <?php
     UNL_UCBCN::displayRegion($this->output);
     echo '<p id="feeds">

@@ -226,18 +226,10 @@ body {
 /* current calendar declaration */
 
 #calChoose-wrap, #search-wrap{
-	border:1px solid #84a09a;
-	padding:8px 6px;
-	margin:0 0 25px 0;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-	-moz-box-shadow: 1px 1px 5px #888;
-	-webkit-box-shadow: 1px 1px 5px #888;
-	box-shadow: 1px 1px 5px #888;
+
 }
 p.currentCal{
-margin:0 0 5px 0;
+margin:0 0 0 17px;
 font-size:16px;
 line-height:20px;
 width:260px;
@@ -253,8 +245,10 @@ white-space:nowrap;
 #contentSearch form#cal_choose label.element{display:none;}
 
 form#cal_choose{
-margin:0;
+margin:0 0 0 17px;
+padding:10px 0 5px 0;
 width:260px;
+height:30px;
 }
 form#cal_choose select, form#cal_choose #submit{
 float:left;
@@ -270,6 +264,9 @@ form#cal_choose fieldset ol{
 	margin:0;
 	top:0;
 }
+form#cal_choose div, form#cal_choose li{
+	display:inline;
+}
 
 /* -- !Submit -- */
 
@@ -280,11 +277,14 @@ form#cal_choose fieldset ol{
 
 }
 #navlinks ul {
-
+height:52px;
+margin:25px 0 40px 0;
+width:560px;
 }
 
 #navlinks ul li {
-
+display:block;
+float:left;
 }
 #nav_end {
 display:none;
@@ -292,17 +292,14 @@ display:none;
 
 #navlinks ul li a {
 display:block;
-width:233px;
-padding:10px 25px;
-margin:0 0 -5px 0;
+width:230px;
+padding:10px 15px;
+margin:0;
 height:30px;
-background-color:#ddd;
-color:#333;
+color:#000;
 font: 17px/30px Helmet, Freesans, sans-serif;
 text-decoration:none;
--moz-border-radius: 7px;
--webkit-border-radius: 7px;
-border-radius: 7px;
+background-color:#fff;
 }
 
 #navlinks ul li#mycalendar a {
@@ -311,7 +308,7 @@ border-radius: 7px;
 }
 
 #navlinks ul li#create a {
-
+margin-left:20px;
 /*background:url(images/nav_create.gif) no-repeat;*/
 }
 
@@ -332,9 +329,7 @@ body#create #navlinks ul li#create a,
 body#subscribe #navigation ul li#subscribe a,
 body#import #navigation ul li#import a,
 body#normal #navigation ul li#calendar a {
-background-color:#255249;
-color:#fff;
-text-decoration:none;
+border-bottom:1px solid #f08730;
 }
 
 #contentSearch div.clear #navigation #leftcollinks {
@@ -354,7 +349,7 @@ color:#212121;
 	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 
-div.cal_widget h3 {
+div.cal_widget h3, #calChoose-wrap h3, #search-wrap h3 {
 	background: transparent url(images/heading-bg.png) no-repeat left top;
 	padding: 13px;
 }
@@ -475,8 +470,8 @@ margin: 0;
 font-size: 15px;
 padding: 7px 5px;
 color: #000;
-background-color: #ccc;
-border-bottom:1px solid #999;
+background-color: #fff;
+border-bottom:1px solid #ccc;
 position:relative;
 vertical-align:baseline;
 }
@@ -845,8 +840,8 @@ background-position:0 -22px;
 	Search form elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 	form#event_search{
-		margin:0;
-		padding:0;
+		margin:0 0 0 17px;
+		padding:10px 0 15px 0;
 		height:25px;
 	}
 #event_search input#searchinput{

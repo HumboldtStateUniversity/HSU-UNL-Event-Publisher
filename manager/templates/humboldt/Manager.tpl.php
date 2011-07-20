@@ -50,7 +50,7 @@
 	
 											<?php
 								                if (isset($this->calendar)) {
-								                    echo '<div id="calChoose-wrap"><p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
+								                    echo '<div id="calChoose-wrap"><h3>Select a calendar</h3><p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
 								                }
 								                ?>
 						                    <?php if (isset($this->user)) {
@@ -67,9 +67,11 @@
 	
 											<?php if (isset($this->user)) { ?>
 													<div id="search-wrap">
+														
+																<h3>Search Events</h3>
 						                    <form id="event_search" name="event_search" method="get" action="<?php echo $this->uri; ?>">				<div>
 						                        <input type='text' name='q' id='searchinput' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-						                        <input type='submit' class="search_submit" name='submit' value="Search" />
+						                        <input type='submit' class="search_submit" name='submit' value="Go" />
 						                        <input type='hidden' name='action' value='search' />
 												</div>
 						                    </form>
@@ -113,14 +115,14 @@
                         </div>
                     </div>
 
-		<div class="three_col right">
-													
+		<div class="right">
+													<div style="width:590px;">
 	                            <?php
 	                            if (isset($this->user)) { ?>
 															<div id="navlinks">
 	                            <ul>
-	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="View or Edit Existing Events">View or Edit Existing Events</a></li>
-	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create an Event">Create an Event</a></li>
+	                                <li id="mycalendar"><a href="<?php echo $this->uri; ?>?" title="View or Edit Existing Events">&raquo; View or Edit Existing Events</a></li>
+	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create an Event">&raquo; Create an Event</a></li>
 	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
 	                            </ul>
 															</div>
@@ -130,6 +132,7 @@
 	
 	
                             <?php UNL_UCBCN::displayRegion($this->output); ?>
+</div>
 													</div>
 
 														<div class="clearfix"></div>

@@ -275,7 +275,7 @@ function todayHilite(){
 		}
 
 		if(idSelector.className != 'year' && idSelector.className != 'upcoming'){	
-			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "upcoming-header");
+			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "sec_main");
 			var re = new RegExp(/\d+/);
 			var m = re.exec(selectedDay[0].childNodes[0].nodeValue);
 			var dayT, todayT;

@@ -889,11 +889,11 @@ function closeULbox(){
 var monthL = getElementsByClassName(document.getElementById('month_viewcal'), "span", "monthvalue");
 var ul = this.parentNode.parentNode;
 	
-/* -- Today icon is moving!!! Bug -- */
-/*if(monthL[0].id == getCalendarDate()){
+// -- Today icon is moving!!! Bug -- 
+if(monthL[0].id == getCalendarDate()){
 document.getElementById('today_image').style.display = 'inline';
 ul.parentNode.id = "today";
-}*/
+}
 
 ul.className = 'none';
 ul.removeChild(ul.lastChild);

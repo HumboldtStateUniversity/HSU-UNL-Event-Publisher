@@ -694,7 +694,7 @@ table.eventlisting {
 	font-size: 12px;
 	width: 100%;
 	text-align: left;
-	margin:25px 0;
+	margin:11px 0 19px 0;
 }
 table.eventlisting thead tr th, table.eventlisting tfoot tr th, table.eventlisting tbody tr th {
 	background:#777;

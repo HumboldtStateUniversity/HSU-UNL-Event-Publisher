@@ -84,7 +84,7 @@
                         <div id="leftcollinks">
                             <?php if (isset($this->user)) { ?>
                             <div class="cal_widget">
-                                <h3><span>Welcome, <?php echo $this->user->uid; ?></span></h3>
+                                <h3>Welcome, <?php echo $this->user->uid; ?></h3>
                                 <ul>
 	
                                     <!--<li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>-->

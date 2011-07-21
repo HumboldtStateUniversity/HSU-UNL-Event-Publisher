@@ -276,16 +276,16 @@ table td.title{width:75%;}
 	padding:0 0 7px 30px!important;
 }*/
 #maincontent h4.ongoing{
-	font-size:1.5em;
+	font-size:18px;
 	margin-top:42px;
-	padding:6px 0 7px 0px;
+/*	padding:6px 0 7px 0px;*/
 	clear:both;
 }
 a {
 	color: #537f15;
 }
 
-#maincontent p#day_nav{/*z-index:10000;*/margin:25px 0;padding:0;float:right;position:relative;}
+#maincontent p#day_nav{/*z-index:10000;*/margin:25px 0 0;padding:0;float:right;position:relative;}
 #maincontent p#day_nav a{float:left;margin:0 0 0 3px}
 a.permalink{
 	position:relative;
@@ -453,7 +453,7 @@ table blockquote {
 	clear: both;
 	font-size:18px;
 	font-weight: 500;
-	padding: 12px 0 12px 25px;
+	padding: 9px 0 12px 25px;
 	background: url(images/flag.png) no-repeat 0 0;
 }
 
@@ -974,7 +974,9 @@ select {
 
 /*non-semantic helper classes
 --------------------------------------------*/
-.visuallyhidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }

@@ -160,6 +160,7 @@ body {
 .column-wrap {
 	width: 910px;
 	margin: 0 auto;
+	padding-top:25px;
 }
 
 .ir {
@@ -468,11 +469,12 @@ width:550px;
 border: 0;
 margin: 0;
 font-size: 15px;
+font-weight:bold;
 padding: 7px 5px;
+height:20px;
 color: #000;
 background-color: #fff;
 border-bottom:1px solid #ccc;
-position:relative;
 vertical-align:baseline;
 }
 
@@ -605,10 +607,6 @@ display:none;
 
 form#event_login button#submit {
 	padding:4px 5px;
-}
-
-form#event_login button#submit:hover {
-background-position:0 -22px;
 }
 
 body#login #contentSearch {
@@ -1063,3 +1061,9 @@ select {
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
 /* @end */
+
+
+/** validation **/
+
+label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}
+p.error {color: #c00; margin:0; font-weight:bold;}

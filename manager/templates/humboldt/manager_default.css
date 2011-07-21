@@ -33,7 +33,7 @@ a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background:
 
 del {text-decoration: line-through;}
 
-abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+abbr[title], dfn[title] {border-bottom: 0;}
 
 /* tables still need cellspacing="0" in the markup */
 table {border-collapse: collapse; border-spacing: 0;}
@@ -301,25 +301,20 @@ color:#000;
 font: 17px/30px Helmet, Freesans, sans-serif;
 text-decoration:none;
 background-color:#fff;
+-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+border-bottom:1px solid #fff;
+border-top:1px solid #fff;
 }
 
-#navlinks ul li#mycalendar a {
+#navlinks ul li#mycalendar a {}
 
-/*background:url(images/nav_calendar.gif) no-repeat;*/
-}
+#navlinks ul li#create a {margin-left:20px;}
 
-#navlinks ul li#create a {
-margin-left:20px;
-/*background:url(images/nav_create.gif) no-repeat;*/
-}
+#navlinks ul li#subscribe a {}
 
-#navlinks ul li#subscribe a {
-background:url(images/nav_subscribe.gif) no-repeat;
-}
-
-#navlinks ul li#import a {
-background:url(images/nav_import.gif) no-repeat;
-}
+#navlinks ul li#import a {}
 
 #navlinks ul li#mycalendar a:hover,
 #navlinks ul li#create a:hover,
@@ -330,7 +325,8 @@ body#create #navlinks ul li#create a,
 body#subscribe #navigation ul li#subscribe a,
 body#import #navigation ul li#import a,
 body#normal #navigation ul li#calendar a {
-border-bottom:1px solid #f08730;
+border-bottom:1px solid #d69627;
+border-top:1px solid #d69627;
 }
 
 #contentSearch div.clear #navigation #leftcollinks {
@@ -355,13 +351,9 @@ div.cal_widget h3, #calChoose-wrap h3, #search-wrap h3 {
 	padding: 13px;
 }
 
-div.cal_widget h3 span {
+div.cal_widget h3 span {}
 
-}
-
-div.cal_widget h3 img {
-	
-}
+div.cal_widget h3 img {}
 div.cal_widget a{
 color:#537F15;
 }
@@ -376,7 +368,7 @@ background:none;
 padding:0;
 }
 
-#maincontent div.cal_widget ul li {
+div.cal_widget ul li {
 padding:0 0 0 0px;
 margin:0 7px 0 0;
 position:relative;
@@ -528,47 +520,44 @@ fieldset.doptionaldetailsheader_class {
 padding:0 0 10px;
 }
 
-#contentSearch .subsectionlink {
-width:20em;
-margin-top:10px;
-text-align:left;
-}
 
 
 /** check all/ uncheck all buttons **/
 /*#contentSearch .subsectionlink,*/
-#contentSearch a#formShow,
-#contentSearch a.checkall,
-#contentSearch a.uncheckall {
-padding:3px 5px;
-border:1px solid #999;
-background:#777;
-color:#fff;
+a#formShow,
+a.checkall,
+a.uncheckall {
+padding:9px 15px;
+background:#fff;
+color:#000;
+-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+box-shadow: 1px 1px 3px rgba(0,0,0,.3);
 }
-#contentSearch li{
+li{
 margin:0;
 }
-#contentSearch a#formShow,#contentSearch .subsectionlink {
+a#formShow,#contentSearch .subsectionlink {
 /*clear:both;
 display:block;
 margin-left:10px;*/
 }
-#contentSearch a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
+a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
 color:#fff !important;
 text-decoration:underline;
 }
-#contentSearch form fieldset.deventtypeheader_class select {
+form fieldset.deventtypeheader_class select {
 float:left;
 }
-#contentSearch form fieldset.deventtypeheader_class .reqnote,
-#contentSearch form fieldset.deventlocationheader_class .reqnote {
+form fieldset.deventtypeheader_class .reqnote,
+form fieldset.deventlocationheader_class .reqnote {
 display:none;
 }
-body#subscribe #contentSearch form fieldset.d__header___class {
+form fieldset.d__header___class {
 margin:10px 0 0;
 }
 
-#contentSearch form div.newlocation {
+form div.newlocation {
 background:#ddd;
 width:400px;
 margin:4px 0 2px;
@@ -576,7 +565,7 @@ border:1px solid #ccc;
 overflow-x:hidden !important;
 }
 
-#contentSearch form div.newlocation fieldset {
+form div.newlocation fieldset {
 margin:0;
 padding:0;
 border:none;
@@ -585,11 +574,11 @@ width:400px;
 overflow-x:hidden !important;
 }
 
-#contentSearch form div.newlocation legend {
+form div.newlocation legend {
 display:none;
 }
 
-#contentSearch fieldset.dlocation_id_location____header___class{
+fieldset.dlocation_id_location____header___class{
 background-color: #ddd;
 margin-left: 50px;
 width: 400px;
@@ -702,14 +691,6 @@ ul#frontend_view_selector li {
 	float:left;
 	margin: 10px;
 }
-
-
-
-body#normal div#contentSearch form {
-padding:0;
-margin:0;
-}
-
 table.eventlisting {
 	border-collapse:collapse;
 	background-color: #cdcdcd;
@@ -766,33 +747,50 @@ text-decoration:underline;
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 	
 /** edit buttons **/
-#contentSearch table.eventlisting td.edit a,#contentSearch table.eventlisting td a.user_perm_edit {
+table.eventlisting td.edit a,#contentSearch table.eventlisting td a.user_perm_edit {
 font-size:11px;
-padding:3px 5px;
-border:1px solid #aaa;
-background:#777;
-color:#fff;
+padding:5px 8px;
+background:#ddd;
+color:#000;
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+-moz-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+cursor:pointer;
 }
 
-#contentSearch table.eventlisting td.delete a,button#delete_event {
-display:block;
+table.eventlisting td.delete a,button#delete_event {
+/*display:block;
 padding:0;
 text-indent:-9999px;
 width:48px;
-height:22px;
-background:url(images/button/delete.gif) no-repeat;
+height:22px;*/
+font-size:11px;
+padding:5px 8px;
+background:#ddd;
+color:#000;
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+-moz-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+cursor:pointer;
 }
 
-#contentSearch table.eventlisting td a.user_perm_remove {
-display:block;
+table.eventlisting td a.user_perm_remove {
+/*display:block;
 padding:0;
 text-indent:-9999px;
-background:url(images/button/remove_user.gif) no-repeat;
 width:89px;
-height:21px;
+height:21px;*/
+font-size:11px;
+padding:5px 8px;
+background:#ddd;
+color:#000;
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+-moz-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+cursor:pointer;
 }
 
-#contentSearch table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {
+table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {
 background-position:0 -22px;
 }
 
@@ -815,24 +813,21 @@ margin:10px 5px 0 0;
 background:#990000 !important;
 border-color:#d52828 #620404 #620404 #d52828 !important;
 }
-#contentSearch form button#moveto_pending{
+form button#moveto_pending{
 width:99px;
 float:left;
 height:22px;
-background:url(images/button/movetodraft.gif) no-repeat;
 }
 
 button#search {
 width:48px;
 height:22px;
-background:url(images/button/search.gif) no-repeat;
 }
 
-#contentSearch form button#moveto_posted{
+form button#moveto_posted{
 width:89px;
 float:left;
 height:21px;
-background:url(images/button/addtoposted.gif) no-repeat;
 }
 
 button#moveto_posted,button#delete_event,button#moveto_pending,button#search {
@@ -861,7 +856,7 @@ background-position:0 -22px;
 	width:180px;
 	margin-right:2px;
 }
-div#contentSearch form#event_search input.search_submit{
+form#event_search input.search_submit{
 	float:left;
 }
 
@@ -916,16 +911,16 @@ border-bottom:1px solid #bbb;
 
 /** facebook integration page **/
 .fb-nav{margin:15px 0}
-#maincontent ol.fb-instruct li{
+ol.fb-instruct li{
 	list-style:decimal;
 	padding:5px 0;
 	margin-left:25px;
 }
-#maincontent ol.fb-instruct li ol li{
+ol.fb-instruct li ol li{
 	list-style:lower-alpha;
 }
-#maincontent ul.fb-last{margin:25px 0}
-#maincontent ul.fb-last li{
+ul.fb-last{margin:25px 0}
+ul.fb-last li{
 	list-style:disc;
 	padding:5px 0;
 	margin-left:25px;
@@ -956,116 +951,8 @@ p {
 	line-height: 18px;
 	margin: 9px 0;
 }
-#subscribe h3, #othercals h3, #communitycals h3 {
-	background: transparent url(images/heading-bg.png) no-repeat left top;
-	padding: 13px;
-}
-#subscribe p, #subscribe ul, #othercals ul, #communitycals ul {
-	padding-left: 13px;
-}
-#subscribe li {
-	margin: 10px 0;
-}
-/* Events by type filter
------------------------------------------------ */
-/*#maincontent .col form {
-	margin-top: 40px;
-}*/
-select {
-/*	width: 100%;*/
-}
 
-/*Jquery Scrollable */
-/*
-	root element for the scrollable.
-	when scrolling occurs this element stays still.
-*/
-.scrollable {
 
-	/* required settings */
-	position:relative;
-	overflow:hidden;
-/*	width: 860px;*/
-	height:275px;
-}
-
-/*
-	root element for scrollable items. Must be absolutely positioned
-	and it should have a extremely large width to accommodate scrollable items.
-	it's enough that you set width and height for the root element and
-	not for this element.
-*/
-.scrollable .items {
-	/* this cannot be too large */
-	width:20000em;
-	position:absolute;
-}
-
-/*
-	a single item. must be floated in horizontal scrolling.
-	typically, this element is the one that *you* will style
-	the most.
-*/
-.items div {
-	float:left;
-}
-/*easy select
----------------------------------------------*/
-#event_type_go {
-	float: left;
-	position: relative;
-	top: -33px;
-	left: 231px;
-	z-index: 200;
-}
-.easy-select-box{
-	position:relative;
-	width:230px;
-	font-size:11px;
-	color:#212121;
-	clear: both;
-/*	float: right;*/
-}
-.easy-select-box .easy-select-box-disp,
-.easy-select-box .easy-select-box-disp:visited{
-	background: url("images/select-bg.png") no-repeat scroll 0 0 transparent;
-	    color: #212121;
-	    display: block;
-	    height: 21px;
-	    line-height: 18px;
-	    padding: 6px 0 5px 10px;
-	    text-decoration: none;
-}
-.easy-select-box .easy-select-box-disp:hover{
-	position:relative;
-	background-position: 0 -32px;
-	text-decoration:none;
-}
-.easy-select-box ul{
-	background: none repeat scroll 0 0 #FFFFFF;
-	    border: 1px solid #CCCCCC;
-	    display: none;
-	    left: 0;
-	    max-height: 200px;
-	    overflow: auto;
-	    position: absolute;
-	    top: 10px;
-	    width: 226px;
-	    z-index: 99;
-}
-.easy-select-box ul li a,
-.easy-select-box ul li a:visited{
-	padding:3px;
-	background:#FFFFFF;
-	display:block;
-	color:#0c2245;
-	cursor:default;
-}
-.easy-select-box ul li a:hover{
-	background:#90b060;
-	color:#FFFFFF;
-	text-decoration:none;
-}
 
 /*non-semantic helper classes
 --------------------------------------------*/

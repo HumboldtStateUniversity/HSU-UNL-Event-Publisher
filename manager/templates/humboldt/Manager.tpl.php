@@ -50,7 +50,7 @@
 	
 											<?php
 								                if (isset($this->calendar)) {
-								                    echo '<div id="calChoose-wrap"><h3>Select a calendar</h3><p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
+								                    echo '<div id="calChoose-wrap"><h3>Current calendar</h3><p class="currentCal"><strong>' . $this->calendar->name . '</strong></p>';
 								                }
 								                ?>
 						                    <?php if (isset($this->user)) {

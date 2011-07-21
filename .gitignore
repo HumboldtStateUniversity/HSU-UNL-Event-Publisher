@@ -9,5 +9,9 @@ home.html
 manager/templates/humboldt/.DS_Store
 manager/templates/humboldt/images/.DS_Store
 >>>>>>> 19cf0615df78071397ebb9d7bdd343d741a51fe7
+<<<<<<< HEAD
 grid.html
 year.html
+=======
+manager/templates/humboldt/jscalendar/.DS_Store
+>>>>>>> fa48338c007f2bad7aa01ebec15a043147bdf807

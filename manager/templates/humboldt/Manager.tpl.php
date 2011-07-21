@@ -50,7 +50,7 @@
 	
 											<?php
 								                if (isset($this->calendar)) {
-								                    echo '<div id="calChoose-wrap"><h3>Select a calendar</h3><p class="currentCal">Current calendar: <strong>' . $this->calendar->name . '</strong></p>';
+								                    echo '<div id="calChoose-wrap"><h3>Current calendar</h3><p class="currentCal"><strong>' . $this->calendar->name . '</strong></p>';
 								                }
 								                ?>
 						                    <?php if (isset($this->user)) {
@@ -87,7 +87,7 @@
                                 <h3><span>Welcome, <?php echo $this->user->uid; ?></span></h3>
                                 <ul>
 	
-                                    <li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>
+                                    <!--<li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>-->
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
                                     <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) : ?>
                                         <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>

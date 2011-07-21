@@ -9,3 +9,5 @@ home.html
 manager/templates/humboldt/.DS_Store
 manager/templates/humboldt/images/.DS_Store
 >>>>>>> 19cf0615df78071397ebb9d7bdd343d741a51fe7
+grid.html
+year.html

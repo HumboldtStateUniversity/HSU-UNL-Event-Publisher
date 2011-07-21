@@ -441,10 +441,10 @@ input[type="text"], #maincontent input[type="password"]{
 	padding: 4px;
 }
 /* override widths */
-#__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
-#__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
-#__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,
-input.submitButton, #maincontent #event_search input, #maincontent input#submit{
+#__reverseLink_eventdatetime_event_idendtime_1, #starttime,
+#__reverseLink_eventdatetime_event_idstarttime_1, #endtime,
+#__reverseLink_eventdatetime_event_idrecurs_until_1, #recurs_until,
+input.submitButton, #event_search input, input#submit{
 	width:auto;
 }
 #searchcriteria{width:400px;font-size:12px;height:150px}
@@ -694,6 +694,7 @@ table.eventlisting {
 	font-size: 12px;
 	width: 100%;
 	text-align: left;
+	margin:25px 0;
 }
 table.eventlisting thead tr th, table.eventlisting tfoot tr th, table.eventlisting tbody tr th {
 	background:#777;

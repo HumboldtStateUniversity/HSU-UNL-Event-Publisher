@@ -447,7 +447,7 @@ table blockquote {
 }
 /* event view*/
 
-.event_cal h1.summary{
+.event_cal h1.summary, h3.summmary {
 	float: none;
 	width: auto;
 	clear: both;

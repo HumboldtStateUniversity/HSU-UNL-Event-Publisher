@@ -87,7 +87,7 @@
                                 <h3><span>Welcome, <?php echo $this->user->uid; ?></span></h3>
                                 <ul>
 	
-                                    <li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>
+                                    <!--<li class="nobullet welcome"><?php echo date("F jS, Y"); ?></li>-->
                                     <li><a href="<?php echo $this->frontenduri . '?calendar_id='.$this->calendar->id; ?>">Live Calendar</a></li>
                                     <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) : ?>
                                         <li><a href="<?php echo $this->uri; ?>?action=calendar">Calendar Info</a></li>

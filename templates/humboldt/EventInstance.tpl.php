@@ -134,10 +134,10 @@ $endu = strtotime($this->eventdatetime->endtime);
 					}
 				}
 				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
-							"&text=" . str_replace('"', "'", UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)) .
-							"&location=" . str_replace('"', "'", $loc) .
+							"&text=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)) .
+							"&location=" . htmlentities($loc) .
 							"&dates=" . $eventdate .
-							"&details=" . str_replace('"', "'", UNL_UCBCN_Frontend::dbStringToHtml($this->event->description)) .
+							"&details=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->description)) .
 							"&sprop=website:" . $this->url;
 
 			?>

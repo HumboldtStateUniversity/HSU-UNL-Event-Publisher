@@ -976,6 +976,23 @@ p {
 
 
 
+
+a.logout-btn{
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	height: 30px;
+	padding: 0 20px;
+	color: #fff;
+	background: #222 url(images/manager-btn.png) repeat-x left top;
+	font:14px/30px Helmet, Freesans, sans-serif;
+	text-decoration:none;
+	display:block;
+	float:right;
+	margin:-40px 0 0 0;
+}
+
+
 /*non-semantic helper classes
 --------------------------------------------*/
 .visuallyhidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
@@ -989,3 +1006,7 @@ p {
 /** validation **/
 p.error {color: #c00; margin:0; font-weight:bold;}
 label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}
+
+
+/** hide empty elements **/
+*:empty {display: none;}

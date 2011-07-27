@@ -1007,3 +1007,6 @@ a.logout-btn{
 p.error {color: #c00; margin:0; font-weight:bold;}
 label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}
 
+
+/** hide empty elements **/
+label.element:empty {display: none;}

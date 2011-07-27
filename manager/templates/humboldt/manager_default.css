@@ -947,7 +947,20 @@ ul.fb-last li{
 	padding:5px 0;
 	margin-left:25px;
 }
-
+/** adobe indesign plugin **/
+.adobe-tags .sec_main{
+	font-weight:bold;
+}
+.adobe-tags input[type=text]{
+	width:200px;
+}
+.adobe-tags table{
+	margin:20px 0;
+}
+.adobe-tags td{
+	padding:7px 12px 7px 0;
+	text-align:left;
+}
 
 
 

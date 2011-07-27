@@ -105,7 +105,7 @@
                             <?php
                             }
 
-                            if (UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) {
+                            if (isset($this->user) && UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) {
                                 if (!empty($this->plugins)) {
                                     echo '      <div class="cal_widget"><h3>Plugins</h3><ul>';
                                     foreach ($this->plugins as $plugin) {

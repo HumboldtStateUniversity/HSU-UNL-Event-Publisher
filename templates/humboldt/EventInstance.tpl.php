@@ -85,7 +85,8 @@ $endu = strtotime($this->eventdatetime->endtime);
 			    if (isset($this->event->listingcontactname) ||
 					isset($this->event->listingcontactphone) ||
 					isset($this->event->listingcontactemail)) {
-			        <h3 class="date">Contact:</h3>
+
+                                echo '<h3 class="date">Contact:</h3>';
 
 				if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
 				if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';

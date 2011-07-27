@@ -101,17 +101,21 @@
 				    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
                                 </ul>
                             </div>
-                                <?php
+                            
+                            <?php
                             }
 
-                            if (!empty($this->plugins)) {
-                                echo '	<div class="cal_widget"><h3>Plugins</h3><ul>';
-                                foreach ($this->plugins as $plugin) {
-                                    echo '<li><a href="'.$plugin->uri.'">'.$plugin->name.'</a></li>';
+                            if (UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) {
+                                if (!empty($this->plugins)) {
+                                    echo '      <div class="cal_widget"><h3>Plugins</h3><ul>';
+                                    foreach ($this->plugins as $plugin) {
+                                        echo '<li><a href="'.$plugin->uri.'">'.$plugin->name.'</a></li>';
+                                    }
+                               	    echo '</ul></div>';
                                 }
-                                echo '</ul></div>';
                             }
                             ?>
+
                         </div>
                     </div>
 

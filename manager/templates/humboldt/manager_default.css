@@ -435,11 +435,12 @@ textarea{
 	overflow:auto;
 	border: 1px solid #888;
 }
-input[type="text"], #maincontent input[type="password"]{
+input[type="text"]{
 	width:400px;
 	border: 1px solid #888;
 	padding: 4px;
 }
+
 /* override widths */
 #__reverseLink_eventdatetime_event_idendtime_1, #starttime,
 #__reverseLink_eventdatetime_event_idstarttime_1, #endtime,
@@ -587,39 +588,33 @@ border-bottom: 1px solid #ccc;
 /*	-------------------------------------------------------------
 	Login Form
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
-body#login #navigation {
-display:none;
-}
+	#login input[type="text"], #login input[type="password"]{
+		background:#fff; 
+		border:1px solid #ccc;
+	 	border-color:#ccc #fff #fff #ccc;
+	 	-webkit-border-radius: 7px;
+	 	-moz-border-radius: 7px;
+	 	border-radius: 7px;
+	 	padding:5px;
+	 	width:350px;
+	 	height: 18px;
+	}
+	#login p{
+		font-size:16px;
+		margin:10px 0 25px 0;
+	}
+	#login button {
+		border: 0 none;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		border-radius: 7px;
+		height: 30px;
+	  padding: 0 10px;
+	  color: #fff;
+	  background: #678f2d url(images/submit-btn.png) repeat-x left top;
+		font-size:12px;
+	}
 
-form#event_login button#submit {
-	padding:4px 5px;
-}
-
-body#login #contentSearch {
-padding-top:50px;
-}
-
-body#login #contentSearch p{
-margin-bottom: 1em;
-}
-
-body#login #contentSearch input {
-background:#eee;
-margin:2px 0;
-width:200px;
-}
-
-body#login #contentSearch input:focus {
-background:#ffc;
-}
-
-body#login #contentSearch form label.element {
-position: relative;
-}
-
-body#login #contentSearch form fieldset {
-width:415px;
-}
 /*	-------------------------------------------------------------
 	Table elements
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/

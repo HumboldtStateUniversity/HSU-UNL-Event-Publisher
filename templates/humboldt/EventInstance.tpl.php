@@ -57,7 +57,7 @@ $endu = strtotime($this->eventdatetime->endtime);
                 echo '<p><strong>Additional Public Info:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->additionalpublicinfo).'</p>';
             }
 			if (isset($this->event->webpageurl)) {
-			    echo '<p><strong>Want more info? </strong> <a class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'">'Visit the event website.'</a></p>';
+			    echo '<p><strong>Want more info? </strong> <a class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->webpageurl).'">Visit the event website.</a></p>';
 			}
 			?>
 			<?php if (isset($this->event->imagedata)) { ?>

@@ -215,9 +215,7 @@ body {
 	clear: both;
 	background: transparent url(images/side-shadow.png) no-repeat right top;
 }
-#maincontent .right {
 
-}
 .right{float:right;}
 /* end container blocks*/
 
@@ -329,11 +327,6 @@ border-bottom:1px solid #9CB479;
 border-top:1px solid #9CB479;
 }
 
-#contentSearch div.clear #navigation #leftcollinks {
-margin:0;
-padding:0;
-}
-
 #navigation{
 float: left;
 margin-right:0;
@@ -415,13 +408,13 @@ list-style: none;
 margin:0;
 padding:0;
 }
-#maincontent fieldset ol{
+fieldset ol{
 margin:0 0 40px 0;
 padding:0;
 position:relative;
 top:10px;
 }
-#maincontent fieldset ol li{
+fieldset ol li{
 margin:10px 0;
 padding:0;
 }
@@ -436,28 +429,28 @@ input, textarea{
 	padding: 2px 5px;
 	line-height: 1;
 }
-#maincontent textarea{
+textarea{
 	width:400px;
 	height:80px;
 	overflow:auto;
 	border: 1px solid #888;
 }
-#maincontent input[type="text"], #maincontent input[type="password"]{
+input[type="text"], #maincontent input[type="password"]{
 	width:400px;
 	border: 1px solid #888;
 	padding: 4px;
 }
 /* override widths */
-#maincontent #__reverseLink_eventdatetime_event_idendtime_1, #maincontent #starttime,
-#maincontent #__reverseLink_eventdatetime_event_idstarttime_1, #maincontent #endtime,
-#maincontent #__reverseLink_eventdatetime_event_idrecurs_until_1, #maincontent #recurs_until,
-#maincontent input.submitButton, #maincontent #event_search input, #maincontent input#submit{
+#__reverseLink_eventdatetime_event_idendtime_1, #starttime,
+#__reverseLink_eventdatetime_event_idstarttime_1, #endtime,
+#__reverseLink_eventdatetime_event_idrecurs_until_1, #recurs_until,
+input.submitButton, #event_search input, input#submit{
 	width:auto;
 }
 #searchcriteria{width:400px;font-size:12px;height:150px}
 
 fieldset legend {
-width:550px;
+width:440px;
 border: 0;
 margin: 0;
 font-size: 15px;
@@ -537,12 +530,16 @@ box-shadow: 1px 1px 3px rgba(0,0,0,.3);
 li{
 margin:0;
 }
-a#formShow,#contentSearch .subsectionlink {
-/*clear:both;
-display:block;
-margin-left:10px;*/
+.subsectionlink {
+	padding:5px 8px;
+	background:#ddd;
+	color:#000;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+	box-shadow: 0px 1px 3px rgba(0,0,0,.6);
+	cursor:pointer;
 }
-a#formShow:focus,#contentSearch a#formShow:active,#contentSearch .subsectionlink:focus,#contentSearch .subsectionlink:active {
+a#formShow:focus, a#formShow:active, .subsectionlink:focus, .subsectionlink:active {
 color:#fff !important;
 text-decoration:underline;
 }
@@ -694,12 +691,12 @@ ul#frontend_view_selector li {
 table.eventlisting {
 	border-collapse:collapse;
 	background-color: #cdcdcd;
-	margin:10px 0pt 15px;
 	font-size: 12px;
 	width: 100%;
 	text-align: left;
+	margin:11px 0 19px 0;
 }
-table.eventlisting thead tr th, table.eventlisting tfoot tr th {
+table.eventlisting thead tr th, table.eventlisting tfoot tr th, table.eventlisting tbody tr th {
 	background:#777;
 	color:#fff;
 	text-align:left;
@@ -726,15 +723,15 @@ display:block;
 /*background:url(images/sort.gif) no-repeat;
 background-position:40px 5px;*/
 text-decoration:none;
-}
+}/*
 table.eventlisting thead th.title a {
 background-position:79px 5px;
-}
+}*/
 table.eventlisting td ul {
 padding:0;
 margin:0;
 }
-table.eventlisting td ul li{
+table.eventlisting td li{
 margin:0;
 padding:0;
 }

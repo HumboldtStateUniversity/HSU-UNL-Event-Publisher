@@ -251,6 +251,8 @@ class UNL_UCBCN_Event extends DB_DataObject
 	$form->addRule('imagedata', 'Image must be one of the following formats: .jpg, .jpeg, .png, .gif, .bmp', 
 			'mimetype', array('image/png', 'image/gif', 'image/jpeg', 'image/bmp'));
 
+        $form->applyFilter('__ALL__', array('UNL_UCBCN_Event', 'stripTags'));
+
         $date = date('Y-m-d H:i:s');
 
         $defaults = array('datecreated'     => $date,
@@ -289,6 +291,19 @@ class UNL_UCBCN_Event extends DB_DataObject
     public function checkURL($val)
     {
         return preg_match('/^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/i', $val);
+    }
+
+
+    /**
+    * Only allow a few html tags in user input
+    *
+    * @param string $val value to filter
+    *
+    * @return string 
+    */
+    public function stripTags($val)
+    {
+        return strip_tags($val, '<b><i><u><a><ul><ol><li><br><s>');
     }
 
     /**

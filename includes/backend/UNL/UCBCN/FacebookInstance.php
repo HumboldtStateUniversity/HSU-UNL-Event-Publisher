@@ -135,7 +135,7 @@ class UNL_UCBCN_FacebookInstance
     {
         $this->loadAccount($calID);
         if ($this->account->show_like_buttons) {
-            return "<iframe src='http://www.facebook.com/plugins/like.php?href=".urlencode(UNL_UCBCN::getBaseURL().$url)."&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:450px; height:80px;' allowTransparency='true'></iframe>";
+            return "<iframe src='http://www.facebook.com/plugins/like.php?href=".urlencode($url)."&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:450px; height:80px;' allowTransparency='true'></iframe>";
         }
     }
     

@@ -848,6 +848,15 @@ h1#calname {
 	font: 40px/27px 'CartoGothicStdBook', Arial, sans-serif;
 	float: left;
 } 
+a.maincal {
+	background: transparent url(images/events_mark.png) no-repeat left top;
+	display: block;
+	width: 338px;
+	height: 49px;
+}
+h1#calname span {
+	
+}
 h1#calname a {
 	color: #212121;
 	text-decoration: none;

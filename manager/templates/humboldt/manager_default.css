@@ -951,7 +951,11 @@ h1,h2,h3,h4,h5,h6, ul {
 h1#calname {
 	font: 40px/27px 'CartoGothicStdBook', Arial, sans-serif;
 } 
-h1#calname a {
+a.maincal {
+	background: transparent url(images/events_mark.png) no-repeat left top;
+	display: block;
+	width: 338px;
+	height: 49px;
 	color: #212121;
 	text-decoration: none;
 }

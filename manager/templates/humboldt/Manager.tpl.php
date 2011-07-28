@@ -31,7 +31,7 @@
 								<div id="load"></div>
 								<div id="banner">
 									<div id="banner-wrap">
-					<h1 id="calname"><a href="<?php echo $this->frontenduri; ?>">HSU Events</a></h1>
+					<h1 id="calname"><a class="maincal" href="<?php echo $this->frontenduri; ?>"><span class="ir"><?php echo $this->calendar->name; ?></span></a></h1>
 						
 					
 					<?php if (isset($this->user)) { ?>

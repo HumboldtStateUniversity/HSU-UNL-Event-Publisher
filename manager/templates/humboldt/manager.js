@@ -16,7 +16,7 @@ function addLoadEvent(func) {
 addLoadEvent(function() {
     updateRow();
     if (document.getElementById('unl_ucbcn_event')) {
-        requiredField();
+        //requiredField();
         hideField();
     }
     try {

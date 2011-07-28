@@ -29,7 +29,7 @@ blockquote:after,
 q:before, 
 q:after {content: ''; content: none;}
 
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;color:#212121;text-decoration:none;}
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;color:#537F15;text-decoration:underline;}
 
 del {text-decoration: line-through;}
 
@@ -255,6 +255,15 @@ margin:0;
 }
 form#cal_choose #submit{
 margin-left:2px;
+border: 0 none;
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+height: 26px;
+padding: 0 10px;
+color: #fff;
+background: #222 url(images/manager-btn.png) repeat-x left top;
+font-size:12px;
 }
 form#cal_choose fieldset {
 border:none;
@@ -440,6 +449,17 @@ input[type="text"]{
 	border: 1px solid #888;
 	padding: 4px;
 }
+input[type="submit"]{
+	border: 0 none;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	height: 30px;
+  padding: 0 17px;
+  color: #fff;
+  background: #222 url(images/manager-btn.png) repeat-x left top;
+	font-size:12px;
+}
 
 /* override widths */
 #__reverseLink_eventdatetime_event_idendtime_1, #starttime,
@@ -596,13 +616,14 @@ border-bottom: 1px solid #ccc;
 	 	-moz-border-radius: 7px;
 	 	border-radius: 7px;
 	 	padding:5px;
-	 	width:350px;
+	 	width:250px;
 	 	height: 18px;
 	}
-	#login p{
+	#login .login p{
 		font-size:16px;
 		margin:10px 0 25px 0;
 	}
+	#login .login p.error {color: #c00; margin:0; font-weight:bold;}
 	#login button {
 		border: 0 none;
 		-webkit-border-radius: 7px;
@@ -850,6 +871,15 @@ background-position:0 -22px;
 }
 form#event_search input.search_submit{
 	float:left;
+	border: 0 none;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	height: 26px;
+  padding: 0 10px;
+  color: #fff;
+  background: #222 url(images/manager-btn.png) repeat-x left top;
+	font-size:12px;
 }
 
 #navigation .element select, #navigation .element ui-selectmenu{
@@ -917,7 +947,24 @@ ul.fb-last li{
 	padding:5px 0;
 	margin-left:25px;
 }
-
+#UNL_UCBCN_Manager_FacebookIntegration table td{
+	padding:7px 12px 7px 0;
+	text-align:left;
+}
+/** adobe indesign plugin **/
+.adobe-tags .sec_main{
+	font-weight:bold;
+}
+.adobe-tags input[type=text]{
+	width:200px;
+}
+.adobe-tags table{
+	margin:20px 0;
+}
+.adobe-tags td{
+	padding:7px 12px 7px 0;
+	text-align:left;
+}
 
 
 
@@ -946,6 +993,23 @@ p {
 
 
 
+
+a.logout-btn{
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	height: 30px;
+	padding: 0 20px;
+	color: #fff;
+	background: #222 url(images/manager-btn.png) repeat-x left top;
+	font:14px/30px Helmet, Freesans, sans-serif;
+	text-decoration:none;
+	display:block;
+	float:right;
+	margin:-40px 0 0 0;
+}
+
+
 /*non-semantic helper classes
 --------------------------------------------*/
 .visuallyhidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
@@ -957,6 +1021,5 @@ p {
 
 
 /** validation **/
-
-label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}
 p.error {color: #c00; margin:0; font-weight:bold;}
+label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}

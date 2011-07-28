@@ -28,14 +28,14 @@ class UNL_UCBCN_Manager_InDesignExport extends UNL_UCBCN_Manager_Plugin
              && strtotime($_GET['endtime']) !== false) {
                     $this->doExport();
             } else {
-                $this->output[] = '<p>Please change your start date and end date to a recognizeable format.</p>';
+                $this->output[] = '<p class="error">Please change your start date and end date to a recognizeable format.</p>';
             }
         }
     }
 
     public function run()
     {
-        $this->output[] = '<p class="sec_main">Adobe InDesign Tags Exporter</p>' .
+        $this->output[] = '<div class="adobe-tags"><p class="sec_main">Adobe InDesign Tags Exporter</p>' .
                 '<p>End users can use this tool to export events in Adobe InDesign Tags formatted text.</p>';
         if (isset($_GET['_id_export'])) {
             $action = $_GET['id_export'];
@@ -48,6 +48,7 @@ class UNL_UCBCN_Manager_InDesignExport extends UNL_UCBCN_Manager_Plugin
             default:
                 $this->output[] = $this->showChooseDateForm();
         }
+			$this->output[] = '</div>';
     }
     
     public function showChooseDateForm()

@@ -31,8 +31,13 @@
 								<div id="load"></div>
 								<div id="banner">
 									<div id="banner-wrap">
-					<h1 id="calname"><a href="<?php echo $this->frontenduri; ?>">HSU Events</a></h1>	
-
+					<h1 id="calname"><a href="<?php echo $this->frontenduri; ?>">HSU Events</a></h1>
+						
+					
+					<?php if (isset($this->user)) { ?>
+						<p><a href="<?php echo $this->uri; ?>?logout=true" class="logout-btn">Log Out</a></p>
+					<?php } ?>
+					
 					<div class="clear"></div>
 
 
@@ -98,20 +103,24 @@
                                     <?php if(UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit Subscription', $this->calendar)) : ?>				    
                   		    	<li><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe to Calendars</a></li>
                                     <?php endif; ?>
-				    <li><a href="<?php echo $this->uri; ?>?logout=true">LogOut</a></li>
+				    <li><a href="<?php echo $this->uri; ?>?logout=true">Log Out</a></li>
                                 </ul>
                             </div>
-                                <?php
+                            
+                            <?php
                             }
 
-                            if (!empty($this->plugins)) {
-                                echo '	<div class="cal_widget"><h3>Plugins</h3><ul>';
-                                foreach ($this->plugins as $plugin) {
-                                    echo '<li><a href="'.$plugin->uri.'">'.$plugin->name.'</a></li>';
+                            if (isset($this->user) && UNL_UCBCN::userHasPermission($this->user, 'Calendar Edit', $this->calendar)) {
+                                if (!empty($this->plugins)) {
+                                    echo '      <div class="cal_widget"><h3>Plugins</h3><ul>';
+                                    foreach ($this->plugins as $plugin) {
+                                        echo '<li><a href="'.$plugin->uri.'">'.$plugin->name.'</a></li>';
+                                    }
+                               	    echo '</ul></div>';
                                 }
-                                echo '</ul></div>';
                             }
                             ?>
+
                         </div>
                     </div>
 
@@ -126,7 +135,7 @@
 	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
 	                            </ul>
 															</div>
-	                                <?php
+	                            <?php
 	                            } ?>
 	                        
 	

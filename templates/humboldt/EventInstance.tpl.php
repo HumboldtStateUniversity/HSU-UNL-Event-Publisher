@@ -66,7 +66,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 
 		<div class="alt">
-			<p class="date"><strong>Where:</strong></p>
+			<h3 class="date"><strong>Where:</strong></h3>
 			
 				<?php
 				if (isset($this->eventdatetime->room)) {
@@ -90,7 +90,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 
 					if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
-					if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
+					if (isset($this->event->listingcontactemail)) echo '<div class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></div>';
 				} ?>
 	</div>
 		

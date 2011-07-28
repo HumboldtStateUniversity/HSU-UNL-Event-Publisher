@@ -29,7 +29,7 @@ blockquote:after,
 q:before, 
 q:after {content: ''; content: none;}
 
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;color:#537F15;text-decoration:underline;}
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;color:#537f15;text-decoration:underline;}
 
 del {text-decoration: line-through;}
 
@@ -237,11 +237,11 @@ p.currentCal strong{
 white-space:nowrap;
 }
 /* select a different calendar dropdown */
-#contentSearch form#cal_choose .element, #contentSearch form#cal_choose fieldset li{
+form#cal_choose .element, form#cal_choose fieldset li{
   clear:none;
   padding:0;
 }
-#contentSearch form#cal_choose label.element{display:none;}
+form#cal_choose label.element{display:none;}
 
 form#cal_choose{
 margin:0 0 0 17px;
@@ -336,14 +336,6 @@ border-bottom:1px solid #9CB479;
 border-top:1px solid #9CB479;
 }
 
-#navigation{
-float: left;
-margin-right:0;
-width:275px;
-}
-#navigation .element a {
-color:#212121;
-}
 /*	-------------------------------------------------------------
 	Right hand column widget -- plugins section + date and welcome box
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
@@ -468,7 +460,7 @@ input[type="submit"]{
 input.submitButton, #event_search input, input#submit{
 	width:auto;
 }
-#searchcriteria{width:400px;font-size:12px;height:150px}
+#searchcriteria{width:400px;font-size:12px;height:150px;}
 
 fieldset legend {
 width:440px;
@@ -498,7 +490,7 @@ padding:0;
 margin:0;
 }
 
-/* required & errors */
+/* required & errors server side */
 form span.error {
 color:red;
 }
@@ -537,7 +529,6 @@ padding:0 0 10px;
 
 
 /** check all/ uncheck all buttons **/
-/*#contentSearch .subsectionlink,*/
 a#formShow,
 a.checkall,
 a.uncheckall {
@@ -636,9 +627,9 @@ border-bottom: 1px solid #ccc;
 		font-size:12px;
 	}
 
-/*	-------------------------------------------------------------
-	Table elements
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	/*	-------------------------------------------------------------
+		edit event or create new event links
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 ul.eventsbystatus {
 font-size:14px;
 list-style:none;
@@ -688,7 +679,9 @@ background:url(images/current.png) no-repeat 16px 10px #9cb479;
 color:#000;
 }
 
-
+/*	-------------------------------------------------------------
+	Table elements
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 ul#frontend_view_selector {
 background-color: #D6D6D6;
     height: 40px;
@@ -760,7 +753,7 @@ text-decoration:underline;
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
 	
 /** edit buttons **/
-table.eventlisting td.edit a,#contentSearch table.eventlisting td a.user_perm_edit {
+table.eventlisting td.edit a, table.eventlisting td a.user_perm_edit {
 font-size:11px;
 padding:5px 8px;
 background:#ddd;
@@ -772,11 +765,6 @@ cursor:pointer;
 }
 
 table.eventlisting td.delete a,button#delete_event {
-/*display:block;
-padding:0;
-text-indent:-9999px;
-width:48px;
-height:22px;*/
 font-size:11px;
 padding:5px 8px;
 background:#ddd;
@@ -788,11 +776,6 @@ cursor:pointer;
 }
 
 table.eventlisting td a.user_perm_remove {
-/*display:block;
-padding:0;
-text-indent:-9999px;
-width:89px;
-height:21px;*/
 font-size:11px;
 padding:5px 8px;
 background:#ddd;
@@ -803,7 +786,7 @@ box-shadow: 0px 1px 3px rgba(0,0,0,.6);
 cursor:pointer;
 }
 
-table.eventlisting td.delete a:hover,#contentSearch table.eventlisting td.edit a:hover,#contentSearch table.eventlisting td a.user_perm_remove:hover,#contentSearch table.eventlisting td a.user_perm_edit:hover {
+table.eventlisting td.delete a:hover, table.eventlisting td.edit a:hover, table.eventlisting td a.user_perm_remove:hover, table.eventlisting td a.user_perm_edit:hover {
 background-position:0 -22px;
 }
 
@@ -813,10 +796,6 @@ float:left;
 
 button {
 margin:10px 5px 0 0;
-}
-
-/*.btnsubmit, */#contentSearch form input.submitButton {
-
 }
 
 .btnsubmit#delete_event {
@@ -880,11 +859,6 @@ form#event_search input.search_submit{
   color: #fff;
   background: #222 url(images/manager-btn.png) repeat-x left top;
 	font-size:12px;
-}
-
-#navigation .element select, #navigation .element ui-selectmenu{
-	width:220px;
-	text-align:left;
 }
 img.image-upload{
 	max-width:525px;
@@ -1020,6 +994,6 @@ a.logout-btn{
 /* @end */
 
 
-/** validation **/
+/** validation client **/
 p.error {color: #c00; margin:0; font-weight:bold;}
 label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}

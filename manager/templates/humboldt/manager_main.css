@@ -51,6 +51,5 @@
  */
 
 /* import stylesheets and hide from ie/mac \*/
-@import url("manager_default.css");
-@import url("manager_ieonly.css"); 
+@import url("manager_default.css"); 
 /* end import/hide */

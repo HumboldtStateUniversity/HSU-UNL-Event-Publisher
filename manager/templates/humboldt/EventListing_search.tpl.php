@@ -75,9 +75,9 @@ foreach ($this->events as $event) {
 	$oddrow = !$oddrow;
 	} ?>
 </tbody>
-</table>
+</table><!--
 <a href="#" class="checkall" onclick="setCheckboxes('searchlist',true); return false">Check All</a>
 <a href="#" class="uncheckall" onclick="setCheckboxes('searchlist',false); return false">Uncheck All</a>
 <input class="btnsubmit" id="moveto_pending" type="submit" name="pending" value="Add to Pending" />
-<input class="btnsubmit" id="moveto_posted" type="submit" name="posted" value="Add to Posted" />
+<input class="btnsubmit" id="moveto_posted" type="submit" name="posted" value="Add to Posted" />-->
 </form>

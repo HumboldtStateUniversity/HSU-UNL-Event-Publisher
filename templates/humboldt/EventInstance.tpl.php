@@ -80,6 +80,8 @@ $endu = strtotime($this->eventdatetime->endtime);
                 }
 				?>
 		</div>	
+
+			<h3 class="date">Contact:</h3>
 			
 			<?php 
 			    if (isset($this->event->listingcontactname) ||
@@ -90,14 +92,6 @@ $endu = strtotime($this->eventdatetime->endtime);
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 					if (isset($this->event->listingcontactemail)) echo '<div class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></div>';
 				} ?>
-
-                                echo '<h3 class="date">Contact:</h3>';
-
-				if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
-				if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
-				if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
-			} ?>
-
 	</div>
 		
 	<div id="facebook_wrap">

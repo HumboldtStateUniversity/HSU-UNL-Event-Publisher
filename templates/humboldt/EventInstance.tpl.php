@@ -86,19 +86,18 @@ $endu = strtotime($this->eventdatetime->endtime);
 					isset($this->event->listingcontactphone) ||
 					isset($this->event->listingcontactemail)) {
 
-<<<<<<< HEAD
 					if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
 					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 					if (isset($this->event->listingcontactemail)) echo '<div class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></div>';
 				} ?>
-=======
+
                                 echo '<h3 class="date">Contact:</h3>';
 
 				if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
 				if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
 				if (isset($this->event->listingcontactemail)) echo '<div class="mailto">'.$this->event->listingcontactemail.'</div>';
 			} ?>
->>>>>>> 3d95b6d86ddb36ff73301554b4e024777301b27b
+
 	</div>
 		
 	<div id="facebook_wrap">

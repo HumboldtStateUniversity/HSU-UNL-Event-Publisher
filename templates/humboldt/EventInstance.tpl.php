@@ -66,7 +66,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 
 		<div class="alt">
-			<h3 class="date"><strong>Where:</strong></h3>
+			<h3 class="date">Where:</h3>
 			
 				<?php
 				if (isset($this->eventdatetime->room)) {

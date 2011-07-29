@@ -62,6 +62,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     public $uidcreated;                      // string(100)
     public $datelastupdated;                 // datetime(19)  binary
     public $uidlastupdated;                  // string(100)
+    public $price;                           // string(100)
 
     /* Static get */
     function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('UNL_UCBCN_Event',$k,$v); }
@@ -73,6 +74,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     public $fb_preDefOrder = array(
                                     'title',
                                     'description',
+                                    'price',
                                     'webpageurl',
                                     '__reverseLink_event_has_eventtype_event_id',
                                     'othereventtype',
@@ -93,7 +95,8 @@ class UNL_UCBCN_Event extends DB_DataObject
                                     'listingcontactphone'    => 'Phone',
                                     'listingcontactemail'    => 'Email',
                                     '__reverseLink_eventdatetime_event_id' => '',
-                                    '__reverseLink_event_has_eventtype_event_id'=>'');
+                                    '__reverseLink_event_has_eventtype_event_id'=>'',
+                                    'price'                  => 'Price');
 
     public $fb_hiddenFields = array('datecreated',
                                     'uidcreated',
@@ -363,7 +366,8 @@ class UNL_UCBCN_Event extends DB_DataObject
             'datecreated'=>14,
             'uidcreated'=>2,
             'datelastupdated'=>14,
-            'uidlastupdated'=>2
+            'uidlastupdated'=>2,
+            'price'=>2
         );
 
         if (isset($_UNL_UCBCN['default_calendar_id']) &&

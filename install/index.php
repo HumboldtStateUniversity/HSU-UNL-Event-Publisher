@@ -24,7 +24,7 @@ require_once 'UNL/UCBCN/Autoload.php';
 require_once 'UNL/UCBCN_setup.php';
 
 $setup = new UNL_UCBCN_setup_postinstall();
-$setup->data_dir = 'http://unl-event-publisher.googlecode.com/svn/UNL_UCBCN/trunk/data';
+$setup->data_dir = './data';
 
 session_start();
 ?>

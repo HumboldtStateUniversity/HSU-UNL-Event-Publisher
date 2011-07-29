@@ -463,15 +463,17 @@ table blockquote {
 .event_cal table td.date, .event_cal table td.title{width:auto;}
 #maincontent .event_cal table td.date{color:#252525;font-weight:bold;}
 .event_cal table thead{display:none;}
-#event_detail {
-	
-}
+
 img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-width:480px;} /* give image max width to stop large images from busting the table layout*/
 #updatecontent #event_detail h3, #updatecontent #event_detail h2  {
 	float: none;
 	margin: 18px 0;
 }
-
+#event_detail h2 {
+	font-size: 24px;
+	font-weight: normal;
+	margin-top: 48px;
+}
 /*- Menu Tabs G--------------------------- */
 
     #tabsG {

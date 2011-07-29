@@ -306,7 +306,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     */
     public function stripTags($val)
     {
-        return strip_tags($val, '<b><i><u><a><ul><ol><li><br><s>');
+        return strip_tags($val, '<b><i><u><a><ul><ol><li><br><s><strong><em>');
     }
 
     /**

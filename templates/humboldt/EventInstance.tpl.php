@@ -63,7 +63,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php if (isset($this->event->imagedata)) { ?>
 				<img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" />
 			<?php } ?>	
-			<?php if (isset($this->event->price)) echo '<p><strong>Price:</strong>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
+			<?php if (isset($this->event->price)) echo '<p><strong>Price: </strong>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
 			
 			<div class="date"><h3>Location:</h3>		
 				<?php

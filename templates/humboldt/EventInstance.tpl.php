@@ -65,7 +65,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php } ?>	
 			<?php if (isset($this->event->price)) echo '<p><strong>Price:</strong>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
 			
-			<p class="date"><strong>Location:</strong>			
+			<div class="date"><p><strong>Location:</strong>	</p>		
 				<?php
 				if (isset($this->eventdatetime->room)) {
 				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
@@ -76,7 +76,7 @@ $endu = strtotime($this->eventdatetime->endtime);
                 if (isset($this->eventdatetime->directions)) {
                     echo '<span class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</span>';
                 }
-				?></p>
+				?></div>
 
 			<p class="date"><strong>Contact:</strong>
 			

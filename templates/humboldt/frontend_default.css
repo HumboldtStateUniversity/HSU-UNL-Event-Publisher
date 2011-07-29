@@ -801,6 +801,7 @@ td {
 }
 h2#featuredEventsTitle {
 	font: 22px/9px 'CartoGothicStdBook', Arial, sans-serif;
+	color:#77797F;
 }
 #featuredEvents .event_detail {
 	margin: 10px 35px 0 0;

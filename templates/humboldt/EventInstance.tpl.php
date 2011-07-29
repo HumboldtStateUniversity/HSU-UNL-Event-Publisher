@@ -7,8 +7,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 <div class="event_cal">
 <div class='vcalendar'>
 	<div class='vevent'>
-		<h1 class='summary'><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?> <a class="permalink" href="<?php echo $this->url; ?>" title="Permanent link for this event"><span class="ir">[permalink]</span></a></h1>
-		<?php if (isset($this->event->subtitle)) echo '<h2>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->subtitle).'</h2>'; ?>
+		<h1 class='summary'><?php echo date('l, F jS',$startu); ?></h1>
 		<!--<div id="tabsG">
 		  <ul>
 		    <li><a href="#" id="event_selected" title="Event Detail"><span>Event Detail</span></a></li>
@@ -19,9 +18,11 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 		<div id="event_detail">
 <!--			<h2 scope="col" class="date">Event Detail</h2>-->
-			<h3 class="date"> <?php echo date('l, F jS',$startu); ?></h3>
+			<h2><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?> <a class="permalink" href="<?php echo $this->url; ?>" title="Permanent link for this event"><span class="ir">[permalink]</span></a></h2>
+			<?php if (isset($this->event->subtitle)) echo '<h3>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->subtitle).'</h3>'; ?>
 		
-			<span class="alt"><span class="date"> 
+			<p class="alt">
+			<strong>Time:</strong> 
 			<?php
 			if (isset($this->eventdatetime->starttime)) {
 				if (strpos($this->eventdatetime->starttime,'00:00:00')) {
@@ -46,8 +47,7 @@ $endu = strtotime($this->eventdatetime->endtime);
  				    	    echo '-<abbr class="dtend" title="'.date(DATE_ISO8601, $endu).'">'.date('g:i a', $endu).'</abbr>';
 		    	}
 		    }
-			?></span>
-		</h3>
+			?></p>
 
 			<h3 class="date">Description:</h3>	
 		<p class='description'>
@@ -63,10 +63,9 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php if (isset($this->event->imagedata)) { ?>
 				<img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" />
 			<?php } ?>	
-			
-
-		<div class="alt">
-			<h3 class="date">Where:</h3>
+			<h3>Price</h3>	
+			<p><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->price); ?></p>
+			<h3 class="date">Where</h3>
 			
 				<?php
 				if (isset($this->eventdatetime->room)) {
@@ -79,7 +78,6 @@ $endu = strtotime($this->eventdatetime->endtime);
                     echo '<p class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }
 				?>
-		</div>	
 
 			<h3 class="date">Contact:</h3>
 			

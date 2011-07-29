@@ -475,7 +475,8 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 	margin-top: 36px;
 }
 div.date {
-	border-top: solid 1px #fff;
+	border-top: solid 1px #999;
+	margin-top: 27px;
 }
 /*- Menu Tabs G--------------------------- */
 

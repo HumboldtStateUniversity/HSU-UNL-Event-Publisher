@@ -65,21 +65,22 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php } ?>	
 			<?php if (isset($this->event->price)) echo '<p><strong>Price:</strong>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
 			
-			<div class="date"><p><strong>Location:</strong>	</p>		
+			<div class="date"><h3>Location:</h3>		
 				<?php
-				if (isset($this->eventdatetime->room)) {
-				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
-				}
 				if ($loc = $this->eventdatetime->getLocation()) {
 					UNL_UCBCN::displayRegion($loc);
 				}
+				if (isset($this->eventdatetime->room)) {
+				    echo '<p class="room"><strong>Room:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room).'</p>';
+				}
+				
                 if (isset($this->eventdatetime->directions)) {
-                    echo '<span class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</span>';
+                    echo '<p class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
                 }
 				?></div>
 
-			<p class="date"><strong>Contact:</strong>
-			
+			<div class="date"><h3>Contact:</h3>
+			<div>
 			<?php 
 			    if (isset($this->event->listingcontactname) ||
 					isset($this->event->listingcontactphone) ||
@@ -89,6 +90,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 					if (isset($this->event->listingcontactphone)) echo '<span class="tel">'.$this->event->listingcontactphone.'</span><br />';
 					if (isset($this->event->listingcontactemail)) echo '<span class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></span><br />';
 				} ?>
+				</div			
 	</div>
 		
 	<div id="facebook_wrap">

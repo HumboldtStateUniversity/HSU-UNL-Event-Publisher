@@ -469,7 +469,7 @@ img.event_description_img{border:1px solid #ccc;background:#ddd;padding:2px;max-
 	float: none;
 	margin: 18px 0;
 }
-#event_detail h2 {
+#updatecontent #event_detail h2 {
 	font-size: 24px;
 	font-weight: normal;
 	margin-top: 48px;

@@ -63,10 +63,9 @@ $endu = strtotime($this->eventdatetime->endtime);
 			<?php if (isset($this->event->imagedata)) { ?>
 				<img class="event_description_img" src="<?php echo UNL_UCBCN_Frontend::formatURL(array()); ?>?image&amp;id=<?php echo $this->event->id; ?>" alt="image for event <?php echo $this->event->id; ?>" />
 			<?php } ?>	
-			<?php if (isset($this->event->price)) echo '<h3>Price</h3><p>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
+			<?php if (isset($this->event->price)) echo '<p><strong>Price:</strong>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->price).'</p>'; ?>
 			
-			<h3 class="date">Where</h3>
-			
+			<p class="date"><strong>Location:</strong>			
 				<?php
 				if (isset($this->eventdatetime->room)) {
 				    echo 'Room: '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->room);
@@ -75,20 +74,20 @@ $endu = strtotime($this->eventdatetime->endtime);
 					UNL_UCBCN::displayRegion($loc);
 				}
                 if (isset($this->eventdatetime->directions)) {
-                    echo '<p class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</p>';
+                    echo '<span class="directions"><strong>Directions:</strong> '.UNL_UCBCN_Frontend::dbStringToHtml($this->eventdatetime->directions).'</span>';
                 }
-				?>
+				?></p>
 
-			<h3 class="date">Contact:</h3>
+			<p class="date"><strong>Contact:</strong>
 			
 			<?php 
 			    if (isset($this->event->listingcontactname) ||
 					isset($this->event->listingcontactphone) ||
 					isset($this->event->listingcontactemail)) {
 
-					if (isset($this->event->listingcontactname)) echo '<div class="n">'.$this->event->listingcontactname.'</div>';
-					if (isset($this->event->listingcontactphone)) echo '<div class="tel">'.$this->event->listingcontactphone.'</div>';
-					if (isset($this->event->listingcontactemail)) echo '<div class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></div>';
+					if (isset($this->event->listingcontactname)) echo '<span class="n">'.$this->event->listingcontactname.'</span><br />';
+					if (isset($this->event->listingcontactphone)) echo '<span class="tel">'.$this->event->listingcontactphone.'</span><br />';
+					if (isset($this->event->listingcontactemail)) echo '<span class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></span><br />';
 				} ?>
 	</div>
 		

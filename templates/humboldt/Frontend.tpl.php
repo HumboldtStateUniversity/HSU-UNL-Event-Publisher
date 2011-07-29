@@ -67,7 +67,15 @@ if (isset($this->output[0], $this->output[0]->event)
 		<div id="load"></div>
 		<div id="banner" class="clearfix">
 			<div id="banner-wrap">
-				<h1 id="calname"><a class="maincal" href="<?php echo $this->uri; ?>"><span class="ir"><?php echo $this->calendar->name; ?></span></a></h1>
+				<?php 
+				
+				if ($this->calendar->id == '1'){ // Only show on main calendar 
+				echo '<h1 id="calname"><a class="maincal" href="'.UNL_UCBN_Frontend::dbString($this->uri).'"><span class="ir"'.UNL_UCBN_Frontend::dbString($this->calendar->name).' </span></a>';
+				} else {
+				echo '<h1 id="calname"><a href="'.UNL_UCBN_Frontend::dbString($this->uri).'">'.UNL_UCBN_Frontend::dbString($this->calendar->name).'</a>';
+				}
+				
+				?>
 <!--search form-->
 		<div id="main_search">
 	      <form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">

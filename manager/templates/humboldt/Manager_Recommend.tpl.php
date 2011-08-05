@@ -1,7 +1,6 @@
 <h3>Recommend <span class="title">'<?php echo $this->events[0]->title; ?>'</span> for other calendars:</h3>
 <form action="<?php echo $this->manager->uri; ?>?action=recommend" method="post">
 <?php
-ini_set('display_errors',true);
 foreach ($this->events as $event) {
     echo '<input type="hidden" name="event'.$event->id.'" value="true" />';
 }

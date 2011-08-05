@@ -493,7 +493,8 @@ class UNL_UCBCN_setup_postinstall
                             'Calendar Format',
                             'Calendar Edit',
                             'Calendar Change Format',
-                            'Calendar Delete');
+                            'Calendar Delete',
+                            'Location Add');
         foreach ($permissions as $p_type) {
             $p       = UNL_UCBCN::factory('permission');
             $p->name = $p_type;

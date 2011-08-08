@@ -634,7 +634,7 @@ ul.eventsbystatus {
 font-size:14px;
 list-style:none;
 line-height:1;
-margin:8px 0 39px 0;
+margin:8px 0 20px 0;
 padding:0;
 height:38px;
 }
@@ -645,7 +645,9 @@ float:left;
 margin:0;
 padding:0;
 }
-
+div.eventButtonAction{
+	margin:10px 0;
+}
 ul.eventsbystatus li a {
 display: inline-block;
 outline: none;

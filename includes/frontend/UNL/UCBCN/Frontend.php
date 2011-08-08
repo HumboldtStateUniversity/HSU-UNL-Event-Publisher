@@ -727,56 +727,53 @@ class UNL_UCBCN_Frontend extends UNL_UCBCN implements UNL_UCBCN_Cacheable
 
     function featured()
     {
-        /*$options = array('calendar'=> $this->calendar,
-                         'limit'   => '18');
-        $eventlist = new UNL_UCBCN_EventListing('upcoming', $options);
-        */
+        $mdb2 = UNL_UCBCN::getDatabaseConnection();
+        $mdb2->setFetchMode(MDB2_FETCHMODE_ASSOC);
+        $sql = "SELECT e.id, edt.id as edt_id, edt.starttime, e.imagedata, e.title
+                        FROM event e, eventdatetime edt, calendar_has_event che
+                        WHERE e.id = edt.event_id
+                            AND che.calendar_id = 1
+                            AND che.event_id = e.id
+                            AND che.event_id = edt.event_id
+                            AND che.status = 'posted'
+                            AND edt.starttime >= " . date('Y-m-d') . "
+                            AND e.status = 'featured'
+                        ORDER BY edt.starttime
+                        LIMIT 10";
+        $events = $mdb2->query($sql)->fetchAll();
+
         $output = '';
-        $xmlUrl = $this->uri . "/upcoming/?format=xml&limit=18";
-        $xmlStr = file_get_contents($xmlUrl);
-        $xmlObj = simplexml_load_string($xmlStr);
-        $xmlObj = json_decode(json_encode($xmlObj),1); //convert xml object to array
 
-        foreach ($xmlObj['Event'] as $event){
-            if ($event['EventStatus'] == 'featured') {
-                $events[] = $event;
-            }
-        }
-
-	if (count($events)) {
+        if (count($events)) {
 
             // generate the div
             $output .= '<div id="featuredEvents">';
             $output .= '<h2 id="featuredEventsTitle">Featured Events</h2>';
-            $output .='<a class="prev browse">previous</a><a class="next browse">next</a>';
+            $output .= '<a class="prev browse">previous</a><a class="next browse">next</a>';
             $output .= '<div class="scrollable">';
             $output .= '<div class="items">';
             $count = 0;
             foreach ($events as $event) {
                 $count++;
-                $time = strtotime($event['DateTime']['StartDate']);
+                $time = strtotime($event['starttime']);
                 $formattedTime = date('M j', $time);
+
+                $eventURL = $this->uri . date('Y', $time) . '/' . date('m', $time) . '/' . date('d', $time) . '/' . $event['edt_id'] . '/';
 
                 if ($count == 1) {
                     $output .= '<div>';
                 }
                 $output .= '<div class="event_detail">';
 
-                if (!is_array($event['WebPages']['WebPage'][0]))
-                    $eventURL = $event['WebPages']['WebPage']['URL'];
-                else
-                    // event has external webpage, so make sure to use the internal link
-                    $eventURL = $event['WebPages']['WebPage'][0]['URL'];
-
-                if (!empty($event['Images']['Image']['URL'])) {
+                if (isset($event['imagedata'])) {
                     $output .= '<div class="imagecrop"><a href="' . $eventURL . '">
-                            <img src="' . $event['Images']['Image']['URL'] . '" 
-                            alt="' . $event['EventTitle'] . '" /></a></div>';
+                            <img src="' . $this->uri . '?image&amp;id=' . $event["id"] . '" 
+                            alt="' . $event["title"] . '" /></a></div>';
                 }
 
                 $output .= '<span>' . $formattedTime . '</span>';
                 $output .= '<a href="' . $eventURL . '">' . 
-                            $event['EventTitle'] . '</a></div><!-- /event_detail -->';
+                            $event['title'] . '</a></div><!-- /event_detail -->';
 
                 if ($count == 3) {
                     $output .= '</div><!--/generic container-->';
@@ -790,9 +787,8 @@ class UNL_UCBCN_Frontend extends UNL_UCBCN implements UNL_UCBCN_Cacheable
             }
 
             $output .= '</div><!-- /items --></div><!-- /scrollable --></div><!-- /featuredEvents-->';
-	}
+        }
         return $output;
     }
-
 }
 ?>

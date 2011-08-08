@@ -89,12 +89,7 @@ if (isset($this->output[0], $this->output[0]->event)
       </div><!--/main-search-->
 				
 	<!-- featured events start-->
-	      <?php	
-	           if ($this->uri == 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] OR
-	               $this->uri == 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']){ // Only show on main calendar page                      
-	                    echo UNL_UCBCN_Frontend::featured();
-	              }
-	        ?>
+	        <?php if ($this->calendar->id == 1 && $this->view == 'day') echo UNL_UCBCN_Frontend::featured(); ?>
 		</div><!-- /banner-wrap -->
 		</div><!-- /banner -->
           <div id="content-wrap">

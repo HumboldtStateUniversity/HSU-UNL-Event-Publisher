@@ -55,7 +55,7 @@ if (isset($this->output[0], $this->output[0]->event)
           <meta property="og:type" content="activity" />
           <meta property="fb:admins" content="52303196" />';
     if (isset($this->output[0]->event->imagedata)){
-        echo "\n" . '<meta property="og:image" content="' . $this->uri . '?image&amp;id=' . $this->output[0]->event->id . '" />';
+        echo "\n" . '<meta property="og:image" content="' . $this->uri . '?image&id=' . $this->output[0]->event->id . '" />';
     } else {
         echo "\n" . '<meta property="og:image" content="http://www.humboldt.edu/humboldt/apple-touch-icon.png" />';
     }

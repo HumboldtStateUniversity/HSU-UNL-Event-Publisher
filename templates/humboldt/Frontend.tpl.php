@@ -50,7 +50,7 @@ if (isset($this->output[0], $this->output[0]->event)
     && $this->output[0]->event instanceof UNL_UCBCN_Event) {
 	echo '<meta property="og:title" content="'. $this->output[0]->event->title .'"/>
           <meta property="og:site_name" content="'. $this->calendar->name .'"/> 
-          <meta property="og:url" content="'. UNL_UCBCN::getBaseURL().$this->output[0]->url .'"/>
+          <meta property="og:url" content="'. $this->output[0]->url .'"/>
           <meta property="og:description" content="'. $this->output[0]->event->description .'" />';
 }
 ?>

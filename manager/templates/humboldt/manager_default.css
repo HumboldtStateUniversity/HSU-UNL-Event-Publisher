@@ -469,7 +469,7 @@ margin: 0;
 font-size: 15px;
 font-weight:bold;
 padding: 7px 5px;
-height:20px;
+min-height:20px;
 color: #000;
 background-color: #fff;
 border-bottom:1px solid #ccc;

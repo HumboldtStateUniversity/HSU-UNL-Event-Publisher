@@ -178,8 +178,9 @@ if (isset($this->output[0], $this->output[0]->event)
 <div id="site-meta">
 	<div id="meta-wrap" class="clearfix">
 		<div class="article first">
-			<h1>Have Questions or comments?</h1>
-			<p><a href="http://humboldt.edu/web/feedback" title="">Drop us a line</a> and we will get back to you as soon as we can.</p>		
+			<h1>Have Questions, comments, or feedback?</h1>			
+			<p>We have been working hard on this calendar but it might still be a bit rough around
+			the edges.<a href="http://humboldt.edu/web/feedback"> Please tell us</a> how we can improve your experience.</p>		
 		</div><!--/article-->
 		<div class="article">
 			<h1>About this Calendar</h1>

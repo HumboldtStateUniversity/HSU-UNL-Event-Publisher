@@ -78,7 +78,13 @@ class UNL_UCBCN_Manager_EventForm
                 // EVENT Has been added... now check permissions and add to selected calendars.
                 $add = $this->addToCalendar($events);
                 if ($add===true) {
-                    $this->manager->localRedirect($this->manager->uri.'?list=posted&new_event_id='.$events->id);
+                    // Determine whether to redirect to pending or posted list
+                    if ($this->manager->userHasPermission($this->manager->user, 'Event Post', $this->manager->calendar)) {
+                        $list = '?list=posted';
+                    } else {
+                        $list = '?list=pending';
+                    }
+                    $this->manager->localRedirect($this->manager->uri.$list.'&new_event_id='.$events->id);
                 } else {
                     // Probably a permissions error.
                     return $add;

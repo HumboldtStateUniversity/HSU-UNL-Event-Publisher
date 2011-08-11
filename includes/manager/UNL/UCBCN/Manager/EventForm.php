@@ -111,7 +111,7 @@ class UNL_UCBCN_Manager_EventForm
             case $this->manager->userHasPermission($this->manager->user, 'Event Post', $this->manager->calendar):
                 $this->manager->addCalendarHasEvent($this->manager->calendar, $event, 'posted', $this->manager->user, 'create event form');
                 break;
-            case $this->manager->userHasPermission($this->manager->user, 'Event Send Event to Pending Queue', $this->manager->calendar):
+            case $this->manager->userHasPermission($this->manager->user, 'Event Create', $this->manager->calendar):
                 $this->manager->addCalendarHasEvent($this->manager->calendar, $event, 'pending', $this->manager->user, 'create event form');
                 break;
             default:

@@ -175,7 +175,6 @@ class UNL_UCBCN_Calendar extends DB_DataObject
                 // HSU - only give new user a few permissions to main calendar
                 $p->whereAdd('name = "Event Create"');
                 $p->whereAdd('name = "Event Recommend"', 'OR');
-                $p->whereAdd('name = "Event Send Event to Pending Queue"', 'OR');
             }
             $p->find();
             while ($p->fetch()) {

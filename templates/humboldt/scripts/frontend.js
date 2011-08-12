@@ -513,9 +513,9 @@ function onSumResponse(text, headers, callingContext) {
   if(document.getElementById('day_nav') != null){
  	 new monthNav(); 
   }
-  else if(getElementsByClassName(document, "div", "event_cal").length > 0){
+  else if(getElementsByClassName(document, "div", "vevent").length > 0){
   	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertBefore('Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
+    	 CBInsertAfter('Back', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
   	 }
   	 else{
   	 	save = '';

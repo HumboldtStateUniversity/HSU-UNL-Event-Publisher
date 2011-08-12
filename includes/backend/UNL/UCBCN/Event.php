@@ -254,6 +254,9 @@ class UNL_UCBCN_Event extends DB_DataObject
 	$form->addRule('imagedata', 'Image must be one of the following formats: .jpg, .jpeg, .png, .gif, .bmp', 
 			'mimetype', array('image/png', 'image/gif', 'image/jpeg', 'image/bmp'));
 
+        $form->addRule('listingcontactname', 'A contact name is required', 'required');
+        $form->addRule('listingcontactemail', 'A contact email address is required', 'required');
+
         $form->applyFilter('__ALL__', array('UNL_UCBCN_Event', 'stripTags'));
 
         $date = date('Y-m-d H:i:s');

@@ -145,6 +145,51 @@ return false;
  * Call from: closeULbox(), showMoreEvents(), todayHilite()
  * Call to: none
  */
+ function getCalendarDate(t)
+ {
+    var months = new Array(13);
+    months[0]  = "January";
+    months[1]  = "February";
+    months[2]  = "March";
+    months[3]  = "April";
+    months[4]  = "May";
+    months[5]  = "June";
+    months[6]  = "July";
+    months[7]  = "August";
+    months[8]  = "September";
+    months[9]  = "October";
+    months[10] = "November";
+    months[11] = "December";
+    if(t){
+    	  var monthname   = months[t];
+    	  return monthname;
+    }
+    else{
+ 	   var now         = new Date();
+ 	   var monthnumber = now.getMonth();
+ 	   var monthname   = months[monthnumber];
+ 	   var dateString = monthname;
+ 	   return dateString;
+    }
+ }
+ 
+ function eventLink(){
+ 
+ 	var tbodyObj = document.getElementsByTagName('tbody');
+ 	for(tb=0; tb<tbodyObj.length; tb++){
+ 		var eventLink = getElementsByClassName(tbodyObj[tb], "a", "url");
+ 			for(a=0; a<eventLink.length; a++){
+ 				 if (isInternalLink(eventLink[a])) {
+ 					eventLink[a].onclick = function(){
+ 										   var linkURL = this.getAttribute("href", 2)+'?&format=hcalendar';
+ 										   new ajaxEngine(linkURL, 'eventlisting');
+ 										   return false;
+ 										   }
+ 				 }
+ 			}
+ 	}
+ }
+ 
 
 /*
  * Determines whether a link is to the internal system or external.

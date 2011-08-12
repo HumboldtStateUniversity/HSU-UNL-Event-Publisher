@@ -513,7 +513,7 @@ function onSumResponse(text, headers, callingContext) {
   if(document.getElementById('day_nav') != null){
  	 new monthNav(); 
   }
-  else if(getElementsByClassName(document, "div", "event_cal", "h2").length > 0){
+  else if(getElementsByClassName(document, "h2", "event-title").length > 0){
   	if(document.getElementById('returnPrevScreen') == null){
     	 CBInsertBefore('Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
   	 }

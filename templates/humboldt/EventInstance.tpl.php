@@ -18,7 +18,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 			
 		<div id="event_detail">
 <!--			<h2 scope="col" class="date">Event Detail</h2>-->
-			<h2><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?> <a class="permalink" href="<?php echo $this->url; ?>" title="Permanent link for this event"><span class="ir">[permalink]</span></a></h2>
+			<h2 class="event-title"><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?> <a class="permalink" href="<?php echo $this->url; ?>" title="Permanent link for this event"><span class="ir">[permalink]</span></a></h2>
 			<?php if (isset($this->event->subtitle)) echo '<h3>'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->subtitle).'</h3>'; ?>
 		
 			<p class="alt">

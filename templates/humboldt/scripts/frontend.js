@@ -513,9 +513,9 @@ function onSumResponse(text, headers, callingContext) {
   if(document.getElementById('day_nav') != null){
  	 new monthNav(); 
   }
-  else if(getElementsByClassName(document, "div", "vevent").length > 0){
+  else if(getElementsByClassName(document, "div", "event_cal", "h2").length > 0){
   	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertAfter('Back', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
+    	 CBInsertBefore('Return to events listing', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
   	 }
   	 else{
   	 	save = '';
@@ -562,17 +562,6 @@ function CBInsertBefore(linktext, actionFunc, classN){
 	morelink.appendChild(text);
 	var c = document.getElementById('updatecontent');
 	c.insertBefore(morelink, getElementsByClassName(document, "div", "event_cal")[0]);
-}
-function CBInsertAfter(linktext, actionFunc, classN){
-	var morelink = document.createElement("a");
-	morelink.style.display = 'block';
-	var text = document.createTextNode(linktext);
-	morelink.className=classN;
-	morelink.href = '#';
-	morelink.onclick = actionFunc;
-	morelink.appendChild(text);
-	var mh = document.getElementById('updatecontent');
-	mh.insertAfter(morelink, getElementsByClassName(document, "div", "event")[0]);
 }
 
 /*

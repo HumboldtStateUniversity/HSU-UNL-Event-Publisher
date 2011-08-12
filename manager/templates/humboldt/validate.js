@@ -1,15 +1,19 @@
 $(document).ready(function() {
 	
 //create event view
-	var create_validator = $("#unl_ucbcn_event").validate({
-		rules: {
-			title: "required",
-			__reverseLink_eventdatetime_event_idstarttime_1: "required"
-		},
-		messages: {
-			title: "Enter a Title for your event",
-			__reverseLink_eventdatetime_event_idstarttime_1: "Enter a Start Date"
-		},
+var create_validator = $("#unl_ucbcn_event").validate({
+	rules: {
+		title: "required",
+		__reverseLink_eventdatetime_event_idstarttime_1: "required", //startdate
+		listingcontactname: "required",
+		listingcontactemail: "required"  
+	},
+	messages: {
+		title: "Enter a Title for your event",
+		__reverseLink_eventdatetime_event_idstarttime_1: "Enter a Start Date",
+		listingcontactname: "Please enter a contact name",
+		listingcontactemail: "Please enter a contact email" 
+	},
 //make error output appear after all fields
 		errorPlacement: function(error, element) {
 						error.appendTo( element.parent() );

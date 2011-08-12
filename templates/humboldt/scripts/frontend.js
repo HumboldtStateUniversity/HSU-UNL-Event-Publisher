@@ -571,8 +571,8 @@ function CBInsertAfter(linktext, actionFunc, classN){
 	morelink.href = '#';
 	morelink.onclick = actionFunc;
 	morelink.appendChild(text);
-	var c = document.getElementById('updatecontent');
-	c.insertAfter(morelink, getElementsByClassName(document, "div", "event")[0]);
+	var mh = document.getElementById('updatecontent');
+	mh.insertAfter(morelink, getElementsByClassName(document, "div", "event")[0]);
 }
 
 /*

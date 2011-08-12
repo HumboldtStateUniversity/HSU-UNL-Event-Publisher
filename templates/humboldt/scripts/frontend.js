@@ -515,7 +515,7 @@ function onSumResponse(text, headers, callingContext) {
   }
   else if(getElementsByClassName(document, "div", "vevent").length > 0){
   	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertAfter('Back', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
+    	 insertAfter('Back', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
   	 }
   	 else{
   	 	save = '';

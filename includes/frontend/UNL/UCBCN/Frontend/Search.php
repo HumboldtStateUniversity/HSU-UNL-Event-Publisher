@@ -150,16 +150,17 @@ class UNL_UCBCN_Frontend_Search extends UNL_UCBCN_Frontend
                $sql  = 'SELECT DISTINCT eventdatetime.id
                         FROM event, eventdatetime, calendar_has_event, location,
                              eventtype, event_has_eventtype
-                        WHERE
-                        event_has_eventtype.event_id = event.id AND
-                        event_has_eventtype.eventtype_id = eventtype.id AND
-                        eventdatetime.event_id = event.id AND
-                        calendar_has_event.event_id = event.id AND
-                        calendar_has_event.status != \'pending\' AND
-                        calendar_has_event.calendar_id = '.$this->calendar->id.' AND
-                        eventdatetime.location_id = location.id AND
-                        event_has_eventtype.eventtype_id = '.$this->eventtype;
-             
+                        WHERE event_has_eventtype.event_id = event.id 
+                        AND event_has_eventtype.eventtype_id = eventtype.id 
+                        AND eventdatetime.event_id = event.id 
+                        AND calendar_has_event.event_id = event.id 
+                        AND calendar_has_event.status != \'pending\' 
+                        AND calendar_has_event.calendar_id = '.$this->calendar->id.' 
+                        AND eventdatetime.location_id = location.id 
+                        AND event_has_eventtype.eventtype_id = '.$this->eventtype.' 
+                        AND (eventdatetime.starttime >= "' . date('Y-m-d') . '"
+                            OR eventdatetime.endtime >= "' . date('Y-m-d') . '")
+                        ORDER BY eventdatetime.starttime ASC'; 
                $res = $mdb2->query($sql);
                if (!PEAR::isError($res)) {
                    $this->output       = new UNL_UCBCN_EventListing();

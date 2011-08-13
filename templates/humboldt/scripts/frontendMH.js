@@ -30,6 +30,7 @@ var glob_handler = {
   //attach search tips if cookie does not exist
  	  
   }
+ }
   
 glob_handler.addEvent(window,"load",glob_handler.init);
 

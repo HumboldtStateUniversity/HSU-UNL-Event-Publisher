@@ -247,7 +247,36 @@ return false;
  * Call from: none
  * Call to: none
  */
-
+function searchinfo(){
+	var nav_prev1 = document.getElementById('day_nav');
+	var search = document.forms.event_search.q;
+	var flagappeared = document.getElementById('search_term');
+	
+	search.onclick = function(){							
+								if(nav_prev1 && nav_prev1.style.display != 'inline'){
+									nav_prev1.style.display = 'none';
+								}
+									if(!flagappeared.className){
+										createCookie('searchtips','searchterms',7);
+										Spry.Effect.AppearFade("search_term", {duration: 1000, from: 0, to: 100, toggle: true, finish: window.setTimeout(finishSearch, 8000)});
+										flagappeared.className = 'appeared';
+										flagappeared.style.display = 'block';																					
+									} else {
+										flagappeared.style.display = 'none';	
+									}							
+								};
+					
+	var top_off = document.forms.event_search.getElementsByTagName('a');
+	top_off[0].onclick = function(){
+									var formseaarch = document.forms.event_search.q;
+									nav_prev1.style.display = 'inline';
+									Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true});
+									formseaarch.focus();
+									flagappeared.style.display = 'none';	
+									return false;
+									};
+									
+}
 /*auto fade out */
 
 /*

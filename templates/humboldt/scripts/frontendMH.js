@@ -29,7 +29,7 @@ var glob_handler = {
     
   //attach search tips if cookie does not exist
   if(readCookie('searchtips') ==null){
-//  	searchinfo(); 
+  	searchinfo(); 
   }
 	  
   },

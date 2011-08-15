@@ -4,7 +4,7 @@
 <?php
 $day = new Calendar_Day($this->year,$this->month,$this->day);
 echo date('l, F jS',$day->getTimeStamp());
-?> <a class="permalink" href="<?php echo $this->url; ?>" title="Permanent link for this event"><span class="ir">[permalink]</span></a>
+?>
 </h4>
 <p id="day_nav">
 <?php

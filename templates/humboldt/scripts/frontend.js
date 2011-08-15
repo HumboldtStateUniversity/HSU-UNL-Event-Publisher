@@ -22,13 +22,11 @@ var glob_handler = {
   else{
  	 if(getElementsByClassName(document, "div", "year_cal").length == 0 && getElementsByClassName(document, "ul", "search").length == 0){
  	 	shortenText();
- 		dropdown();
+// 		dropdown();
  	 }
  	glob_handler.addEvent(document.getElementById('monthwidget'), 'DOMMouseScroll', changeMonthWidget);
   }
-  
-  todayHilite();	
-  
+    
   //attach search tips if cookie does not exist
   if(readCookie('searchtips') ==null){
   	searchinfo(); 
@@ -122,24 +120,6 @@ function gotoURL(location) {document.location=location;}
  * Call from: closeULbox(), showMoreEvents(), todayHilite()
  * Call to: none
  */
-var g_bH = false; 
-  function dropdown(p_strId) {
-    g_bH = false;
-    var l_E = document.getElementById(p_strId);
-
-    if(l_E && document.defaultView) {
-      if(document.defaultView.getComputedStyle(l_E, 'hover')) {
-        g_bH = true;    
-      }
-    }
-    l_E = null;
-   try{ 
-   var dr = document.getElementById('droplist').style;
-   var rightCol = getElementsByClassName(document, "div", "col");
- rightCol[0].style.Height = '768px';
- dr.position = 'relative';
-   }catch(e){};
-  }
 
 /*
  * Toggle off monthview() based on cookie
@@ -163,87 +143,62 @@ return false;
  * Call from: closeULbox(), showMoreEvents(), todayHilite()
  * Call to: none
  */
-function getCalendarDate(t)
-{
-   var months = new Array(13);
-   months[0]  = "January";
-   months[1]  = "February";
-   months[2]  = "March";
-   months[3]  = "April";
-   months[4]  = "May";
-   months[5]  = "June";
-   months[6]  = "July";
-   months[7]  = "August";
-   months[8]  = "September";
-   months[9]  = "October";
-   months[10] = "November";
-   months[11] = "December";
-   if(t){
-   	  var monthname   = months[t];
-   	  return monthname;
-   }
-   else{
-	   var now         = new Date();
-	   var monthnumber = now.getMonth();
-	   var monthname   = months[monthnumber];
-	   var dateString = monthname;
-	   return dateString;
-   }
-}
-
-function eventLink(){
-
-	var tbodyObj = document.getElementsByTagName('tbody');
-	for(tb=0; tb<tbodyObj.length; tb++){
-		var eventLink = getElementsByClassName(tbodyObj[tb], "a", "url");
-			for(a=0; a<eventLink.length; a++){
-				 if (isInternalLink(eventLink[a])) {
-					eventLink[a].onclick = function(){
-										   var linkURL = this.getAttribute("href", 2)+'?&format=hcalendar';
-										   new ajaxEngine(linkURL, 'eventlisting');
-										   return false;
-										   }
-				 }
-			}
-	}
-}
+ function getCalendarDate(t)
+ {
+    var months = new Array(13);
+    months[0]  = "January";
+    months[1]  = "February";
+    months[2]  = "March";
+    months[3]  = "April";
+    months[4]  = "May";
+    months[5]  = "June";
+    months[6]  = "July";
+    months[7]  = "August";
+    months[8]  = "September";
+    months[9]  = "October";
+    months[10] = "November";
+    months[11] = "December";
+    if(t){
+    	  var monthname   = months[t];
+    	  return monthname;
+    }
+    else{
+ 	   var now         = new Date();
+ 	   var monthnumber = now.getMonth();
+ 	   var monthname   = months[monthnumber];
+ 	   var dateString = monthname;
+ 	   return dateString;
+    }
+ }
+ 
+ function eventLink(){
+ 
+ 	var tbodyObj = document.getElementsByTagName('tbody');
+ 	for(tb=0; tb<tbodyObj.length; tb++){
+ 		var eventLink = getElementsByClassName(tbodyObj[tb], "a", "url");
+ 			for(a=0; a<eventLink.length; a++){
+ 				 if (isInternalLink(eventLink[a])) {
+ 					eventLink[a].onclick = function(){
+ 										   var linkURL = this.getAttribute("href", 2)+'?&format=hcalendar';
+ 										   new ajaxEngine(linkURL, 'eventlisting');
+ 										   return false;
+ 										   }
+ 				 }
+ 			}
+ 	}
+ }
+ 
 
 /*
  * Determines whether a link is to the internal system or external.
  */
-function isInternalLink(link)
-{
-	var baseURL = document.getElementById('todayview');
-	//baseURL.childNodes[0].getAttribute("href", 2)
-	if (link.getAttribute('href').indexOf('http') == 0 && link.getAttribute('href').indexOf('its-caldev.humboldt.edu/unlcal') < 0 ) {
-		return false;
-	} else {
-		return true;
-	}
-}
 
 /*
  * Go back to today's date in month widget
  * Call from: addLoadEvent
  * Call to: none
  */
-function returnToday(){
-	var x = new Date ();	
-	//var widgetDiv = document.getElementById('monthwidget');
-	document.getElementById('load').innerHTML="<img src='http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif' />";
-	//due to the way we detect today's date, the left side content has to be loaded before the month widget
-	var backtoDay = '?&amp;y='+x.getYear () + 1900+'&amp;m='+x.getMonth () + 1+'&amp;d='+x.getDate+'&amp;?&format=hcalendar';
-	ajaxEngine(backtoDay, 'eventlisting');
-	ajaxCaller.get('?&amp;y='+x.getYear () + 1900+'&amp;m='+x.getMonth () + 1+'&amp;?&monthwidget&format=hcalendar', null, function(text, headers, callingContext){
-		if(document.getElementById('onselect') && document.getElementById('onselect').getElementsByTagName('a')[0] != null){
-			var tdlink = document.getElementById('onselect').getElementsByTagName('a')[0].getAttribute("href", 2);
-		}
-		document.getElementById('load').innerHTML=""
-		document.getElementById("monthwidget").innerHTML = text;
-		todayHilite();			
-	}, false, null);
-	return false;
-}
+
 
 /*
  * today icon and ajax initialization for month widget
@@ -251,347 +206,41 @@ function returnToday(){
  * Call to: none
  */
 
-function todayHilite(){
-	try {
-	x = new Date ();
-	y = x.getDate ();
-	var td0 = getElementsByClassName(document, "table", "wp-calendar");
-	var spanID = document.getElementById(getCalendarDate());
-	
-	var td1 = td0[0].getElementsByTagName('td');
-		var verify = getElementsByClassName(td0[0], "span", "monthvalue");
-		//if in day view (only), execute....
-		var idSelector = document.getElementById('frontend_view_selector');
-		if (idSelector.className == 'day' || idSelector.className == 'event' || idSelector.className == 'upcoming'){
-			createButton('Return to today', document.getElementById('monthwidget'), returnToday, 'returnToday');
-			if(idSelector.className == 'day'){
-				monthNav(); 
-			}
-			eventLink();
-			monthCaptionSwitch(td0[0]);
-			for(i=0;i<td1.length;i++){
-				monthWidget(td1[i]);
-			}
-		}
-
-		if(idSelector.className != 'year' && idSelector.className != 'upcoming'){	
-			var selectedDay = getElementsByClassName(document.getElementById('maincontent'), "h4", "sec_main");
-			var re = new RegExp(/\d+/);
-			var m = re.exec(selectedDay[0].childNodes[0].nodeValue);
-			var dayT, todayT;
-			var todayFlag = false;
-			//indicate today
-			for(i=0;i<td1.length;i++){
-				
-				if(td1[i].className.indexOf('prev') < 0 && td1[i].className.indexOf('next') < 0){
-					
-					if(td1[i].firstChild.nodeName == 'A'){
-						dayT = td1[i].firstChild.childNodes[0].nodeValue.indexOf(m[0]);
-						todayT = td1[i].firstChild.childNodes[0].nodeValue.indexOf([y]);
-					}else{
-						dayT = td1[i].firstChild.nodeValue.indexOf(m[0]);
-						todayT = td1[i].firstChild.nodeValue.indexOf([y]);
-					}
-				
-					if(m != null && dayT >= 0 && document.getElementById('onselect') == null){
-						td1[i].id = 'onselect';
-					}
-				
-					//insert icon to indicate today	
-					if(verify[0].id == getCalendarDate() && !todayFlag){
-							try{
-								
-								if(todayT >= 0){
-									td1[i].className += ' today'
-									var imageToday = document.createElement("div");
-									imageToday.setAttribute("id","today_image");
-									td1[i].appendChild(imageToday);
-									todayFlag = true;
-								}
-							}
-							catch(e){}	
-					}
-				}
-			}
-			todayFlag = false;
-		}
-		
-		else{
-				
-			for(q=0;q<td0.length;q++){
-				var verify1 = getElementsByClassName(td0[q], "span", "monthvalue");
-				var td1 = td0[q].getElementsByTagName('td');
-				//indicate today
-				for(i=0;i<td1.length;i++){
-						//insert icon to indicate today	
-					if(verify1[0].id == getCalendarDate() && td1[i].className.indexOf('prev') < 0 && td1[i].className.indexOf('next') < 0){
-							try{
-								if(td1[i].innerHTML.match("<a href.*>"+y+"</a>|"+y)){
-									td1[i].className += ' today'
-									var imageToday = document.createElement("div");
-									imageToday.setAttribute("id","today_image");
-									td1[i].appendChild(imageToday);
-									break;
-								}
-							}
-							catch(e){}	
-					}
-					
-				}
-			}
-		}
-	} catch(e) {}
-	if(!window.XMLHttpRequest){
-  			fnLoadPngs();
-  	}
-}
-
 /*
  * go through each table widget to set marker and launch ajax month engine if applicable
  * Call from: onkeyup, monthnav
  * Call to: none
  */
-function widgetAttachEvent(e){
-	var td0 = getElementsByClassName(document, "table", "wp-calendar");
-	var td1 = td0[0].getElementsByTagName('td');
-	for (i=0;i<td1.length;i++){
-				if (td1[i].getAttribute("id") == 'onselect') {
-					td1[i].id = 'none';
-					if(e == 'prev'){
-						td1[i-1].id = 'onselect';
-						if(document.getElementById('onselect').className.indexOf('prev') > 0){
-							var val_month = document.getElementById('prev_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-							new ajaxEngine(val_month, 'monthwidget');
-						}
-					}
-					else{
-						td1[i+1].id = 'onselect';
-						if(document.getElementById('onselect').className.indexOf('next') > 0){
-							var val_month = document.getElementById('next_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-							new ajaxEngine(val_month, 'monthwidget');
-						}
-					}				
-					break;
-				}
-	}
-}
 
-var timerID = null;
-document.onkeyup = function(event){
-if(document.getElementById('day_nav')){
-	
-	var arrowNav = document.getElementById('day_nav');
-	//reset timer
-	if (timerID != null) {
-	  window.clearTimeout(timerID);
-	} 
-	
-	var evt = event || window.event;
-	var el = evt.srcElement || evt.target;
-	if (el.name)
-	return true;
-		
-		//if it is right arrow key => next date
-		if (evt.keyCode == 39) {
-			arrowNav.getElementsByTagName('a')[1].id = 'ac';			
-			widgetAttachEvent('next');
-			if(document.getElementById('onselect').childNodes[0].nodeType == 1){
-				timerID = window.setTimeout(_ajaxKeyNav, 500);
-			}
-			return false;
-		}
-		
-		//if it is left arrow key => previous date
-		else if (evt.keyCode == 37) {		 
-			arrowNav.getElementsByTagName('a')[0].id = 'dc';
-			widgetAttachEvent('prev');			
-			if(document.getElementById('onselect').childNodes[0].nodeType == 1){
-				timerID = window.setTimeout(_ajaxKeyNav, 500);
-			}
-			return false;
-		}
-	return true;	
-}
-};
 
 //key nav function call.
-function _ajaxKeyNav(){
-	var url = document.getElementById('onselect').childNodes[0].getAttribute("href", 2)+'?&format=hcalendar';
-	ajaxEngine(url, 'eventlisting');
-	return false;
-}
+
 
 /* top right arrows navigator*/
-function monthNav(){
-	var nav_prev1 = document.getElementById('day_nav');
-	var linkprev = nav_prev1.getElementsByTagName('a')[0].getAttribute("href", 2)+'?&format=hcalendar';
-	var linknext = nav_prev1.getElementsByTagName('a')[1].getAttribute("href", 2)+'?&format=hcalendar';
-		
-	nav_prev1.getElementsByTagName('a')[0].onclick=function(){
-		widgetAttachEvent('prev');
-		new ajaxEngine(linkprev, 'eventlisting');	
-		return false;
-	};
-	
-	nav_prev1.getElementsByTagName('a')[1].onclick=function(){
-		widgetAttachEvent('next');	
-		new ajaxEngine(linknext, 'eventlisting');	
-		return false;
-	};
-}
+
 
 /*month widget day TD navigator */
-function monthWidget(tD){
-	if (tD.className.indexOf('selected') >= 0){
-			tD.style.cursor = 'pointer';
-			var daylink = tD.getElementsByTagName('a')[0];
-				tD.onclick = function(){
-					if(document.getElementById('onselect')){
-							document.getElementById('onselect').id = 'none';						
-					}
-					this.id = 'onselect';					
-					if(this.className.indexOf('next') > 0){
-						var nextmonth = document.getElementById('next_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-						new ajaxEngine(nextmonth, 'monthwidget');
-					}
-					else if(this.className.indexOf('prev') > 0){
-						var prevmonth = document.getElementById('prev_month').getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-						new ajaxEngine(prevmonth, 'monthwidget');
-					}					
-					var link = daylink.getAttribute("href", 2)+'?&format=hcalendar';
-					new ajaxEngine(link, 'eventlisting');				  				
-					return false;
-				}
-	}
-}
 
 /*month widget caption month navigator*/
-function monthCaptionSwitch(eT){
-	var spanarrow = eT.getElementsByTagName('span');
-	var spanlinkprev = spanarrow[0].childNodes[0].getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-	var spanlinknext = spanarrow[3].childNodes[0].getAttribute("href", 2)+'?&monthwidget&format=hcalendar';
-	spanarrow[3].childNodes[0].onclick=function(){new ajaxEngine(spanlinknext, 'monthwidget');return false;};
- 	spanarrow[0].childNodes[0].onclick=function(){new ajaxEngine(spanlinkprev, 'monthwidget');return false;};
-}
-
-/*this is the main ajax calling engine. make library calls to XHR lib (ajaxcaller.js)*/
-function ajaxEngine(urlPath, section, vars){
-	document.getElementById('load').innerHTML="<img src='http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif' />";
-	switch (section){
-		case "monthwidget":
-			ajaxCaller.get(urlPath, null, onMonthResponse, false, null);
-			break;
-		case "search":
-			ajaxCaller.get(urlPath, vars, onSumResponse, false, null);
-			break;
-		case "eventlisting":
-			ajaxCaller.get(urlPath, null, onSumResponse, false, null);
-		break;
-		default : alert("Error: please specify ajaxEngine calling section");
-	}	
-}
 
 /* parse ajax response for month widget */
-function onMonthResponse(text, headers, callingContext) {
-  if(document.getElementById('onselect') && document.getElementById('onselect').getElementsByTagName('a')[0] != null){
-   var tdlink = document.getElementById('onselect').getElementsByTagName('a')[0].getAttribute("href", 2);
-  } 
-  document.getElementById('load').innerHTML="";
-  document.getElementById("monthwidget").innerHTML = text;
-  carryOver(tdlink);
-  todayHilite();
-}
 
 /* parse ajax response for event listing and event instance */
-var save;//global variable to store previous content;
-function onSumResponse(text, headers, callingContext) {
-  save = document.getElementById('updatecontent').innerHTML;
-  document.getElementById('load').innerHTML=""
-  document.getElementById("updatecontent").innerHTML = text;
-  new eventLink();
-  shortenText();
-  if(document.getElementById('day_nav') != null){
- 	 new monthNav(); 
-  }
-  else if(getElementsByClassName(document, "div", "event_cal").length > 0){
-  	if(document.getElementById('returnPrevScreen') == null){
-    	 CBInsertBefore('Back', function(){returnPrevScreen(save);return false;}, 'returnPrevScreen');
-  	 }
-  	 else{
-  	 	save = '';
-  	 }
-  }
-}
 
 //this function carries over onselect value from prior month widget
-function carryOver(ss){
-var td0 = getElementsByClassName(document, "table", "wp-calendar");
-var td1 = td0[0].getElementsByTagName('a');
-var td2 = td0[0].getElementsByTagName('td');
-//alert(ss);
-for(l=0;l<td1.length;l++){
-		if(td1[l].getAttribute("href", 2).indexOf(ss) >= 0){			
-			//alert(td1[l].getAttribute("href", 2));
-			td1[l].parentNode.id = 'onselect';
-			break;
-		}		
-	}
-}
 
-function returnPrevScreen(prev_content){
- document.getElementById("updatecontent").innerHTML = prev_content;
- new eventLink();
- if(document.getElementById('day_nav') != null){
- 	new monthNav();
- }
- save = '';
-}
 
 /*
  * Create <a href> buttons using insertBefore
  * Call from: onSumResponse()
  * Call to: returnPrevScreen()
  */
-function CBInsertBefore(linktext, actionFunc, classN){
-	var morelink = document.createElement("a");
-	morelink.style.display = 'inline';
-	var text = document.createTextNode(linktext);
-	morelink.className=classN;
-	morelink.href = '#';
-	morelink.onclick = actionFunc;
-	morelink.appendChild(text);
-	var c = document.getElementById('updatecontent');
-	c.insertBefore(morelink, getElementsByClassName(document, "div", "event_cal")[0]);
-}
 
 /*
  * Ajax search
  * Call from: addevent
  * Call to: onSearchResponse
  */
-function ajaxsearch(){
-	var searchForm = document.getElementById('event_search');
-	var searchSubmit = searchForm.getElementsByTagName('input')[1];
-	var fp = document.getElementById('event_search');
-	var formAction = fp.action;
-	formAction = formAction.substring(0,formAction.indexOf('search'));
-
-	document.event_search.onsubmit = function(){
-		var searchVal = document.getElementById('searchinput').value;
-		while (searchVal.indexOf('#')>-1) {
-			searchVal = searchVal.replace(/#+/,'');
-		}
-		var searchVars = new Array();
-		searchVars['q'] = searchVal;
-		searchVars['format'] = 'hcalendar';
-		searchVars['search'] = 'search';
-		document.getElementById('load').innerHTML = '<img src="http://its-caldev.humboldt.edu/unlcal/templates/humboldt/images/loading.gif" />';
-		ajaxEngine(formAction, 'search', searchVars)
-		return false;
-	}
-}
-
-
 
 /*
  * Search box tips
@@ -628,11 +277,8 @@ function searchinfo(){
 									};
 									
 }
-
 /*auto fade out */
-function finishSearch(){	
-	Spry.Effect.AppearFade("search_term", {duration: 1000, from: 100, to: 0, toggle: true, finish:function(){var nav_prev1 = document.getElementById('day_nav');nav_prev1.style.display = 'inline';}	});
-}
+
 /*
  * Clean and simple month display
  * Call from: addLoadEvent

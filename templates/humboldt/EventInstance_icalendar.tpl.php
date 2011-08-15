@@ -13,7 +13,7 @@ if (isset($this->eventdatetime->starttime)) {
     if (strpos($this->eventdatetime->starttime,'00:00:00')) {
         $out[] = 'DTSTART;VALUE=DATE:'.date('Ymd', $startu);
     } else {
-           $out[] = 'DTSTART;TZID=US/Central:'.date('Ymd\THis', $startu);
+           $out[] = 'DTSTART;TZID=US/Pacific:'.date('Ymd\THis', $startu);
     }
 }
 $out[] = 'UID:'.$this->eventdatetime->id.'@'.$_SERVER['SERVER_NAME'];
@@ -34,7 +34,7 @@ if (isset($this->eventdatetime->endtime)
     if (strpos($this->eventdatetime->endtime,'00:00:00')) {
         $out[] = 'DTEND;VALUE=DATE:'.date('Ymd', $endu);
     } else {
-           $out[] = 'DTEND;TZID=US/Central:'.date('Ymd\THis', $endu);
+           $out[] = 'DTEND;TZID=US/Pacific:'.date('Ymd\THis', $endu);
     }
 }
 $out[] = 'END:VEVENT';

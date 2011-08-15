@@ -35,13 +35,13 @@ var glob_handler = {
   },
   
   addEvent: function( obj, type, fn ) {
-//    if ( obj.attachEvent ) {
-//      obj['e'+type+fn] = fn;
-//      obj[type+fn] = function(){obj['e'+type+fn]( window.event );}
-//      obj.attachEvent( 'on'+type, obj[type+fn] );
-//    } else {
-//      obj.addEventListener( type, fn, false );
-//    }
+    if ( obj.attachEvent ) {
+      obj['e'+type+fn] = fn;
+      obj[type+fn] = function(){obj['e'+type+fn]( window.event );}
+      obj.attachEvent( 'on'+type, obj[type+fn] );
+    } else {
+      obj.addEventListener( type, fn, false );
+    }
   }
 }
 glob_handler.addEvent(window,"load",glob_handler.init);

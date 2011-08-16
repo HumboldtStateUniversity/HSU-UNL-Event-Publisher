@@ -125,7 +125,7 @@
                     </div>
 
 		<div class="right">
-						<div style="width:900px;">
+						<div style="width:910px;">
 	                            <?php
 	                            if (isset($this->user)) { ?>
 															<div id="navlinks">

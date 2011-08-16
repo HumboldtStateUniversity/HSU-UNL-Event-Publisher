@@ -628,14 +628,13 @@ border-bottom: 1px solid #ccc;
 	}
 	div.login {
 		float: right;
-		width: 500px;
-		margin-left: 20px;
+		width: 400px;
 		padding-top: 10px;
 	}
 div.eventdirections {
 	float: left;
 	width: 335px;
-	padding:0 25px 0 0;
+	padding:0 90px 0 0;
 	border-right: solid 1px #999;
 }
 div.eventdirections h2 {
@@ -644,7 +643,7 @@ div.eventdirections h2 {
 }
 div.eventdirections ul {
 	list-style: disc outside;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 div.eventdirections ul li {
 	margin: 10px;

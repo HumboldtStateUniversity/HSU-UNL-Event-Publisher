@@ -383,7 +383,7 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                 $this->uniquebody = 'id="subscribe"';
                 $this->sectitle   = 'Subscribe to Events';
                 $this->output[]   = '<p>Subscriptions allow you to automatically add events to your calendar which match a given set of criteria.
-                                    This feature allows the College of Engineering\'s Calendar to automatically add all events posted to the Electrical Engineering calendar.</p>';
+                                    This feature allows the College of Natural Resources and Sciences\' Calendar to automatically add all events posted to the Environmental Resources Engineering calendar.</p>';
                 $this->output[]   = $this->showSubscriptions();
                 $this->output[]   = $this->showSubscribeForm();
                 break;

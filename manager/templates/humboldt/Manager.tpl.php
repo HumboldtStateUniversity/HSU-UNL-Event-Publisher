@@ -125,7 +125,7 @@
                     </div>
 
 		<div class="right">
-													<div style="width:590px;">
+						<div style="width:900px;">
 	                            <?php
 	                            if (isset($this->user)) { ?>
 															<div id="navlinks">
@@ -134,7 +134,7 @@
 	                                <li id="create"><a href="<?php echo $this->uri; ?>?action=createEvent" title="Create an Event">&raquo; Create an Event</a></li>
 	                                <!--<li id="subscribe"><a href="<?php echo $this->uri; ?>?action=subscribe" title="Subscribe">Subscribe</a></li>-->
 	                            </ul>
-															</div>
+						</div>
 	                            <?php
 	                            } ?>
 	                        

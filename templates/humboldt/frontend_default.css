@@ -678,7 +678,14 @@ input[type="submit"] {
 	}
 	#maincontent h1.results {
 		margin: 25px 0;
+		clear: both;
+		font-size: 18px;
+		font-weight: normal;
 	}
+h3.result-count {
+	background-color: #fff;
+	padding: 2px;
+}	
 #maincontent p#search_term{position:absolute;display:none;opacity:0;width:244px;height:85px;background:url(images/searchinfo.png) no-repeat;margin:-10px 0 0 -45px;padding:18px 20px 0 10px;font-size:11px;line-height:normal;}
 
 

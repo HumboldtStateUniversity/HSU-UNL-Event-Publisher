@@ -157,13 +157,14 @@
 													<div id="site-meta">
 														<div id="meta-wrap" class="clearfix">
 															<div class="article first">
-																<h1>Have Questions or comments?</h1>
-																<p><a href="http://humboldt.edu/web/feedback" title="">Drop us a line</a> and we will get back to you as soon as we can.</p>		
+																<h1>Have Questions, comments, or feedback?</h1>			
+																<p>We have been working hard on this calendar but it might still be a bit rough around
+																the edges. Please <a href="http://humboldt.edu/web/feedback">tell us</a> how we can improve your experience.</p>		
 															</div><!--/article-->
-															<div class="article">
-																<h1>About this Calendar</h1>
-																<p>If you ware wondering how to <a href="#" title="">submit events, get event content on to your own site or subscribe</a> to certain event feeds our guide should get you going.</p>
-															</div><!--/article-->
+																<div class="article">
+																	<h1>About this Calendar</h1>
+																	<p>If you were wondering how to <a href="#" title="">submit events, get event content on to your own site or subscribe</a> to certain event feeds, our guide should get you going.</p>
+																</div><!--/article-->
 															<div class="article last">
 															<div class="socialnetworks"><a href="http://www.facebook.com/humboldtstatealumni" title="facebook"><img src="http://www.humboldt.edu/humboldt/images2010/facebook.png" alt="Facebook" width="18px" height="18px"></a> <a href="http://www.flickr.com/photos/humboldtstate" title="flickr"><img src="http://www.humboldt.edu/humboldt/images2010/flickr.png" alt="Flickr" width="18px" height="18px"></a> <a href="http://www.linkedin.com/groups?home=&amp;gid=2772964&amp;trk=anet_ug_hm" title="linkedin"><img src="http://www.humboldt.edu/humboldt/images2010/linkedin.png" alt="LinkedIn"></a> <a href="http://www.twitter.com/humboldtstate/" title="twitter"><img src="http://www.humboldt.edu/humboldt/images2010/twitter.png" alt="Twitter" width="18px" height="18px"></a> <a href="http://www.youtube.com/humboldtonline" title="youtube"><img src="http://www.humboldt.edu/humboldt/images2010/youtube.png" alt="Youtube" width="18px" height="18px"></a></div>
 																<div class="vcard">

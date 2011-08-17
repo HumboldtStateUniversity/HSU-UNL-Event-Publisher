@@ -399,9 +399,11 @@ table.wp-calendar td.pad:hover{background:none}
 #maincontent span.location{
 	text-transform:uppercase;
 	font-size: 10px;
-	padding: 0 5px 0 0;
+	padding: 4px 5px 0 0;
 	float:right;
 	margin:0;
+	width: 35%;
+	line-height: 12px;
 }
 #maincontent span.location a {
 	text-decoration: none;

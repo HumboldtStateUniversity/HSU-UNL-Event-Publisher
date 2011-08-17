@@ -5,7 +5,7 @@
 		<li>The event must be sponsored by Humboldt State University, department, program, student club or organization.</li>
 		<li>The event listing must include an event title, date, time, location, contact person, and admission fee (if applicable).</li>
 		<li>Events will be moderated by HSU staff</li>
-		<li>Don't meet the requirements? <a href="http://humboldt.edu/marcom/campusResources.php?section=eventpromo">Learn more about promoting your event</a></li>
+		<li>Don't meet the requirements? <a href="http://humboldt.edu/marcom/campusResources.php?section=eventPromo">Learn more about promoting your event</a></li>
 	</ul>         	
 </div>
 <div class="login">

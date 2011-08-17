@@ -1,3 +1,4 @@
+<div id="loginwrap">
 <div class="eventdirections">
 	<h2>Before you begin, make sure your event meets these requirements:</h2>
 	<ul>
@@ -26,4 +27,5 @@
 	$form->accept($renderer);
 	echo $renderer->toHtml();
 ?>
+</div>
 </div>

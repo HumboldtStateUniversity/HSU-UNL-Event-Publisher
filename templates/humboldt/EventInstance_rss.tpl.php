@@ -3,16 +3,15 @@ $startu = strtotime($this->eventdatetime->starttime);
 $endu = strtotime($this->eventdatetime->endtime);
 ?>
 <item>
-	<title><?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?></title>
+	<title><?php echo date('M j', $startu); ?> - <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title); ?></title>
 	<link><?php echo $this->url; ?></link>
-	 <date><?php echo '&lt;small&gt;'.date('l, F jS', $startu).'&lt;/small&gt;'; ?></date>
 	<description>
 		<?php
 		$desc = UNL_UCBCN_Frontend::dbStringToHtml($this->event->description);
 		$desc = strip_tags(str_replace(array('<br>','<br />'), '&lt;br /&gt;', $desc));
 		echo '&lt;div&gt;'. $desc .'&lt;/div&gt;';
 		if (isset($this->event->subtitle)) echo '&lt;div&gt;'.UNL_UCBCN_Frontend::dbStringToHtml($this->event->subtitle).'&lt;/div&gt;';
-		
+		echo '&lt;small&gt;'.date('l, F jS', $startu).'&lt;/small&gt;';
 		
 		if (isset($this->eventdatetime->starttime)) {
 			if (strpos($this->eventdatetime->starttime,'00:00:00')) {

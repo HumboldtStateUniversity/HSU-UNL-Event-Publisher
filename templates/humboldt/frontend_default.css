@@ -997,6 +997,11 @@ select {
 	text-decoration:none;
 }
 
+/* IE specific styles*/
+.ie7 .month_cal table.wp_calendar td {
+	width: 12.3em;
+}
+
 /*non-semantic helper classes
 --------------------------------------------*/
 /* Hide only visually, but have it available for screenreaders: by Jon Neal.

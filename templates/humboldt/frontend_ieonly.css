@@ -2,3 +2,6 @@
  * ieonly.css
  * IE only hacks go in here
  */
+ .month_cal table.wp-calendar td {
+ 	height: 12.3em;
+ }

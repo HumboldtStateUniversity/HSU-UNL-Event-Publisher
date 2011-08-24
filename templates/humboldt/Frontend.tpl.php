@@ -21,7 +21,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 ?>| Events</title>
 <!--styles & scripts for calendar content-->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/frontend_main.css" />
-<!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/frontend_ieonly.css" /><![endif]-->
+
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/humboldt/facebook.css" />
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/ajaxCaller.js"></script>
 <script type="text/javascript" src="<?php echo $this->uri; ?>templates/humboldt/scripts/frontend.js"></script>

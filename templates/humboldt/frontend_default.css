@@ -559,7 +559,6 @@ float: left;margin-top: -65px;position: relative;width: 100%;
 	float:left;
 	display:block;
 	min-height:12.3em;
-/*	_height:12.3em;	*/
 	}
 #maincontent .month_cal table.wp-calendar td a{background:#fff;padding:0 4px;float:left;color:#567f1c!important;margin:-4px 0 0 -4px; border-right:solid 1px #999;border-bottom:solid 1px #999;}	
 #maincontent .month_cal table.wp-calendar td a:active{color:#567f1c;}

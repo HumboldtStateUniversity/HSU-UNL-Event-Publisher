@@ -736,7 +736,7 @@ class UNL_UCBCN_Frontend extends UNL_UCBCN implements UNL_UCBCN_Cacheable
                             AND che.event_id = e.id
                             AND che.event_id = edt.event_id
                             AND che.status = 'posted'
-                            AND edt.endtime >= " . date('Y-m-d H:i:s') . "
+                            AND edt.endtime >= '" . date('Y-m-d H:i:s') . "'
                             AND e.status = 'featured'
                         ORDER BY edt.starttime
                         LIMIT 18";

@@ -823,7 +823,7 @@ h2#featuredEventsTitle {
 .imagecrop {
 	width: 260px;
 	overflow: hidden;
-	height: 190px;
+	height: 173px;
 	margin-bottom: 10px;
 	border: solid 4px #dadb76;
 }
@@ -915,7 +915,7 @@ select {
 	position:relative;
 	overflow:hidden;
 /*	width: 860px;*/
-	height:275px;
+	height:255px;
 }
 
 /*

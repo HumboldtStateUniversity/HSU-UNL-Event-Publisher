@@ -159,7 +159,7 @@
 															<div class="article first">
 																<h1>Have Questions, comments, or feedback?</h1>			
 																<p>We have been working hard on this calendar but it might still be a bit rough around
-																the edges. Please <a href="http://humboldt.edu/web/feedback">tell us</a> how we can improve your experience.</p>		
+																the edges. Please <a href="http://humboldt.edu/web/feedback/events">tell us</a> how we can improve your experience.</p>		
 															</div><!--/article-->
 																<div class="article">
 																	<h1>About this Calendar</h1>

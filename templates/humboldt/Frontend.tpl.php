@@ -201,6 +201,7 @@ if (isset($this->output[0], $this->output[0]->event)
 				</div>
 				<div class="tel">(707) 826-3011</div>
 				<div class="contact"><a href="http://humboldt.edu/web/feedback">Contact us</a></div>
+                                <div class="switchtemplate"><?php if ($_SESSION['mobile']) echo "<a href='" . $this->output[0]->url . "?template=mobile'>Switch to Mobile Site"; ?>
 			</div>						
 		</div><!--/article-->
 

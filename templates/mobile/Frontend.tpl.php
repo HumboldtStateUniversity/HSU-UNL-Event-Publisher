@@ -41,5 +41,8 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
 
+<!-- Template link -->
+    <a href="<?php echo $this->output[0]->uri; ?>?template=humboldt">Switch to Full Site</a>
+
 </body>
 </html>

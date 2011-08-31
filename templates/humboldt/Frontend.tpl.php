@@ -78,7 +78,7 @@ if (isset($this->output[0], $this->output[0]->event)
 		    if ($this->calendar->id == '1'){ // Only show on main calendar 
 		        echo '<h1 id="calname"><a class="maincal" href="'.$this->uri.'"><span class="ir">'.$this->calendar->name.'</span></a></h1>';
 		    } else {
-		        echo '<h1 id="calname"><a href="'.$this->uri.'">'.$this->calendar->name.'</a></h1>';
+		        echo '<h1 id="calname"><a href="'.$this->uri.'?calendar_id='.$this->calendar->id.'">'.$this->calendar->name.'</a></h1>';
 		    }
 		?>
                 

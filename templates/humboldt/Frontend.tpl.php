@@ -116,6 +116,7 @@ if (isset($this->output[0], $this->output[0]->event)
                         <?php if( $eventlist = UNL_UCBCN_Frontend::getEventTypes()): ?>
           	  <form action="<?php echo UNL_UCBCN_Frontend::formatURL(array('search'=>'search')) ?>" method="get">
                             <select name="e" id="e"> 
+                            <option disabled="disabled">-- Show Events by Type --</option>
                             <?php while ($eventlist->fetch()): ?>
                                 <option value='<?php echo "$eventlist->id'>$eventlist->name"; ?></option>\n
                             <?php endwhile; ?>

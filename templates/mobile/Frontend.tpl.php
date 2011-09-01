@@ -41,6 +41,15 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		</script>
 		
 		
+		<!-- disabling ajax navigation -->
+		<script>
+		 $(document).ready(function() {
+		  // disable ajax nav
+		  $.mobile.ajaxLinksEnabled = false;
+		 });
+		</script>
+		
+		
 </head>
 
 

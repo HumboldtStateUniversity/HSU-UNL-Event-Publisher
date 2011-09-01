@@ -16,9 +16,19 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script> -->
 
-
+		<script>
+		    $(function(){
+		      // bind change event to select
+		      $('#new-day').submit(function() {
+		          var url = $('#date').val(); // get selected value
+		          if (url) { // require a URL
+		              window.location = url; // redirect
+		          }
+		          return false;
+		      });
+		    });
+		</script>
 		
-<link rel="alternate" type="application/rss+xml" title="<?php echo $this->calendar->name; ?> Events" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'format'=>'rss')); ?>" />
 </head>
 
 

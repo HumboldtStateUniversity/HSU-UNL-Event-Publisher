@@ -33,7 +33,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		          var url = $('#date').val(); // get selected value
 		          if (url) { // require a URL
 									window.location.search = '';
-		              window.location.pathname = 'unlcal' + url; // redirect
+		              window.location.pathname = 'unlcal/' + url; // redirect
 		          }
 		          return false;
 		      });

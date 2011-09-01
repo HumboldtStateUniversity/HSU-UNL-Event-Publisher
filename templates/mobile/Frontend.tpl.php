@@ -10,6 +10,10 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 }
 ?>| Events</title>
 
+		<link rel="stylesheet" type="text/css" media="screen" href="templates/mobile/jqm/jquery.mobile-1.0b2.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="templates/mobile/jqm/jquery.ui.datepicker.mobile.css" />
+
+		
 <link rel="alternate" type="application/rss+xml" title="<?php echo $this->calendar->name; ?> Events" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'format'=>'rss')); ?>" />
 </head>
 
@@ -21,7 +25,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			<h1>Humboldt State Events</h1>
 			
 			
-			<form id="new-day" action="destination.html">
+			<form id="new-day" action="index.html">
 				<div data-role="fieldcontain">
 					<label for="date">Change Date:</label>
 					<input type="date" name="date" id="date" value=""  />

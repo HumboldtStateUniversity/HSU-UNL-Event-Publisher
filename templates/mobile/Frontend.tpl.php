@@ -13,10 +13,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<link rel="stylesheet" type="text/css" media="screen" href="templates/mobile/jqm/jquery.mobile-1.0b2.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="templates/mobile/jqm/jquery.ui.datepicker.mobile.css" />
 		
-		<script src="templates/mobile/jqm/jquery-1.6.2.min.js"></script>
-		<script src="templates/mobile/jqm/jquery.mobile-1.0b2.min.js"></script> 
-		<script src="templates/mobile/jqm/jquery.ui.datepicker.js"></script>
-		<script src="templates/mobile/jqm/jquery.ui.datepicker.mobile.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script> 
+
 
 		
 <link rel="alternate" type="application/rss+xml" title="<?php echo $this->calendar->name; ?> Events" href="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'format'=>'rss')); ?>" />

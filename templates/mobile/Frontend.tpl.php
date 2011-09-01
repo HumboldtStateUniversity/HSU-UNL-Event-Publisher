@@ -21,10 +21,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		      // bind change event to select
 		      $('#new-day').submit(function() {
 		          var url = $('#date').val(); // get selected value
-							value.replace("-", "/");
-							
+		
 		          if (url) { // require a URL
-		              window.location = url; // redirect
+		              window.location = url.replace(/-/g, '/'); // redirect
 		          }
 		          return false;
 		      });

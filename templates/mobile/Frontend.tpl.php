@@ -75,9 +75,6 @@
 			    <div id="updatecontent" class="three_col right">
 			    <?php UNL_UCBCN::displayRegion($this->output); ?>
 			    </div>
-			    <div class="col left">
-			        <div id="monthwidget"><?php UNL_UCBCN::displayRegion($this->right); ?></div>
-			    </div>
 			<?php } else {
 			    UNL_UCBCN::displayRegion($this->output);
 			} ?>

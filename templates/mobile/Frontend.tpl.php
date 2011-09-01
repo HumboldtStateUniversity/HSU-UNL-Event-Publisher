@@ -29,11 +29,10 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<script>
 		    $(function(){
 		      // bind change event to select
-		      $('#new-day').submit(function() {
-		          var url = $('#date').val(); // get selected value
-		          if (url) { // require a URL
-									window.location.search = '';
-		              window.location.pathname = 'unlcal/' + url; // redirect
+		      $('#new-day').submit(function() {			
+		          var url = $('#date').val(); // get selected value	
+		          if (url) { // require a URL									
+		              window.location.href = '<?php echo $this->uri ?>' + url; // redirect
 		          }
 		          return false;
 		      });
@@ -58,24 +57,24 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 
 		<div data-role="header" data-title="Humboldt State Events">
 			<h1>Humboldt State Events</h1>
-			
-			
-			<form id="new-day" action="index.html">
-				<div data-role="fieldcontain">
-					<label for="date">Change Date:</label>
-					<input type="date" name="date" id="date" value=""  />
-					<input type='submit' name='submit' value="Go" />
-				</div>		
-			</form>			
-			
-		<form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
-    <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-    <input type='submit' name='submit' value="Search" />
-    <input type='hidden' name='search' value='search' />
-	</form>
 			</div>
     
 		<div data-role="content">
+			
+					<form id="new-day" action="index.html">
+						<div data-role="fieldcontain">
+							<label for="date">Change Date:</label>
+							<input type="date" name="date" id="date" value=""  />
+							<input type='submit' name='submit' value="Go" />
+						</div>		
+					</form>			
+
+				<form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
+		    <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+		    <input type='submit' name='submit' value="Search" />
+		    <input type='hidden' name='search' value='search' />
+			</form>
+			
 <?php if (isset($this->right)) { ?>
     <div id="updatecontent" class="three_col right">
     <?php UNL_UCBCN::displayRegion($this->output); ?>

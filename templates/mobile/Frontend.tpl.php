@@ -18,7 +18,16 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="page">
 
 		<div data-role="header" data-title="Humboldt State Events">
-			<h1>Humboldt State Events</h1>			
+			<h1>Humboldt State Events</h1>
+			
+			
+			<form id="new-day" action="destination.html">
+				<div data-role="fieldcontain">
+					<label for="date">Change Date:</label>
+					<input type="date" name="date" id="date" value=""  />
+					<input type='submit' name='submit' value="Go" />
+				</div>		
+			</form>			
 			
 		<form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
     <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />

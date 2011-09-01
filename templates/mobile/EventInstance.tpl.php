@@ -100,51 +100,6 @@ $endu = strtotime($this->eventdatetime->endtime);
 			echo $this->facebook->like($this->url,$this->calendar->id);
 		?>
 		</div>
-		<p id="feeds">
-			<a id="icsformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')); ?>" title="Get event in ical format">
-				ics format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
-			<a id="rssformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')); ?>" title="Get this event via rss">
-				rss format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
-			<!--<?php
-				if ($this->eventdatetime->location_id) {
-					$loc = $this->eventdatetime->getLink('location_id');
-					$loc = UNL_UCBCN_Frontend::dbStringToHtml($loc->name);
-				} else {
-					$loc = "Unknown";
-				}
-
-				// Add to Google button URL
-				$eventdate = '';
-				if (isset($this->eventdatetime->starttime)) {
-					$starttime = strtotime($this->eventdatetime->starttime);
-					$eventdate .= date('Ymd', $starttime);
-
-					if (strpos($this->eventdatetime->starttime,'00:00:00')) {
-						// all day event
-						$eventdate .= "/" . date('Ymd', strtotime("+1 day", $starttime));
-					} else {
-						// has start time
-						$eventdate .= "T" . gmdate('Hi', $starttime) . '00Z';
-						if (isset($this->eventdatetime->endtime)) {
-							// has end time
-							$endtime = strtotime($this->eventdatetime->endtime);
-							$eventdate .= "/" . date('Ymd', $endtime);
-							$eventdate .= "T" . gmdate('Hi', $endtime) . '00Z';
-						}
-					}
-				}
-				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
-							"&text=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)) .
-							"&location=" . htmlentities($loc) .
-							"&dates=" . $eventdate .
-							"&details=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->description)) .
-							"&sprop=website:" . $this->url;
-
-			?>
-			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>-->
-			
-			<a id="twittershare" href="http://twitter.com/home?status=Check out this event <?php echo $this->url; ?>" title="Click to share this post on Twitter">Share on Twitter</a>
-		</p>
 		
 		</div>
 	</div>

@@ -12,11 +12,6 @@ if (is_a($this->output,'UNL_UCBCN_EventListing')) {
 }
 UNL_UCBCN::displayRegion($this->output);
 
-echo '<p id="feeds">
-            <a id="icsformat" title="ics format for search results" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'ics')).'">ics format for search results</a>
-            <a id="rssformat" title="rss format for search results" href="'.UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')).'">rss format for search results</a>
-            </p>';
-
 ?>
 
 </div>

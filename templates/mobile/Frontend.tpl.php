@@ -23,15 +23,31 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		</script>				
 
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-		<script>
-		 $(document).ready(function() {
-		  // disable ajax nav
-		  $.mobile.ajaxLinksEnabled = false;
-		 });
-		</script>
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.js"></script>
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.mobile.js"></script>
 
+		<script>
+		    $(function(){
+		      // bind change event to select
+		      $('#new-day').submit(function() {
+		          var url = $('#date').val(); // get selected value
+		          if (url) { // require a URL
+									window.location.search = '';
+		              window.location.pathname = 'unlcal/' + url; // redirect
+		          }
+		          return false;
+		      });
+		    });
+		</script>
+		
+		
+
+		<script>
+		 $(document).ready(function() {
+		  // disable ajax nav
+		  $.mobile.ajaxEnabled = false;
+		 });
+		</script>
 		
 		
 </head>

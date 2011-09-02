@@ -1,14 +1,10 @@
 <?php if ($this->type == 'ongoing') {
     echo '<h4 class="'.$this->type.'">Ongoing Events:</h4>';
 } ?>
-<table class='<?php echo $this->type; ?>' id="eventlist">
-<thead>
-<tr>
-<th scope="col" class="date visuallyhidden">Time</th>
-<th scope="col" class="title visuallyhidden">Event Title</th>
-</tr>
-</thead>
-<tbody class="vcalendar">
+
+
+
+<div class="vcalendar">
 <?php
 $oddrow = false;
 foreach ($this->events as $e) {
@@ -16,13 +12,15 @@ foreach ($this->events as $e) {
     $startu = strtotime($e->eventdatetime->starttime);
     $endu = strtotime($e->eventdatetime->endtime);
     
-    $row = '<tr class="vevent';
+    $row = '<div class="vevent';
     if ($oddrow) {
         $row .= ' alt';
     }
     $row .= '">';
     $oddrow = !$oddrow;
-    $row .=    '<td class="date">';
+
+
+    $row .=    '<div class="date"><strong>Date:</strong> ';
     if ($this->type == 'ongoing') {
         $row .= '<abbr class="dtstart" title="'.date('c', $startu).'">'.date('M jS', $startu).'</abbr>';
         $row .= '-<abbr class="dtend" title="'.date('c', $endu).'">'.date('M jS', $endu).'</abbr>';
@@ -57,29 +55,29 @@ foreach ($this->events as $e) {
             }
         }
     }
-    $row .= '</td>' .
-            '<td><h3><a class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3>';
+    $row .= '</div>' .
+
+            '<div><h3><a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3></div>';
+
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {
         $l = $e->eventdatetime->getLink('location_id');
-        $row .= ' <span class="location">';
+        $row .= ' <div class="location">';
         if (isset($l->mapurl)) {
             $row .= '<a class="mapurl" href="'.UNL_UCBCN_Frontend::dbStringToHtml($l->mapurl).'">'.UNL_UCBCN_Frontend::dbStringToHtml($l->name).'</a>';
         } else {
             $row .= UNL_UCBCN_Frontend::dbStringToHtml($l->name);
         }
-        $row .= '</span>';
+        $row .= '</div>';
     }
+
     if ($this->type != 'ongoing') {
         $row .=    '<blockquote class="description">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->description).'</blockquote>';
     }
 //    $row .= $e-><!--facebook-->->like($e->url,$e->calendar->id);
-    $row .= '</td></tr>';
+    $row .= '</div>';
     
     echo $row;
 }
 
  ?>
-
-</tbody>
-</table>
-
+</div>

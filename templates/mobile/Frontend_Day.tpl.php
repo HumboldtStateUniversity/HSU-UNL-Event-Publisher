@@ -9,12 +9,12 @@ echo date('l, F jS',$day->getTimeStamp());
 
 <?php
     $prev = $day->prevDay('object');
-    echo '<a class="url prev" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
+    echo '<a rel="external" class="url prev" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
                                                             'm'=>$prev->thisMonth(),
                                                             'y'=>$prev->thisYear(),
                                                             'calendar'=>$this->calendar->id)).'">Previous Day</a> ';
     $next = $day->nextDay('object');
-    echo '<a class="url next" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$next->thisDay(),
+    echo '<a rel="external" class="url next" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$next->thisDay(),
                                                             'm'=>$next->thisMonth(),
                                                             'y'=>$next->thisYear(),
                                                             'calendar'=>$this->calendar->id)).'">Next Day</a></p>';

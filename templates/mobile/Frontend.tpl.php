@@ -80,12 +80,14 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="page" id="two">
 			<div data-role="header"><h1>Select a date to view</h1></div>
 			
+			<div data-role="content">
+			
 			<div id="monthwidget" class="minical">
 				<?php UNL_UCBCN::displayRegion($this->right); ?>
 			</div><!--/monthwidget-->
 			
 			<!--
-			<div data-role="content">
+			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
 					<label for="date" id="date-label">Change Date:</label>

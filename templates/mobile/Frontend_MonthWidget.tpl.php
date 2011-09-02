@@ -1,5 +1,8 @@
 <table class="wp-calendar">
-	<caption><?php echo $this->caption; ?></caption>
+	<caption><?php echo '<span><a href="'.$prev.'" id="prev_month" title="View events for '.Calendar_Util_Textual::thisMonthName($PMonth).' '.$PMonth->thisYear().'">&lt;&lt; </a></span>
+  <span class="monthvalue" id="'.Calendar_Util_Textual::thisMonthName($Month).'">'.Calendar_Util_Textual::thisMonthName($Month).'</span>
+  <span class="yearvalue">'.$Month->thisYear().'</span>
+  <span><a href="'.$next.'" id="next_month" title="View events for '.Calendar_Util_Textual::thisMonthName($NMonth).' '.$NMonth->thisYear().'"> &gt;&gt;</a></span>' ?></caption>
    <thead>
 	<tr>
 		<th abbr="Sunday" scope="col" title="Sunday">S</th>

@@ -84,19 +84,13 @@ $endu = strtotime($this->eventdatetime->endtime);
 					isset($this->event->listingcontactemail)) {
 
 					if (isset($this->event->listingcontactname)) echo '<span class="n">'.$this->event->listingcontactname.'</span><br />';
-					if (isset($this->event->listingcontactphone)) echo '<span class="tel">'.$this->event->listingcontactphone.'</span><br />';
+					if (isset($this->event->listingcontactphone)) echo '<span class="tel"><a href="tel:'.$this->event->listingcontactphone.'">'.$this->event->listingcontactphone.'</a></span><br />';
 					if (isset($this->event->listingcontactemail)) echo '<span class="mailto"><a href="mailto:'.$this->event->listingcontactemail.'">'.$this->event->listingcontactemail.'</a></span>';
 				} ?>
 				</div>
 			</div>		
 		</div>
 		
-	<div id="facebook_wrap">
-		<?php
-			UNL_UCBCN::displayRegion($this->facebookRSVP);
-			echo $this->facebook->like($this->url,$this->calendar->id);
-		?>
-		</div>
 		
 		</div>
 	</div>

@@ -55,9 +55,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="content">
 				<a href="#two" data-role="button" data-rel="dialog">Select a new date</a>
 
-				<form id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
+				<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
 		    <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-		    <input rel="external" type='submit' name='submit' value="Search" />
+		    <input type='submit' name='submit' value="Search" />
 		    <input type='hidden' name='search' value='search' />
 			</form>
 			
@@ -76,11 +76,11 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="page" id="two">
 			<div data-role="header"><h1>Select a date to view</h1></div>
 			<div data-role="contnet">
-			<form id="new-day" action="destination.html">
+			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
 					<label for="date" id="date-label">Change Date:</label>
 					<input type="date" name="date" id="date" value=""  />
-					<input rel="external" type='submit' name='submit' value="Go" />
+					<input type='submit' name='submit' value="Go" />
 				</div>		
 			</form>
 			</div>

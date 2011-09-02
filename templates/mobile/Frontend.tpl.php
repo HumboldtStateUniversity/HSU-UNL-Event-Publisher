@@ -53,14 +53,21 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			</div>
     
 		<div data-role="content">
-				<a href="#two" data-role="button" data-rel="dialog">Select a date to view</a>
-
-				<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
-		    <input type='text' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-		    <input type='submit' name='submit' value="Search" />
-		    <input type='hidden' name='search' value='search' />
-			</form>
 			
+			<div class="ui-grid-a">
+			<div  class="ui-block-a">
+				<a href="#two" data-role="button" data-rel="dialog">Select a date to view</a>
+			</div>
+			<div class="ui-block-b">
+				<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
+				<div data-role="fieldcontain">	
+		    <input type='search' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+		    <!--<input type='submit' name='submit' value="Search" />-->
+		    <input type='hidden' name='search' value='search' />
+				</div>
+			</form>
+			</div>
+			</div>
 <?php if (isset($this->right)) { ?>
     <div id="updatecontent" class="three_col right">
     <?php UNL_UCBCN::displayRegion($this->output); ?>

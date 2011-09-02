@@ -19,8 +19,9 @@ foreach ($this->events as $e) {
     $row .= '">';
     $oddrow = !$oddrow;
 
+		$row .= '<div><h3><a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3></div>';
 
-    $row .=    '<div class="date"><strong>Date:</strong> ';
+    $row .=    '<div class="date">';
     if ($this->type == 'ongoing') {
         $row .= '<abbr class="dtstart" title="'.date('c', $startu).'">'.date('M jS', $startu).'</abbr>';
         $row .= '-<abbr class="dtend" title="'.date('c', $endu).'">'.date('M jS', $endu).'</abbr>';
@@ -55,9 +56,7 @@ foreach ($this->events as $e) {
             }
         }
     }
-    $row .= '</div>' .
-
-            '<div><h3><a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3></div>';
+    $row .= '</div>';
 
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {
         $l = $e->eventdatetime->getLink('location_id');
@@ -70,10 +69,6 @@ foreach ($this->events as $e) {
         $row .= '</div>';
     }
 
-    if ($this->type != 'ongoing') {
-        $row .=    '<blockquote class="description">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->description).'</blockquote>';
-    }
-//    $row .= $e-><!--facebook-->->like($e->url,$e->calendar->id);
     $row .= '</div>';
     
     echo $row;

@@ -16,11 +16,12 @@ foreach ($this->events as $e) {
     if ($oddrow) {
         $row .= ' alt';
     }
-    $row .= '">';
+    $row .= '"><a rel="external" class="url" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">';
     $oddrow = !$oddrow;
 
-
-    $row .=    '<div class="date">';
+		$row .='<div class="summary"><h3>'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</h3></div>';
+    
+		$row .=    '<div class="date">';
     if ($this->type == 'ongoing') {
         $row .= '<abbr class="dtstart" title="'.date('c', $startu).'">'.date('M jS', $startu).'</abbr>';
         $row .= '-<abbr class="dtend" title="'.date('c', $endu).'">'.date('M jS', $endu).'</abbr>';
@@ -55,9 +56,7 @@ foreach ($this->events as $e) {
             }
         }
     }
-    $row .= '</div>' .
-
-            '<div><h3><a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3></div>';
+    $row .= '</div>'
 
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {
         $l = $e->eventdatetime->getLink('location_id');
@@ -70,7 +69,7 @@ foreach ($this->events as $e) {
         $row .= '</div>';
     }
 
-    $row .= '</div>';
+    $row .= '</a></div>';
     
     echo $row;
 }

@@ -73,7 +73,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
 		</div>
-
+		</div>
     <div data-role="footer"><p>Switch to <a rel="external" href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard site</a></p></div>
 
 		</div>

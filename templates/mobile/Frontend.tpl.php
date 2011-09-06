@@ -89,7 +89,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 					<input type='submit' name='submit' value="Go" />
 				</div>		
 			</form>
-			
+			</div>
 			</div>
 </body>
 </html>

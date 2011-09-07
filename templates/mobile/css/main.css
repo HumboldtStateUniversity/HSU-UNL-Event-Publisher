@@ -10,7 +10,7 @@ img{
 #one .ui-header .ui-title{
 	text-align:left;
 	padding:0;
-	margin:15px 15px 0 15px;
+	margin:15px;
 }
 #one .ui-header .ui-field-contain{
 	margin:10px 15px 18px;
@@ -46,7 +46,7 @@ div.alt{
 h4.sec_main {
   font-size:20px;
   font-weight: bold;
-	margin:35px 0 0 0;
+	margin:15px 0 0 0;
 }
 .day-buttons a{
 

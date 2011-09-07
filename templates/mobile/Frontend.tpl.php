@@ -90,7 +90,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 					<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
 				</ul>
 			</div>
-
+			</div>
 		</div>
 		
 		<div data-role="page" id="two">

@@ -74,7 +74,32 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 } ?>
 		</div>
 		</div>
-    <div data-role="footer"><p>Switch to <a rel="external" href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard site</a></p></div>
+    <div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+					
+					<?php
+					
+							$day = new Calendar_Day($this->year,$this->month,$this->day);
+
+					    $prev = $day->prevDay('object');
+					    echo '<li><a rel="external" data-icon="arrow-l" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
+					                                                            'm'=>$prev->thisMonth(),
+					                                                            'y'=>$prev->thisYear(),
+					                                                            'calendar'=>$this->calendar->id)).'">Previous Day</a></li>';
+					    $next = $day->nextDay('object');
+					    echo '<li><a rel="external" data-icon="arrow-r" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$next->thisDay(),
+					                                                            'm'=>$next->thisMonth(),
+					                                                            'y'=>$next->thisYear(),
+					                                                            'calendar'=>$this->calendar->id)).'">Next Day</a></li>';
+
+					?>
+					
+					
+					<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+				</ul>
+			</div>
 
 		</div>
 		<div data-role="page" id="two">

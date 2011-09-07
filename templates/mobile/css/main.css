@@ -84,7 +84,7 @@ h2.event-title{
 }
 
 /* jquery mobile overrides */
-.ui-header {
+#one .ui-header {
 	border: 0px solid #bbb;
 	border-bottom:1px solid #bbb;
 	background:url(handmadepaper.png) repeat #6a9231;
@@ -96,7 +96,7 @@ h2.event-title{
 	-webkit-box-shadow: inset 0px -3px 5px rgba(0,0,0,.2);
 	box-shadow: inset 0px -3px 5px rgba(0,0,0,.2);
 }
-#two .ui-header{
+.ui-header{
 	border: 1px solid 		#77a13b;
 	background: 			#6a9231;
 	color: 					#ffffff;

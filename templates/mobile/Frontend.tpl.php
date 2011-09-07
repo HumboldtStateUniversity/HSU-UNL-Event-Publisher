@@ -62,7 +62,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 <?php } else {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
-		</div>
+
 		</div>
     <div data-role="footer" data-position="fixed">
 			<div data-role="navbar">

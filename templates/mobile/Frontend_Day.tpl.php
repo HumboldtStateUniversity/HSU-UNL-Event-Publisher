@@ -19,8 +19,6 @@ $day = new Calendar_Day($this->year,$this->month,$this->day);
                                                             'y'=>$next->thisYear(),
                                                             'calendar'=>$this->calendar->id)).'">Next</a></div>';
 
-    UNL_UCBCN::displayRegion($this->output);
-
 ?>
 
 <h4 class="sec_main">
@@ -28,4 +26,7 @@ $day = new Calendar_Day($this->year,$this->month,$this->day);
 echo date('l, F jS',$day->getTimeStamp());
 ?>
 </h4>
+<?php
+UNL_UCBCN::displayRegion($this->output);
+?>
 </div>

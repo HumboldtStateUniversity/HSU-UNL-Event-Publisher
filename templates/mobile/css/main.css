@@ -39,7 +39,7 @@ img{
 	margin:10px 0;
 	padding:10px 5px;
 }
-.alt{
+div.alt{
 	background-color: transparent;
   background-color: rgba(255, 255, 255, 0.4);
 }
@@ -61,6 +61,26 @@ a .summary{
 }
 .ui-field-contain{
 	border-bottom:0;
+}
+
+/* event detail */
+h1.summary{
+	float: none;
+	width: auto;
+	clear: both;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 9px 0 12px 25px;
+	background: url(flag.png) no-repeat 0 0;
+}
+.ui-content h3.date, .ui-content .date h3{
+	font-size:15px;
+}
+.ui-content p{
+	font-size:15px;
+}
+h2.event-title{
+	font-size:18px;
 }
 
 /* jquery mobile overrides */

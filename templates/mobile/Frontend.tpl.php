@@ -50,20 +50,10 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 
 		<div data-role="header" data-title="Humboldt State Events">
 			<h1 class="wordmark"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></h1>
-			
-				<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
-				<div data-role="fieldcontain">	
-		    <input type='search' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-		    <!--<input type='submit' name='submit' value="Go" />-->
-		    <input type='hidden' name='search' value='search' />
-				</div>
-			</form>
-			
 			</div>
     
 		<div data-role="content">
 
-				<a href="#two" data-role="button" data-rel="dialog">Select a date to view</a>
 
 <?php if (isset($this->right)) { ?>
     <div id="updatecontent" class="three_col right">
@@ -102,6 +92,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			</div>
 
 		</div>
+		
 		<div data-role="page" id="two">
 			<div data-role="header"><h1>Select a date to view</h1></div>
 			
@@ -116,5 +107,21 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			</form>
 			</div>
 			</div>
+			
+			<div data-role="page" id="three">
+				<div data-role="header"><h1>Search for events</h1></div>
+				<div data-role="content">
+						<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
+						<div data-role="fieldcontain">	
+				    <input type='search' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+				    <!--<input type='submit' name='submit' value="Go" />-->
+				    <input type='hidden' name='search' value='search' />
+						</div>
+					</form>					
+				
+			</div>
+			
+			</div>
+			
 </body>
 </html>

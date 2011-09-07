@@ -120,27 +120,9 @@ h2.event-title{
 	font-weight: normal;
 	font-family: Helmet, Freesans, sans-serif;
 }
-.ui-content .ui-link, .ui-footer .ui-link{
+.ui-content .ui-link{
 	color:#6a9231;
 	text-decoration:none;
-}
-.ui-footer .ui-link{
-	text-decoration:underline;
-}
-.ui-footer{
-	border: 1px solid 		#fff;
-	background: 			#fff;
-	color: 					#222;
-	font-weight: normal;
-	text-shadow: 0 1px 0 	#fff;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #fff, #fff); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #fff, #fff); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #fff, #fff); /* IE10 */
-	background-image:      -o-linear-gradient(top, #fff, #fff); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #fff, #fff);
-	padding-left:15px;
-	font-family: Helmet, Freesans, sans-serif;
 }
 
 .ui-shadow-inset {

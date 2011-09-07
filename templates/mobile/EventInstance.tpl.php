@@ -1,5 +1,3 @@
-<a href="index.html" data-role="button" data-rel="back">Back</a>
-
 <?php
 
 $startu = strtotime($this->eventdatetime->starttime);

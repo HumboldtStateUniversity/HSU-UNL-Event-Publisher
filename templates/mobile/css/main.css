@@ -1,12 +1,14 @@
 body { 
 	font-family: Helmet, Freesans, sans-serif;
-	background:url(exclusive_paper.jpg) repeat #597e24;
 }
 img{
 	max-width:100%;
 }
 #date, #date-label{
 	display:none;
+}
+#one {
+	background:url(exclusive_paper.jpg) repeat #597e24;
 }
 #one .ui-header .ui-title{
 	text-align:left;

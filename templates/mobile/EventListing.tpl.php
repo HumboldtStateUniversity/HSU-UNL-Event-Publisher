@@ -57,7 +57,7 @@ foreach ($this->events as $e) {
             }
         }
     }
-    $row .= '</div>' .
+    $row .= '</div>';
 
 
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {

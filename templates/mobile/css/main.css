@@ -67,6 +67,11 @@ a .date, a .location{
 .ui-field-contain{
 	border-bottom:0;
 }
+p.standard-link{
+	background-color:#fff;
+	padding:8px 3px;
+	margin:45px 0 10px 0;
+}
 
 /* event list */
 div.vevent .date, div.vevent .location, div.vevent h3{

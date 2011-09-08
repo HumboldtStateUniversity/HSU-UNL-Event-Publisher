@@ -64,7 +64,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 } ?>
 
 			<!-- link to standard events site -->
-			<p>Switch to <a href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard site</a></p>
+			<p class="standard-link">Switch to <a href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard events site</a></p>
 	
 		</div>
     <div data-role="footer" data-position="fixed">

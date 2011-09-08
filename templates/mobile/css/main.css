@@ -58,7 +58,10 @@ a .date, a .location{
 	text-decoration:none;
 	font-weight:normal;
 }
-a .summary{
+.ui-content .ui-link .summary{
+	text-decoration:underline;
+}
+.ui-content p .ui-link{
 	text-decoration:underline;
 }
 .ui-field-contain{

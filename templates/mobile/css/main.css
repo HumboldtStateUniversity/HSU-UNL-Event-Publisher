@@ -68,6 +68,14 @@ div.vevent .date, div.vevent .location, div.vevent h3{
 	font-size:17px;
 }
 
+/* search list */
+h1.results{
+	font-size:17px;
+}
+h3.result-count{
+	font-size:17px;
+	font-weight:normal;
+}
 
 /* event detail */
 h1.summary{

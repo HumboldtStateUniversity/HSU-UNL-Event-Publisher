@@ -49,7 +49,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="page" id="one">
 
 		<div data-role="header" data-title="Humboldt State Events">
-			<h1 class="wordmark"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></h1>
+			<h1 class="wordmark"><a href="<?php echo $this->uri; ?>"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></a></h1>
 			</div>
     
 		<div data-role="content">
@@ -63,11 +63,13 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
 
+			<!-- link to standard events site -->
+			<p>Switch to <a href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard site</a></p>
+	
 		</div>
     <div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
 					
 					<?php
 					
@@ -88,6 +90,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 					
 					
 					<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+					<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
 				</ul>
 			</div>
 			</div>

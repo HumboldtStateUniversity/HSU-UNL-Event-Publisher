@@ -49,7 +49,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<div data-role="page" id="one">
 
 		<div data-role="header" data-title="Humboldt State Events">
-			<h1 class="wordmark"><a href="<?php echo $this->uri; ?>"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></a></h1>
+			<h1 class="wordmark"><a rel="external" href="<?php echo $this->uri; ?>"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></a></h1>
 			</div>
     
 		<div data-role="content">

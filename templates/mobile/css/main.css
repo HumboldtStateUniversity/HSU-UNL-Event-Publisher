@@ -1,5 +1,6 @@
 body { 
 	font-family: Helmet, Freesans, sans-serif;
+	background:url(exclusive_paper.jpg) repeat #597e24;
 }
 img{
 	max-width:100%;
@@ -44,12 +45,11 @@ div.alt{
   background-color: rgba(255, 255, 255, 0.4);
 }
 h4.sec_main {
-  font-size:20px;
-  font-weight: bold;
-	margin:15px 0 0 0;
-}
-.day-buttons a{
-
+	font-size: 18px;
+	font-weight: 500;
+	padding: 9px 0 12px 25px;
+	background: url(flag.png) no-repeat 0 0;
+	margin:15px 0;
 }
 a .date, a .location{
 	color:#222;
@@ -63,11 +63,14 @@ a .summary{
 	border-bottom:0;
 }
 
+/* event list */
+div.vevent .date, div.vevent .location, div.vevent h3{
+	font-size:17px;
+}
+
+
 /* event detail */
 h1.summary{
-	float: none;
-	width: auto;
-	clear: both;
 	font-size: 18px;
 	font-weight: 500;
 	padding: 9px 0 12px 25px;
@@ -80,22 +83,10 @@ h1.summary{
 	font-size:15px;
 }
 h2.event-title{
-	font-size:18px;
+	font-size:17px;
 }
 
 /* jquery mobile overrides */
-#one .ui-header {
-	border: 0px solid #bbb;
-	border-bottom:1px solid #bbb;
-	background:url(handmadepaper.png) repeat #6a9231;
-	color: #222;
-	font-weight: bold;
-	text-shadow: 0 -1px 1px #fff;
-	font-family: Helmet, Freesans, sans-serif;
-	-moz-box-shadow: inset 0px -3px 5px rgba(0,0,0,.2);
-	-webkit-box-shadow: inset 0px -3px 5px rgba(0,0,0,.2);
-	box-shadow: inset 0px -3px 5px rgba(0,0,0,.2);
-}
 .ui-header{
 	border: 1px solid 		#77a13b;
 	background: 			#6a9231;

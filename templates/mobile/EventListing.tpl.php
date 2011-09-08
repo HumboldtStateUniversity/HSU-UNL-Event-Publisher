@@ -12,7 +12,7 @@ foreach ($this->events as $e) {
     $startu = strtotime($e->eventdatetime->starttime);
     $endu = strtotime($e->eventdatetime->endtime);
     
-    $row = '<div class="vevent';
+    $row = '<a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'"><div class="vevent';
     if ($oddrow) {
         $row .= ' alt';
     }
@@ -22,7 +22,7 @@ foreach ($this->events as $e) {
 		
 
 		
-    $row .=  '<div><h3><a rel="external" class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3></div>' .  '<div class="date">';
+    $row .=  '<div><h3>'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</h3></div>' .  '<div class="date">';
     if ($this->type == 'ongoing') {
         $row .= '<abbr class="dtstart" title="'.date('c', $startu).'">'.date('M jS', $startu).'</abbr>';
         $row .= '-<abbr class="dtend" title="'.date('c', $endu).'">'.date('M jS', $endu).'</abbr>';
@@ -68,7 +68,7 @@ foreach ($this->events as $e) {
         } else {
             $row .= UNL_UCBCN_Frontend::dbStringToHtml($l->name);
         }
-        $row .= '</div>';
+        $row .= '</div></a>';
     }
 
     $row .= '</div>';

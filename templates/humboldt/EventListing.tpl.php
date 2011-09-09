@@ -58,7 +58,7 @@ foreach ($this->events as $e) {
         }
     }
     $row .= '</td>' .
-            '<td><h3><a class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3>';
+            '<td><h3><a class="url summary" href="'.UNL_UCBCN_Frontend::dbStringToHtml($e->url).'#top'">'.UNL_UCBCN_Frontend::dbStringToHtml($e->event->title).'</a></h3>';
     if (isset($e->eventdatetime->location_id) && $e->eventdatetime->location_id) {
         $l = $e->eventdatetime->getLink('location_id');
         $row .= ' <span class="location">';

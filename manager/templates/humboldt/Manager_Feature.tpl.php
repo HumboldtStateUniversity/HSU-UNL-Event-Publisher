@@ -4,24 +4,29 @@
 
 require_once 'HTML/Table.php';
 $t = new HTML_Table(array('id'=>'feature_cals'));
-$t->addRow(array('Event','Not Featured', 'Featured'), null, 'TH');
+$t->addRow(array('Event','Featured', 'HSU Homepage'), null, 'TH');
 
 foreach ($this->events as $event) {
 
     if ($event->status == 'featured') {
-        $isfeaturedcheck = 'checked = checked';
-        $notfeaturedcheck = NULL;
+        $featuredcheck = 'checked = checked';
     } else {
-	$isfeaturedcheck = NULL;
-	$notfeaturedcheck = 'checked = checked';
+	$featuredcheck = NULL;
     }
 
-    $notfeatured = HTML_QuickForm::createElement('radio','changeevent'.$event->id,null,null, 'Not Featured', $notfeaturedcheck);
-    $notfeatured = $notfeatured->toHtml();
+    $featuredhidden = HTML_QuickForm::createElement('hidden', 'featureevent'.$event->id, 0);
+    $featuredhidden = $featuredhidden->toHtml();
 
-    $featured = HTML_QuickForm::createElement('radio','changeevent'.$event->id,null,null, 'Featured', $isfeaturedcheck);
+    $featured = HTML_QuickForm::createElement('checkbox','featureevent'.$event->id, null, null, $featuredcheck);
     $featured = $featured->toHtml();
-    $t->addRow(array($event->title, $notfeatured, $featured));
+
+    $homepagehidden = HTML_QuickForm::createElement('hidden', 'homepageevent'.$event->id, 0);
+    $homepagehidden = $homepagehidden->toHtml();
+
+    $homepage = HTML_QuickForm::createElement('checkbox','homepageevent'.$event->id, null, null);
+    $homepage = $homepage->toHtml();
+
+    $t->addRow(array($event->title, $featuredhidden.$featured, $homepagehidden.$homepage));
 
 }
 echo $t->toHtml();

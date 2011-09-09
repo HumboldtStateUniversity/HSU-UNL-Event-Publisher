@@ -52,5 +52,4 @@
 
 /* import stylesheets and hide from ie/mac \*/
 @import url("frontend_default.css");
-@import url("frontend_ieonly.css"); 
 /* end import/hide */

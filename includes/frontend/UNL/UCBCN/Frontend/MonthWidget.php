@@ -174,7 +174,7 @@ class UNL_UCBCN_Frontend_MonthWidget extends UNL_UCBCN implements UNL_UCBCN_Cach
             if ( in_array(date('m-d', $Day->getTimestamp()), $selected_days)
                 || in_array(date('m-d', $Day->getTimestamp()), $ongoing_events)
                 || in_array(date('m-d', $Day->getTimestamp()), $recurring_events) ) {
-                $this->tbody .= "<td class='selected {$class}'><a href='$link'>".$Day->thisDay()."</a></td>\n";
+                $this->tbody .= "<td class='selected {$class}'><a href='$link#top'>".$Day->thisDay()."</a></td>\n";
             } else if ( $Day->isEmpty() ) {
                 $this->tbody .= "<td class='{$class}'>".$Day->thisDay()."</td>\n";
             } else {

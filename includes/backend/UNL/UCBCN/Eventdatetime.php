@@ -219,6 +219,9 @@ class UNL_UCBCN_Eventdatetime extends DB_DataObject
                 array('Invalid Date', 'date'),
             )
             ));
+
+        $form->registerRule('endtime_group', 'callback', 'check_dates', $this);
+        $form->addRule('endtime_group', 'End date &amp; time must be after start date.', 'endtime_group');
     }
     
     public function preProcessForm(&$values, &$fb)
@@ -331,7 +334,16 @@ class UNL_UCBCN_Eventdatetime extends DB_DataObject
         
         return true;
     }
-    
+
+    // make sure endtime is after starttime    
+    public function check_dates()
+    {
+        if ($this->starttime > $this->enddtime) {
+            return false;
+        }
+        return true;
+    }
+
     public function _array2date($dateInput, $timestamp = false)
     {
         if (isset($dateInput['M'])) {

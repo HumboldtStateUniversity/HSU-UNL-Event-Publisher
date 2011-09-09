@@ -555,19 +555,19 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
         $mdb2 =& $this->getDatabaseConnection();
         if (!empty($q)) {
             $events = UNL_UCBCN_Manager::factory('event');
-            /*if ($t = strtotime($q)) {
+            if ($t = strtotime($q)) {
                 // This is a time...
                 $events->query('SELECT event.* FROM event, eventdatetime WHERE ' .
                         'eventdatetime.event_id = event.id AND eventdatetime.starttime LIKE \''.date('Y-m-d', $t).'%\'');
                 
             } else {
-            */
+            
                 // Do a textual search.
                 $q = $mdb2->escape($q);
                 $events->whereAdd('event.title LIKE \'%'.$q.'%\' AND event.approvedforcirculation=1');
                 $events->orderBy('event.title');
                 $events->find();
-            //}
+            }
             $listing = new UNL_UCBCN_EventListing();
             while ($events->fetch()) {
                 $event_removed = false;

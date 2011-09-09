@@ -10,8 +10,10 @@ foreach ($this->events as $event) {
 
     if ($event->status == 'featured') {
         $featuredcheck = 'checked = checked';
-    } else {
-	$featuredcheck = NULL;
+    } 
+
+    if ($event->homepage) {
+        $homepagecheck = 'checked = checked';
     }
 
     $featuredhidden = HTML_QuickForm::createElement('hidden', 'featureevent'.$event->id, 0);
@@ -23,7 +25,7 @@ foreach ($this->events as $event) {
     $homepagehidden = HTML_QuickForm::createElement('hidden', 'homepageevent'.$event->id, 0);
     $homepagehidden = $homepagehidden->toHtml();
 
-    $homepage = HTML_QuickForm::createElement('checkbox','homepageevent'.$event->id, null, null);
+    $homepage = HTML_QuickForm::createElement('checkbox','homepageevent'.$event->id, null, null, $homepagecheck);
     $homepage = $homepage->toHtml();
 
     $t->addRow(array($event->title, $featuredhidden.$featured, $homepagehidden.$homepage));

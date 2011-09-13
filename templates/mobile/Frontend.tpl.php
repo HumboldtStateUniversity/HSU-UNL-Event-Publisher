@@ -10,7 +10,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 }
 ?>| Events</title>
 
-		<link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.mobile.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/css/main.css" />
 		
@@ -23,7 +23,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		  });	
 		</script>				
 
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.js"></script>
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.mobile.js"></script>
 
@@ -67,6 +67,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			<p class="standard-link">Switch to <a href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard events site</a></p>
 	
 		</div>
+		
+		
+		<!-- first footer -->
     <div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
@@ -94,6 +97,21 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 				</ul>
 			</div>
 			</div>
+			
+			<!-- other footer -->
+			<!--
+			
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
+							<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+							<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+						</ul>
+					</div>
+					</div>			
+			
+			-->
 		</div>
 		
 		<div data-role="page" id="two">

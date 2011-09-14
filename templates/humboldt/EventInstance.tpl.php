@@ -105,7 +105,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 				ics format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
 			<a id="rssformat" href="<?php echo UNL_UCBCN_Frontend::reformatURL($this->url,array('format'=>'rss')); ?>" title="Get this event via rss">
 				rss format for <?php echo UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)?></a>
-			<!--<?php
+			<?php
 				if ($this->eventdatetime->location_id) {
 					$loc = $this->eventdatetime->getLink('location_id');
 					$loc = UNL_UCBCN_Frontend::dbStringToHtml($loc->name);
@@ -134,15 +134,13 @@ $endu = strtotime($this->eventdatetime->endtime);
 					}
 				}
 				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
-							"&text=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->title)) .
-							"&location=" . htmlentities($loc) .
+							"&text=" . urlencode($this->event->title) .
+							"&location=" . urlencode($loc) .
 							"&dates=" . $eventdate .
-							"&details=" . htmlentities(UNL_UCBCN_Frontend::dbStringToHtml($this->event->description)) .
-							"&sprop=website:" . $this->url;
-
+							"&details=" .urlencode($this->event->description . "\n\n" . $this->url) .
+							"&sprop=website:" . urlencode($this->url);
 			?>
-			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>-->
-			
+			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>
 			<a id="twittershare" href="http://twitter.com/home?status=Check out this event <?php echo $this->url; ?>" title="Click to share this post on Twitter">Share on Twitter</a>
 		</p>
 		

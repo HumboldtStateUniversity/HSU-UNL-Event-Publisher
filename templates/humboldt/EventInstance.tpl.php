@@ -134,10 +134,10 @@ $endu = strtotime($this->eventdatetime->endtime);
 					}
 				}
 				$googleurl = "http://www.google.com/calendar/event?action=TEMPLATE" .
-							"&text=" . urlencode($this->event->title) .
+							"&text=" . urlencode(strip_tags($this->event->title)) .
 							"&location=" . urlencode($loc) .
 							"&dates=" . $eventdate .
-							"&details=" .urlencode($this->event->description . "\n\n" . $this->url) .
+							"&details=" .urlencode(strip_tags($this->event->description) . "\n\n" . $this->url) .
 							"&sprop=website:" . urlencode($this->url);
 			?>
 			<a id="googlecal" href="<?php echo $googleurl; ?>" title="Add to google calendar">Add to Google</a>

@@ -117,18 +117,18 @@ $endu = strtotime($this->eventdatetime->endtime);
 				$eventdate = '';
 				if (isset($this->eventdatetime->starttime)) {
 					$starttime = strtotime($this->eventdatetime->starttime);
-					$eventdate .= date('Ymd', $starttime);
+					$eventdate .= gmdate('Ymd', $starttime);
 
 					if (strpos($this->eventdatetime->starttime,'00:00:00')) {
 						// all day event
-						$eventdate .= "/" . date('Ymd', strtotime("+1 day", $starttime));
+						$eventdate .= "/" . gmdate('Ymd', strtotime("+1 day", $starttime));
 					} else {
 						// has start time
 						$eventdate .= "T" . gmdate('Hi', $starttime) . '00Z';
 						if (isset($this->eventdatetime->endtime)) {
 							// has end time
 							$endtime = strtotime($this->eventdatetime->endtime);
-							$eventdate .= "/" . date('Ymd', $endtime);
+							$eventdate .= "/" . gmdate('Ymd', $endtime);
 							$eventdate .= "T" . gmdate('Hi', $endtime) . '00Z';
 						}
 					}

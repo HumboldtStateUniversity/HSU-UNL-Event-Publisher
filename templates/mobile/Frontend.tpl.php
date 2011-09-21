@@ -68,15 +68,32 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 	
 		</div>
 		
-		
-		<!-- first footer -->
-    <div data-role="footer" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					
-					<?php
-					
-							$day = new Calendar_Day($this->year,$this->month,$this->day);
+    <?php 
+    // Main footer has Previous and Next day buttons, 
+    // the Event Instance and Search footer has a back button
+    switch(get_class($this->output[0])) 
+    {
+    	case 'UNL_UCBCN_Frontend_Search':
+    	case 'UNL_UCBCN_EventInstance':
+    		// Main footer
+    		echo '
+    		<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
+						<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+						<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+					</ul>
+				</div>
+			</div>';	
+    		break;
+    	default:
+    		// Event Instance and Search footer
+    		echo '
+    		<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>';
+						$day = new Calendar_Day($this->year,$this->month,$this->day);
 
 					    $prev = $day->prevDay('object');
 					    echo '<li><a rel="external" data-icon="arrow-l" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
@@ -88,30 +105,15 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 					                                                            'm'=>$next->thisMonth(),
 					                                                            'y'=>$next->thisYear(),
 					                                                            'calendar'=>$this->calendar->id)).'">Next Day</a></li>';
-
-					?>
-					
-					
-					<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
-					<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
-				</ul>
-			</div>
-			</div>
-			
-			<!-- other footer -->
-			<!--
-			
-				<div data-role="footer" data-position="fixed">
-					<div data-role="navbar">
-						<ul>
-							<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
-							<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
-							<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
-						</ul>
-					</div>
-					</div>			
-			
-			-->
+						echo '
+						<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+						<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+					</ul>
+				</div>
+			</div>';
+    		break;
+    }
+    ?>
 		</div>
 		
 		<div data-role="page" id="two">
@@ -146,3 +148,6 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 </body>
 </html>
+<?php echo "<!--"; 
+echo get_class($this->output[0]);
+var_dump($this->output); echo "-->"; ?>

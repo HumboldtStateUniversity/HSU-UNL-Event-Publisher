@@ -148,6 +148,3 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 </body>
 </html>
-<?php echo "<!--"; 
-echo get_class($this->output[0]);
-var_dump($this->output); echo "-->"; ?>

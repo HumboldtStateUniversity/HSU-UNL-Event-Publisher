@@ -41,7 +41,7 @@ foreach ($this->events as $event) {
 						$starttime = $edt->starttime;
 					}
 					if (substr($starttime, 11) != '00:00:00') {
-						echo '<li>'.date('M jS g:ia',strtotime($edt->starttime)).'</li>';
+						echo '<li>'.date('M jS g:ia',strtotime($starttime)).'</li>';
 					} else {
 						echo '<li>'.date('M jS', strtotime($starttime)).'</li>';
 					}

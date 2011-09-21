@@ -599,8 +599,6 @@ class UNL_UCBCN_Manager extends UNL_UCBCN
                 }
             }
             if (count($listing->events)) {
-		// bug in returning recurring events, return single events until  
-                // it is tracked down
                 $listing = UNL_UCBCN_Recurringdate::getInstanceEvents($listing);
                 return array('<h1 class="num_results">'.count($listing->events).' Result(s)</h1>',$listing);
             } else {

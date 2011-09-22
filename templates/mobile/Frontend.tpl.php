@@ -119,7 +119,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		</div>
 		
 		<div data-role="page" id="two">
-			<div data-role="header"><h1>Select a date to view</h1></div>
+			<div data-role="header" data-title="Select a date to view"><h1>Select a date</h1></div>
 			
 			<div data-role="content">
 			
@@ -134,7 +134,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			</div>
 			
 			<div data-role="page" id="three">
-				<div data-role="header"><h1>Search for events</h1></div>
+				<div data-role="header" data-title="Search for events"><h1>Search for events</h1></div>
 				<div data-role="content">
 						<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
 						<div data-role="fieldcontain">	

@@ -37,7 +37,7 @@ img{
 }
 .wordmark{
 	width:auto;
-	padding:0 15px;
+	padding:0 5px;
 }
 .vevent h3{
 	margin:0;
@@ -75,8 +75,7 @@ a .date, a .location{
 .ui-field-contain{
 	border-bottom:0;
 }
-.ui-btn-text { white-space: normal; }
-.ui-li-desc { white-space: normal; }
+.ui-btn-text, .ui-li-desc, .ui-title { white-space: normal; }
 
 .ui-navbar .ui-btn-inner{
 height:28px;
@@ -87,7 +86,7 @@ div.vevent .date, div.vevent .location, div.vevent h3{
 }
 
 /* search list */
-h1.results{
+h2.results{
 	font-size:17px;
 }
 h3.result-count{
@@ -140,12 +139,6 @@ h2.event-title{
 .ui-content .ui-link{
 	color:#6a9231;
 	text-decoration:none;
-}
-
-.ui-shadow-inset {
-	-moz-box-shadow: inset 0px 0px 0px rgba(0,0,0,.2);
-	-webkit-box-shadow: inset 0px 0px 0px rgba(0,0,0,.2);
-	box-shadow: inset 0px 0px 0px rgba(0,0,0,.2);
 }
 .ui-focus{
 	

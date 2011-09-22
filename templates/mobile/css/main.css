@@ -32,8 +32,12 @@ img{
 	position: absolute;
 	width: 1px;
 }
+#one .ui-content{
+	padding-bottom:40px;
+}
 .wordmark{
 	width:auto;
+	padding:0 15px;
 }
 .vevent h3{
 	margin:0;
@@ -53,6 +57,10 @@ h4.sec_main {
 	background: url(flag.png) no-repeat 0 0;
 	margin:15px 0;
 }
+.ui-content h4.sec_main a{
+	color:#000;
+	font-weight:normal;
+}
 a .date, a .location{
 	color:#222;
 	text-decoration:none;
@@ -67,12 +75,12 @@ a .date, a .location{
 .ui-field-contain{
 	border-bottom:0;
 }
-p.standard-link{
-	background-color:#fff;
-	padding:8px 3px;
-	margin:45px 0 10px 0;
-}
+.ui-btn-text { white-space: normal; }
+.ui-li-desc { white-space: normal; }
 
+.ui-navbar .ui-btn-inner{
+height:28px;
+}
 /* event list */
 div.vevent .date, div.vevent .location, div.vevent h3{
 	font-size:17px;
@@ -256,4 +264,27 @@ tbody .ui-state-active{
 .ui-btn-down-c {
 	font-family: Helvetica, Arial, sans-serif;
 	text-decoration: none;
+}
+/* footer */
+.ui-content .ui-link, .ui-footer .ui-link{
+	color:#6a9231;
+	text-decoration:none;
+}
+.ui-footer .ui-link{
+	text-decoration:underline;
+}
+.ui-footer{
+	border: 1px solid 		#fff;
+	background: 			#fff;
+	color: 					#222;
+	font-weight: normal;
+	text-shadow: 0 1px 0 	#fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #fff, #fff); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fff, #fff); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #fff, #fff); /* IE10 */
+	background-image:      -o-linear-gradient(top, #fff, #fff); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fff, #fff);
+	padding-left:15px;
+	font-family: Helmet, Freesans, sans-serif;
 }

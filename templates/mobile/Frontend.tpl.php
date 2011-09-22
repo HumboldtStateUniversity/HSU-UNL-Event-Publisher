@@ -48,12 +48,57 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 <body id="mobilecal">
 		<div data-role="page" id="one">
 
-		<div data-role="header" data-title="Humboldt State Events">
-			<h1 class="wordmark"><a rel="external" href="<?php echo $this->uri; ?>"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></a></h1>
+			 <?php 
+		    // Main footer has Previous and Next day buttons, 
+		    // the Event Instance and Search footer has a back button
+		    switch(get_class($this->output[0])) 
+		    {
+		    	case 'UNL_UCBCN_Frontend_Search':
+		    	case 'UNL_UCBCN_EventInstance':
+		    		// Main footer
+		    		echo '
+		    		<div data-role="header">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
+								<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+								<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+							</ul>
+						</div>
+					</div>';	
+		    		break;
+		    	default:
+		    		// Event Instance and Search footer
+		    		echo '
+		    		<div data-role="header">
+						<div data-role="navbar">
+							<ul>';
+								$day = new Calendar_Day($this->year,$this->month,$this->day);
+
+							    $prev = $day->prevDay('object');
+							    echo '<li><a rel="external" data-icon="arrow-l" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
+							                                                            'm'=>$prev->thisMonth(),
+							                                                            'y'=>$prev->thisYear(),
+							                                                            'calendar'=>$this->calendar->id)).'">Previous Day</a></li>';
+							    $next = $day->nextDay('object');
+							    echo '<li><a rel="external" data-icon="arrow-r" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$next->thisDay(),
+							                                                            'm'=>$next->thisMonth(),
+							                                                            'y'=>$next->thisYear(),
+							                                                            'calendar'=>$this->calendar->id)).'">Next Day</a></li>';
+								echo '
+								<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
+								<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
+							</ul>
+						</div>
+					</div>';
+		    		break;
+		    }
+		    ?>			
 			</div>
     
 		<div data-role="content">
-
+			
+<h1 class="wordmark"><a rel="external" href="<?php echo $this->uri; ?>"><img src="<?php echo $this->uri; ?>templates/mobile/css/wordmark.png" alt="Humboldt State Events" /></a></h1>
 
 <?php if (isset($this->right)) { ?>
     <div id="updatecontent" class="three_col right">
@@ -63,57 +108,15 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
 
-			<!-- link to standard events site -->
-			<p class="standard-link">Switch to <a rel="external" href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard events site</a></p>
+
 	
 		</div>
 		
-    <?php 
-    // Main footer has Previous and Next day buttons, 
-    // the Event Instance and Search footer has a back button
-    switch(get_class($this->output[0])) 
-    {
-    	case 'UNL_UCBCN_Frontend_Search':
-    	case 'UNL_UCBCN_EventInstance':
-    		// Main footer
-    		echo '
-    		<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
-						<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
-						<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
-					</ul>
-				</div>
-			</div>';	
-    		break;
-    	default:
-    		// Event Instance and Search footer
-    		echo '
-    		<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-					<ul>';
-						$day = new Calendar_Day($this->year,$this->month,$this->day);
-
-					    $prev = $day->prevDay('object');
-					    echo '<li><a rel="external" data-icon="arrow-l" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$prev->thisDay(),
-					                                                            'm'=>$prev->thisMonth(),
-					                                                            'y'=>$prev->thisYear(),
-					                                                            'calendar'=>$this->calendar->id)).'">Previous Day</a></li>';
-					    $next = $day->nextDay('object');
-					    echo '<li><a rel="external" data-icon="arrow-r" data-iconpos="top" href="'.UNL_UCBCN_Frontend::formatURL(array(    'd'=>$next->thisDay(),
-					                                                            'm'=>$next->thisMonth(),
-					                                                            'y'=>$next->thisYear(),
-					                                                            'calendar'=>$this->calendar->id)).'">Next Day</a></li>';
-						echo '
-						<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
-						<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
-					</ul>
-				</div>
-			</div>';
-    		break;
-    }
-    ?>
+		<div data-role="footer">
+		<!-- link to standard events site -->
+		<p>Switch to <a rel="external" href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard events site</a></p>
+		</div>
+   
 		</div>
 		
 		<div data-role="page" id="two">

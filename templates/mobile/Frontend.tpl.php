@@ -27,16 +27,17 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.mobile.datebox.js"></script>
 
 		<script>
-		    $(function(){
-		      // bind change event to select
-		      $('#new-day').submit(function() {			
-		          var url = $('#date').val(); // get selected value	
-		          if (url) { // require a URL									
-		              window.location.href = '<?php echo $this->uri ?>' + url; // redirect
-		          }
-		          return false;
-		      });
-		    });
+		
+				$(function(){
+					// bind change event to select
+					$('#new-day').submit(function() {
+						var url = $('#date').val(); // get selected value
+						  if (url) { // require a URL
+						  	window.location = url.replace(/-/g, '/'); // redirect
+						  }
+						    return false;
+						  });
+					});
 		
 		
 			// hiding date picker label and input

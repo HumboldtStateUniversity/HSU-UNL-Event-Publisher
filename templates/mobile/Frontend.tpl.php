@@ -11,7 +11,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 ?>| Events</title>
 
 		<link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.mobile.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.mobile.datebox.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/css/main.css" />
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
@@ -24,8 +24,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		</script>				
 
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
-		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.js"></script>
-		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.ui.datepicker.mobile.js"></script>
+		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.mobile.datebox.js"></script>
 
 		<script>
 		    $(function(){
@@ -42,7 +41,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		
 			// hiding date picker label and input
 				$(function(){
-					$('#date, #date-label, #searchsubmit').hide();
+					$('#searchsubmit, #dateinstruct').hide();
 				});
 		</script>
 		
@@ -131,8 +130,8 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
-					<label for="date" id="date-label">Enter date with format yyyy-mm-dd:</label>
-					<input type="date" name="date" id="date" value=""  />
+					<label for="date" id="date-label">Date<span id="dateinstruct">, enter with the format yyyy-mm-dd</span>:</label>
+					<input type="date" data-role="datebox" data-options='{"mode": "calbox", "noButtonFocusMode": true}' name="date" id="date" value=""  />
 					<input type='submit' name='submit' value="Go" />
 				</div>		
 			</form>

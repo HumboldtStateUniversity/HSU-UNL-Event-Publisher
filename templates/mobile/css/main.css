@@ -4,9 +4,6 @@ body {
 img{
 	max-width:100%;
 }
-#date, #date-label{
-	display:none;
-}
 #one {
 	background:url(exclusive_paper.jpg) repeat #597e24;
 }

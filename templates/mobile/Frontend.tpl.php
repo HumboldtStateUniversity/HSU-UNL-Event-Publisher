@@ -38,6 +38,12 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		          return false;
 		      });
 		    });
+		
+		
+			// hiding date picker label and input
+				$(function(){
+					$('#date, #date-label, #searchsubmit').hide();
+				});
 		</script>
 		
 		
@@ -125,7 +131,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
-					<label for="date" id="date-label">Change Date:</label>
+					<label for="date" id="date-label">Enter date with format yyyy-mm-dd:</label>
 					<input type="date" name="date" id="date" value=""  />
 					<input type='submit' name='submit' value="Go" />
 				</div>		
@@ -139,7 +145,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 						<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
 						<div data-role="fieldcontain">	
 				    <input type='search' name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
-				    <!--<input type='submit' name='submit' value="Go" />-->
+				    <input type='submit' name='submit' id="searchsubmit" data-role="none" value="Go" />
 				    <input type='hidden' name='search' value='search' />
 						</div>
 					</form>					

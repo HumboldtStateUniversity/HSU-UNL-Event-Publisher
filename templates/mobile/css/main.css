@@ -109,6 +109,13 @@ h2.event-title{
 }
 
 /* jquery mobile overrides */
+/* search input */
+.ui-field-contain .ui-body-a{
+	background:#fff;
+	border:#ccc;
+	color:#000;
+}
+
 .ui-header{
 	border: 1px solid 		#77a13b;
 	background: 			#6a9231;

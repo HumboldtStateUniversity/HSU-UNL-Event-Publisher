@@ -62,6 +62,9 @@ class UNL_UCBCN_Frontend_Upcoming extends UNL_UCBCN
      * @var int
      */
     public $limit = 10;
+
+    public $homepage = false;
+
     
     /**
      * Constructs an upcoming event view for this calendar.
@@ -90,6 +93,9 @@ class UNL_UCBCN_Frontend_Upcoming extends UNL_UCBCN
     {
         $options = array('calendar'=> $this->calendar,
                          'limit'   => $this->limit);
+	if(isset($_GET['homepage'])) { 
+		$options['homepage'] = true;
+	}
         // Fetch the day evenlisting for this day.
         $eventlist = new UNL_UCBCN_EventListing('upcoming', $options);
         

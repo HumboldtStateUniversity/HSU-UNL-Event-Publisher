@@ -178,7 +178,13 @@ $day->getTimestamp()).'%\'' .
         } else {
             $limit = 10;
         }
-        
+
+var_dump($options);
+
+        if ($options['homepage']) {
+            $onlyhomepage = "AND event.homepage = 1 ";
+        }
+
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
             $mdb2     = $calendar->getDatabaseConnection();
@@ -190,7 +196,8 @@ $day->getTimestamp()).'%\'' .
                         AND calendar_has_event.event_id = eventdatetime.event_id 
                         AND calendar_has_event.event_id = event.id 
                         AND eventdatetime.starttime >= '" . date('Y-m-d') . "'
-			AND event.id NOT IN (select distinct event_id from recurringdate)
+			AND event.id NOT IN (select distinct event_id from recurringdate) " .
+                        $onlyhomepage . "
                         ORDER BY " . $orderby . " LIMIT " . $limit;
 	} else {
             $mdb2     = UNL_UCBCN::getDatabaseConnection();

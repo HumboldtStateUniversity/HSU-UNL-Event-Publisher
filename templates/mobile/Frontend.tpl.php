@@ -147,7 +147,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 				<div data-role="content">
 						<form data-ajax="false" id="event_search" name="event_search" method="get" action="<?php echo UNL_UCBCN_Frontend::formatURL(array('calendar'=>$this->calendar->id,'search'=>'search')); ?>">
 						<div data-role="fieldcontain">	
-				    <input type='search' data-role="none" name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
+				    <input type='text' data-role="none" name='q' id='searchinput' alt='Search for events' value="<?php if (isset($_GET['q'])) { echo htmlentities($_GET['q']); } ?>" />
 				    <input type='submit' name='submit' id="searchsubmit" data-role="none" value="Go" />
 				    <input type='hidden' name='search' value='search' />
 						</div>

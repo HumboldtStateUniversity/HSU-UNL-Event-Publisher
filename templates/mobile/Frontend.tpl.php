@@ -67,7 +67,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		    		<div data-role="header">
 						<div data-role="navbar">
 							<ul>
-								<li><a href="index.html" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
+								<li><a href="'.$this->uri.'" data-rel="back" data-icon="back" data-iconpos="top">Back</a></li>
 								<li><a href="#two" data-rel="dialog" data-icon="grid" data-iconpos="top">Select Date</a></li>
 								<li><a href="#three" data-rel="dialog" data-icon="search" data-iconpos="top">Search</a></li>
 							</ul>

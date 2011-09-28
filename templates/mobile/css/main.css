@@ -164,6 +164,9 @@ h1.summary{
 h2.event-title{
 	font-size:17px;
 }
+.contactinfo{
+	margin-top:15px;
+}
 
 /* jquery mobile overrides */
 /* search input */

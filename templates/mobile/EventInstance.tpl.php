@@ -76,7 +76,7 @@ $endu = strtotime($this->eventdatetime->endtime);
                 }
 				?></div>
 
-			<div class="date"><h3>Contact:</h3>
+			<div class="date contactinfo"><h3>Contact:</h3>
 			<div>
 			<?php 
 			    if (isset($this->event->listingcontactname) ||

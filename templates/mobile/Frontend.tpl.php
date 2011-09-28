@@ -132,7 +132,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
-					<label for="date" id="datelabel">Enter date with the format yyyy/mm/dd (2011/05/12):</label>
+					<label for="date" id="datelabel">Enter date with the format yyyy/mm/dd (example - 2011/05/12):</label>
 					<div id="dateinputwrap">
 					<input type="text" data-role="datebox" data-options='{"mode": "calbox", "useInline": true, "dateFormat": "YYYY/MM/DD"}' name="date" id="dateinput" value=""  />
 					</div>

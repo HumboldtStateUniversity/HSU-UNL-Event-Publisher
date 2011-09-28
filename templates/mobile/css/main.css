@@ -10,7 +10,7 @@ img{
 #one .ui-header .ui-title{
 	text-align:left;
 	padding:0;
-	margin:15px;
+	margin:0;
 }
 #one .ui-header .ui-field-contain{
 	margin:10px 15px 18px;
@@ -72,11 +72,13 @@ a .date, a .location{
 .ui-field-contain{
 	border-bottom:0;
 }
-.ui-btn-text, .ui-li-desc, .ui-title { white-space: normal; }
+.ui-btn-text, .ui-li-desc, .ui-header .ui-title { white-space: normal; }
 
 .ui-navbar .ui-btn-inner{
 height:28px;
 }
+
+p.standard-link{margin-left:15px;}
 /* event list */
 div.vevent .date, div.vevent .location, div.vevent h3{
 	font-size:17px;
@@ -342,6 +344,6 @@ tbody .ui-state-active{
 	background-image:     -ms-linear-gradient(top, #fff, #fff); /* IE10 */
 	background-image:      -o-linear-gradient(top, #fff, #fff); /* Opera 11.10+ */
 	background-image:         linear-gradient(top, #fff, #fff);
-	padding-left:15px;
+	padding:0;
 	font-family: Helmet, Freesans, sans-serif;
 }

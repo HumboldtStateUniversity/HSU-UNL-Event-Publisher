@@ -32,7 +32,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		      $('#new-day').submit(function() {			
 		          var url = $('#dateinput').val(); // get selected value	
 		          if (url) { // require a URL									
-		              window.location.href = '<?php echo $this->uri ?>' + url.replace(/-/g, '/'); // redirect
+		              window.location.href = '<?php echo $this->uri ?>' + url; // redirect
 		          }
 		          return false;
 		      });
@@ -132,9 +132,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
-					<label for="date" id="datelabel">Enter date with the format yyyy-mm-dd:</label>
+					<label for="date" id="datelabel">Enter date with the format yyyy/mm/dd (2011/05/12):</label>
 					<div id="dateinputwrap">
-					<input type="date" data-role="datebox" data-options='{"mode": "calbox", "useInline": true}' name="date" id="dateinput" value=""  />
+					<input type="text" data-role="datebox" data-options='{"mode": "calbox", "useInline": true, "dateFormat": "YYYY/MM/DD"}' name="date" id="dateinput" value=""  />
 					</div>
 					<input type='submit' id="datesubmit" name='submit' value="Go" />
 				</div>		

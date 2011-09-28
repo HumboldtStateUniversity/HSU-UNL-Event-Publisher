@@ -30,7 +30,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		    $(function(){
 		      // bind change event to select
 		      $('#new-day').submit(function() {			
-		          var url = $('#date').val(); // get selected value	
+		          var url = $('#dateinput').val(); // get selected value	
 		          if (url) { // require a URL									
 		              window.location.href = '<?php echo $this->uri ?>' + url.replace(/-/g, '/'); // redirect
 		          }

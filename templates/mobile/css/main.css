@@ -125,8 +125,8 @@ form#new-day .dateboxinput div.ui-input-datebox{
 	background:0;
 	height:0;
 }
-form#new-day .dateboxinput{
-	margin-left:5px;
+.ui-datebox-container{
+	margin:0 auto;
 }
 form#event_search input#searchsubmit{
 border:1px solid #ccc;

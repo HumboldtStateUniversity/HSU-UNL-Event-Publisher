@@ -179,8 +179,6 @@ $day->getTimestamp()).'%\'' .
             $limit = 10;
         }
 
-var_dump($options);
-
         if ($options['homepage']) {
             $onlyhomepage = "AND event.homepage = 1 ";
         }

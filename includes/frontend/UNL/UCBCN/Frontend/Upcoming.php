@@ -63,8 +63,6 @@ class UNL_UCBCN_Frontend_Upcoming extends UNL_UCBCN
      */
     public $limit = 10;
 
-    public $homepage = false;
-
     
     /**
      * Constructs an upcoming event view for this calendar.

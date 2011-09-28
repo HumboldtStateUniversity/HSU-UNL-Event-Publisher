@@ -41,7 +41,9 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		
 			// hiding date picker label and input
 				$(function(){
-					$('#searchsubmit, #dateinstruct').hide();
+					$('#datelabel').hide();
+					$('#dateinputwrap input').attr('style', 'visibility:hidden;');
+					$('#dateinputwrap').addClass('dateboxinput');
 				});
 		</script>
 		
@@ -124,15 +126,17 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		</div>
 		
 		<div data-role="page" id="two">
-			<div data-role="header" data-title="Select a date to view"><h1>Select a date</h1></div>
+			<div data-role="header" data-title="Select a date"><h1>Select a date</h1></div>
 			
 			<div data-role="content">
 			
 			<form data-ajax="false" id="new-day" action="destination.html">
 				<div data-role="fieldcontain">
-					<label for="date" id="date-label">Date<span id="dateinstruct"> (enter with the format yyyy-mm-dd)</span>:</label>
-					<input type="date" data-role="datebox" data-options='{"mode": "calbox", "noButtonFocusMode": true}' name="date" id="date" value=""  />
-					<input type='submit' name='submit' value="Go" />
+					<label for="date" id="datelabel">Enter date with the format yyyy-mm-dd:</label>
+					<div id="dateinputwrap">
+					<input type="date" data-role="datebox" data-options='{"mode": "calbox", "useInline": true}' name="date" id="dateinput" value=""  />
+					</div>
+					<input type='submit' id="datesubmit" name='submit' value="Go" />
 				</div>		
 			</form>
 			</div>

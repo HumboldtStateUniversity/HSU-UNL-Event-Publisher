@@ -91,6 +91,63 @@ h3.result-count{
 	font-weight:normal;
 }
 
+/* search box & datepicker overrides */
+.searchcontain{
+	width:90%;
+	margin:0 auto;
+}
+form#event_search input#searchinput{
+	background:#fff; 
+	border:1px solid #ccc;
+ 	border-color:#ccc #fff #fff #ccc;
+ 	-webkit-border-top-left-radius: 10px;
+ 	-webkit-border-bottom-left-radius: 10px;
+ 	-moz-border-radius-topleft: 10px;
+ 	-moz-border-radius-bottomleft: 10px;
+ 	border-top-left-radius: 10px;
+ 	border-bottom-left-radius: 10px;
+ 	-webkit-border-top-right-radius: 0;
+ 	-webkit-border-bottom-right-radius: 0;
+ 	-moz-border-radius-topright: 0;
+ 	-moz-border-radius-bottomright: 0;
+ 	border-top-right-radius: 0;
+ 	border-bottom-right-radius: 0;
+ 	padding:10px 0 10px 7%;
+	height:18px;
+ 	width:72%;
+	font-size:14px;
+	display:inline;
+}
+form#new-day .dateboxinput div.ui-input-datebox{
+	border:0;
+	background:0;
+	height:0;
+}
+form#new-day .dateboxinput{
+	margin-left:5px;
+}
+form#event_search input#searchsubmit{
+border:1px solid #ccc;
+border-color:#678f2d #49691a #49691a #678f2d;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+height: 40px;
+margin: 0 0 0 -4px;
+  padding: 0;
+  color: #fff;
+  background: #678f2d;
+width:19%;
+font-size:15px;
+position:relative;
+top:1px;
+}
+#two .ui-content{
+	padding:0;
+}
 /* event detail */
 h1.summary{
 	font-size: 18px;

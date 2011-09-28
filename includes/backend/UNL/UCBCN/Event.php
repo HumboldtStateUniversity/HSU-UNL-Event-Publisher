@@ -254,6 +254,8 @@ class UNL_UCBCN_Event extends DB_DataObject
 	$form->addRule('imagedata', 'Image must be one of the following formats: .jpg, .jpeg, .png, .gif, .bmp', 
 			'mimetype', array('image/png', 'image/gif', 'image/jpeg', 'image/bmp'));
 
+        $form->addRule('listingcontactemail', 'Please enter a valid email address', 'callback', array('UNL_UCBCN_Event', 'checkEmail'));
+
         $form->addRule('listingcontactname', 'A contact name is required', 'required');
         $form->addRule('listingcontactemail', 'A contact email address is required', 'required');
 
@@ -297,6 +299,11 @@ class UNL_UCBCN_Event extends DB_DataObject
     public function checkURL($val)
     {
         return preg_match('/^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/i', $val);
+    }
+
+    public function checkEmail($val)
+    {
+        return filter_var($val, FILTER_VALIDATE_EMAIL);
     }
 
 

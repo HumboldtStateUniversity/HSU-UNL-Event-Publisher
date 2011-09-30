@@ -179,6 +179,8 @@ $day->getTimestamp()).'%\'' .
             $limit = 10;
         }
 
+        // Restrict upcoming list to events that are
+        // marked for the HSU homepage
         if ($options['homepage']) {
             $onlyhomepage = "AND event.homepage = 1 ";
         }
@@ -206,7 +208,7 @@ $day->getTimestamp()).'%\'' .
         }
         $res = $mdb2->query($sql)->fetchAll();
                $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
-               'recurringdate.recurrence_id FROM recurringdate, eventdatetime, calendar_has_event ' .
+               'recurringdate.recurrence_id FROM recurringdate, eventdatetime, calendar_has_event, event ' .
                'WHERE recurringdate > \'' . date('Y-m-d') . '\' ' .
                'AND eventdatetime.event_id = recurringdate.event_id ' .
                'AND recurringdate.ongoing = FALSE ' .
@@ -214,6 +216,8 @@ $day->getTimestamp()).'%\'' .
                'AND calendar_has_event.calendar_id = '. $calendar->id .
                ' AND calendar_has_event.event_id = eventdatetime.event_id ' .
                ' AND calendar_has_event.status = \'posted\' ' . 
+               ' AND eventdatetime.event_id = event.id ' .
+               $onlyhomepage . 
                'ORDER BY recurringdate LIMIT ' . $limit;
 
         $rec_res = $mdb2->query($sql);

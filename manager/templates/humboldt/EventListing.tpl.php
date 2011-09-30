@@ -24,7 +24,8 @@
 <th scope="col" class="title"><a href="?list=<?php echo @$_GET['list']; ?>&amp;orderby=title">Event Title</a></th>
 <th scope="col" class="date"><a href="?list=<?php echo @$_GET['list']; ?>&amp;orderby=starttime">Date</a></th>
 <th scope="col" class="edit">Edit</th>
-<th scope="col" class="featured">Featured?</th>
+<th scope="col" class="featured">Featured</th>
+<th scope="col" class="homepage">HSU Homepage</th>
 </tr>
 </thead>
 <tbody>
@@ -91,10 +92,15 @@ foreach ($this->events as $e) {
 		}
 	}
 	$row .= "</td><td>";
-	if ($e->status == 'featured')
+	if ($e->status == 'featured') {
 		$row .= "Featured";
-	else
-		$row .= "Not Featured";
+        }
+        $row .= '</td>';
+
+        $row .= '<td>';
+        if ($e->homepage) {
+		$row .= "HSU Homepage";
+        }
 	$row .=		'</td></tr>';
 	echo $row;
 } ?>

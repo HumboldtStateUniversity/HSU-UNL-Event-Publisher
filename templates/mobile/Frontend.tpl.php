@@ -10,7 +10,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 }
 ?>| Events</title>
 
-		<link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.mobile.datebox.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->uri; ?>templates/mobile/css/main.css" />
 		
@@ -23,7 +23,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 		  });	
 		</script>				
 
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
 		<script type="text/javascript" src="<?php echo $this->uri; ?>templates/mobile/jqm/jquery.mobile.datebox.js"></script>
 
 		<script>

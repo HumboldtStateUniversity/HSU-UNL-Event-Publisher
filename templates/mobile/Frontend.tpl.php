@@ -134,7 +134,7 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
 				<div data-role="fieldcontain">
 					<label for="date" id="datelabel">Enter date with the format yyyy/mm/dd (example - 2011/05/12):</label>
 					<div id="dateinputwrap">
-					<input type="text" data-role="datebox" data-options='{"mode": "calbox", "useInline": true, "dateFormat": "YYYY/MM/DD"}' name="date" id="dateinput" value=""  />
+					<input type="text" data-role="datebox" data-options='{"mode": "calbox", "useInline": true, "dateFormat": "YYYY/MM/DD", "pickPageHighButtonTheme": "b"}' name="date" id="dateinput" value=""  />
 					</div>
 					<input type='submit' id="datesubmit" name='submit' value="Go" />
 				</div>		

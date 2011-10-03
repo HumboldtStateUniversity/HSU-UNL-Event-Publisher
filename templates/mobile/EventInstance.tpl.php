@@ -7,7 +7,7 @@ $endu = strtotime($this->eventdatetime->endtime);
 <div class="event_cal">
 <div class='vcalendar'>
 	<div class='vevent'>
-		<h1 class='summary'><a href="<?php echo $this->uri . date('o/m/d'); ?>"><?php echo date('l, F jS',$startu); ?></a></h1>
+		<h1 class='summary'><a rel="external" href="<?php echo $this->uri . date('o/m/d',$startu); ?>"><?php echo date('l, F jS',$startu); ?></a></h1>
 		<!--<div id="tabsG">
 		  <ul>
 		    <li><a href="#" id="event_selected" title="Event Detail"><span>Event Detail</span></a></li>

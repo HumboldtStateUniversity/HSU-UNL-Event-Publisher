@@ -135,7 +135,7 @@ if (isset($this->output[0], $this->output[0]->event)
 		</div><!--/monthwidget-->
 		<div id="subscribe">
           <h3>Take events with you</h3>
-          	<p>Get HSU events on you calendar or in your rss reader.</p>
+          	<p>Get HSU events on your calendar or in your rss reader.</p>
           	<ul>
           		<li id="eventical"><a href="<?php echo $this->uri; ?>upcoming/?format=ics&amp;limit=100" title="ical format" class="icon-ical">Google Cal, iCal, or Outlook</a></li>		
           		<li id="eventrss"><a href="<?php echo $this->uri; ?>upcoming/?format=rss&amp;limit=100" title="RSS feed" class="icon-rss">RSS</a></li>

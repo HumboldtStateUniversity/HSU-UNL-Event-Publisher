@@ -188,11 +188,12 @@ if (isset($this->output[0], $this->output[0]->event)
 			<p>If you were wondering how to <a href="http://humboldt.edu/web/event-help">submit events, get event content on to your own site or subscribe</a> to certain event feeds, our guide should get you going.</p>
 		</div><!--/article-->
 		<div class="article last">
+			<div class="mobilelink"><a href="<?php echo $this->output[0]->uri; ?>?template=mobile">HSU Events Mobile</a></div>
 		<div class="socialnetworks"><a href="http://www.facebook.com/humboldtstatealumni" title="facebook"><img src="http://www.humboldt.edu/humboldt/images2010/facebook.png" alt="Facebook" width="18px" height="18px"></a> <a href="http://www.flickr.com/photos/humboldtstate" title="flickr"><img src="http://www.humboldt.edu/humboldt/images2010/flickr.png" alt="Flickr" width="18px" height="18px"></a> <a href="http://www.linkedin.com/groups?home=&amp;gid=2772964&amp;trk=anet_ug_hm" title="linkedin"><img src="http://www.humboldt.edu/humboldt/images2010/linkedin.png" alt="LinkedIn"></a> <a href="http://www.twitter.com/humboldtstate/" title="twitter"><img src="http://www.humboldt.edu/humboldt/images2010/twitter.png" alt="Twitter" width="18px" height="18px"></a> <a href="http://www.youtube.com/humboldtonline" title="youtube"><img src="http://www.humboldt.edu/humboldt/images2010/youtube.png" alt="Youtube" width="18px" height="18px"></a></div>
 			<div class="vcard">
 				<a class="url" href="http://www.humboldt.edu"></a>
 			
-				<div class="org fn">Humboldt State University<br />a California State University</div>
+				<!--<div class="org fn">Humboldt State University<br />a California State University</div>-->
 				<div class="adr">
 					<div class="street-address">1 Harpst Street</div>
 					<span class="locality">Arcata</span>, 

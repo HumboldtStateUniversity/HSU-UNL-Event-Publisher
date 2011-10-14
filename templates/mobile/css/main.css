@@ -72,10 +72,10 @@ a .date, a .location{
 .ui-field-contain{
 	border-bottom:0;
 }
-.ui-btn-text, .ui-li-desc, .ui-header .ui-title { white-space: normal; }
+.ui-li-desc, .ui-header .ui-title { white-space: normal; }
 
 .ui-navbar .ui-btn-inner{
-height:28px;
+
 }
 
 p.standard-link{margin-left:15px;}
@@ -129,23 +129,35 @@ form#new-day .dateboxinput div.ui-input-datebox{
 	margin:0 auto;
 }
 form#event_search input#searchsubmit{
-border:1px solid #ccc;
-border-color:#678f2d #49691a #49691a #678f2d;
--webkit-border-top-right-radius: 10px;
--webkit-border-bottom-right-radius: 10px;
--moz-border-radius-topright: 10px;
--moz-border-radius-bottomright: 10px;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
-height: 40px;
-margin: 0 0 0 -4px;
-  padding: 0;
-  color: #fff;
-  background: #678f2d;
-width:19%;
-font-size:15px;
-position:relative;
-top:1px;
+	border: solid 1px #ccc;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	line-height: 100%;
+	margin: 0 0 0 -4px;
+	padding: 0;
+	position: relative;
+	text-decoration: none;
+	text-shadow: #416114 0 1px 0;
+	vertical-align: middle;
+	width:19%;
+	height:40px;
+	color: #fff;
+	text-shadow: #2e4987 0 1px 0;
+	background-color: #678f2d;
+	border-color:#678f2d #49691a #49691a #678f2d;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/* webkit */
+	background-image: -webkit-gradient(linear,left top,left bottom,
+	  color-stop(0.01, #678f2d),
+	  color-stop(0.05, #678f2d),
+	  color-stop(0.70, #678f2d),
+	  color-stop(1, #678f2d));
 }
 #two .ui-content{
 	padding:0;

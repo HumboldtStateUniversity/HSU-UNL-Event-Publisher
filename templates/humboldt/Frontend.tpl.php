@@ -4,7 +4,7 @@ if (!isset($GLOBALS['unl_template_dependents'])) {
 }
 ?>
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="copyright" content="Humboldt State University" />

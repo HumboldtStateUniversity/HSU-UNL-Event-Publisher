@@ -211,10 +211,6 @@ class UNL_UCBCN_Event extends DB_DataObject
             $fb->reverseLinks = array();
         }
 
-	if (isset($this->imagedata)) {
-	    $el = HTML_QuickForm::createElement('text', 'uploadedimage', '<img src="'.$_UNL_UCBCN['frontenduri'].'?image&id='.$this->id.'" alt="Uploaded Image" class="image-upload" />');
-            $el->freeze();
-        }
     }
 
     /**
@@ -227,12 +223,17 @@ class UNL_UCBCN_Event extends DB_DataObject
      */
     public function postGenerateForm(&$form, &$formBuilder)
     {
+       global $_UNL_UCBCN;
+
        // $form->insertElementBefore(HTML_QuickForm::createElement('header', 'detailsheader', 'Event Details'), 'title');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'contactheader', 'Contact Information'), 'listingcontactname');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'eventlocationheader', 'Event Location, Date and Time'), '__reverseLink_eventdatetime_event_id');
         $form->insertElementBefore(HTML_QuickForm::createElement('header', 'optionaldetailsheader', 'Add an Image (Optional)'), 'shortdescription');
         $form->updateElementAttr('approvedforcirculation', 'id="approvedforcirculation"');
         $form->updateElementAttr('uidcreated', 'id="uidcreated"');
+
+        $form->insertElementBefore(HTML_QuickForm::createElement('image', 'uploadedimage', $_UNL_UCBCN['frontenduri'].'?image&id='.$this->id, 
+                                   array('alt'=>'Uploaded image', 'class'=>'image-upload')),'imagedata');
 
         foreach ($this->fb_textAreaFields as $name) {
             $el =& $form->getElement($name);

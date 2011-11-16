@@ -94,4 +94,3 @@ $endu = strtotime($this->eventdatetime->endtime);
 		
 		</div>
 	</div>
-</div>

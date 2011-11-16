@@ -114,15 +114,13 @@ if ($this->calendar->id != $GLOBALS['_UNL_UCBCN']['default_calendar_id']) {
     UNL_UCBCN::displayRegion($this->output);
 } ?>
 
-
-	
+   </div>
 		</div>
 		
 		<div data-role="footer">
 		<!-- link to standard events site -->
 		<p class="standard-link">Switch to <a rel="external" href="<?php echo $this->output[0]->uri; ?>?template=humboldt">standard events site</a></p>
 		</div>
-   
 		</div>
 		
 		<div data-role="page" id="two">

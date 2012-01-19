@@ -181,7 +181,8 @@ $day->getTimestamp()).'%\'' .
 
         // Restrict upcoming list to events that are
         // marked for the HSU homepage
-        if ($options['homepage']) {
+        $onlyhomepage = NULL;
+        if (isset($options['homepage']) {
             $onlyhomepage = "AND event.homepage = 1 ";
         }
 

@@ -168,7 +168,6 @@ if (isset($this->output[0], $this->output[0]->event)
           } ?>
       <!-- InstanceEndEditable -->
       <div class="clear"></div>
-      <?php include_once $GLOBALS['unl_template_dependents'].'/wdn/templates_3.0/includes/noscript.html'; ?>
       <!--THIS IS THE END OF THE MAIN CONTENT AREA.-->
 </div><!-- /column-wrap -->
 </div><!-- /column-top -->
@@ -205,7 +204,8 @@ if (isset($this->output[0], $this->output[0]->event)
 				</div>
 				<div class="tel">(707) 826-3011</div>
 				<div class="contact"><a href="http://humboldt.edu/web/feedback">Contact us</a></div>
-                                <div class="switchtemplate"><?php if ($_SESSION['mobile']) echo "<a href='" . $this->output[0]->url . "?template=mobile'>Switch to Mobile Site"; ?>
+                                <div class="switchtemplate"><?php if ($_SESSION['mobile']) echo "<a href='" . 
+$this->output[0]->url . "?template=mobile'>Switch to Mobile Site"; ?>
 			</div>						
 		</div><!--/article-->
 

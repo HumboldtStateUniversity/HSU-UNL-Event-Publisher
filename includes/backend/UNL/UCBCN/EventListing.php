@@ -113,14 +113,11 @@ class UNL_UCBCN_EventListing
 
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
-            $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime 
-'.$rstr[0].
+            $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime '.$rstr[0].
                             'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status 
-=\'archived\') '.
+                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
                                     'AND calendar_has_event.event_id = eventdatetime.event_id ' .
-                                    'AND (eventdatetime.starttime LIKE \''.date('Y-m-d ', 
-$day->getTimestamp()).'%\'' .
+                                    'AND (eventdatetime.starttime LIKE \''.date('Y-m-d ', $day->getTimestamp()).'%\'' .
                                     $rstr[1] . ') ' .
                             'ORDER BY '.$orderby);
         } else {
@@ -179,28 +176,17 @@ $day->getTimestamp()).'%\'' .
             $limit = 10;
         }
 
-        // Restrict upcoming list to events that are
-        // marked for the HSU homepage
-        $onlyhomepage = NULL;
-        if (isset($options['homepage'])) {
-            $onlyhomepage = "AND event.homepage = 1 ";
-        }
-
         if (isset($options['calendar'])) {
             $calendar =& $options['calendar'];
             $mdb2     = $calendar->getDatabaseConnection();
-            $sql      = "SELECT eventdatetime.id, eventdatetime.starttime 
-			FROM event,calendar_has_event,eventdatetime
-                        WHERE calendar_has_event.calendar_id={$calendar->id}  
-                        AND (calendar_has_event.status ='posted' OR 
-				calendar_has_event.status ='archived') 
-                        AND calendar_has_event.event_id = eventdatetime.event_id 
-                        AND calendar_has_event.event_id = event.id 
-                        AND eventdatetime.starttime >= '" . date('Y-m-d') . "'
-			AND event.id NOT IN (select distinct event_id from recurringdate) " .
-                        $onlyhomepage . "
-                        ORDER BY " . $orderby . " LIMIT " . $limit;
-	} else {
+            $sql      = 'SELECT eventdatetime.id, eventdatetime.starttime FROM event,calendar_has_event,eventdatetime ' .
+                                'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
+                                                'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
+                                                'AND calendar_has_event.event_id = eventdatetime.event_id ' .
+                                                'AND calendar_has_event.event_id = event.id ' .
+                                                'AND eventdatetime.starttime >= \'' . date('Y-m-d') . '\' '.
+                                'ORDER BY '.$orderby.' LIMIT '.$limit;
+        } else {
             $mdb2     = UNL_UCBCN::getDatabaseConnection();
             $calendar = null;
             $sql      = 'SELECT eventdatetime.id FROM eventdatetime WHERE '.
@@ -208,19 +194,13 @@ $day->getTimestamp()).'%\'' .
                         'ORDER BY '.$orderby.' LIMIT '.$limit;
         }
         $res = $mdb2->query($sql)->fetchAll();
-               $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
-               'recurringdate.recurrence_id FROM recurringdate, eventdatetime, calendar_has_event, event ' .
+        $sql = 'SELECT eventdatetime.id, recurringdate.recurringdate, ' .
+               'recurringdate.recurrence_id FROM recurringdate, eventdatetime ' .
                'WHERE recurringdate > \'' . date('Y-m-d') . '\' ' .
                'AND eventdatetime.event_id = recurringdate.event_id ' .
                'AND recurringdate.ongoing = FALSE ' .
                'AND recurringdate.unlinked = FALSE ' .
-               'AND calendar_has_event.calendar_id = '. $calendar->id .
-               ' AND calendar_has_event.event_id = eventdatetime.event_id ' .
-               ' AND calendar_has_event.status = \'posted\' ' . 
-               ' AND eventdatetime.event_id = event.id ' .
-               $onlyhomepage . 
-               'ORDER BY recurringdate LIMIT ' . $limit;
-
+               'ORDER BY recurringdate LIMIT 10;';
         $rec_res = $mdb2->query($sql);
         $recurring_events = $rec_res->fetchAll();
         for ($i = 0; $i < count($recurring_events); $i++) {
@@ -238,7 +218,7 @@ $day->getTimestamp()).'%\'' .
                 array_push($res, $recurring_events[$i]);
             }
         }
-        while (count($res) > $limit) {
+        while (count($res) > 10) {
             array_pop($res);
         }
         foreach ($res as $row) {
@@ -281,13 +261,10 @@ $day->getTimestamp()).'%\'' .
             $calendar =& $options['calendar'];
             $eventdatetime->query('SELECT DISTINCT eventdatetime.* FROM calendar_has_event,eventdatetime ' .
                             'WHERE calendar_has_event.calendar_id='.$calendar->id.' ' .
-                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status 
-=\'archived\') '.
+                                    'AND (calendar_has_event.status =\'posted\' OR calendar_has_event.status =\'archived\') '.
                                     'AND calendar_has_event.event_id = eventdatetime.event_id ' .
-                                    'AND eventdatetime.starttime < \''.date('Y-m-d', $day->getTimestamp()).'\' ' 
-.
-                                    'AND eventdatetime.endtime >= \''.date('Y-m-d', $day->getTimestamp()).'\' ' 
-.
+                                    'AND eventdatetime.starttime < \''.date('Y-m-d', $day->getTimestamp()).'\' ' .
+                                    'AND eventdatetime.endtime >= \''.date('Y-m-d', $day->getTimestamp()).'\' ' .
                             'ORDER BY '.$orderby);
         } else {
             $eventdatetime->whereAdd('starttime LIKE \''.date('Y-m-d', $day->getTimestamp()).'%\'');

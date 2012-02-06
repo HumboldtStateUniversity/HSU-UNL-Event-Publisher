@@ -1029,3 +1029,8 @@ a.logout-btn{
 /** validation client **/
 p.error {color: #c00; margin:0; font-weight:bold;}
 label.error {color: #c00; vertical-align: top; font-weight:bold; display:block;}
+
+
+
+/* hiding some recurring stuff */
+#__reverseLink_eventdatetime_event_idrecurringtype_1, #__reverseLink_eventdatetime_event_idrecurs_until_1, #date3_calendar_trigger, select[name="__reverseLink_eventdatetime_event_idrecurs_untilhour_1[g]"], select[name="__reverseLink_eventdatetime_event_idrecurs_untilhour_1[i]"], select[name="__reverseLink_eventdatetime_event_idrecurs_untilhour_1[A]"], label[for="__reverseLink_eventdatetime_event_idrecurringtype_1"], #recurs_until, label[for="recurringtype"], #recurringtype, select[name="recurs_untilhour[g]"], select[name="recurs_untilhour[i]"], select[name="recurs_untilhour[A]"] {display:none;}

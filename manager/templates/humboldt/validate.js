@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+// hiding recurs until
+var foundin = $('label:contains("Recurs Until")');
+$(foundin).hide();
 	
 //create event view
 var create_validator = $("#unl_ucbcn_event").validate({

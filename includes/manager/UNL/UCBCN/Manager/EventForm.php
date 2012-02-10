@@ -153,7 +153,7 @@ class UNL_UCBCN_Manager_EventForm
         if ($instances) {
             include_once 'HTML/Table.php';
             $table = new HTML_Table(array('class'=>'eventlisting'));
-            $table->addRow(array('Start Time', 'End Time', 'Recurs Until', 'Location', 'Edit', 'Delete'), null, 'TH');
+            $table->addRow(array('Start Time', 'End Time', '', 'Location', 'Edit', 'Delete'), null, 'TH');
             $instances = 0;
             while ($edt->fetch()) {
                 $etime = '';

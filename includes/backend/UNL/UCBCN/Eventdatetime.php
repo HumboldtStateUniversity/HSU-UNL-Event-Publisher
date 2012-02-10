@@ -338,7 +338,7 @@ class UNL_UCBCN_Eventdatetime extends DB_DataObject
     // make sure endtime is after starttime    
     public function check_dates()
     {
-        if ($this->starttime > $this->enddtime) {
+        if ($this->starttime > $this->endtime) {
             return false;
         }
         return true;

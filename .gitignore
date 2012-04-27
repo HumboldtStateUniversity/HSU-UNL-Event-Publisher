@@ -3,24 +3,15 @@ HSU-UNL-Event-Publisher.esproj/Project.espressostorage
 HSU-UNL-Event-Publisher.esproj/user.mmh61.espressostorage
 templates/humboldt/.DS_Store
 manager/templates/.DS_Store
-<<<<<<< HEAD
 home.html
-=======
 manager/templates/humboldt/.DS_Store
 manager/templates/humboldt/images/.DS_Store
->>>>>>> 19cf0615df78071397ebb9d7bdd343d741a51fe7
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 grid.html
 year.html
-=======
 manager/templates/humboldt/jscalendar/.DS_Store
->>>>>>> fa48338c007f2bad7aa01ebec15a043147bdf807
 templates/.DS_Store
 .DS_Store
-=======
 templates/.DS_Store
 detail.html
 templates/humboldt/images/croptest.jpg
 upcoming.html
->>>>>>> Stashed changes

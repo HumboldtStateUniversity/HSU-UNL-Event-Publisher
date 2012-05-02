@@ -141,6 +141,14 @@ if (isset($this->output[0], $this->output[0]->event)
           		<li id="eventrss"><a href="<?php echo $this->uri; ?>upcoming/?format=rss&amp;limit=100" title="RSS feed" class="icon-rss">RSS</a></li>
           	</ul>
          </div><!--/subscribe-->
+         
+      <div id="maps">
+        <h3>Find your way around campus</h3>
+     		<ul>
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusmap.pdf">Printable Map of Humboldt State University</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusaccessmap.pdf">Printable Disability Access Map</a></li>
+     		</ul>
+      </div>
      	<div id="othercals">
      	<h3>More Calendars</h3>
      		<ul>
@@ -154,13 +162,7 @@ if (isset($this->output[0], $this->output[0]->event)
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2011-2012.pdf" >Green & Gold Calendar 2011-2012</a></li>
      				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
      			
-     		</ul>
-     	
-     	<h3>Find your way around campus</h3>
-     		<ul>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusmap.pdf">Printable Map of Humboldt State University</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusaccessmap.pdf">Printable Disability Access Map</a></li>
-     		</ul>
+     		</ul>     	
      	</div><!--/othercals-->
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->

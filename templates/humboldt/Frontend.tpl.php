@@ -143,7 +143,7 @@ if (isset($this->output[0], $this->output[0]->event)
          </div><!--/subscribe-->
          
       <div id="maps">
-        <h3>Find your way around campus</h3>
+        <h3>Campus Maps</h3>
      		<ul>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusmap.pdf">Printable Map of Humboldt State University</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusaccessmap.pdf">Printable Disability Access Map</a></li>

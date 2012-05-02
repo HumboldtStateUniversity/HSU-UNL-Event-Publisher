@@ -761,7 +761,7 @@ padding:0;
 a#monthfullview{background:url(images/checkbox.gif) no-repeat;background-position:0 -14px; padding: 0 0 0 17px;}
 a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 
-#subscribe, #othercals, #communitycals {
+#subscribe, #othercals, #communitycals, #maps {
   margin-top:40px ;
   clear: both;
 }
@@ -895,11 +895,11 @@ p {
 	line-height: 18px;
 	margin: 9px 0;
 }
-#subscribe h3, #othercals h3, #communitycals h3 {
+#subscribe h3, #othercals h3, #communitycals h3, #maps h3 {
 	background: transparent url(images/heading-bg.png) no-repeat left top;
 	padding: 13px;
 }
-#subscribe p, #subscribe ul, #othercals ul, #communitycals ul {
+#subscribe p, #subscribe ul, #othercals ul, #communitycals ul, #maps ul {
 	padding-left: 13px;
 }
 #subscribe li {

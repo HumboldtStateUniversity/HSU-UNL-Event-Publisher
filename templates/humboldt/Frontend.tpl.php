@@ -159,12 +159,8 @@ if (isset($this->output[0], $this->output[0]->event)
      	</div><!--/othercals-->
      	
      	<div id="maps">
-        <h3>Campus Maps</h3>
-     		<ul>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusmap.pdf">Printable Map of Humboldt State University</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/campusaccessmap.pdf">Printable Disability Access Map</a></li>
-     		</ul>
-      </div><!--/maps-->
+     		<a href="http://humboldt.edu/maps">Campus Maps</a>   			
+     	</div><!
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->
       <div id="updatecontent" class="three_col right">

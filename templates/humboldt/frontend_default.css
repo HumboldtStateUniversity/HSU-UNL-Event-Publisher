@@ -761,9 +761,20 @@ padding:0;
 a#monthfullview{background:url(images/checkbox.gif) no-repeat;background-position:0 -14px; padding: 0 0 0 17px;}
 a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 
-#subscribe, #othercals, #communitycals, #maps {
+#subscribe, #othercals, #communitycals{
   margin-top:40px ;
   clear: both;
+}
+#maps{
+	margin-top:30px;
+	clear:both;
+}
+#maps a{
+	background:url(icon-map.png) no-repeat top left;
+	padding-left:30px;
+	height:25px;
+	line-height:25px;
+	display:block;
 }
 a.icon-ical {
 	background: transparent url(images/icon-cal.png) no-repeat left top;

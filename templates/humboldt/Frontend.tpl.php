@@ -160,7 +160,7 @@ if (isset($this->output[0], $this->output[0]->event)
      	
      	<div id="maps">
      		<a href="http://humboldt.edu/maps">Campus Maps</a>   			
-     	</div><!
+     	</div><!--/maps-->
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->
       <div id="updatecontent" class="three_col right">

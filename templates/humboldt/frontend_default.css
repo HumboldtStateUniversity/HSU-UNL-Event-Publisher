@@ -770,7 +770,7 @@ a#monthfullview.monthfullview_unchecked{background-position:0 0;}
 	clear:both;
 }
 #maps a{
-	background:url(icon-map.png) no-repeat top left;
+	background:url(images/icon-map.png) no-repeat top left;
 	padding-left:30px;
 	height:25px;
 	line-height:25px;

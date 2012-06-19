@@ -863,6 +863,14 @@
     <notnull>false</notnull>
     <default></default>
    </field>
+   
+   <field>
+    <name>homepage</name>
+    <type>text</type>
+    <length>100</length>
+    <notnull>false</notnull>
+    <default></default>
+   </field>
 
    <field>
     <name>privatecomment</name>

@@ -46,6 +46,7 @@ class UNL_UCBCN_Event extends DB_DataObject
     public $approvedforcirculation;          // int(1)
     public $transparency;                    // string(255)
     public $status;                          // string(100)
+    public $homepage;                        // string(100)
     public $privatecomment;                  // blob(4294967295)  blob
     public $otherkeywords;                   // string(255)
     public $imagetitle;                      // string(100)

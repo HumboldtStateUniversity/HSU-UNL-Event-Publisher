@@ -141,26 +141,28 @@ if (isset($this->output[0], $this->output[0]->event)
           		<li id="eventrss"><a href="<?php echo $this->uri; ?>upcoming/?format=rss&amp;limit=100" title="RSS feed" class="icon-rss">RSS</a></li>
           	</ul>
          </div><!--/subscribe-->
-         
      	<div id="othercals">
      	<h3>More Calendars</h3>
      		<ul>
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2011-12.pdf" >Academic Calendar 2011-12</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2012-13.pdf" >Academic Calendar 2012-13</a></li>
-					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS12.pdf" >Activities & Deadlines – Spring 2012</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/CalendarOfActivitiesF12.pdf" >Activities & Deadlines – Fall 2012</a></li>
+					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS12.pdf" >Activities &amp; Deadlines – Spring 2012</a></li>
+					<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/CalendarOfActivitiesSUM12.pdf" >Activities &amp; Deadlines – Summer 2012</a></li>
+     			<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesF12.pdf" >Activities &amp; Deadlines – Fall 2012</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Spring2012.pdf" >Final Exam Schedule for Spring 2012</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/FinalExam_Fall2012.pdf" >Final Exam Schedule for Fall 2012</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2011-2012.pdf" >Green & Gold Calendar 2011-2012</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2011-2012.pdf" >Green &amp; Gold Calendar 2011-2012</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2012-2013.pdf" >Green &amp; Gold Calendar 2012-2013</a></li>
      				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
      			
-     		</ul>     	
+     		</ul>
      	</div><!--/othercals-->
      	
      	<div id="maps">
      		<a href="http://humboldt.edu/maps">Campus Maps</a>   			
      	</div><!--/maps-->
+
 		<p><a href="<?php echo $this->uri; ?>manager" title="Submit an event" class="event_submit">Submit an event</a></p>
        </div><!--/col left-->
       <div id="updatecontent" class="three_col right">

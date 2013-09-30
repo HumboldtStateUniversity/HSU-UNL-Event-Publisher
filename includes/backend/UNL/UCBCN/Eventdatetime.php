@@ -123,7 +123,7 @@ class UNL_UCBCN_Eventdatetime extends DB_DataObject
             )
         );
         $dateoptions = array('format'=>'g i A',
-                            'optionIncrement'=>array('i'=>5),
+                            'optionIncrement'=>array('i'=>1),
                             'addEmptyOption'=>true);
         $rtoptions = array('none'=>'None',
                            'daily'=>'Daily',

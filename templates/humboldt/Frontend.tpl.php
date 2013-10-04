@@ -150,6 +150,7 @@ if (isset($this->output[0], $this->output[0]->event)
 		?></p>
      		<ul>
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
+     			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2011-12.pdf" >Academic Calendar 2011-12</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2012-13.pdf" >Academic Calendar 2012-13</a></li>
 					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS12.pdf" >Activities &amp; Deadlines – Spring 2012</a></li>

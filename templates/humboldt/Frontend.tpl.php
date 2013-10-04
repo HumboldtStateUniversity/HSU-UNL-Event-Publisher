@@ -151,16 +151,12 @@ if (isset($this->output[0], $this->output[0]->event)
      		<ul>
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2011-12.pdf" >Academic Calendar 2011-12</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2012-13.pdf" >Academic Calendar 2012-13</a></li>
-					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS12.pdf" >Activities &amp; Deadlines – Spring 2012</a></li>
-					<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/CalendarOfActivitiesSUM12.pdf" >Activities &amp; Deadlines – Summer 2012</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesF12.pdf" >Activities &amp; Deadlines – Fall 2012</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Spring2012.pdf" >Final Exam Schedule for Spring 2012</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/FinalExam_Fall2012.pdf" >Final Exam Schedule for Fall 2012</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2011-2012.pdf" >Green &amp; Gold Calendar 2011-2012</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar_2012-2013.pdf" >Green &amp; Gold Calendar 2012-2013</a></li>
-     				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
+
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li>
+					<li>&raquo; <a href="http://pine.humboldt.edu/registrar/pdf/CalendarOfActivitiesF13.pdf" >Activities &amp; Deadlines – Fall 2013</a></li>
+     			<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/FinalExam_Fall2013.pdf" >Final Exam Schedule for Fall 2013</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalander2013-2014.pdf" >Green &amp; Gold Calendar 2013-2014</a></li>
+				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
      			
      		</ul>
      	</div><!--/othercals-->

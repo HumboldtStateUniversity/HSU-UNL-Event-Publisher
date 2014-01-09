@@ -154,10 +154,8 @@ if (isset($this->output[0], $this->output[0]->event)
 
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2014-15-Draft.pdf" >Academic Calendar 2014-15</a></li>
-					<li>&raquo; <a href="http://pine.humboldt.edu/registrar/pdf/CalendarOfActivitiesF13.pdf" >Activities &amp; Deadlines – Fall 2013</a></li>
 					<li>&raquo; <a href="http://pine.humboldt.edu/reg/pdf/CalendarOfActivitiesS14.pdf" >Activities &amp; Deadlines – Spring 2014</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/registrar/pdf/FinalExam_Fall2013.pdf" >Final Exam Schedule for Fall 2013</a></li>
-     			<li>&raquo; <a href="http://pine.humboldt.edu/reg/pdf/FinalExam_Spring2014.pdf" >Final Exam Schedule for Spring 2013</a></li>
+     			<li>&raquo; <a href="http://pine.humboldt.edu/reg/pdf/FinalExam_Spring2014.pdf" >Final Exam Schedule for Spring 2014</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalander2013-2014.pdf" >Green &amp; Gold Calendar 2013-2014</a></li>
 				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
      			

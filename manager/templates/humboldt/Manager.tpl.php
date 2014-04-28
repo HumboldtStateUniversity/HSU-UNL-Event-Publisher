@@ -179,7 +179,7 @@
 																		<span class="postal-code">95521</span>
 
 																	</div>
-																	<div class="tel">(707) 826-3011</div>
+																	<div class="tel">(707) 826-3321</div>
 																	<div class="contact"><a href="http://humboldt.edu/web/feedback">Contact us</a></div>
 																</div>						
 															</div><!--/article-->

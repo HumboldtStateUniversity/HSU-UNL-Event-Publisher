@@ -143,11 +143,6 @@ if (isset($this->output[0], $this->output[0]->event)
          </div><!--/subscribe-->
      	<div id="othercals">
      	<h3>More Calendars</h3>
-		<p style="margin:19px 0 0 13px;"><?php 
-		    if ($this->calendar->id == '1'){ // Only show on main calendar 
-		        echo '<a href="'.$this->uri.'/centennial/search/?q=centennial&submit=Go&search=search"><img src="'.$this->uri.'/templates/humboldt/images/centennial-calendar.png" alt="Centennial Events" width="181" height="39"/></a>';
-		    } 
-		?></p>
      		<ul>
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>

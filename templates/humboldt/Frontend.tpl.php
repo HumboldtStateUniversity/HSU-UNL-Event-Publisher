@@ -147,15 +147,10 @@ if (isset($this->output[0], $this->output[0]->event)
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>
 
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li>
+     			<!-- <li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li> -->
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2014-15-Draft.pdf" >Academic Calendar 2014-15</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
-					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS14.pdf" >Activities &amp; Deadlines – Spring 2014</a></li>
-					<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesSUM14.pdf">Activities &amp; Deadlines - Summer 2014</a></li>
-										<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesF14.pdf">Activities &amp; Deadlines - Fall 2014</a></li>
-     			<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Spring2014.pdf" >Final Exam Schedule for Spring 2014</a></li>
-				<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Fall2014.pdf">Final Exam Schedule Fall 2014</a>			</li>	
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalander2013-2014.pdf" >Green &amp; Gold Calendar 2013-2014</a></li>
+									<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS15.pdf" >Activities &amp; Deadlines – Spring 2015</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar2014-2015.pdf" >Green &amp; Gold Calendar 2014-2015</a></li>
 
 				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>

@@ -149,9 +149,10 @@ if (isset($this->output[0], $this->output[0]->event)
 
      			<!-- <li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li> -->
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2014-15-Draft.pdf" >Academic Calendar 2014-15</a></li>
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuacademiccalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
+     			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2016-17.pdf" >Academic Calendar 2016-17</a></li>
 									<li>&raquo; <a href="http://humboldt.edu/reg/pdf/CalendarOfActivitiesS15.pdf" >Activities &amp; Deadlines – Spring 2015</a></li>
-									<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Spring2015.pdf" >Final Exam Schedule – Spring 2015</a></li>
+									<li>&raquo; <a href="http://humboldt.edu/reg/pdf/FinalExam_Spring2015.pdf">Final Exam Schedule – Spring 2015</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar2014-2015.pdf" >Green &amp; Gold Calendar 2014-2015</a></li>
 
 				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>

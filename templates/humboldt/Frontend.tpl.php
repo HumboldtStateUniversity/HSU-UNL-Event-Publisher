@@ -152,9 +152,9 @@ if (isset($this->output[0], $this->output[0]->event)
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2016-17.pdf" >Academic Calendar 2016-17</a></li>
 									<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesF15.pdf" >Activities &amp; Deadlines – Fall 2015</a></li>
-                                    <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesS16.pdf" >Activities &amp; Deadlines – Fall 2016</a></li>
+                                    <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesS16.pdf" >Activities &amp; Deadlines – Spring 2016</a></li>
 									<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Fall2015.pdf">Final Exam Schedule – Fall 2015</a></li>
-                                    <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Spring2016.pdf">Final Exam Schedule – Fall 2016</a></li>
+                                    <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Spring2016.pdf">Final Exam Schedule – Spring 2016</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/images/uploads/greenAndGoldCalendar2014-2015.pdf" >Green &amp; Gold Calendar 2014-2015</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/greenandgoldcalendar2015-2016.pdf" >Green &amp; Gold Calendar 2015-2016</a></li>
 

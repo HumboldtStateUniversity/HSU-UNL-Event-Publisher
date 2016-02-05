@@ -219,6 +219,7 @@ body {
 .socialnetworks {
 	float: right;
 	width: 115px;
+	margin-top: 18px;
 }
 .socialnetworks img {
 	float: left;

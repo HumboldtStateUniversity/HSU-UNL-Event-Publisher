@@ -148,9 +148,11 @@ if (isset($this->output[0], $this->output[0]->event)
      			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>
 
      			<!-- <li>&raquo; <a href="http://www.humboldt.edu/humboldt/2013-14AcademicCalendar.pdf" >Academic Calendar 2013-14</a></li> -->
-     			<li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2014-15-Draft.pdf" >Academic Calendar 2014-15</a></li>
+     			<!-- <li>&raquo; <a href="http://www.humboldt.edu/humboldt/hsuAcademicCalendar2014-15-Draft.pdf" >Academic Calendar 2014-15</a></li> -->
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2016-17.pdf" >Academic Calendar 2016-17</a></li>
+     			<li>&raquo; <a href="http://humboldt.edu/sites/default/files/hsuacademiccalendar2017-18.pdf" >Academic Calendar 2017-18</a></li>
+     			<li>&raquo; <a href="http://humboldt.edu/sites/default/files/hsuacademiccalendar2018-19.pdf" >Academic Calendar 2018-19</a></li>
 									
                             <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesS16.pdf" >Activities &amp; Deadlines – Spring 2016</a></li>
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesF16.pdf" >Activities &amp; Deadlines – Fall 2016</a></li>

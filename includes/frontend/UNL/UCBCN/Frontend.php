@@ -739,7 +739,7 @@ class UNL_UCBCN_Frontend extends UNL_UCBCN implements UNL_UCBCN_Cacheable
                             AND edt.endtime >= '" . date('Y-m-d H:i:s') . "'
                             AND e.status = 'featured'
                         ORDER BY edt.starttime
-                        LIMIT 18";
+                        LIMIT 6";
         $events = $mdb2->query($sql)->fetchAll();
 
         $output = '';

@@ -145,28 +145,37 @@ if (isset($this->output[0], $this->output[0]->event)
      	<h3>More Calendars</h3>
      		<ul>
      			<li>&raquo; <a href="http://humboldt.edu/centeractivities" title="CenterActivities calendar">CenterActivities calendar</a></li>
+     			<br>
      			<li>&raquo; <a href="http://humboldt.edu/centerarts/" title="Center Arts calendar">Center Arts calendar</a></li>
+     			<br>
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2015-16.pdf" >Academic Calendar 2015-16</a></li>
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/hsuacademiccalendar2016-17.pdf" >Academic Calendar 2016-17</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/sites/default/files/hsuacademiccalendar2017-18.pdf" >Academic Calendar 2017-18</a></li>
      			<li>&raquo; <a href="http://humboldt.edu/sites/default/files/hsuacademiccalendar2018-19.pdf" >Academic Calendar 2018-19</a></li>
-									
+							
+							<br>
+
                             <!-- <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesS16.pdf" >Activities &amp; Deadlines – Spring 2016</a></li> -->
 
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesF16.pdf" >Activities &amp; Deadlines – Fall 2016</a></li>
 
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesSp17.pdf" >Activities &amp; Deadlines – Spring 2017</a></li>
+							
+							<br>
 
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Spring2016.pdf">Final Exam Schedule – Spring 2016</a></li>
 							
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Fall2016.pdf">Final Exam Schedule – Fall 2016</a></li>
 
 							<li>&raquo; <a href="http://pine.humboldt.edu/registrar/pdf/FinalExamSp17.pdf">Final Exam Schedule – Spring 2017</a></li>
-                                    
+                          	
+                          	<br>          
      			
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/greenandgoldcalendar2015-2016.pdf" >Green &amp; Gold Calendar 2015-2016</a></li>
 				<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/greenandgoldcalendar2016-2017.pdf" >Green &amp; Gold Calendar 2016-2017</a></li>
-							
+				
+				<br>
+
 				<li>&raquo; <a href="http://www.northcoastjournal.com/calendar/">Events in the Community</a></li>
      			
      		</ul>

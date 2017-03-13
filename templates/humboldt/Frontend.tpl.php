@@ -152,11 +152,16 @@ if (isset($this->output[0], $this->output[0]->event)
      			<li>&raquo; <a href="http://humboldt.edu/sites/default/files/hsuacademiccalendar2018-19.pdf" >Academic Calendar 2018-19</a></li>
 									
                             <!-- <li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesS16.pdf" >Activities &amp; Deadlines – Spring 2016</a></li> -->
+
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesF16.pdf" >Activities &amp; Deadlines – Fall 2016</a></li>
+
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/CalendarOfActivitiesSp17.pdf" >Activities &amp; Deadlines – Spring 2017</a></li>
+
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Spring2016.pdf">Final Exam Schedule – Spring 2016</a></li>
 							
 							<li>&raquo; <a href="http://www.humboldt.edu/reg/pdf/FinalExam_Fall2016.pdf">Final Exam Schedule – Fall 2016</a></li>
+
+							<li>&raquo; <a href="http://pine.humboldt.edu/registrar/pdf/FinalExamSp17.pdf">Final Exam Schedule – Spring 2017</a></li>
                                     
      			
      			<li>&raquo; <a href="http://www.humboldt.edu/sites/default/files/greenandgoldcalendar2015-2016.pdf" >Green &amp; Gold Calendar 2015-2016</a></li>
